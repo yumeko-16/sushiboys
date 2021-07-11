@@ -1,2 +1,23 @@
-// 基本フォントサイズ
-$fontSize: 18px;
+// ブレイクポイント
+$breakPoint-tb: 600px;
+$breakPoint-pc: 1025px;
+
+@function get_vw-sm($size, $viewport: 375) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+@function get_vw-tb($size, $viewport: 600) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+
+// サイトで使用する色
+$color-white: #fff;
+$color-black: #444;
+$color-pink: #f6a4af;
+
+// 基本書体
+$font: "Oswald", sans-serif;
+
+// 基本行間
+$lineHeight: 1.6;
