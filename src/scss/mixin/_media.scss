@@ -1,0 +1,12 @@
+// ** mixin
+// * ブレイクポイント
+@mixin tb-screen {
+  @media (min-width: ($breakPoint-tb)) {
+    @content;
+  }
+}
+@mixin pc-screen {
+  @media (min-width: ($breakPoint-pc)) {
+    @content;
+  }
+}

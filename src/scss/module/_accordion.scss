@@ -1,0 +1,35 @@
+.accordion {
+  &__title-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__title {
+    color: $color-black;
+    font-size: get_vw-sm(28);
+    line-height: 1;
+    @include tb-screen {
+      font-size: get_vw-tb(20);
+    }
+    @include pc-screen {
+      font-size: 28px;
+    }
+  }
+  &__title-arrow {
+    color: $color-black;
+  }
+  &__contents {
+    height: 0;
+    line-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition-duration: 0.4s;
+    &.accordion__contents--open {
+      height: auto;
+      line-height: normal;
+      opacity: 1;
+    }
+  }
+}

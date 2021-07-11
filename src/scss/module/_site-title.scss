@@ -1,0 +1,24 @@
+.site-title {
+  margin-bottom: get_vw-sm(25);
+  text-align: center;
+  @include tb-screen {
+    margin-bottom: get_vw-tb(25);
+  }
+  @include pc-screen {
+    margin-bottom: 35px;
+  }
+  &__link {
+    display: block;
+    color: $color-white;
+    font-size: get_vw-sm(40);
+    line-height: 1;
+    letter-spacing: 0.1em;
+    text-align: center;
+    @include tb-screen {
+      font-size: get_vw-tb(30);
+    }
+    @include pc-screen {
+      font-size: 54px;
+    }
+  }
+}
