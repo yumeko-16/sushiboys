@@ -1,4 +1,4 @@
-.album {
+.news {
   &__list {
     display: flex;
     flex-direction: column;
@@ -20,6 +20,11 @@
       @include pc-screen {
         margin-block-start: 0;
       }
+    }
+  }
+  &__thumbnail {
+    @include tb-screen {
+      max-width: 200px;
     }
   }
   &__thumbnail-image {
@@ -44,27 +49,22 @@
       padding-inline-end: 30px;
     }
   }
-  &__caption-title {
+  &__caption-time {
     color: $color-white;
-    font-size: get_vw-sm(28);
     font-weight: bold;
-    line-height: 1;
-    @include tb-screen {
-      font-size: get_vw-tb(20);
-    }
-    @include pc-screen {
-      font-size: 28px;
-    }
   }
-  &__caption-list {
+  &__caption-title {
     margin-block-start: get_vw-sm(20);
     color: $color-white;
+    font-size: get_vw-sm(16);
     font-weight: bold;
     @include tb-screen {
       margin-block-start: get_vw-tb(20);
+      font-size: get_vw-tb(16);
     }
     @include pc-screen {
       margin-block-start: 20px;
+      font-size: 16px;
     }
   }
 }
