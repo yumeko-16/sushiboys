@@ -1,0 +1,12 @@
+.main {
+  padding-block-start: get_vw-sm(40);
+  padding-block-end: get_vw-sm(40);
+  @include tb-screen {
+    padding-block-start: get_vw-tb(60);
+    padding-block-end: get_vw-tb(60);
+  }
+  @include pc-screen {
+    padding-block-start: 80px;
+    padding-block-end: 80px;
+  }
+}

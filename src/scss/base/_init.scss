@@ -43,6 +43,16 @@ h1 {
   font-weight: initial;
 }
 
+h2 {
+  display: block;
+  font-size: initial;
+  margin-block-start: initial;
+  margin-block-end: initial;
+  margin-inline-start: initial;
+  margin-inline-end: initial;
+  font-weight: initial;
+}
+
 p {
   display: block;
   margin-block-start: initial;
@@ -63,10 +73,26 @@ ul {
   margin-inline-start: initial;
   margin-inline-end: initial;
   padding-inline-start: initial;
-  font-size: 0;
 }
 
 li {
   display: block;
   text-align: initial;
+}
+
+dl {
+  display: block;
+  margin-block-start: initial;
+  margin-block-end: initial;
+  margin-inline-start: initial;
+  margin-inline-end: initial;
+}
+
+dt {
+  display: block;
+}
+
+dd {
+  display: block;
+  margin-inline-start: initial;
 }

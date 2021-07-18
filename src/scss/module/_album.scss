@@ -1,0 +1,81 @@
+.album {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    margin-block-start: get_vw-sm(40);
+    @include tb-screen {
+      display: flex;
+      margin-block-start: get_vw-tb(60);
+    }
+    @include pc-screen {
+      margin-block-start: 80px;
+    }
+    &:first-child {
+      margin-block-start: 0;
+      @include tb-screen {
+        margin-block-start: 0;
+      }
+      @include pc-screen {
+        margin-block-start: 0;
+      }
+    }
+  }
+  &__image {
+    display: block;
+    width: 100%;
+  }
+  &__caption {
+    padding-block-start: get_vw-sm(20);
+    padding-block-end: get_vw-sm(20);
+    padding-inline-start: get_vw-sm(10);
+    padding-inline-end: get_vw-sm(10);
+    @include tb-screen {
+      padding-block-start: get_vw-tb(10);
+      padding-block-end: get_vw-tb(10);
+      padding-inline-start: get_vw-tb(20);
+      padding-inline-end: get_vw-tb(20);
+    }
+    @include pc-screen {
+      padding-block-start: 10px;
+      padding-block-end: 10px;
+      padding-inline-start: 30px;
+      padding-inline-end: 30px;
+    }
+  }
+  &__title {
+    color: $color-white;
+    font-size: get_vw-sm(28);
+    font-weight: bold;
+    line-height: 1;
+    @include tb-screen {
+      font-size: get_vw-tb(20);
+    }
+    @include pc-screen {
+      font-size: 28px;
+    }
+  }
+  &__information-list {
+    margin-block-start: get_vw-sm(20);
+    color: $color-white;
+    font-weight: bold;
+    @include tb-screen {
+      margin-block-start: get_vw-tb(20);
+    }
+    @include pc-screen {
+      margin-block-start: 20px;
+    }
+  }
+  &__song-list {
+    margin-block-start: get_vw-sm(20);
+    color: $color-white;
+    font-weight: bold;
+    @include tb-screen {
+      margin-block-start: get_vw-tb(20);
+    }
+    @include pc-screen {
+      margin-block-start: 20px;
+    }
+  }
+}
