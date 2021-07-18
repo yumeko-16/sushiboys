@@ -117,7 +117,7 @@
       color: $color-white;
       line-height: 1;
       @include tb-screen {
-        font-size: get_vw-tb(20);
+        font-size: get_vw-tb(24);
       }
       @include pc-screen {
         font-size: 28px;

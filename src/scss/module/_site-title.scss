@@ -15,7 +15,7 @@
     letter-spacing: 0.1em;
     text-align: center;
     @include tb-screen {
-      font-size: get_vw-tb(30);
+      font-size: get_vw-tb(45);
     }
     @include pc-screen {
       font-size: 54px;
