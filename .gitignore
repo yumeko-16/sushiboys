@@ -5,3 +5,7 @@
 node_modules/
 package-lock.json
 package.json
+webpack.config.js
+dist/*
+!/dist/img
+!/dist/favicon.ico
