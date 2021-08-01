@@ -4,20 +4,20 @@
   &__list {
     display: flex;
     justify-content: center;
-    padding: get_vw-sm(15) 0;
+    padding: i.get_vw-sm(15) 0;
     @include i.pc-screen {
-      padding: get_vw-tb(25) 0;
+      padding: i.get_vw-tb(25) 0;
     }
     @include i.pc-screen {
       padding: 25px 0;
     }
   }
   &__item {
-    padding-inline-start: get_vw-sm(10);
-    padding-inline-end: get_vw-sm(10);
+    padding-inline-start: i.get_vw-sm(10);
+    padding-inline-end: i.get_vw-sm(10);
     @include i.tb-screen {
-      padding-inline-start: get_vw-tb(10);
-      padding-inline-end: get_vw-tb(10);
+      padding-inline-start: i.get_vw-tb(10);
+      padding-inline-end: i.get_vw-tb(10);
     }
     @include i.pc-screen {
       padding-inline-start: 10px;
@@ -28,18 +28,18 @@
   &__link {
     display: inline-block;
     position: relative;
-    width: get_vw-sm(40);
-    height: get_vw-sm(40);
+    width: i.get_vw-sm(40);
+    height: i.get_vw-sm(40);
     border-radius: 50%;
     background-color: i.$color-black;
     color: i.$color-white;
-    font-size: get_vw-sm(20);
+    font-size: i.get_vw-sm(20);
     text-decoration: none;
     transition: 0.5s;
     @include i.tb-screen {
-      width: get_vw-sm(30);
-      height: get_vw-sm(30);
-      font-size: get_vw-sm(16);
+      width: i.get_vw-sm(30);
+      height: i.get_vw-sm(30);
+      font-size: i.get_vw-sm(16);
     }
     @include i.pc-screen {
       width: 50px;

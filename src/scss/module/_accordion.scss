@@ -10,10 +10,10 @@
   }
   &__title {
     color: i.$color-black;
-    font-size: get_vw-sm(28);
+    font-size: i.get_vw-sm(28);
     line-height: 1;
     @include i.tb-screen {
-      font-size: get_vw-tb(20);
+      font-size: i.get_vw-tb(20);
     }
     @include i.pc-screen {
       font-size: 28px;

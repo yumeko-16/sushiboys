@@ -7,7 +7,7 @@
     }
     &__selector {
       position: relative;
-      width: get_vw-sm(90);
+      width: i.get_vw-sm(90);
       margin: 0 auto;
       &::before {
         display: flex;
@@ -20,7 +20,7 @@
     }
     &__title {
       color: i.$color-white;
-      font-size: get_vw-sm(28);
+      font-size: i.get_vw-sm(28);
       line-height: 1;
       cursor: pointer;
     }
@@ -42,17 +42,17 @@
     }
     &__close {
       position: absolute;
-      top: get_vw-sm(20);
-      right: get_vw-sm(20);
-      width: get_vw-sm(50);
-      height: get_vw-sm(50);
+      top: i.get_vw-sm(20);
+      right: i.get_vw-sm(20);
+      width: i.get_vw-sm(50);
+      height: i.get_vw-sm(50);
       cursor: pointer;
       &::before,
       &::after {
         content: "";
         display: block;
         width: 100%; /*バツ線の長さ*/
-        height: get_vw-sm(5); /*バツ線の太さ*/
+        height: i.get_vw-sm(5); /*バツ線の太さ*/
         background: i.$color-white;
         transform: rotate(45deg);
         transform-origin: 0% 50%;
@@ -77,12 +77,12 @@
     &__link {
       display: block;
       color: i.$color-white;
-      font-size: get_vw-sm(28);
+      font-size: i.get_vw-sm(28);
       line-height: 1;
     }
     &__item {
-      width: get_vw-sm(300);
-      padding: get_vw-sm(20) get_vw-sm(70);
+      width: i.get_vw-sm(300);
+      padding: i.get_vw-sm(20) i.get_vw-sm(70);
       text-align: center;
     }
   }
@@ -103,11 +103,11 @@
       }
     }
     &__item {
-      padding-inline-start: get_vw-sm(15);
-      padding-inline-end: get_vw-sm(15);
+      padding-inline-start: i.get_vw-sm(15);
+      padding-inline-end: i.get_vw-sm(15);
       @include i.tb-screen {
-        padding-inline-start: get_vw-tb(15);
-        padding-inline-end: get_vw-tb(15);
+        padding-inline-start: i.get_vw-tb(15);
+        padding-inline-end: i.get_vw-tb(15);
       }
       @include i.pc-screen {
         padding-inline-start: 15px;
@@ -119,7 +119,7 @@
       color: i.$color-white;
       line-height: 1;
       @include i.tb-screen {
-        font-size: get_vw-tb(24);
+        font-size: i.get_vw-tb(24);
       }
       @include i.pc-screen {
         font-size: 28px;
@@ -130,9 +130,9 @@
     }
   }
   &__wrapper {
-    padding: get_vw-sm(15) 0;
+    padding: i.get_vw-sm(15) 0;
     @include i.pc-screen {
-      padding: get_vw-tb(15) 0;
+      padding: i.get_vw-tb(15) 0;
     }
     @include i.pc-screen {
       padding: 25px 0;

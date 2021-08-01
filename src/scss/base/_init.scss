@@ -10,9 +10,9 @@ body {
   box-sizing: border-box;
   margin: 0;
   font-family: i.$font;
-  font-size: get_vw-sm(16);
+  font-size: i.get_vw-sm(16);
   @include i.tb-screen {
-    font-size: get_vw-tb(16);
+    font-size: i.get_vw-tb(16);
   }
   @include i.pc-screen {
     font-size: 16px;

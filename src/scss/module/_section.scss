@@ -3,11 +3,11 @@
 .section {
   max-width: 600px;
   width: 100%;
-  margin-block-start: get_vw-sm(40);
+  margin-block-start: i.get_vw-sm(40);
   margin-inline-start: auto;
   margin-inline-end: auto;
   @include i.tb-screen {
-    margin-block-start: get_vw-tb(60);
+    margin-block-start: i.get_vw-tb(60);
   }
   @include i.pc-screen {
     margin-block-start: 80px;
