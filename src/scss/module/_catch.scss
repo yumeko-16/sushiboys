@@ -1,5 +1,4 @@
-@use "../mixin/media";
-@use "../setting/config";
+@use "../import" as i;
 
 .catch {
   display: block;
@@ -9,7 +8,7 @@
   margin-inline-start: auto;
   margin-inline-end: auto;
   pointer-events: none;
-  @include media.tb-screen {
+  @include i.tb-screen {
     width: 50%;
   }
 }

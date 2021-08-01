@@ -1,5 +1,4 @@
-@use "../mixin/media";
-@use "../setting/config";
+@use "../import" as i;
 
 .accordion {
   &__title-wrap {
@@ -10,18 +9,18 @@
     cursor: pointer;
   }
   &__title {
-    color: config.$color-black;
+    color: i.$color-black;
     font-size: get_vw-sm(28);
     line-height: 1;
-    @include media.tb-screen {
+    @include i.tb-screen {
       font-size: get_vw-tb(20);
     }
-    @include media.pc-screen {
+    @include i.pc-screen {
       font-size: 28px;
     }
   }
   &__title-arrow {
-    color: config.$color-black;
+    color: i.$color-black;
   }
   &__contents {
     height: 0;

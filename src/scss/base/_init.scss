@@ -1,5 +1,4 @@
-@use "../mixin/media";
-@use "../setting/config";
+@use "../import" as i;
 
 // ** サイト共通設定
 * {
@@ -10,15 +9,15 @@ body {
   display: block;
   box-sizing: border-box;
   margin: 0;
-  font-family: config.$font;
+  font-family: i.$font;
   font-size: get_vw-sm(16);
-  @include media.tb-screen {
+  @include i.tb-screen {
     font-size: get_vw-tb(16);
   }
-  @include media.pc-screen {
+  @include i.pc-screen {
     font-size: 16px;
   }
-  line-height: config.$lineHeight;
+  line-height: i.$lineHeight;
   letter-spacing: 0.1em;
 }
 

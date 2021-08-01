@@ -1,5 +1,4 @@
-@use "../mixin/media";
-@use "../setting/config";
+@use "../import" as i;
 
 .news {
   &__list {
@@ -8,25 +7,25 @@
   }
   &__item {
     margin-block-start: get_vw-sm(40);
-    @include media.tb-screen {
+    @include i.tb-screen {
       display: flex;
       margin-block-start: get_vw-tb(60);
     }
-    @include media.pc-screen {
+    @include i.pc-screen {
       margin-block-start: 80px;
     }
     &:first-child {
       margin-block-start: 0;
-      @include media.tb-screen {
+      @include i.tb-screen {
         margin-block-start: 0;
       }
-      @include media.pc-screen {
+      @include i.pc-screen {
         margin-block-start: 0;
       }
     }
   }
   &__thumbnail {
-    @include media.tb-screen {
+    @include i.tb-screen {
       max-width: 200px;
     }
   }
@@ -39,13 +38,13 @@
     padding-block-end: get_vw-sm(20);
     padding-inline-start: get_vw-sm(10);
     padding-inline-end: get_vw-sm(10);
-    @include media.tb-screen {
+    @include i.tb-screen {
       padding-block-start: get_vw-tb(10);
       padding-block-end: get_vw-tb(10);
       padding-inline-start: get_vw-tb(20);
       padding-inline-end: get_vw-tb(20);
     }
-    @include media.pc-screen {
+    @include i.pc-screen {
       padding-block-start: 10px;
       padding-block-end: 10px;
       padding-inline-start: 30px;
@@ -53,19 +52,19 @@
     }
   }
   &__caption-time {
-    color: config.$color-white;
+    color: i.$color-white;
     font-weight: bold;
   }
   &__caption-title {
     margin-block-start: get_vw-sm(20);
-    color: config.$color-white;
+    color: i.$color-white;
     font-size: get_vw-sm(16);
     font-weight: bold;
-    @include media.tb-screen {
+    @include i.tb-screen {
       margin-block-start: get_vw-tb(20);
       font-size: get_vw-tb(16);
     }
-    @include media.pc-screen {
+    @include i.pc-screen {
       margin-block-start: 20px;
       font-size: 16px;
     }
