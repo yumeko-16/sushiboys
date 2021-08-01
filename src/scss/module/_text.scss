@@ -1,8 +1,11 @@
+@use "../mixin/media";
+@use "../setting/config";
+
 .text {
   margin-block-start: 1em;
   margin-block-end: 1em;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  color: $color-black;
+  color: config.$color-black;
   font-weight: bold;
 }

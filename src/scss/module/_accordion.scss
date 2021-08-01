@@ -1,3 +1,6 @@
+@use "../mixin/media";
+@use "../setting/config";
+
 .accordion {
   &__title-wrap {
     display: flex;
@@ -7,18 +10,18 @@
     cursor: pointer;
   }
   &__title {
-    color: $color-black;
+    color: config.$color-black;
     font-size: get_vw-sm(28);
     line-height: 1;
-    @include tb-screen {
+    @include media.tb-screen {
       font-size: get_vw-tb(20);
     }
-    @include pc-screen {
+    @include media.pc-screen {
       font-size: 28px;
     }
   }
   &__title-arrow {
-    color: $color-black;
+    color: config.$color-black;
   }
   &__contents {
     height: 0;

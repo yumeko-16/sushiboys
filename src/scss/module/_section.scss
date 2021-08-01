@@ -1,21 +1,24 @@
+@use "../mixin/media";
+@use "../setting/config";
+
 .section {
   max-width: 600px;
   width: 100%;
   margin-block-start: get_vw-sm(40);
   margin-inline-start: auto;
   margin-inline-end: auto;
-  @include tb-screen {
+  @include media.tb-screen {
     margin-block-start: get_vw-tb(60);
   }
-  @include pc-screen {
+  @include media.pc-screen {
     margin-block-start: 80px;
   }
   &:first-child {
     margin-block-start: 0;
-    @include tb-screen {
+    @include media.tb-screen {
       margin-block-start: 0;
     }
-    @include pc-screen {
+    @include media.pc-screen {
       margin-block-start: 0;
     }
   }

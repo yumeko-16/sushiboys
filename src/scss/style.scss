@@ -1,20 +1,20 @@
-@import "./setting/config";
+@use "./setting/config";
 
-@import "./mixin/media";
+@use "./mixin/media";
 
-@import "./base/init";
+@use "./base/init";
 
-@import "./module/wrapper";
-@import "./module/container";
-@import "./module/header";
-@import "./module/main";
-@import "./module/footer";
-@import "./module/site-title";
-@import "./module/global-navigation";
-@import "./module/sns";
-@import "./module/section";
-@import "./module/text";
-@import "./module/catch";
-@import "./module/accordion";
-@import "./module/news";
-@import "./module/album";
+@use "./module/wrapper";
+@use "./module/container";
+@use "./module/header";
+@use "./module/main";
+@use "./module/footer";
+@use "./module/site-title";
+@use "./module/global-navigation";
+@use "./module/sns";
+@use "./module/section";
+@use "./module/text";
+@use "./module/catch";
+@use "./module/accordion";
+@use "./module/news";
+@use "./module/album";

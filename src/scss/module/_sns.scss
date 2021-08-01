@@ -1,23 +1,26 @@
+@use "../mixin/media";
+@use "../setting/config";
+
 .sns {
   &__list {
     display: flex;
     justify-content: center;
     padding: get_vw-sm(15) 0;
-    @include pc-screen {
+    @include media.pc-screen {
       padding: get_vw-tb(25) 0;
     }
-    @include pc-screen {
+    @include media.pc-screen {
       padding: 25px 0;
     }
   }
   &__item {
     padding-inline-start: get_vw-sm(10);
     padding-inline-end: get_vw-sm(10);
-    @include tb-screen {
+    @include media.tb-screen {
       padding-inline-start: get_vw-tb(10);
       padding-inline-end: get_vw-tb(10);
     }
-    @include pc-screen {
+    @include media.pc-screen {
       padding-inline-start: 10px;
       padding-inline-end: 10px;
     }
@@ -29,17 +32,17 @@
     width: get_vw-sm(40);
     height: get_vw-sm(40);
     border-radius: 50%;
-    background-color: $color-black;
-    color: $color-white;
+    background-color: config.$color-black;
+    color: config.$color-white;
     font-size: get_vw-sm(20);
     text-decoration: none;
     transition: 0.5s;
-    @include tb-screen {
+    @include media.tb-screen {
       width: get_vw-sm(30);
       height: get_vw-sm(30);
       font-size: get_vw-sm(16);
     }
-    @include pc-screen {
+    @include media.pc-screen {
       width: 50px;
       height: 50px;
       font-size: 30px;
