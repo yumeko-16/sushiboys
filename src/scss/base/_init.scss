@@ -1,3 +1,5 @@
+@use "../import" as i;
+
 // ** サイト共通設定
 * {
   box-sizing: border-box;
@@ -7,15 +9,15 @@ body {
   display: block;
   box-sizing: border-box;
   margin: 0;
-  font-family: $font;
-  font-size: get_vw-sm(16);
-  @include tb-screen {
-    font-size: get_vw-tb(16);
+  font-family: i.$font;
+  font-size: i.get_vw-sm(16);
+  @include i.tb-screen {
+    font-size: i.get_vw-tb(16);
   }
-  @include pc-screen {
+  @include i.pc-screen {
     font-size: 16px;
   }
-  line-height: $lineHeight;
+  line-height: i.$lineHeight;
   letter-spacing: 0.1em;
 }
 

@@ -1,3 +1,5 @@
+@use "../import" as i;
+
 .accordion {
   &__title-wrap {
     display: flex;
@@ -7,18 +9,18 @@
     cursor: pointer;
   }
   &__title {
-    color: $color-black;
-    font-size: get_vw-sm(28);
+    color: i.$color-black;
+    font-size: i.get_vw-sm(28);
     line-height: 1;
-    @include tb-screen {
-      font-size: get_vw-tb(20);
+    @include i.tb-screen {
+      font-size: i.get_vw-tb(20);
     }
-    @include pc-screen {
+    @include i.pc-screen {
       font-size: 28px;
     }
   }
   &__title-arrow {
-    color: $color-black;
+    color: i.$color-black;
   }
   &__contents {
     height: 0;

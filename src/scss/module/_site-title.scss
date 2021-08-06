@@ -1,23 +1,25 @@
+@use "../import" as i;
+
 .site-title {
-  margin-bottom: get_vw-sm(25);
+  margin-bottom: i.get_vw-sm(25);
   text-align: center;
-  @include tb-screen {
-    margin-bottom: get_vw-tb(25);
+  @include i.tb-screen {
+    margin-bottom: i.get_vw-tb(25);
   }
-  @include pc-screen {
+  @include i.pc-screen {
     margin-bottom: 35px;
   }
   &__link {
     display: block;
-    color: $color-white;
-    font-size: get_vw-sm(40);
+    color: i.$color-white;
+    font-size: i.get_vw-sm(40);
     line-height: 1;
     letter-spacing: 0.1em;
     text-align: center;
-    @include tb-screen {
-      font-size: get_vw-tb(45);
+    @include i.tb-screen {
+      font-size: i.get_vw-tb(45);
     }
-    @include pc-screen {
+    @include i.pc-screen {
       font-size: 54px;
     }
   }

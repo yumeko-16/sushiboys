@@ -1,3 +1,5 @@
+@use "../import" as i;
+
 .catch {
   display: block;
   width: 70%;
@@ -6,7 +8,7 @@
   margin-inline-start: auto;
   margin-inline-end: auto;
   pointer-events: none;
-  @include tb-screen {
+  @include i.tb-screen {
     width: 50%;
   }
 }

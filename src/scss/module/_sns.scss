@@ -1,23 +1,25 @@
+@use "../import" as i;
+
 .sns {
   &__list {
     display: flex;
     justify-content: center;
-    padding: get_vw-sm(15) 0;
-    @include pc-screen {
-      padding: get_vw-tb(25) 0;
+    padding: i.get_vw-sm(15) 0;
+    @include i.pc-screen {
+      padding: i.get_vw-tb(25) 0;
     }
-    @include pc-screen {
+    @include i.pc-screen {
       padding: 25px 0;
     }
   }
   &__item {
-    padding-inline-start: get_vw-sm(10);
-    padding-inline-end: get_vw-sm(10);
-    @include tb-screen {
-      padding-inline-start: get_vw-tb(10);
-      padding-inline-end: get_vw-tb(10);
+    padding-inline-start: i.get_vw-sm(10);
+    padding-inline-end: i.get_vw-sm(10);
+    @include i.tb-screen {
+      padding-inline-start: i.get_vw-tb(10);
+      padding-inline-end: i.get_vw-tb(10);
     }
-    @include pc-screen {
+    @include i.pc-screen {
       padding-inline-start: 10px;
       padding-inline-end: 10px;
     }
@@ -26,20 +28,20 @@
   &__link {
     display: inline-block;
     position: relative;
-    width: get_vw-sm(40);
-    height: get_vw-sm(40);
+    width: i.get_vw-sm(40);
+    height: i.get_vw-sm(40);
     border-radius: 50%;
-    background-color: $color-black;
-    color: $color-white;
-    font-size: get_vw-sm(20);
+    background-color: i.$color-black;
+    color: i.$color-white;
+    font-size: i.get_vw-sm(20);
     text-decoration: none;
     transition: 0.5s;
-    @include tb-screen {
-      width: get_vw-sm(30);
-      height: get_vw-sm(30);
-      font-size: get_vw-sm(16);
+    @include i.tb-screen {
+      width: i.get_vw-sm(30);
+      height: i.get_vw-sm(30);
+      font-size: i.get_vw-sm(16);
     }
-    @include pc-screen {
+    @include i.pc-screen {
       width: 50px;
       height: 50px;
       font-size: 30px;
@@ -57,7 +59,8 @@
     }
     /* Instagramマウスホバー時 */
     &--instagram:hover {
-      background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+      background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
+        no-repeat;
       background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
     }
     /* YouTubeマウスホバー時 */

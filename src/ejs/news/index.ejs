@@ -1,50 +1,22 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NEWS | SUSHIBOYS</title>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="preconnect" href="//fonts.googleapis.com">
-  <link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
-  <link href="//fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+  <%
+  let localmeta = {
+    title: 'NEWS | SUSHIBOYS',
+    description: ''
+  };
+  let localfile = {
+    css: '/css/news.css',
+    js: '/js/news.js'
+  };
+  %>
+  <%- include('../_inc/_head', {meta: localmeta, file: localfile}) %>
 </head>
 <body>
   <div class="wrapper">
     <div class="container">
-      <header>
-        <h1 class="site-title">
-          <a class="site-title__link" href="/">SUSHIBOYS</a>
-        </h1>
-        <nav class="global-navigation__wrapper">
-          <div class="global-navigation--sp">
-            <div id="js-global-navigation--sp__selector" class="global-navigation--sp__selector">
-              <div class="global-navigation--sp__title">MENU</div>
-            </div>
-            <div id="js-global-navigation--sp__menu" class="global-navigation--sp__menu">
-              <div id="global-navigation--sp__close" class="global-navigation--sp__close"></div>
-              <ul class="global-navigation--sp__list">
-                <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/">HOME</a></li>
-                <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/news/">NEWS</a></li>
-                <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/discography/">DISCOGRAPHY</a></li>
-                <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="">CONTACT</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="global-navigation--pc">
-            <ul class="global-navigation--pc__list">
-              <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/">HOME</a></li>
-              <li class="global-navigation--pc__item"><a class="global-navigation--pc__link current" href="/news/">NEWS</a></li>
-              <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/discography/">DISCOGRAPHY</a></li>
-              <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="">CONTACT</a></li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-
+      <%- include('../_inc/components/_header') %>
       <main class="main">
         <section class="section">
           <div class="news">
@@ -93,29 +65,8 @@
           </div>
         </section>
       </main>
-
-      <footer class="footer">
-        <ul class="sns__list">
-          <li class="sns__item">
-            <a class="sns__link sns__link--twitter" href="//twitter.com/sushiboys350" target="_blank" rel="noopener">
-              <i class="fab fa-twitter"></i>
-            </a>
-          </li>
-          <li class="sns__item">
-            <a class="sns__link sns__link--instagram" href="//www.instagram.com/sushiboys350" target="_blank" rel="noopener">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </li>
-          <li class="sns__item">
-            <a class="sns__link sns__link--youtube" href="//www.youtube.com/user/umetube2013" target="_blank" rel="noopener">
-              <i class="fab fa-youtube"></i>
-            </a>
-          </li>
-        </ul>
-      </footer>
+      <%- include('../_inc/components/_footer') %>
     </div>
   </div>
-
-  <script src="/js/news.js"></script>
 </body>
 </html>
