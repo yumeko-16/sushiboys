@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%
+  let localmeta = {
+    title: 'DISCOGRAPHY | SUSHIBOYS',
+    description: ''
+  };
+  let localfile = {
+    css: '/css/discography.css',
+    js: '/js/discography.js'
+  };
+  %>
+  <%- include('../_inc/_head', {meta: localmeta, file: localfile}) %>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <%- include('../_inc/components/_header') %>
+      <main class="main">
+        <section class="section">
+          <div class="album">
+            <ul>
+              <li class="album__item">
+                <div>
+                  <img class="album__thumbnail-image" src="/img/discography/350.jpg" alt="350">
+                </div>
+                <div class="album__caption">
+                  <h2 class="album__caption-title">350</h2>
+                  <ul class="album__caption-list">
+                    <li>作品種別 : Mini Album</li>
+                    <li>発売日 : 2018.11.21</li>
+                    <li>価格 : ¥1,620 (Tax Include)</li>
+                  </ul>
+                  <ul class="album__caption-list">
+                    <li>収録曲</li>
+                    <li>01.Shopping Cart Racer</li>
+                    <li>02.味の素</li>
+                    <li>03.Drivin’</li>
+                    <li>04.８月３２日</li>
+                    <li>05.遊戯王</li>
+                    <li>06.USB</li>
+                    <li>07.とりま-Bonus Track-</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="album__item">
+                <div>
+                  <img class="album__image" src="/img/discography/wasabi.jpg" alt="WASABI">
+                </div>
+                <div class="album__caption">
+                  <h2 class="album__caption-title">WASABI</h2>
+                  <ul class="album__caption-list">
+                    <li>作品種別 : Mini Album</li>
+                    <li>発売日 : 2018.4.25</li>
+                    <li>価格 : ￥1,620 (Tax Include）</li>
+                  </ul>
+                  <ul class="album__caption-list">
+                    <li>収録曲</li>
+                    <li>01.KUNG FU</li>
+                    <li>02.アヒルボート</li>
+                    <li>03.ゲートボーラー</li>
+                    <li>04.旅に出よう</li>
+                    <li>05.問題ねぇ</li>
+                    <li>06.ママチャリ remix</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="album__item">
+                <div>
+                  <img class="album__image" src="/img/discography/nandemodekiru.jpg" alt="なんでもできる">
+                </div>
+                <div class="album__caption">
+                  <h2 class="album__caption-title">なんでもできる</h2>
+                  <ul class="album__caption-list">
+                    <li>作品種別 : Mini Album</li>
+                    <li>発売日 : 2018.1.13</li>
+                    <li>価格 : ￥200 (Tax Include）</li>
+                  </ul>
+                  <ul class="album__caption-list">
+                    <li>収録曲</li>
+                    <li>01.なんでもできる</li>
+                  </ul>
+                </div>
+              </li>
+              <li class="album__item">
+                <div>
+                  <img class="album__image" src="/img/discography/nigiri.jpg" alt="NIGIRI">
+                </div>
+                <div class="album__caption">
+                  <h2 class="album__caption-title">NIGIRI</h2>
+                  <ul class="album__caption-list">
+                    <li>作品種別 : Album</li>
+                    <li>発売日 : 2018.10.15</li>
+                    <li>価格 : ￥2,000 (Tax Include）</li>
+                  </ul>
+                  <ul class="album__caption-list">
+                    <li>収録曲</li>
+                    <li>01. Catch ur dream</li>
+                    <li>02. 遊園地</li>
+                    <li>03. ダンボルギーニ</li>
+                    <li>04. OMG</li>
+                    <li>05. だけど元気</li>
+                    <li>06. 思ったよりも</li>
+                    <li>07. ブルーハワイ</li>
+                    <li>08. Yossy</li>
+                    <li>09. Peace club</li>
+                    <li>10. 軽自動車</li>
+                    <li>bonus: NIGIRI</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+      <%- include('../_inc/components/_footer') %>
+    </div>
+  </div>
+</body>
+</html>

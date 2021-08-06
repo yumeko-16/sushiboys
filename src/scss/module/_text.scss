@@ -1,0 +1,10 @@
+@use "../import" as i;
+
+.text {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  color: i.$color-black;
+  font-weight: bold;
+}

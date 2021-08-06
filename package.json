@@ -1,0 +1,53 @@
+{
+  "name": "sushiboys",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "run-p serve ejs:watch ejs:lint sass js imagemin:watch",
+    "build": "run-s ejs sass:build js:build remove",
+    "serve": "webpack serve",
+    "sass": "sass src/scss/:dist/css/ --style=compressed --no-source-map --no-charset --watch",
+    "sass:build": "sass src/scss:dist/css/ --style=compressed --no-source-map --no-charset",
+    "js": "webpack --mode development -w",
+    "js:build": "webpack --mode production -w",
+    "ejs": "ejs-cli -b src/ejs/ \"/**/*.ejs\" -o dist/",
+    "ejs:watch": "chokidar \"src/ejs/\" -c \"npm run ejs\" --initial",
+    "ejs:lint": "ejslint src/ejs/",
+    "remove": "rm -rfv dist/_inc/",
+    "prettier": "prettier --write \"src/js/*.js\"",
+    "imagemin": "node imagemin.js",
+    "imagemin:watch": "onchange \"src/img\" -- npm run imagemin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sihoo-milk/sushiboys.git"
+  },
+  "author": "Tomohiro Maeno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sihoo-milk/sushiboys/issues"
+  },
+  "homepage": "https://github.com/Sihoo-milk/sushiboys#readme",
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "babel-loader": "^8.2.2",
+    "chokidar-cli": "^3.0.0",
+    "ejs-cli": "^2.2.1",
+    "ejs-lint": "^1.2.1",
+    "imagemin": "^8.0.0",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-keep-folder": "^5.3.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.1.0",
+    "prettier": "^2.3.2",
+    "sass": "^1.35.2",
+    "webpack": "^5.45.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}

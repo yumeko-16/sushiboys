@@ -1,0 +1,71 @@
+@use "../import" as i;
+
+.sns {
+  &__list {
+    display: flex;
+    justify-content: center;
+    padding: i.get_vw-sm(15) 0;
+    @include i.pc-screen {
+      padding: i.get_vw-tb(25) 0;
+    }
+    @include i.pc-screen {
+      padding: 25px 0;
+    }
+  }
+  &__item {
+    padding-inline-start: i.get_vw-sm(10);
+    padding-inline-end: i.get_vw-sm(10);
+    @include i.tb-screen {
+      padding-inline-start: i.get_vw-tb(10);
+      padding-inline-end: i.get_vw-tb(10);
+    }
+    @include i.pc-screen {
+      padding-inline-start: 10px;
+      padding-inline-end: 10px;
+    }
+  }
+  /* ボタン全体 */
+  &__link {
+    display: inline-block;
+    position: relative;
+    width: i.get_vw-sm(40);
+    height: i.get_vw-sm(40);
+    border-radius: 50%;
+    background-color: i.$color-black;
+    color: i.$color-white;
+    font-size: i.get_vw-sm(20);
+    text-decoration: none;
+    transition: 0.5s;
+    @include i.tb-screen {
+      width: i.get_vw-sm(30);
+      height: i.get_vw-sm(30);
+      font-size: i.get_vw-sm(16);
+    }
+    @include i.pc-screen {
+      width: 50px;
+      height: 50px;
+      font-size: 30px;
+    }
+    /* アイコンを真ん中に */
+    i {
+      position: absolute;
+      top: 50%;
+      left: 52%;
+      transform: translate(-50%, -50%);
+    }
+    /* Twitterマウスホバー時 */
+    &--twitter:hover {
+      background: linear-gradient(135deg, #13f1fc 0%, #0470dc 100%);
+    }
+    /* Instagramマウスホバー時 */
+    &--instagram:hover {
+      background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
+        no-repeat;
+      background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
+    }
+    /* YouTubeマウスホバー時 */
+    &--youtube:hover {
+      background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
+    }
+  }
+}

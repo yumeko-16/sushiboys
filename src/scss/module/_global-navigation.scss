@@ -1,0 +1,141 @@
+@use "../import" as i;
+
+.global-navigation {
+  &--sp {
+    @include i.tb-screen {
+      display: none;
+    }
+    &__selector {
+      position: relative;
+      width: i.get_vw-sm(90);
+      margin: 0 auto;
+      &::before {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        color: i.$color-white;
+        content: '▼';
+      }
+    }
+    &__title {
+      color: i.$color-white;
+      font-size: i.get_vw-sm(28);
+      line-height: 1;
+      cursor: pointer;
+    }
+    &__menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      transition: all 0.5s;
+      visibility: hidden;
+      opacity: 0;
+      &.js-open {
+        visibility: visible;
+        opacity: 1;
+        z-index: 2;
+      }
+    }
+    &__close {
+      position: absolute;
+      top: i.get_vw-sm(20);
+      right: i.get_vw-sm(20);
+      width: i.get_vw-sm(50);
+      height: i.get_vw-sm(50);
+      cursor: pointer;
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        width: 100%; /*バツ線の長さ*/
+        height: i.get_vw-sm(5); /*バツ線の太さ*/
+        background: i.$color-white;
+        transform: rotate(45deg);
+        transform-origin: 0% 50%;
+        position: absolute;
+        left: 14%;
+      }
+      &::after {
+        transform: rotate(-45deg);
+        transform-origin: 100% 50%;
+        left: auto;
+        right: 14%;
+      }
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+    }
+    &__link {
+      display: block;
+      color: i.$color-white;
+      font-size: i.get_vw-sm(28);
+      line-height: 1;
+    }
+    &__item {
+      width: i.get_vw-sm(300);
+      padding: i.get_vw-sm(20) i.get_vw-sm(70);
+      text-align: center;
+    }
+  }
+  &--pc {
+    display: none;
+    @include i.tb-screen {
+      display: block;
+    }
+    &__list {
+      @include i.tb-screen {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+      }
+    }
+    &__item {
+      padding-inline-start: i.get_vw-sm(15);
+      padding-inline-end: i.get_vw-sm(15);
+      @include i.tb-screen {
+        padding-inline-start: i.get_vw-tb(15);
+        padding-inline-end: i.get_vw-tb(15);
+      }
+      @include i.pc-screen {
+        padding-inline-start: 15px;
+        padding-inline-end: 15px;
+      }
+    }
+    &__link {
+      display: block;
+      color: i.$color-white;
+      line-height: 1;
+      @include i.tb-screen {
+        font-size: i.get_vw-tb(24);
+      }
+      @include i.pc-screen {
+        font-size: 28px;
+      }
+      &.current {
+        color: i.$color-black;
+      }
+    }
+  }
+  &__wrapper {
+    padding: i.get_vw-sm(15) 0;
+    @include i.pc-screen {
+      padding: i.get_vw-tb(15) 0;
+    }
+    @include i.pc-screen {
+      padding: 25px 0;
+    }
+  }
+}

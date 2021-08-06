@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%
+  const localmeta = {
+    title: 'SUSHIBOYS',
+    description: ''
+  };
+  const localfile = {
+    css: '/css/home.css',
+    js: '/js/home.js'
+  };
+  %>
+  <%- include('./_inc/_head', {meta: localmeta, file: localfile}) %>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="container">
+      <%- include('./_inc/components/_header') %>
+      <main class="main">
+        <%- include('./_inc/components/home/_hero') %>
+        <%- include('./_inc/components/home/_biography') %>
+      </main>
+      <%- include('./_inc/components/_footer') %>
+    </div>
+  </div>
+</body>
+</html>

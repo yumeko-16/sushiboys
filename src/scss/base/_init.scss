@@ -1,0 +1,100 @@
+@use "../import" as i;
+
+// ** サイト共通設定
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: i.$font;
+  font-size: i.get_vw-sm(16);
+  @include i.tb-screen {
+    font-size: i.get_vw-tb(16);
+  }
+  @include i.pc-screen {
+    font-size: 16px;
+  }
+  line-height: i.$lineHeight;
+  letter-spacing: 0.1em;
+}
+
+div {
+  display: block;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header {
+  display: block;
+}
+
+h1 {
+  display: block;
+  margin-block-start: initial;
+  margin-block-end: initial;
+  margin-inline-start: initial;
+  margin-inline-end: initial;
+  font-size: initial;
+  font-weight: initial;
+}
+
+h2 {
+  display: block;
+  font-size: initial;
+  margin-block-start: initial;
+  margin-block-end: initial;
+  margin-inline-start: initial;
+  margin-inline-end: initial;
+  font-weight: initial;
+}
+
+p {
+  display: block;
+  margin-block-start: initial;
+  margin-block-end: initial;
+  margin-inline-start: initial;
+  margin-inline-end: initial;
+}
+
+nav {
+  display: block;
+}
+
+ul {
+  display: block;
+  list-style-type: none;
+  margin-block-start: initial;
+  margin-block-end: initial;
+  margin-inline-start: initial;
+  margin-inline-end: initial;
+  padding-inline-start: initial;
+}
+
+li {
+  display: block;
+  text-align: initial;
+}
+
+dl {
+  display: block;
+  margin-block-start: initial;
+  margin-block-end: initial;
+  margin-inline-start: initial;
+  margin-inline-end: initial;
+}
+
+dt {
+  display: block;
+}
+
+dd {
+  display: block;
+  margin-inline-start: initial;
+}

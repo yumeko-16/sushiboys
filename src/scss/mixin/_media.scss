@@ -1,0 +1,14 @@
+@use "../setting/config";
+
+// ** mixin
+// * ブレイクポイント
+@mixin tb-screen {
+  @media (min-width: (config.$breakPoint-tb)) {
+    @content;
+  }
+}
+@mixin pc-screen {
+  @media (min-width: (config.$breakPoint-pc)) {
+    @content;
+  }
+}

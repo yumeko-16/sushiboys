@@ -1,0 +1,21 @@
+@use "../import" as i;
+
+.wrapper {
+  padding-block-start: i.get_vw-sm(40);
+  padding-block-end: i.get_vw-sm(40);
+  padding-inline-start: i.get_vw-sm(30);
+  padding-inline-end: i.get_vw-sm(30);
+  background-color: i.$color-pink;
+  @include i.tb-screen {
+    padding-block-start: i.get_vw-tb(60);
+    padding-block-end: i.get_vw-tb(60);
+    padding-inline-start: i.get_vw-tb(30);
+    padding-inline-end: i.get_vw-tb(30);
+  }
+  @include i.pc-screen {
+    padding-block-start: 80px;
+    padding-block-end: 80px;
+    padding-inline-start: 50px;
+    padding-inline-end: 50px;
+  }
+}
