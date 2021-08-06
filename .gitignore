@@ -5,5 +5,4 @@ node_modules/
 *.sass.map
 *.scss.map
 dist/*
-!/dist/img
 !/dist/favicon.ico
