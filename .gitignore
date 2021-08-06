@@ -1,8 +1,0 @@
-.DS_Store
-node_modules/
-.sass-cache/
-*.css.map
-*.sass.map
-*.scss.map
-dist/*
-!/dist/favicon.ico
