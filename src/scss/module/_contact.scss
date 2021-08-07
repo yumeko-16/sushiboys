@@ -108,8 +108,14 @@
     }
   }
   &__button-icon {
-    margin-inline-end: i.get_vw-sm(2);
+    margin-inline-end: i.get_vw-sm(10);
     color: i.$color-white;
+    @include i.tb-screen {
+      margin-inline-end: i.get_vw-tb(10);
+    }
+    @include i.pc-screen {
+      margin-inline-end: 10px;
+    }
   }
   &__button-text {
     color: i.$color-white;
