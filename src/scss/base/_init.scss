@@ -98,3 +98,86 @@ dd {
   display: block;
   margin-inline-start: initial;
 }
+
+form {
+  display: initial;
+  margin-top: initial;
+}
+
+input {
+  -webkit-writing-mode: initial;
+  text-rendering: initial;
+  color: initial;
+  letter-spacing: initial;
+  word-spacing: initial;
+  text-transform: initial;
+  text-indent: initial;
+  text-shadow: initial;
+  display: initial;
+  text-align: initial;
+  appearance: initial;
+  background-color: initial;
+  -webkit-rtl-ordering: initial;
+  cursor: initial;
+  margin: initial;
+  font: initial;
+  padding: initial;
+  border-width: initial;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+}
+
+textarea {
+  -webkit-writing-mode: initial;
+  text-rendering: initial;
+  color: initial;
+  letter-spacing: initial;
+  word-spacing: initial;
+  text-transform: initial;
+  text-indent: initial;
+  text-shadow: initial;
+  display: initial;
+  text-align: initial;
+  appearance: initial;
+  background-color: initial;
+  -webkit-rtl-ordering: initial;
+  flex-direction: initial;
+  resize: initial;
+  cursor: initial;
+  white-space: initial;
+  overflow-wrap: initial;
+  column-count: initial;
+  margin: initial;
+  font: initial;
+  border-width: initial;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  padding: initial;
+}
+
+button {
+  appearance: initial;
+  -webkit-writing-mode: initial;
+  text-rendering: initial;
+  color: initial;
+  letter-spacing: initial;
+  word-spacing: initial;
+  text-transform: initial;
+  text-indent: initial;
+  text-shadow: initial;
+  display: initial;
+  text-align: initial;
+  align-items: initial;
+  cursor: initial;
+  background-color: initial;
+  box-sizing: initial;
+  margin: initial;
+  font: initial;
+  padding: initial;
+  border-width: initial;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+}

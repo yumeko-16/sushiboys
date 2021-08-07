@@ -10,6 +10,7 @@ module.exports = {
     home: __dirname + '/src/home.js',
     news: __dirname + '/src/news.js',
     discography: __dirname + '/src/discography.js',
+    contact: __dirname + '/src/contact.js',
   },
   output: {
     path: __dirname + '/dist/js',

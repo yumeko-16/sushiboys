@@ -1,10 +1,18 @@
 @use "../import" as i;
 
 .text {
-  margin-block-start: 1em;
-  margin-block-end: 1em;
   margin-inline-start: 0;
   margin-inline-end: 0;
   color: i.$color-black;
   font-weight: bold;
+  &:not(:first-child) {
+    margin-block-start: i.get_vw-tb(40);
+    margin-block-end: 0;
+    @include i.tb-screen {
+      margin-block-start: i.get_vw-tb(40);
+    }
+    @include i.pc-screen {
+      margin-block-start: 40px;
+    }
+  }
 }
