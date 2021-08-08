@@ -12,15 +12,18 @@
     padding-inline-start: i.get_vw-sm(15);
     padding-inline-end: i.get_vw-sm(15);
     border: none;
+    border-radius: i.get_vw-sm(5);
     background: i.$color-white;
     color: i.$color-black;
     font-size: i.get_vw-sm(16);
     line-height: 1.6;
+    letter-spacing: 0.1em;
     @include i.tb-screen {
       padding-block-start: i.get_vw-tb(15);
       padding-block-end: i.get_vw-tb(15);
       padding-inline-start: i.get_vw-tb(15);
       padding-inline-end: i.get_vw-tb(15);
+      border-radius: i.get_vw-tb(5);
       font-size: i.get_vw-tb(16);
     }
     @include i.pc-screen {
@@ -28,6 +31,7 @@
       padding-block-end: 15px;
       padding-inline-start: 15px;
       padding-inline-end: 15px;
+      border-radius: 5px;
       font-size: 16px;
     }
     &:not(:first-child) {
@@ -44,13 +48,14 @@
       color: i.$color-gray;
     }
     &:focus-visible {
-      outline: i.get_vw-sm(3) solid i.$color-black;
+      box-shadow: 0 0 i.get_vw-sm(5) i.get_vw-sm(1) i.$color-black;
+      outline: none;
       outline-offset: 0;
       @include i.tb-screen {
-        outline: i.get_vw-tb(2) solid i.$color-black;
+        box-shadow: 0 0 i.get_vw-tb(5) i.get_vw-tb(1) i.$color-black;
       }
       @include i.pc-screen {
-        outline: 2px solid i.$color-black;
+        box-shadow: 0 0 5px 1px i.$color-black;
       }
     }
   }
@@ -82,25 +87,35 @@
     }
   }
   &__button {
+    border-radius: i.get_vw-sm(5);
     background-color: i.$color-white;
+    @include i.tb-screen {
+      border-radius: i.get_vw-tb(5);
+    }
+    @include i.pc-screen {
+      border-radius: 5px;
+    }
   }
   &__button-inner {
     padding-block-start: i.get_vw-sm(15);
     padding-block-end: i.get_vw-sm(15);
     padding-inline-start: i.get_vw-sm(25);
     padding-inline-end: i.get_vw-sm(25);
+    border-radius: i.get_vw-sm(5);
     background-color: i.$color-black;
     @include i.tb-screen {
       padding-block-start: i.get_vw-tb(15);
       padding-block-end: i.get_vw-tb(15);
       padding-inline-start: i.get_vw-tb(25);
       padding-inline-end: i.get_vw-tb(25);
+      border-radius: i.get_vw-tb(5);
     }
     @include i.pc-screen {
       padding-block-start: 15px;
       padding-block-end: 15px;
       padding-inline-start: 25px;
       padding-inline-end: 25px;
+      border-radius: 5px;
     }
     &:hover {
       opacity: 0.9;
