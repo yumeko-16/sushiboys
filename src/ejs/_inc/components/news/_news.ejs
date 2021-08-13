@@ -1,46 +1,24 @@
         <section class="section">
           <div class="news">
             <ul>
+              <%
+                let posts = newsData.posts.slice(0,10);
+              %>
+              <% posts.forEach(function(post) { %>
               <li class="news__item">
                 <div class="news__thumbnail">
                   <a href="">
-                    <img class="news__thumbnail-image" src="/img/news/20210408_flyer-001.jpg" alt="agartha20210408">
+                    <img class="news__thumbnail-image" src="<%- post.images[0] %>" alt="">
                   </a>
                 </div>
                 <div class="news__caption">
-                  <time class="news__caption-time">2021.3.18</time>
+                  <time class="news__caption-date"><%- post.date %></time>
                   <a href="">
-                    <h2 class="news__caption-title">4/8『agartha20210408』 at Pangea(大阪）開演時間変更と払い戻しのお知らせ。</h2>
+                    <h2 class="news__caption-title"><%- post.title %></h2>
                   </a>
                 </div>
               </li>
-              <li class="news__item">
-                <div class="news__thumbnail">
-                  <img class="news__thumbnail-image" src="/img/news/20210408_flyer-001.jpg" alt="agartha20210408">
-                </div>
-                <div class="news__caption">
-                  <time class="news__caption-time">2021.3.18</time>
-                  <h2 class="news__caption-title">4/8『agartha20210408』 at Pangea(大阪）開演時間変更と払い戻しのお知らせ。</h2>
-                </div>
-              </li>
-              <li class="news__item">
-                <div class="news__thumbnail">
-                  <img class="news__thumbnail-image" src="/img/news/20210408_flyer-001.jpg" alt="agartha20210408">
-                </div>
-                <div class="news__caption">
-                  <time class="news__caption-time">2021.3.18</time>
-                  <h2 class="news__caption-title">4/8『agartha20210408』 at Pangea(大阪）開演時間変更と払い戻しのお知らせ。</h2>
-                </div>
-              </li>
-              <li class="news__item">
-                <div class="news__thumbnail">
-                  <img class="news__thumbnail-image" src="/img/news/20210408_flyer-001.jpg" alt="agartha20210408">
-                </div>
-                <div class="news__caption">
-                  <time class="news__caption-time">2021.3.18</time>
-                  <h2 class="news__caption-title">4/8『agartha20210408』 at Pangea(大阪）開演時間変更と払い戻しのお知らせ。</h2>
-                </div>
-              </li>
+              <% }); %>
             </ul>
           </div>
         </section>

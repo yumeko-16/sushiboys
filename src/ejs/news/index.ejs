@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+  <%- include('../_data/_news') %>
   <%
   let localmeta = {
     title: 'NEWS | SUSHIBOYS',
@@ -10,6 +11,7 @@
     css: '/css/news.css',
     js: '/js/news.js'
   };
+  let newsData = news();
   %>
   <%- include('../_inc/_head', {meta: localmeta, file: localfile}) %>
 </head>
@@ -18,7 +20,7 @@
     <div class="container">
       <%- include('../_inc/components/_header') %>
       <main class="main">
-        <%- include('../_inc/components/news/_news') %>
+        <%- include('../_inc/components/news/_news', {newsData: newsData}) %>
       </main>
       <%- include('../_inc/components/_footer') %>
     </div>
