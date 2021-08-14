@@ -1,15 +1,13 @@
 <section class="section">
-  <div class="news-category">
-    <ul>
-      <% let posts = newsData.posts.slice(0,10); %>
-      <% posts.forEach(function(post) { %>
-      <li class="news-category__item">
-        <a href="">
-          <time class="news-category__date"><%- post.date %></time>
-          <h2 class="news-category__title"><%- post.title %></h2>
-        </a>
-      </li>
-      <% }); %>
-    </ul>
-  </div>
+  <ul class="news-category__list">
+    <% let posts = newsData.posts.slice(0,10); %>
+    <% posts.forEach(function(post) { %>
+    <li class="news-category__item">
+      <a href="">
+        <time class="news-category__date"><%- post.date %></time>
+        <h2 class="news-category__title"><%- post.title %></h2>
+      </a>
+    </li>
+    <% }); %>
+  </ul>
 </section>
