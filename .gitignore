@@ -6,4 +6,4 @@ node_modules/
 *.sass.map
 *.scss.map
 
-dist/_*
+dist/_*/
