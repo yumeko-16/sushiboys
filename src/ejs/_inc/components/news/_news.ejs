@@ -1,24 +1,15 @@
-        <section class="section">
-          <div class="news">
-            <ul>
-              <%
-                let posts = newsData.posts.slice(0,10);
-              %>
-              <% posts.forEach(function(post) { %>
-              <li class="news__item">
-                <div class="news__thumbnail">
-                  <a href="">
-                    <img class="news__thumbnail-image" src="<%- post.images[0] %>" alt="">
-                  </a>
-                </div>
-                <div class="news__caption">
-                  <time class="news__caption-date"><%- post.date %></time>
-                  <a href="">
-                    <h2 class="news__caption-title"><%- post.title %></h2>
-                  </a>
-                </div>
-              </li>
-              <% }); %>
-            </ul>
-          </div>
-        </section>
+<section class="section">
+  <div class="news-category">
+    <ul>
+      <% let posts = newsData.posts.slice(0,10); %>
+      <% posts.forEach(function(post) { %>
+      <li class="news-category__item">
+        <a href="">
+          <time class="news-category__date"><%- post.date %></time>
+          <h2 class="news-category__title"><%- post.title %></h2>
+        </a>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
+</section>
