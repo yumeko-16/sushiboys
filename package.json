@@ -14,7 +14,7 @@
     "ejs": "ejs-cli -b src/ejs/ \"/**/*.ejs\" -o dist/",
     "ejs:watch": "chokidar \"src/ejs/\" -c \"npm run ejs\" --initial",
     "ejs:lint": "ejslint src/ejs/",
-    "remove": "rm -rfv dist/_inc/",
+    "remove": "rm -rfv dist/_inc/ dist/_data/",
     "prettier": "prettier --write \"src/js/*.js\"",
     "imagemin": "node imagemin.js",
     "imagemin:watch": "onchange \"src/img\" -- npm run imagemin"
