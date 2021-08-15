@@ -23,7 +23,11 @@
       }
     }
   }
+  &__link {
+    display: block;
+  }
   &__date {
+    display: block;
     color: i.$color-white;
     font-weight: bold;
   }
