@@ -6,23 +6,22 @@
       display: none;
     }
     &__selector {
-      position: relative;
-      width: i.get_vw-sm(90);
+      width: 100%;
       margin: 0 auto;
-      &::before {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        right: 0;
-        color: i.$color-white;
-        content: '▼';
-      }
     }
     &__title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: i.$color-white;
       font-size: i.get_vw-sm(28);
-      line-height: 1;
       cursor: pointer;
+      &::after {
+        margin-inline-start: i.get_vw-sm(10);
+        color: i.$color-white;
+        font-size: i.get_vw-sm(20);
+        content: "▼";
+      }
     }
     &__menu {
       position: fixed;
@@ -49,7 +48,7 @@
       cursor: pointer;
       &::before,
       &::after {
-        content: '';
+        content: "";
         display: block;
         width: 100%; /*バツ線の長さ*/
         height: i.get_vw-sm(5); /*バツ線の太さ*/
