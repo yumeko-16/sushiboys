@@ -1,0 +1,48 @@
+@use "../import" as i;
+
+.news-category {
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+  &__item {
+    margin-block-start: i.get_vw-sm(40);
+    @include i.tb-screen {
+      margin-block-start: i.get_vw-tb(60);
+    }
+    @include i.pc-screen {
+      margin-block-start: 80px;
+    }
+    &:first-child {
+      margin-block-start: 0;
+      @include i.tb-screen {
+        margin-block-start: 0;
+      }
+      @include i.pc-screen {
+        margin-block-start: 0;
+      }
+    }
+  }
+  &__link {
+    display: block;
+  }
+  &__date {
+    display: block;
+    color: i.$color-white;
+    font-weight: bold;
+  }
+  &__title {
+    margin-block-start: i.get_vw-sm(10);
+    color: i.$color-white;
+    font-size: i.get_vw-sm(16);
+    font-weight: bold;
+    @include i.tb-screen {
+      margin-block-start: i.get_vw-tb(10);
+      font-size: i.get_vw-tb(16);
+    }
+    @include i.pc-screen {
+      margin-block-start: 10px;
+      font-size: 16px;
+    }
+  }
+}

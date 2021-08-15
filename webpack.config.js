@@ -8,7 +8,8 @@ module.exports = {
   },
   entry: {
     home: __dirname + '/src/home.js',
-    news: __dirname + '/src/news.js',
+    newsCategory: __dirname + '/src/newsCategory.js',
+    newsDetail: __dirname + '/src/newsDetail.js',
     discography: __dirname + '/src/discography.js',
     contact: __dirname + '/src/contact.js',
   },

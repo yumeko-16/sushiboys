@@ -1,0 +1,66 @@
+@use "../import" as i;
+
+.news-category {
+  &__heading {
+    width: 100%;
+  }
+  &__date {
+    display: block;
+    margin-block-start: i.get_vw-sm(40);
+    color: i.$color-white;
+    font-weight: bold;
+    @include i.tb-screen {
+      margin-block-start: i.get_vw-tb(40);
+    }
+    @include i.pc-screen {
+      margin-block-start: 40px;
+    }
+  }
+  &__title {
+    margin-block-start: i.get_vw-sm(10);
+    color: i.$color-white;
+    font-size: i.get_vw-sm(20);
+    font-weight: bold;
+    @include i.tb-screen {
+      margin-block-start: i.get_vw-tb(10);
+      font-size: i.get_vw-tb(24);
+    }
+    @include i.pc-screen {
+      margin-block-start: 10px;
+      font-size: 28px;
+    }
+  }
+  &__text-wrap {
+    margin-block-start: i.get_vw-sm(40);
+    @include i.tb-screen {
+      margin-block-start: i.get_vw-tb(40);
+    }
+    @include i.pc-screen {
+      margin-block-start: 40px;
+    }
+  }
+  &__text {
+    margin-block-start: i.get_vw-sm(20);
+    color: i.$color-black;
+    font-weight: bold;
+    @include i.tb-screen {
+      margin-block-start: i.get_vw-tb(20);
+    }
+    @include i.pc-screen {
+      margin-block-start: 20px;
+    }
+    &:first-child {
+      margin-block-start: 0;
+    }
+  }
+  &__text-link {
+    border-bottom: i.get_vw-sm(1) solid i.$color-blue;
+    color: i.$color-blue;
+    @include i.tb-screen {
+      border-bottom: i.get_vw-tb(1) solid i.$color-blue;
+    }
+    @include i.pc-screen {
+      border-bottom: 1px solid i.$color-blue;
+    }
+  }
+}
