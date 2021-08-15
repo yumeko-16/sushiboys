@@ -41,7 +41,7 @@
   }
   &__text {
     margin-block-start: i.get_vw-sm(20);
-    color: i.$color-black;
+    color: i.$color-white;
     font-weight: bold;
     @include i.tb-screen {
       margin-block-start: i.get_vw-tb(20);
