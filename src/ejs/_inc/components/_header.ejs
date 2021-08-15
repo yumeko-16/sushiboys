@@ -6,7 +6,27 @@
   <nav class="global-navigation__wrapper">
     <div class="global-navigation--sp">
       <div id="js-global-navigation--sp__selector" class="global-navigation--sp__selector">
-        <div class="global-navigation--sp__title">MENU</div>
+        <div class="global-navigation--sp__title">
+          <% let text = ''; %>
+          <% let page = current; %>
+          <%
+          switch (page) {
+            case "home":
+              text = 'HOME';
+              break;
+            case "news":
+              text = 'NEWS';
+              break;
+            case "discography":
+              text = 'DISCOGRAPHY';
+              break;
+            case "contact":
+              text = 'CONTACT'
+              break;
+          }
+          %>
+          <%= text %>
+        </div>
       </div>
       <div id="js-global-navigation--sp__menu" class="global-navigation--sp__menu">
         <div id="global-navigation--sp__close" class="global-navigation--sp__close"></div>
