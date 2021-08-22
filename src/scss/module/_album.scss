@@ -6,10 +6,10 @@
     flex-direction: column;
   }
   &__item {
-    margin-block-start: i.get_vw-sm(40);
+    margin-block-start: i.get_vw-sm(80);
     @include i.tb-screen {
       display: flex;
-      margin-block-start: i.get_vw-tb(60);
+      margin-block-start: i.get_vw-tb(80);
     }
     @include i.pc-screen {
       margin-block-start: 80px;
