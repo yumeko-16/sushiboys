@@ -9,7 +9,7 @@
     cursor: pointer;
   }
   &__title {
-    color: i.$color-black;
+    color: i.$color-white;
     font-size: i.get_vw-sm(28);
     line-height: 1;
     @include i.tb-screen {
@@ -20,7 +20,7 @@
     }
   }
   &__title-arrow {
-    color: i.$color-black;
+    color: i.$color-white;
   }
   &__contents {
     height: 0;
