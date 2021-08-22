@@ -34,14 +34,14 @@
     padding-inline-start: i.get_vw-sm(10);
     padding-inline-end: i.get_vw-sm(10);
     @include i.tb-screen {
-      padding-block-start: i.get_vw-tb(10);
-      padding-block-end: i.get_vw-tb(10);
+      padding-block-start: 0;
+      padding-block-end: 0;
       padding-inline-start: i.get_vw-tb(20);
       padding-inline-end: i.get_vw-tb(20);
     }
     @include i.pc-screen {
-      padding-block-start: 10px;
-      padding-block-end: 10px;
+      padding-block-start: 0;
+      padding-block-end: 0;
       padding-inline-start: 30px;
       padding-inline-end: 30px;
     }
