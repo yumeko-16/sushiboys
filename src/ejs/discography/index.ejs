@@ -17,13 +17,11 @@
 </head>
 <body>
   <div class="wrapper">
-    <div class="container">
-      <%- include('../_inc/components/_header', {current: 'discography'}) %>
-      <main class="main">
-        <%- include('../_inc/components/discography/_album', {discographyData: discographyData}) %>
-      </main>
-      <%- include('../_inc/components/_footer') %>
-    </div>
+    <%- include('../_inc/components/_header', {current: 'discography'}) %>
+    <main class="main">
+      <%- include('../_inc/components/discography/_album', {discographyData: discographyData}) %>
+    </main>
+    <%- include('../_inc/components/_footer') %>
   </div>
 </body>
 </html>
