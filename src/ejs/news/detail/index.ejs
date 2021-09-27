@@ -17,13 +17,11 @@
 </head>
 <body>
   <div class="wrapper">
-    <div class="container">
-      <%- include('../../_inc/components/_header', {current: 'news'}) %>
-      <main class="main">
-        <%- include('../../_inc/components/news/detail/news-detail') %>
-      </main>
-      <%- include('../../_inc/components/_footer') %>
-    </div>
+    <%- include('../../_inc/components/_header', {current: 'news'}) %>
+    <main class="main">
+      <%- include('../../_inc/components/news/detail/news-detail') %>
+    </main>
+    <%- include('../../_inc/components/_footer') %>
   </div>
 </body>
 </html>
