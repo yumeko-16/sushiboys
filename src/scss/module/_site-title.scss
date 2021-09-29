@@ -1,14 +1,6 @@
 @use "../import" as i;
 
 .site-title {
-  margin-bottom: i.get_vw-sm(25);
-  text-align: center;
-  @include i.tb-screen {
-    margin-bottom: i.get_vw-tb(25);
-  }
-  @include i.pc-screen {
-    margin-bottom: 35px;
-  }
   &__link {
     display: block;
     color: i.$color-white;
