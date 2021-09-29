@@ -1,0 +1,11 @@
+@use "../import" as i;
+
+.header {
+  padding: i.get_vw-sm(15) 0;
+  @include i.pc-screen {
+    padding: i.get_vw-tb(25) 0;
+  }
+  @include i.pc-screen {
+    padding: 25px 0;
+  }
+}

@@ -6,21 +6,24 @@
     flex-direction: column;
   }
   &__item {
-    margin-block-start: i.get_vw-sm(80);
+    padding-block-start: i.get_vw-sm(40);
+    padding-block-end: i.get_vw-sm(40);
     @include i.tb-screen {
-      margin-block-start: i.get_vw-tb(80);
+      padding-block-start: i.get_vw-tb(40);
+      padding-block-end: i.get_vw-tb(40);
     }
     @include i.pc-screen {
-      margin-block-start: 80px;
+      padding-block-start: 40px;
+      padding-block-end: 40px;
     }
     &:first-child {
-      margin-block-start: 0;
-      @include i.tb-screen {
-        margin-block-start: 0;
-      }
-      @include i.pc-screen {
-        margin-block-start: 0;
-      }
+      padding-block-start: 0;
+    }
+    &:last-child {
+      padding-block-end: 0;
+    }
+    &:hover {
+      opacity: 0.8;
     }
   }
   &__link {

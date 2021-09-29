@@ -1,6 +1,14 @@
 @use "../import" as i;
 
 .global-navigation {
+  margin-top: i.get_vw-sm(40);
+  text-align: center;
+  @include i.tb-screen {
+    margin-top: i.get_vw-tb(40);
+  }
+  @include i.pc-screen {
+    margin-top: 40px;
+  }
   &--sp {
     @include i.tb-screen {
       display: none;
@@ -15,6 +23,7 @@
       justify-content: center;
       color: i.$color-white;
       font-size: i.get_vw-sm(28);
+      line-height: 1;
       cursor: pointer;
       &::after {
         margin-inline-start: i.get_vw-sm(10);
@@ -82,13 +91,12 @@
       padding-inline-start: 0;
       padding-inline-end: 0;
       background: radial-gradient(transparent, #000 100%);
+      font-size: i.get_vw-sm(28);
       overflow-y: scroll;
     }
     &__link {
       display: block;
       color: i.$color-white;
-      font-size: i.get_vw-sm(28);
-      line-height: 1;
     }
     &__item {
       width: i.get_vw-sm(300);
@@ -115,37 +123,24 @@
     &__item {
       padding-inline-start: i.get_vw-sm(15);
       padding-inline-end: i.get_vw-sm(15);
+      line-height: 1;
       @include i.tb-screen {
         padding-inline-start: i.get_vw-tb(15);
         padding-inline-end: i.get_vw-tb(15);
+        font-size: i.get_vw-tb(24);
       }
       @include i.pc-screen {
         padding-inline-start: 15px;
         padding-inline-end: 15px;
+        font-size: 28px;
       }
     }
     &__link {
       display: block;
       color: i.$color-white;
-      line-height: 1;
-      @include i.tb-screen {
-        font-size: i.get_vw-tb(24);
-      }
-      @include i.pc-screen {
-        font-size: 28px;
-      }
       &.current {
         color: i.$color-black;
       }
-    }
-  }
-  &__wrapper {
-    padding: i.get_vw-sm(15) 0;
-    @include i.pc-screen {
-      padding: i.get_vw-tb(15) 0;
-    }
-    @include i.pc-screen {
-      padding: 25px 0;
     }
   }
 }

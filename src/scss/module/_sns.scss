@@ -1,18 +1,10 @@
 @use "../import" as i;
 
 .sns {
-  &__list {
-    display: flex;
-    justify-content: center;
-    padding: i.get_vw-sm(15) 0;
-    @include i.pc-screen {
-      padding: i.get_vw-tb(25) 0;
-    }
-    @include i.pc-screen {
-      padding: 25px 0;
-    }
-  }
+  display: flex;
+  justify-content: center;
   &__item {
+    display: flex;
     padding-inline-start: i.get_vw-sm(10);
     padding-inline-end: i.get_vw-sm(10);
     @include i.tb-screen {
@@ -59,8 +51,7 @@
     }
     /* Instagramマウスホバー時 */
     &--instagram:hover {
-      background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%)
-        no-repeat;
+      background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
       background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
     }
     /* YouTubeマウスホバー時 */

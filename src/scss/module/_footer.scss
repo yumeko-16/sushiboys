@@ -1,5 +1,12 @@
+@use "../import" as i;
+
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
+  padding: i.get_vw-sm(15) 0;
+  @include i.pc-screen {
+    padding: i.get_vw-tb(25) 0;
+  }
+  @include i.pc-screen {
+    padding: 25px 0;
+  }
 }
