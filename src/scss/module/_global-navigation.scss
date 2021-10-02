@@ -2,12 +2,15 @@
 
 .global-navigation {
   margin-top: i.get_vw-sm(40);
+  padding: i.get_vw-sm(15) 0;
   text-align: center;
   @include i.tb-screen {
     margin-top: i.get_vw-tb(40);
+    padding: i.get_vw-tb(25) 0;
   }
   @include i.pc-screen {
     margin-top: 40px;
+    padding: 25px 0;
   }
   &--sp {
     @include i.tb-screen {
@@ -133,6 +136,9 @@
         padding-inline-start: 15px;
         padding-inline-end: 15px;
         font-size: 28px;
+      }
+      &:hover {
+        opacity: 0.8;
       }
     }
     &__link {
