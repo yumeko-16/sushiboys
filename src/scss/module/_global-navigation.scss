@@ -137,6 +137,9 @@
         padding-inline-end: 15px;
         font-size: 28px;
       }
+      &:hover {
+        opacity: 0.8;
+      }
     }
     &__link {
       display: block;
