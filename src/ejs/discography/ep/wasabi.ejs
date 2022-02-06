@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%- include('../../_data/_discography'); %>
+  <%
+  let localmeta = {
+    title: 'DISCOGRAPHY WASABI | SUSHIBOYS',
+    description: ''
+  };
+  let localfile = {
+    css: '/css/discography-detail.css',
+    js: '/js/discographyDetail.js'
+  };
+  let discographyData = discography();
+  %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+</head>
+<body>
+  <div class="wrapper">
+    <%- include('../../_inc/components/_header', {current: 'discography'}); %>
+    <main class="main">
+      <%- include('../../_inc/components/discography/ep/_wasabi', {discographyData: discographyData}); %>
+    </main>
+    <%- include('../../_inc/components/_footer'); %>
+  </div>
+</body>
+</html>

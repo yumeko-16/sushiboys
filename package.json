@@ -17,7 +17,7 @@
     "remove": "rm -rfv dist/_inc/ dist/_data/",
     "prettier": "prettier --write \"src/js/*.js\"",
     "imagemin": "node imagemin.js",
-    "imagemin:watch": "onchange \"src/img\" -- npm run imagemin"
+    "imagemin:watch": "onchange \"src/img/**/*.{jpg, png, gif, svg}\" -- npm run imagemin"
   },
   "repository": {
     "type": "git",
@@ -46,6 +46,7 @@
     "onchange": "^7.1.0",
     "prettier": "^2.3.2",
     "sass": "^1.35.2",
+    "swiper": "^7.4.1",
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"

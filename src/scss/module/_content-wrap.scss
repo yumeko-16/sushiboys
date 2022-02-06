@@ -1,0 +1,11 @@
+@use "../import" as i;
+
+.content-wrap {
+  margin-block-start: i.get_vw-sm(40);
+  @include i.tb-screen {
+    margin-block-start: i.get_vw-tb(40);
+  }
+  @include i.pc-screen {
+    margin-block-start: 40px;
+  }
+}

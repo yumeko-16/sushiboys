@@ -1,14 +1,5 @@
 @use "../import" as i;
 
 .main {
-  padding-block-start: i.get_vw-sm(40);
-  padding-block-end: i.get_vw-sm(40);
-  @include i.tb-screen {
-    padding-block-start: i.get_vw-tb(60);
-    padding-block-end: i.get_vw-tb(60);
-  }
-  @include i.pc-screen {
-    padding-block-start: 80px;
-    padding-block-end: 80px;
-  }
+  overflow: hidden;
 }

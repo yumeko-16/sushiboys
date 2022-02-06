@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../_data/_discography') %>
+  <%- include('../_data/_discography'); %>
   <%
   let localmeta = {
     title: 'DISCOGRAPHY | SUSHIBOYS',
@@ -13,15 +13,54 @@
   };
   let discographyData = discography();
   %>
-  <%- include('../_inc/_head', {meta: localmeta, file: localfile}) %>
+  <%- include('../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <div class="wrapper">
-    <%- include('../_inc/components/_header', {current: 'discography'}) %>
+    <%- include('../_inc/components/_header', {current: 'discography'}); %>
     <main class="main">
-      <%- include('../_inc/components/discography/_album', {discographyData: discographyData}) %>
+      <%- include('../_inc/components/discography/_discography', {discographyData: discographyData}); %>
     </main>
-    <%- include('../_inc/components/_footer') %>
+    <%- include('../_inc/components/_footer'); %>
   </div>
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script>
+    const swiperEp = new Swiper('#swiper-ep', {
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    });
+
+    const swiperSingle = new Swiper('#swiper-single', {
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    });
+
+    const swiperFeat = new Swiper('#swiper-feat', {
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    });
+
+    const swiperRecord = new Swiper('#swiper-record', {
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    });
+
+    const swiperFarmhouseEp = new Swiper('#swiper-farmhouse-ep', {
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    });
+
+    const swiperFarmhouseSingle = new Swiper('#swiper-farmhouse-single', {
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    });
+  </script>
 </body>
 </html>

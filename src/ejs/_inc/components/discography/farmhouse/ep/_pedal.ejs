@@ -1,0 +1,37 @@
+<section class="section">
+  <ul class="discography-detail">
+    <% let eps = discographyData.farmhouseEps; %>
+    <li class="discography-detail__item">
+      <div class="discography-detail__thumbnail">
+        <img class="discography-detail__thumbnail-image" src="<%- eps[1].image %>" alt="<%- eps[1].alt %>">
+      </div>
+      <div class="discography-detail__caption">
+        <h2 class="title"><%- eps[1].title %></h2>
+        <ul class="discography-detail__caption-list">
+          <li class="discography-detail__caption-item">作品種別 : <%- eps[1].kind %></li>
+          <li class="discography-detail__caption-item">発売日 : <%- eps[1].release %></li>
+          <li class="discography-detail__caption-item">価格 : <%- eps[1].price %></li>
+          <li class="discography-detail__caption-item">視聴：ご視聴は<a href="<%- eps[1].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
+        </ul>
+        <h3 class="discography-detail__caption-heading">Song contents</h3>
+        <ol class="discography-detail__caption-list">
+          <% eps[1].songs.forEach(function(song) { %>
+          <li class="discography-detail__caption-item">
+            <%- song %>
+          </li>
+          <% }); %>
+        </ol>
+        <% if (!eps[1].bonusTracks[0] == '') { %>
+        <h3 class="discography-detail__caption-heading">Bonus track</h3>
+        <% } %>
+        <ol class="discography-detail__caption-list">
+          <% eps[1].bonusTracks.forEach(function(bonusTrack) { %>
+          <li class="discography-detail__caption-item">
+            <%- bonusTrack %>
+          </li>
+          <% }); %>
+        </ol>
+      </div>
+    </li>
+  </ul>
+</section>

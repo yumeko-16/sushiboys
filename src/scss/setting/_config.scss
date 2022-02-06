@@ -1,8 +1,8 @@
 @use "sass:math";
 
 // ブレイクポイント
-$breakPoint-tb: 600px;
-$breakPoint-pc: 1025px;
+$breakPoint-tb: 768px;
+$breakPoint-pc: 1024px;
 
 @function get_vw-sm($size, $viewport: 375) {
   $rate: math.div(100, $viewport);
@@ -16,9 +16,12 @@ $breakPoint-pc: 1025px;
 // サイトで使用する色
 $color-white: #fff;
 $color-black: #444;
-$color-gray: #a9a9a9;
+$color-gray: #ccc;
 $color-pink: #f6a4af;
 $color-blue: #2b7bb9;
+$color-error: #ff0000;
 
 // 基本書体
 $font: "Oswald", sans-serif;
+// 文章
+$font-text: "Yu Gothic", "游ゴシック", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;

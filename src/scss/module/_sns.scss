@@ -28,15 +28,18 @@
     font-size: i.get_vw-sm(20);
     text-decoration: none;
     transition: 0.5s;
+    &:hover {
+      opacity: 0.8;
+    }
     @include i.tb-screen {
-      width: i.get_vw-sm(30);
-      height: i.get_vw-sm(30);
-      font-size: i.get_vw-sm(16);
+      width: i.get_vw-tb(40);
+      height: i.get_vw-tb(40);
+      font-size: i.get_vw-tb(20);
     }
     @include i.pc-screen {
-      width: 50px;
-      height: 50px;
-      font-size: 30px;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
     }
     /* アイコンを真ん中に */
     i {
@@ -44,19 +47,6 @@
       top: 50%;
       left: 52%;
       transform: translate(-50%, -50%);
-    }
-    /* Twitterマウスホバー時 */
-    &--twitter:hover {
-      background: linear-gradient(135deg, #13f1fc 0%, #0470dc 100%);
-    }
-    /* Instagramマウスホバー時 */
-    &--instagram:hover {
-      background: -webkit-linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-      background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;
-    }
-    /* YouTubeマウスホバー時 */
-    &--youtube:hover {
-      background: linear-gradient(135deg, #f5515f 0%, #c9293c 100%);
     }
   }
 }

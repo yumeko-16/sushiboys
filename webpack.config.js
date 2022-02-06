@@ -8,9 +8,10 @@ module.exports = {
   },
   entry: {
     home: __dirname + '/src/home.js',
-    newsCategory: __dirname + '/src/newsCategory.js',
+    news: __dirname + '/src/news.js',
     newsDetail: __dirname + '/src/newsDetail.js',
     discography: __dirname + '/src/discography.js',
+    discographyDetail: __dirname + '/src/discographyDetail.js',
     contact: __dirname + '/src/contact.js',
   },
   output: {

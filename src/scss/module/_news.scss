@@ -1,0 +1,33 @@
+@use "../import" as i;
+
+.news {
+  display: flex;
+  flex-direction: column;
+  &__item {
+    border-top: 1px solid #fff;
+    padding-block-start: i.get_vw-sm(30);
+    padding-block-end: i.get_vw-sm(30);
+    @include i.tb-screen {
+      padding-block-start: i.get_vw-tb(30);
+      padding-block-end: i.get_vw-tb(30);
+    }
+    @include i.pc-screen {
+      padding-block-start: 30px;
+      padding-block-end: 30px;
+    }
+    &:last-of-type {
+      border-bottom: 1px solid #fff;
+    }
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  &__link {
+    display: block;
+  }
+  &__date {
+    display: block;
+    color: i.$color-white;
+    font-weight: 700;
+  }
+}

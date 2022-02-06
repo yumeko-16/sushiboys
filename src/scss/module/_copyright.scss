@@ -1,0 +1,13 @@
+@use "../import" as i;
+
+.copyright {
+  color: i.$color-black;
+  margin-block-start: i.get_vw-sm(20);
+  text-align: center;
+  @include i.tb-screen {
+    margin-block-start: i.get_vw-tb(20);
+  }
+  @include i.pc-screen {
+    margin-block-start: 20px;
+  }
+}
