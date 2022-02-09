@@ -72,7 +72,7 @@ if (!empty($clean['button_confirm'])) {
     $admin_reply_text .= "お問い合わせ内容：" . nl2br($clean['message']) . "\n\n";
 
     // SUSHIBOYS側へメール送信
-    mb_send_mail('chelsea.tm20@gmail.com, sushiboys350@yahoo.co.jp', $admin_reply_subject, $admin_reply_text, $header);
+    mb_send_mail('sushiboys.tm@gmail.com, sushiboys350@yahoo.co.jp', $admin_reply_subject, $admin_reply_text, $header);
   } else {
     $page_flag = 0;
   }
