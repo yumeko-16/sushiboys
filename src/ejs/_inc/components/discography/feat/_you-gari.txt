@@ -19,7 +19,7 @@
           </li>
           <% }); %>
         </ol>
-        <% if (!feats[2].bonusTracks[0] == '') { %>
+        <% if (!feats[2].bonusTracks[0].trim() == '') { %>
         <h3 class="discography-detail__caption-heading">Bonus track</h3>
         <% } %>
         <ol class="discography-detail__caption-list">
