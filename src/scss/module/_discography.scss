@@ -1,0 +1,59 @@
+@use "../import" as i;
+
+.discography {
+  &__item {
+    &:not(:first-of-type) {
+      margin-block-start: i.get_vw-sm(40);
+      @include i.tb-screen {
+        margin-block-start: i.get_vw-tb(40);
+      }
+      @include i.pc-screen {
+        margin-block-start: 40px;
+      }
+    }
+  }
+  &__type-heading {
+    color: i.$color-white;
+    font-size: i.get_vw-sm(28);
+    font-weight: 700;
+    @include i.tb-screen {
+      font-size: i.get_vw-tb(24);
+    }
+    @include i.pc-screen {
+      font-size: 28px;
+    }
+  }
+  &__swiper {
+    margin-block-start: i.get_vw-sm(20);
+    @include i.tb-screen {
+      margin-block-start: i.get_vw-tb(20);
+    }
+    @include i.pc-screen {
+      margin-block-start: 20px;
+    }
+    &.swiper {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+  }
+  &__card {
+    &.swiper-slide {
+      width: fit-content;
+    }
+  }
+  &__image {
+    display: block;
+    width: i.get_vw-sm(200);
+    height: i.get_vw-sm(200);
+    object-fit: cover;
+    @include i.tb-screen {
+      width: i.get_vw-tb(200);
+      height: i.get_vw-tb(200);
+    }
+    @include i.pc-screen {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}

@@ -1,24 +1,24 @@
 @use "../import" as i;
 
 .section {
-  max-width: 600px;
+  max-width: 768px;
   width: 100%;
-  margin-block-start: i.get_vw-sm(40);
   margin-inline-start: auto;
   margin-inline-end: auto;
+  padding-block-start: i.get_vw-sm(40);
+  padding-block-end: i.get_vw-sm(40);
+  padding-inline-start: i.get_vw-sm(20);
+  padding-inline-end: i.get_vw-sm(20);
   @include i.tb-screen {
-    margin-block-start: i.get_vw-tb(60);
+    padding-block-start: i.get_vw-tb(40);
+    padding-block-end: i.get_vw-tb(40);
+    padding-inline-start: i.get_vw-tb(20);
+    padding-inline-end: i.get_vw-tb(20);
   }
   @include i.pc-screen {
-    margin-block-start: 80px;
-  }
-  &:first-child {
-    margin-block-start: 0;
-    @include i.tb-screen {
-      margin-block-start: 0;
-    }
-    @include i.pc-screen {
-      margin-block-start: 0;
-    }
+    padding-block-start: 40px;
+    padding-block-end: 40px;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
   }
 }

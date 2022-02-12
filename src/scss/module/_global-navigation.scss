@@ -1,16 +1,16 @@
 @use "../import" as i;
 
 .global-navigation {
-  margin-top: i.get_vw-sm(40);
-  padding: i.get_vw-sm(15) 0;
+  margin-top: i.get_vw-sm(20);
+  padding: i.get_vw-sm(20) 0;
   text-align: center;
   @include i.tb-screen {
-    margin-top: i.get_vw-tb(40);
-    padding: i.get_vw-tb(25) 0;
+    margin-top: i.get_vw-tb(20);
+    padding: i.get_vw-tb(20) 0;
   }
   @include i.pc-screen {
-    margin-top: 40px;
-    padding: 25px 0;
+    margin-top: 20px;
+    padding: 20px 0;
   }
   &--sp {
     @include i.tb-screen {
@@ -26,7 +26,6 @@
       justify-content: center;
       color: i.$color-white;
       font-size: i.get_vw-sm(28);
-      line-height: 1;
       cursor: pointer;
       &::after {
         margin-inline-start: i.get_vw-sm(10);
@@ -126,7 +125,6 @@
     &__item {
       padding-inline-start: i.get_vw-sm(15);
       padding-inline-end: i.get_vw-sm(15);
-      line-height: 1;
       @include i.tb-screen {
         padding-inline-start: i.get_vw-tb(15);
         padding-inline-end: i.get_vw-tb(15);

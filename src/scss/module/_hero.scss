@@ -1,0 +1,15 @@
+@use "../import" as i;
+
+.hero {
+  width: 70%;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  pointer-events: none;
+  @include i.tb-screen {
+    width: 50%;
+  }
+  &__image {
+    display: block;
+    width: 100%;
+  }
+}

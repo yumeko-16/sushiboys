@@ -1,0 +1,77 @@
+@use "../import" as i;
+
+.discography-detail {
+  display: flex;
+  flex-direction: column;
+  &__item {
+    padding-block-start: i.get_vw-sm(20);
+    padding-block-end: i.get_vw-sm(20);
+    @include i.tb-screen {
+      padding-block-start: i.get_vw-tb(20);
+      padding-block-end: i.get_vw-tb(20);
+      display: flex;
+    }
+    @include i.pc-screen {
+      padding-block-start: 20px;
+      padding-block-end: 20px;
+    }
+  }
+  &__thumbnail {
+    width: 100%;
+    @include i.tb-screen {
+      width: 40%;
+    }
+  }
+  &__thumbnail-image {
+    display: block;
+    width: 100%;
+  }
+  &__caption {
+    width: 100%;
+    margin-block-start: i.get_vw-sm(20);
+    padding-block-start: 0;
+    padding-block-end: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    @include i.tb-screen {
+      width: 60%;
+      margin-block-start: 0;
+      padding-inline-start: i.get_vw-tb(20);
+    }
+    @include i.pc-screen {
+      padding-inline-start: 30px;
+    }
+  }
+  &__caption-heading {
+    color: i.$color-white;
+    font-size: i.get_vw-sm(24);
+    font-weight: 700;
+    @include i.tb-screen {
+      font-size: i.get_vw-tb(24);
+    }
+    @include i.pc-screen {
+      font-size: 24px;
+    }
+  }
+  &__caption-list {
+    display: block;
+    margin-block-start: i.get_vw-sm(20);
+    @include i.tb-screen {
+      margin-block-start: i.get_vw-tb(20);
+    }
+    @include i.pc-screen {
+      margin-block-start: 20px;
+    }
+  }
+  &__caption-item {
+    color: i.$color-white;
+    font-size: i.get_vw-sm(16);
+    font-weight: 700;
+    @include i.tb-screen {
+      font-size: i.get_vw-tb(16);
+    }
+    @include i.pc-screen {
+      font-size: 16px;
+    }
+  }
+}

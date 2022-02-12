@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../_data/_news') %>
+  <%- include('../_data/_news'); %>
   <%
   let localmeta = {
     title: 'NEWS | SUSHIBOYS',
-    description: ''
+    description: 'SUSHIBOYSの最新情報。メディア掲載等の情報をご覧いただけます。'
   };
   let localfile = {
-    css: '/css/news-category.css',
-    js: '/js/newsCategory.js'
+    css: '/css/news.css',
+    js: '/js/news.js'
   };
   let newsData = news();
   %>
-  <%- include('../_inc/_head', {meta: localmeta, file: localfile}) %>
+  <%- include('../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <div class="wrapper">
-    <%- include('../_inc/components/_header', {current: 'news'}) %>
+    <%- include('../_inc/components/_header', {current: 'news'}); %>
     <main class="main">
-      <%- include('../_inc/components/news/_news-category', {newsData: newsData}) %>
+      <%- include('../_inc/components/news/_news', {newsData: newsData}); %>
     </main>
-    <%- include('../_inc/components/_footer') %>
+    <%- include('../_inc/components/_footer'); %>
   </div>
 </body>
 </html>

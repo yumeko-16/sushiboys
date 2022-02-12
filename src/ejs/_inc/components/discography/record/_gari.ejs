@@ -1,0 +1,36 @@
+<section class="section">
+  <ul class="discography-detail">
+    <% let records = discographyData.records; %>
+    <li class="discography-detail__item">
+      <div class="discography-detail__thumbnail">
+        <img class="discography-detail__thumbnail-image" src="<%- records[1].image %>" alt="<%- records[1].alt %>">
+      </div>
+      <div class="discography-detail__caption">
+        <h2 class="title"><%- records[1].title %></h2>
+        <ul class="discography-detail__caption-list">
+          <li class="discography-detail__caption-item">作品種別 : <%- records[1].kind %></li>
+          <li class="discography-detail__caption-item">発売日 : <%- records[1].release %></li>
+          <li class="discography-detail__caption-item">価格 : <%- records[1].price %></li>
+        </ul>
+        <h3 class="discography-detail__caption-heading">Song contents</h3>
+        <ol class="discography-detail__caption-list">
+          <% records[1].songs.forEach(function(song) { %>
+          <li class="discography-detail__caption-item">
+            <%- song %>
+          </li>
+          <% }); %>
+        </ol>
+        <% if (!records[0].bonusTracks[0].trim() == '') { %>
+        <h3 class="discography-detail__caption-heading">Bonus track</h3>
+        <% } %>
+        <ol class="discography-detail__caption-list">
+          <% records[1].bonusTracks.forEach(function(bonusTrack) { %>
+          <li class="discography-detail__caption-item">
+            <%- bonusTrack %>
+          </li>
+          <% }); %>
+        </ol>
+      </div>
+    </li>
+  </ul>
+</section>

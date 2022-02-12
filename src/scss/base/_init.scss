@@ -23,7 +23,7 @@ div {
   display: block;
 }
 a {
-  color: initial;
+  color: i.$color-black;
   text-decoration: none;
   cursor: pointer;
 }
@@ -178,4 +178,10 @@ button {
   border-style: initial;
   border-color: initial;
   border-image: initial;
+}
+figure {
+  margin-block-start: initial;
+  margin-block-end: initial;
+  margin-inline-start: initial;
+  margin-inline-end: initial;
 }

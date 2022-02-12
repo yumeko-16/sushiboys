@@ -1,0 +1,25 @@
+@use "../import" as i;
+
+.title {
+  color: i.$color-white;
+  font-size: i.get_vw-sm(24);
+  font-weight: 700;
+  @include i.tb-screen {
+    font-size: i.get_vw-tb(24);
+  }
+  @include i.pc-screen {
+    font-size: 28px;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--news {
+    font-size: i.get_vw-sm(16);
+    @include i.tb-screen {
+      font-size: i.get_vw-tb(16);
+    }
+    @include i.pc-screen {
+      font-size: 16px;
+    }
+  }
+}

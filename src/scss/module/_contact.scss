@@ -3,10 +3,34 @@
 .contact {
   display: flex;
   flex-direction: column;
-  &__item {
+  padding-block-start: i.get_vw-sm(20);
+  padding-block-end: i.get_vw-sm(20);
+  @include i.tb-screen {
+    padding-block-start: i.get_vw-tb(20);
+    padding-block-end: i.get_vw-tb(20);
+  }
+  @include i.pc-screen {
+    padding-block-start: 20px;
+    padding-block-end: 20px;
+  }
+  &__label {
+    display: block;
+    padding-block-start: i.get_vw-sm(15);
+    padding-block-end: i.get_vw-sm(15);
+    color: i.$color-white;
+    @include i.tb-screen {
+      padding-block-start: i.get_vw-tb(15);
+      padding-block-end: i.get_vw-tb(15);
+    }
+    @include i.pc-screen {
+      padding-block-start: 15px;
+      padding-block-end: 15px;
+    }
+  }
+  &__input,
+  &__textarea {
+    display: block;
     width: 100%;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
     padding-block-start: i.get_vw-sm(15);
     padding-block-end: i.get_vw-sm(15);
     padding-inline-start: i.get_vw-sm(15);
@@ -34,17 +58,8 @@
       border-radius: 5px;
       font-size: 16px;
     }
-    &:not(:first-child) {
-      margin-block-start: i.get_vw-tb(40);
-      margin-block-end: 0;
-      @include i.tb-screen {
-        margin-block-start: i.get_vw-tb(30);
-      }
-      @include i.pc-screen {
-        margin-block-start: 30px;
-      }
-    }
     &::placeholder {
+      font-family: i.$font;
       color: i.$color-gray;
     }
     &:focus-visible {
@@ -61,15 +76,30 @@
   }
   &__textarea {
     height: calc(1.6em * 5 + 8vw);
-    font-size: i.get_vw-sm(16);
-    line-height: 1.6;
     @include i.tb-screen {
       height: calc(1.6em * 5 + 5vw);
-      font-size: i.get_vw-tb(16);
     }
     @include i.pc-screen {
       height: calc(1.6em * 5 + 30px);
-      font-size: 16px;
+    }
+  }
+  &__input-confirmation {
+    padding-block-start: i.get_vw-sm(15);
+    padding-block-end: i.get_vw-sm(15);
+    padding-inline-start: i.get_vw-sm(15);
+    padding-inline-end: i.get_vw-sm(15);
+    color: i.$color-white;
+    @include i.tb-screen {
+      padding-block-start: i.get_vw-tb(15);
+      padding-block-end: i.get_vw-tb(15);
+      padding-inline-start: i.get_vw-tb(15);
+      padding-inline-end: i.get_vw-tb(15);
+    }
+    @include i.pc-screen {
+      padding-block-start: 15px;
+      padding-block-end: 15px;
+      padding-inline-start: 15px;
+      padding-inline-end: 15px;
     }
   }
   &__button-wrap {
@@ -94,6 +124,15 @@
     }
     @include i.pc-screen {
       border-radius: 5px;
+    }
+    &:not(:first-of-type) {
+      margin-left: i.get_vw-sm(30);
+      @include i.tb-screen {
+        margin-left: i.get_vw-tb(30);
+      }
+      @include i.pc-screen {
+        margin-left: 30px;
+      }
     }
   }
   &__button-inner {
@@ -134,5 +173,22 @@
   }
   &__button-text {
     color: i.$color-white;
+  }
+  &__error {
+    color: i.$color-error;
+  }
+  &__completion-text {
+    padding-block-start: i.get_vw-sm(15);
+    padding-block-end: i.get_vw-sm(15);
+    text-align: center;
+    color: i.$color-white;
+    @include i.tb-screen {
+      padding-block-start: i.get_vw-tb(15);
+      padding-block-end: i.get_vw-tb(15);
+    }
+    @include i.pc-screen {
+      padding-block-start: 15px;
+      padding-block-end: 15px;
+    }
   }
 }
