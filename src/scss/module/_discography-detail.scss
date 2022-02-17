@@ -55,9 +55,9 @@
   }
   &__caption-list {
     display: block;
-    list-style-type: decimal;
+    list-style-type: decimal-leading-zero;
     margin-block-start: i.get_vw-sm(20);
-    padding-inline-start: 2rem;
+    padding-inline-start: 3rem;
     @include i.tb-screen {
       margin-block-start: i.get_vw-tb(20);
     }
