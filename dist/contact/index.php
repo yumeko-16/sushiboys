@@ -175,7 +175,7 @@ function validation($data) {
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">GOODS</a></li>
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/news/">NEWS</a></li>
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/discography/">DISCOGRAPHY</a></li>
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/contact/">CONTACT</a></li>
+              <li class="global-navigation--sp__item current"><a class="global-navigation--sp__link" href="/contact/">CONTACT</a></li>
             </ul>
             <div class="global-navigation--sp__close-wrap">
               <div id="js-global-navigation--sp__close" class="global-navigation--sp__close"></div>
