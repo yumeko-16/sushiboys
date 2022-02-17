@@ -55,14 +55,17 @@
   }
   &__caption-list {
     display: block;
-    list-style-type: decimal-leading-zero;
     margin-block-start: i.get_vw-sm(20);
-    padding-inline-start: 3rem;
+    padding-inline-start: 1rem;
     @include i.tb-screen {
       margin-block-start: i.get_vw-tb(20);
     }
     @include i.pc-screen {
       margin-block-start: 20px;
+    }
+    &--song {
+      list-style-type: decimal-leading-zero;
+      padding-inline-start: 3rem;
     }
   }
   &__caption-item {
