@@ -172,6 +172,7 @@ function validation($data) {
           <div id="js-global-navigation--sp__menu" class="global-navigation--sp__menu">
             <ul class="global-navigation--sp__list">
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/">HOME</a></li>
+              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">GOODS</a></li>
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/news/">NEWS</a></li>
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/discography/">DISCOGRAPHY</a></li>
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/contact/">CONTACT</a></li>
@@ -184,9 +185,10 @@ function validation($data) {
         <div class="global-navigation--pc">
           <ul class="global-navigation--pc__list">
             <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/">HOME</a></li>
+            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">GOODS</a></li>
             <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/news/">NEWS</a></li>
             <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/discography/">DISCOGRAPHY</a></li>
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link current" href="/contact/">CONTACT</a></li>
+            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/contact/">CONTACT</a></li>
           </ul>
         </div>
       </nav>
@@ -300,11 +302,6 @@ function validation($data) {
         <li class="sns__item">
           <a class="sns__link" href="//www.youtube.com/user/umetube2013" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-youtube"></i>
-          </a>
-        </li>
-        <li class="sns__item">
-          <a class="sns__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">
-            <i class="fas fa-campground"></i>
           </a>
         </li>
       </ul>
