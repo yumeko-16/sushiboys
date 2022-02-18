@@ -162,19 +162,14 @@ function validation($data) {
       <nav class="global-navigation">
         <div class="global-navigation--sp">
           <div id="js-global-navigation--sp__selector" class="global-navigation--sp__selector">
-            <div class="global-navigation--sp__title">
-
-
-
-              CONTACT
-            </div>
+            <div class="global-navigation--sp__title">CONTACT</div>
           </div>
           <div id="js-global-navigation--sp__menu" class="global-navigation--sp__menu">
             <ul class="global-navigation--sp__list">
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/">HOME</a></li>
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">GOODS</a></li>
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/news/">NEWS</a></li>
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/discography/">DISCOGRAPHY</a></li>
+              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">GOODS</a></li>
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/contact/">CONTACT</a></li>
             </ul>
             <div class="global-navigation--sp__close-wrap">
@@ -185,9 +180,9 @@ function validation($data) {
         <div class="global-navigation--pc">
           <ul class="global-navigation--pc__list">
             <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/">HOME</a></li>
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">GOODS</a></li>
             <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/news/">NEWS</a></li>
             <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/discography/">DISCOGRAPHY</a></li>
+            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">GOODS</a></li>
             <li class="global-navigation--pc__item"><a class="global-navigation--pc__link current" href="/contact/">CONTACT</a></li>
           </ul>
         </div>
