@@ -295,6 +295,11 @@ function validation($data) {
           </a>
         </li>
         <li class="sns__item">
+          <a class="sns__link" href="//www.tiktok.com/@sushiboys350" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </li>
+        <li class="sns__item">
           <a class="sns__link" href="//www.youtube.com/user/umetube2013" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-youtube"></i>
           </a>
