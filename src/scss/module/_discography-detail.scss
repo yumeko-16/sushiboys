@@ -4,16 +4,8 @@
   display: flex;
   flex-direction: column;
   &__item {
-    padding-block-start: i.get_vw-sm(20);
-    padding-block-end: i.get_vw-sm(20);
     @include i.tb-screen {
-      padding-block-start: i.get_vw-tb(20);
-      padding-block-end: i.get_vw-tb(20);
       display: flex;
-    }
-    @include i.pc-screen {
-      padding-block-start: 20px;
-      padding-block-end: 20px;
     }
   }
   &__thumbnail {
