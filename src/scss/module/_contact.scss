@@ -106,64 +106,6 @@
       margin-block-start: 30px;
     }
   }
-  &__button {
-    border-radius: i.get_vw-sm(5);
-    background-color: i.$color-white;
-    @include i.tb-screen {
-      border-radius: i.get_vw-tb(5);
-    }
-    @include i.pc-screen {
-      border-radius: 5px;
-    }
-    &:not(:first-of-type) {
-      margin-left: i.get_vw-sm(30);
-      @include i.tb-screen {
-        margin-left: i.get_vw-tb(30);
-      }
-      @include i.pc-screen {
-        margin-left: 30px;
-      }
-    }
-  }
-  &__button-inner {
-    padding-block-start: i.get_vw-sm(15);
-    padding-block-end: i.get_vw-sm(15);
-    padding-inline-start: i.get_vw-sm(25);
-    padding-inline-end: i.get_vw-sm(25);
-    border-radius: i.get_vw-sm(5);
-    background-color: i.$color-black;
-    @include i.tb-screen {
-      padding-block-start: i.get_vw-tb(15);
-      padding-block-end: i.get_vw-tb(15);
-      padding-inline-start: i.get_vw-tb(25);
-      padding-inline-end: i.get_vw-tb(25);
-      border-radius: i.get_vw-tb(5);
-    }
-    @include i.pc-screen {
-      padding-block-start: 15px;
-      padding-block-end: 15px;
-      padding-inline-start: 25px;
-      padding-inline-end: 25px;
-      border-radius: 5px;
-    }
-    &:hover {
-      opacity: 0.9;
-      transition: 0.1s;
-    }
-  }
-  &__button-icon {
-    margin-inline-end: i.get_vw-sm(10);
-    color: i.$color-white;
-    @include i.tb-screen {
-      margin-inline-end: i.get_vw-tb(10);
-    }
-    @include i.pc-screen {
-      margin-inline-end: 10px;
-    }
-  }
-  &__button-text {
-    color: i.$color-white;
-  }
   &__error {
     color: i.$color-error;
   }
