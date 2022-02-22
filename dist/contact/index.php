@@ -54,7 +54,7 @@ if (!empty($clean['button_confirm'])) {
     $auto_reply_text .= "お問い合わせ日時：" . date("Y-m-d H:i") . "\n";
     $auto_reply_text .= "氏名：" . $clean['name'] . "\n";
     $auto_reply_text .= "メールアドレス：" . $clean['email'] . "\n";
-    $auto_reply_text .= "お問い合わせ内容：" . nl2br($clean['contact']) . "\n\n";
+    $auto_reply_text .= "お問い合わせ内容：" . nl2br($clean['message']) . "\n\n";
     $auto_reply_text .= "SUSHIBOYS 窓口";
 
     // メール送信
