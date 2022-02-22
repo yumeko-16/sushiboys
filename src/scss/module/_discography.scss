@@ -1,6 +1,8 @@
 @use "../import" as i;
 
 .discography {
+  display: flex;
+  flex-direction: column;
   &__item {
     &:not(:first-of-type) {
       margin-block-start: i.get_vw-sm(40);
