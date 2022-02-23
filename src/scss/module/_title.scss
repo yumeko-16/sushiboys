@@ -5,6 +5,7 @@
   font-family: i.$font-special;
   font-size: i.get_vw-sm(20);
   font-weight: 700;
+  letter-spacing: 0.1em;
   @include i.tb-screen {
     font-size: i.get_vw-tb(24);
   }

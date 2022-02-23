@@ -5,6 +5,8 @@
   flex-direction: column;
   &__label {
     display: block;
+    font-family: i.$font-special;
+    letter-spacing: 0.1em;
     padding-block-start: i.get_vw-sm(15);
     padding-block-end: i.get_vw-sm(15);
     color: i.$color-white;
@@ -49,8 +51,9 @@
       font-size: 16px;
     }
     &::placeholder {
-      font-family: i.$font-special;
       color: i.$color-gray;
+      font-family: i.$font-special;
+      letter-spacing: 0.1em;
     }
     &:focus-visible {
       box-shadow: 0 0 i.get_vw-sm(5) i.get_vw-sm(1) i.$color-black;

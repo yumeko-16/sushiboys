@@ -3,6 +3,7 @@
 .copyright {
   color: i.$color-black;
   font-family: i.$font-special;
+  letter-spacing: 0.1em;
   margin-block-start: i.get_vw-sm(20);
   text-align: center;
   @include i.tb-screen {

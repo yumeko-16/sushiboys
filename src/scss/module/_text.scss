@@ -1,10 +1,11 @@
 @use "../import" as i;
 
 .text {
-  margin-inline-start: 0;
-  margin-inline-end: 0;
   color: i.$color-white;
   font-family: i.$font-base;
+  letter-spacing: 0.1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   word-break: break-all;
   &:not(:first-of-type) {
     margin-block-start: i.get_vw-sm(10);
