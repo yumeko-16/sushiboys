@@ -21,12 +21,13 @@
       margin: 0 auto;
     }
     &__title {
-      display: flex;
       align-items: center;
-      justify-content: center;
       color: i.$color-white;
-      font-size: i.get_vw-sm(28);
       cursor: pointer;
+      display: flex;
+      font-family: i.$font-special;
+      font-size: i.get_vw-sm(28);
+      justify-content: center;
       &::after {
         margin-inline-start: i.get_vw-sm(10);
         color: i.$color-white;
@@ -101,9 +102,13 @@
       color: i.$color-white;
     }
     &__item {
-      width: i.get_vw-sm(300);
-      padding: i.get_vw-sm(20) i.get_vw-sm(70);
+      font-family: i.$font-special;
+      padding-block-start: i.get_vw-sm(20);
+      padding-block-end: i.get_vw-sm(20);
+      padding-inline-start: i.get_vw-sm(70);
+      padding-inline-end: i.get_vw-sm(70);
       text-align: center;
+      width: i.get_vw-sm(300);
     }
   }
   &--pc {
@@ -123,17 +128,16 @@
       }
     }
     &__item {
-      padding-inline-start: i.get_vw-sm(15);
-      padding-inline-end: i.get_vw-sm(15);
       @include i.tb-screen {
+        font-family: i.$font-special;
+        font-size: i.get_vw-tb(24);
         padding-inline-start: i.get_vw-tb(15);
         padding-inline-end: i.get_vw-tb(15);
-        font-size: i.get_vw-tb(24);
       }
       @include i.pc-screen {
+        font-size: 28px;
         padding-inline-start: 15px;
         padding-inline-end: 15px;
-        font-size: 28px;
       }
       &:hover {
         opacity: 0.8;
