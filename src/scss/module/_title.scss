@@ -2,7 +2,7 @@
 
 .title {
   color: i.$color-white;
-  font-size: i.get_vw-sm(24);
+  font-size: i.get_vw-sm(20);
   font-weight: 700;
   @include i.tb-screen {
     font-size: i.get_vw-tb(24);
