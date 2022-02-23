@@ -1,7 +1,7 @@
 @use "../import" as i;
 
 .header {
-  padding-block-start: i.get_vw-sm(40);
+  padding-block-start: i.get_vw-sm(20);
   @include i.tb-screen {
     padding-block-start: i.get_vw-tb(40);
   }

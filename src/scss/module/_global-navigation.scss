@@ -1,16 +1,13 @@
 @use "../import" as i;
 
 .global-navigation {
-  margin-top: i.get_vw-sm(20);
-  padding: i.get_vw-sm(20) 0;
+  margin-block-start: i.get_vw-sm(20);
   text-align: center;
   @include i.tb-screen {
-    margin-top: i.get_vw-tb(20);
-    padding: i.get_vw-tb(20) 0;
+    margin-block-start: i.get_vw-tb(20);
   }
   @include i.pc-screen {
-    margin-top: 20px;
-    padding: 20px 0;
+    margin-block-start: 20px;
   }
   &--sp {
     @include i.tb-screen {
