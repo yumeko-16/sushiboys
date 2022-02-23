@@ -22,8 +22,8 @@ $color-blue: #2b7bb9;
 $color-error: #ff0000;
 
 // 基本書体
-$font-base: "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo",
+$font-base: -apple-system, "BlinkMacSystemFont", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo",
   sans-serif;
 // メイン書体
-$font-special: "Oswald", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ",
+$font-special: "Oswald", -apple-system, "BlinkMacSystemFont", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ",
   "Meiryo", sans-serif;

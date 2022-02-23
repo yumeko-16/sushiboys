@@ -7,9 +7,9 @@
     display: block;
     margin-inline-start: auto;
     margin-inline-end: auto;
+    width: 70%;
     @include i.tb-screen {
-      margin-inline-start: 0;
-      margin-inline-end: 0;
+      width: 50%;
     }
   }
 }
