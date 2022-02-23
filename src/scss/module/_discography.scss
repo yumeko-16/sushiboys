@@ -5,12 +5,12 @@
   flex-direction: column;
   &__item {
     &:not(:first-of-type) {
-      margin-block-start: i.get_vw-sm(40);
+      margin-block-start: i.get_vw-sm(30);
       @include i.tb-screen {
-        margin-block-start: i.get_vw-tb(40);
+        margin-block-start: i.get_vw-tb(30);
       }
       @include i.pc-screen {
-        margin-block-start: 40px;
+        margin-block-start: 30px;
       }
     }
   }

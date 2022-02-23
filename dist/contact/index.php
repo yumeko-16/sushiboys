@@ -187,19 +187,28 @@ function validation($data) {
 
     <main class="main">
       <section class="section">
-        <?php if ($page_flag === 1) : ?>
+
+<?php if ($page_flag === 1) : ?>
 
         <!-- 確認ページ start -->
         <form class="contact" method="post" action="">
           <!-- 表示用 start-->
-          <label class="contact__label" for="">Name</label>
-          <p class="contact__input-confirmation"><?php echo $clean['name']; ?></p>
-          <label class="contact__label" for="">Email</label>
-          <p class="contact__input-confirmation"><?php echo $clean['email']; ?></p>
-          <label class="contact__label" for="">Subject</label>
-          <p class="contact__input-confirmation"><?php echo $clean['subject']; ?></p>
-          <label class="contact__label" for="">Message</label>
-          <p class="contact__input-confirmation"><?php echo nl2br($clean['message']); ?></p>
+          <div class="contact__group">
+            <label class="contact__label" for="">Name</label>
+            <p class="contact__input-confirmation"><?= $clean['name']; ?></p>
+          </div>
+          <div class="contact__group">
+            <label class="contact__label" for="">Email</label>
+            <p class="contact__input-confirmation"><?= $clean['email']; ?></p>
+          </div>
+          <div class="contact__group">
+            <label class="contact__label" for="">Subject</label>
+            <p class="contact__input-confirmation"><?= $clean['subject']; ?></p>
+          </div>
+          <div class="contact__group">
+            <label class="contact__label" for="">Message</label>
+            <p class="contact__input-confirmation"><?= nl2br($clean['message']); ?></p>
+          </div>
           <div class="button__wrap">
             <button class="button" type="submit" name="button_back" value="Back">
               <span class="button__text">Back</span>
@@ -211,15 +220,15 @@ function validation($data) {
           <!-- 表示用 end -->
 
           <!-- 入力値の受け渡し用 start -->
-          <input type="hidden" name="name" value="<?php echo $clean['name']; ?>">
-          <input type="hidden" name="email" value="<?php echo $clean['email']; ?>">
-          <input type="hidden" name="subject" value="<?php echo $clean['subject']; ?>">
-          <input type="hidden" name="message" value="<?php echo $clean['message']; ?>">
+          <input type="hidden" name="name" value="<?= $clean['name']; ?>">
+          <input type="hidden" name="email" value="<?= $clean['email']; ?>">
+          <input type="hidden" name="subject" value="<?= $clean['subject']; ?>">
+          <input type="hidden" name="message" value="<?= $clean['message']; ?>">
           <!-- 入力値の受け渡し用 end -->
         </form>
         <!-- 確認ページ end -->
 
-        <?php elseif ($page_flag === 2) : ?>
+<?php elseif ($page_flag === 2) : ?>
 
         <!-- 完了ページ start -->
         <div class="contact">
@@ -232,25 +241,33 @@ function validation($data) {
         </div>
         <!-- 完了ページ end -->
 
-        <?php else : ?>
+<?php else : ?>
 
         <!-- 入力ページ start -->
-        <?php if (!empty($error)) : ?>
+  <?php if (!empty($error)) : ?>
         <ul>
-          <?php foreach ($error as $value) : ?>
-          <li class="contact__error"><?php echo $value; ?></li>
-          <?php endforeach; ?>
+    <?php foreach ($error as $value) : ?>
+          <li class="contact__error"><?= $value; ?></li>
+    <?php endforeach; ?>
         </ul>
-        <?php endif; ?>
+  <?php endif; ?>
         <form class="contact" method="post" action="" novalidate>
-          <label class="contact__label" for="">Name</label>
-          <input class="contact__input" type="text" name="name" value="<?php if (!empty($clean['name'])) {echo $clean['name'];} ?>" placeholder="neo yoshikawa" autocomplete="off" required>
-          <label class="contact__label" for="">Email</label>
-          <input class="contact__input" type="email" name="email" value="<?php if (!empty($clean['email'])) {echo $clean['email'];} ?>" placeholder="sushiboys350@yahoo.co.jp" autocomplete="off" required>
-          <label class="contact__label" for="">Subject</label>
-          <input class="contact__input" type="subject" name="subject" value="<?php if (!empty($clean['subject'])) {echo $clean['subject'];} ?>" placeholder="About your inquiry for our products" autocomplete="off" required>
-          <label class="contact__label" for="">Message</label>
-          <textarea class="contact__textarea" name="message" placeholder="I have a question regarding your online shop." autocomplete="off" required><?php if (!empty($clean['message'])) {echo $clean['message'];} ?></textarea>
+          <div class="contact__group">
+            <label class="contact__label" for="">Name</label>
+            <input class="contact__input" type="text" name="name" value="<?php if (!empty($clean['name'])) {echo $clean['name'];} ?>" placeholder="neo yoshikawa" autocomplete="off" required>
+          </div>
+          <div class="contact__group">
+            <label class="contact__label" for="">Email</label>
+            <input class="contact__input" type="email" name="email" value="<?php if (!empty($clean['email'])) {echo $clean['email'];} ?>" placeholder="sushiboys350@yahoo.co.jp" autocomplete="off" required>
+          </div>
+          <div class="contact__group">
+            <label class="contact__label" for="">Subject</label>
+            <input class="contact__input" type="subject" name="subject" value="<?php if (!empty($clean['subject'])) {echo $clean['subject'];} ?>" placeholder="About your inquiry for our products" autocomplete="off" required>
+          </div>
+          <div class="contact__group">
+            <label class="contact__label" for="">Message</label>
+            <textarea class="contact__textarea" name="message" placeholder="I have a question regarding your online shop." autocomplete="off" required><?php if (!empty($clean['message'])) {echo $clean['message'];} ?></textarea>
+          </div>
           <div class="button__wrap">
             <button class="button" type="submit" name="button_confirm" value="Confirm">
               <i class="button__icon fas fa-paper-plane"></i><span class="button__text">Confirm</span>
@@ -259,7 +276,8 @@ function validation($data) {
         </form>
         <!-- 入力ページ end -->
 
-        <?php endif; ?>
+<?php endif; ?>
+
       </section>
     </main>
 
