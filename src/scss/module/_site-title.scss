@@ -2,6 +2,7 @@
 
 .site-title {
   font-size: i.get_vw-sm(40);
+  font-family: i.$font-special;
   letter-spacing: 0.1em;
   text-align: center;
   @include i.tb-screen {

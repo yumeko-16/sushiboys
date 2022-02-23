@@ -4,7 +4,7 @@
   margin-inline-start: 0;
   margin-inline-end: 0;
   color: i.$color-white;
-  font-family: i.$font-text;
+  font-family: i.$font-base;
   word-break: break-all;
   &:not(:first-of-type) {
     margin-block-start: i.get_vw-sm(10);

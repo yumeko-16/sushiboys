@@ -69,9 +69,9 @@
   }
   &__text {
     color: i.$color-white;
-    font-family: i.$font;
+    font-family: i.$font-special;
     font-size: i.get_vw-sm(16);
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     @include i.tb-screen {
       font-size: i.get_vw-tb(16);
     }
