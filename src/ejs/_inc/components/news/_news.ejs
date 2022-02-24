@@ -4,7 +4,10 @@
     <% posts.forEach(function(post) { %>
     <li class="news__item">
       <a class="news__link" href="<%- post.url %>">
-        <span class="text text--bold"><%- post.title %></span>
+        <figure class="news__group">
+          <img class="news__thumbnail" src="<%- post.image %>" alt="<%- post.image %>">
+          <figcaption class="news__caption text text--bold"><%- post.title %></figcaption>
+        </figure>
       </a>
     </li>
     <% }); %>
