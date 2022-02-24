@@ -45,16 +45,16 @@
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
-    margin-block-start: i.get_vw-sm(30);
+    margin-block-start: i.get_vw-sm(40);
     margin-block-end: 0;
     margin-inline-start: 0;
     margin-inline-end: 0;
     @include i.tb-screen {
       flex-direction: row;
-      margin-block-start: i.get_vw-tb(30);
+      margin-block-start: i.get_vw-tb(40);
     }
     @include i.pc-screen {
-      margin-block-start: 30px;
+      margin-block-start: 40px;
     }
   }
   &__icon {

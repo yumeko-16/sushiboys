@@ -1,9 +1,9 @@
 @use "../import" as i;
 
 .content-wrap {
-  margin-block-start: i.get_vw-sm(40);
+  margin-block-start: i.get_vw-sm(20);
   @include i.tb-screen {
-    margin-block-start: i.get_vw-tb(40);
+    margin-block-start: i.get_vw-tb(20);
   }
   @include i.pc-screen {
     margin-block-start: 40px;

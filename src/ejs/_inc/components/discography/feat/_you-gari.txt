@@ -1,29 +1,29 @@
 <section class="section">
-  <div class="discography-detail">
+  <div class="article">
     <% let feats = discographyData.feats; %>
-    <div class="discography-detail__item">
-      <div class="discography-detail__thumbnail">
-        <img class="discography-detail__thumbnail-image" src="<%- feats[2].image %>" alt="<%- feats[2].alt %>">
-      </div>
-      <div class="discography-detail__caption">
-        <h2 class="title"><%- feats[2].title %></h2>
-        <ul class="discography-detail__caption-list">
-          <li class="discography-detail__caption-item">作品種別 : <%- feats[2].kind %></li>
-          <li class="discography-detail__caption-item">発売日 : <%- feats[2].release %></li>
+    <div class="article__inner">
+      <p class="article__jacket">
+        <img class="article__jacket-image" src="<%- feats[2].image %>" alt="<%- feats[2].alt %>">
+      </p>
+      <div class="article__caption">
+        <h2 class="heading"><%- feats[2].title %></h2>
+        <ul class="article__caption-list">
+          <li class="article__caption-item">作品種別 : <%- feats[2].kind %></li>
+          <li class="article__caption-item">発売日 : <%- feats[2].release %></li>
         </ul>
-        <h3 class="discography-detail__caption-heading">Song contents</h3>
-        <ol class="discography-detail__caption-list discography-detail__caption-list--song">
+        <h3 class="article__caption-heading">Song contents</h3>
+        <ol class="article__caption-list article__caption-list--song">
           <% feats[2].songs.forEach(function(song) { %>
-          <li class="discography-detail__caption-item">
+          <li class="article__caption-item">
             <%- song %>
           </li>
           <% }); %>
         </ol>
         <% if (!feats[2].bonusTracks[0].trim() == '') { %>
-        <h3 class="discography-detail__caption-heading">Bonus track</h3>
-        <ol class="discography-detail__caption-list discography-detail__caption-list--song">
+        <h3 class="article__caption-heading">Bonus track</h3>
+        <ol class="article__caption-list article__caption-list--song">
           <% feats[2].bonusTracks.forEach(function(bonusTrack) { %>
-          <li class="discography-detail__caption-item">
+          <li class="article__caption-item">
             <%- bonusTrack %>
           </li>
           <% }); %>

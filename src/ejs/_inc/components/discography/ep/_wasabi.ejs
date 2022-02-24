@@ -1,31 +1,31 @@
 <section class="section">
-  <div class="discography-detail">
+  <div class="article">
     <% let eps = discographyData.eps; %>
-    <div class="discography-detail__item">
-      <div class="discography-detail__thumbnail">
-        <img class="discography-detail__thumbnail-image" src="<%- eps[3].image %>" alt="<%- eps[3].alt %>">
-      </div>
-      <div class="discography-detail__caption">
-        <h2 class="title"><%- eps[3].title %></h2>
-        <ul class="discography-detail__caption-list">
-          <li class="discography-detail__caption-item">作品種別 : <%- eps[3].kind %></li>
-          <li class="discography-detail__caption-item">発売日 : <%- eps[3].release %></li>
-          <li class="discography-detail__caption-item">価格 : <%- eps[3].price %></li>
-          <li class="discography-detail__caption-item">視聴：ご視聴は<a href="<%- eps[3].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
+    <div class="article__inner">
+      <p class="article__jacket">
+        <img class="article__jacket-image" src="<%- eps[3].image %>" alt="<%- eps[3].alt %>">
+      </p>
+      <div class="article__caption">
+        <h2 class="heading"><%- eps[3].title %></h2>
+        <ul class="article__caption-list">
+          <li class="article__caption-item">作品種別 : <%- eps[3].kind %></li>
+          <li class="article__caption-item">発売日 : <%- eps[3].release %></li>
+          <li class="article__caption-item">価格 : <%- eps[3].price %></li>
+          <li class="article__caption-item">視聴：ご視聴は<a href="<%- eps[3].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
         </ul>
-        <h3 class="discography-detail__caption-heading">Song contents</h3>
-        <ol class="discography-detail__caption-list discography-detail__caption-list--song">
+        <h3 class="article__caption-heading">Song contents</h3>
+        <ol class="article__caption-list article__caption-list--song">
           <% eps[3].songs.forEach(function(song) { %>
-          <li class="discography-detail__caption-item">
+          <li class="article__caption-item">
             <%- song %>
           </li>
           <% }); %>
         </ol>
         <% if (!eps[3].bonusTracks[0].trim() == '') { %>
-        <h3 class="discography-detail__caption-heading">Bonus track</h3>
-        <ol class="discography-detail__caption-list discography-detail__caption-list--song">
+        <h3 class="article__caption-heading">Bonus track</h3>
+        <ol class="article__caption-list article__caption-list--song">
           <% eps[3].bonusTracks.forEach(function(bonusTrack) { %>
-          <li class="discography-detail__caption-item">
+          <li class="article__caption-item">
             <%- bonusTrack %>
           </li>
           <% }); %>

@@ -3,35 +3,24 @@
 .contact {
   display: flex;
   flex-direction: column;
-  &__group {
-    &:not(:first-of-type) {
-      margin-block-start: i.get_vw-sm(30);
-      @include i.tb-screen {
-        margin-block-start: i.get_vw-tb(30);
-      }
-      @include i.pc-screen {
-        margin-block-start: 30px;
-      }
-    }
-  }
   &__label {
     color: i.$color-white;
     display: block;
     font-family: i.$font-special;
-    font-size: i.get_vw-sm(20);
+    font-size: i.get_vw-sm(16);
     letter-spacing: 0.1em;
     @include i.tb-screen {
-      font-size: i.get_vw-tb(24);
+      font-size: i.get_vw-tb(20);
     }
     @include i.pc-screen {
-      font-size: 28px;
+      font-size: 20px;
     }
   }
   &__input,
   &__textarea {
     display: block;
     width: 100%;
-    margin-block-start: i.get_vw-sm(20);
+    margin-block-start: i.get_vw-sm(10);
     padding-block-start: i.get_vw-sm(15);
     padding-block-end: i.get_vw-sm(15);
     padding-inline-start: i.get_vw-sm(15);
@@ -44,7 +33,7 @@
     line-height: 1.6;
     letter-spacing: 0.1em;
     @include i.tb-screen {
-      margin-block-start: i.get_vw-tb(20);
+      margin-block-start: i.get_vw-tb(10);
       padding-block-start: i.get_vw-tb(15);
       padding-block-end: i.get_vw-tb(15);
       padding-inline-start: i.get_vw-tb(15);
@@ -53,7 +42,7 @@
       font-size: i.get_vw-tb(16);
     }
     @include i.pc-screen {
-      margin-block-start: 20px;
+      margin-block-start: 10px;
       padding-block-start: 15px;
       padding-block-end: 15px;
       padding-inline-start: 15px;

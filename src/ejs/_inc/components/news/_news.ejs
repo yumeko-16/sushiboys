@@ -4,7 +4,7 @@
     <% posts.forEach(function(post) { %>
     <li class="news__item">
       <a class="news__link" href="<%- post.url %>">
-        <h2 class="title title--news"><%- post.title %></h2>
+        <span class="text text--bold"><%- post.title %></span>
       </a>
     </li>
     <% }); %>

@@ -4,11 +4,14 @@
   width: 100%;
   position: absolute;
   bottom: 0;
-  padding: i.get_vw-sm(40) 0;
+  padding-block-start: i.get_vw-sm(20);
+  padding-block-end: i.get_vw-sm(20);
   @include i.tb-screen {
-    padding: i.get_vw-tb(40) 0;
+    padding-block-start: i.get_vw-tb(20);
+    padding-block-end: i.get_vw-tb(20);
   }
   @include i.pc-screen {
-    padding: 40px 0;
+    padding-block-start: 40px;
+    padding-block-end: 40px;
   }
 }

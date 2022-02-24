@@ -11,7 +11,6 @@ body {
   background-color: i.$color-pink;
   font-family: i.$font-base;
   font-size: i.get_vw-sm(16);
-  letter-spacing: 0.1em;
   @include i.tb-screen {
     font-size: i.get_vw-tb(16);
   }

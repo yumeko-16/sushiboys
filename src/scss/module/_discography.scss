@@ -5,12 +5,12 @@
   flex-direction: column;
   &__item {
     &:not(:first-of-type) {
-      margin-block-start: i.get_vw-sm(30);
+      margin-block-start: i.get_vw-sm(20);
       @include i.tb-screen {
-        margin-block-start: i.get_vw-tb(30);
+        margin-block-start: i.get_vw-tb(20);
       }
       @include i.pc-screen {
-        margin-block-start: 30px;
+        margin-block-start: 40px;
       }
     }
   }
@@ -26,9 +26,9 @@
     }
   }
   &__swiper {
-    margin-block-start: i.get_vw-sm(20);
+    margin-block-start: i.get_vw-sm(10);
     @include i.tb-screen {
-      margin-block-start: i.get_vw-tb(20);
+      margin-block-start: i.get_vw-tb(10);
     }
     @include i.pc-screen {
       margin-block-start: 20px;

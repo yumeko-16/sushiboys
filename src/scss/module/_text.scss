@@ -2,19 +2,9 @@
 
 .text {
   color: i.$color-white;
-  font-family: i.$font-base;
-  letter-spacing: 0.1em;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
   word-break: break-all;
-  &:not(:first-of-type) {
-    margin-block-start: i.get_vw-sm(10);
-    @include i.tb-screen {
-      margin-block-start: i.get_vw-tb(10);
-    }
-    @include i.pc-screen {
-      margin-block-start: 10px;
-    }
+  &--bold {
+    font-weight: 700;
   }
   &__link {
     text-decoration: underline;
