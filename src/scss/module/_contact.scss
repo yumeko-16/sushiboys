@@ -3,6 +3,15 @@
 .contact {
   display: flex;
   flex-direction: column;
+  &__group {
+    margin-block-start: i.get_vw-sm(20);
+    @include i.tb-screen {
+      margin-block-start: i.get_vw-tb(20);
+    }
+    @include i.pc-screen {
+      margin-block-start: 20px;
+    }
+  }
   &__label {
     color: i.$color-white;
     display: block;

@@ -193,19 +193,19 @@ function validation($data) {
         <!-- 確認ページ start -->
         <form class="contact" method="post" action="">
           <!-- 表示用 start-->
-          <div>
+          <div class="contact__group">
             <label class="contact__label" for="">Name</label>
             <p class="contact__input-confirmation"><?= $clean['name']; ?></p>
           </div>
-          <div class="content-wrap">
+          <div class="contact__group">
             <label class="contact__label" for="">Email</label>
             <p class="contact__input-confirmation"><?= $clean['email']; ?></p>
           </div>
-          <div class="content-wrap">
+          <div class="contact__group">
             <label class="contact__label" for="">Subject</label>
             <p class="contact__input-confirmation"><?= $clean['subject']; ?></p>
           </div>
-          <div class="content-wrap">
+          <div class="contact__group">
             <label class="contact__label" for="">Message</label>
             <p class="contact__input-confirmation"><?= nl2br($clean['message']); ?></p>
           </div>
@@ -256,15 +256,15 @@ function validation($data) {
             <label class="contact__label" for="">Name</label>
             <input class="contact__input" type="text" name="name" value="<?php if (!empty($clean['name'])) {echo $clean['name'];} ?>" placeholder="neo yoshikawa" autocomplete="off" required>
           </div>
-          <div class="content-wrap">
+          <div class="contact__group">
             <label class="contact__label" for="">Email</label>
             <input class="contact__input" type="email" name="email" value="<?php if (!empty($clean['email'])) {echo $clean['email'];} ?>" placeholder="sushiboys350@yahoo.co.jp" autocomplete="off" required>
           </div>
-          <div class="content-wrap">
+          <div class="contact__group">
             <label class="contact__label" for="">Subject</label>
             <input class="contact__input" type="subject" name="subject" value="<?php if (!empty($clean['subject'])) {echo $clean['subject'];} ?>" placeholder="About your inquiry for our products" autocomplete="off" required>
           </div>
-          <div class="content-wrap">
+          <div class="contact__group">
             <label class="contact__label" for="">Message</label>
             <textarea class="contact__textarea" name="message" placeholder="I have a question regarding your online shop." autocomplete="off" required><?php if (!empty($clean['message'])) {echo $clean['message'];} ?></textarea>
           </div>
