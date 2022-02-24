@@ -193,7 +193,7 @@ function validation($data) {
         <!-- 確認ページ start -->
         <form class="contact" method="post" action="">
           <!-- 表示用 start-->
-          <div class="content-wrap">
+          <div>
             <label class="contact__label" for="">Name</label>
             <p class="contact__input-confirmation"><?= $clean['name']; ?></p>
           </div>
@@ -252,7 +252,7 @@ function validation($data) {
         </ul>
   <?php endif; ?>
         <form class="contact" method="post" action="" novalidate>
-          <div class="content-wrap">
+          <div>
             <label class="contact__label" for="">Name</label>
             <input class="contact__input" type="text" name="name" value="<?php if (!empty($clean['name'])) {echo $clean['name'];} ?>" placeholder="neo yoshikawa" autocomplete="off" required>
           </div>
