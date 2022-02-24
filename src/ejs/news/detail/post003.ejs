@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%- include('../../_data/_news'); %>
+  <%
+  let localmeta = {
+    title: 'NEWS DETAIL | SUSHIBOYS',
+    description: 'SUSHIBOYSの最新情報。メディア掲載等の情報をご覧いただけます。'
+  };
+  let localfile = {
+    css: '/css/news-detail.css',
+    js: '/js/newsDetail.js'
+  };
+  let newsData = news();
+  %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+</head>
+<body>
+  <%- include('../../_inc/components/_googletagmanager'); %>
+  <div class="wrapper">
+    <%- include('../../_inc/components/_header', {current: 'news'}); %>
+    <main class="main">
+      <%- include('../../_inc/components/news/detail/_post003', {newsData: newsData}); %>
+    </main>
+    <%- include('../../_inc/components/_footer'); %>
+  </div>
+</body>
+</html>
