@@ -87,8 +87,8 @@
       align-items: center;
       width: 100%;
       height: 100%;
-      padding-block-start: 30%;
-      padding-block-end: 30%;
+      padding-block-start: i.get_vw-sm(20);
+      padding-block-end: i.get_vw-sm(20);
       padding-inline-start: 0;
       padding-inline-end: 0;
       background: radial-gradient(transparent, #000 100%);
