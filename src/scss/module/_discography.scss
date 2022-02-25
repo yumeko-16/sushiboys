@@ -46,16 +46,16 @@
   }
   &__image {
     display: block;
-    width: i.get_vw-sm(200);
-    height: i.get_vw-sm(200);
+    width: i.get_vw-sm(130);
+    height: i.get_vw-sm(130);
     object-fit: cover;
     @include i.tb-screen {
-      width: i.get_vw-tb(200);
-      height: i.get_vw-tb(200);
+      width: i.get_vw-tb(160);
+      height: i.get_vw-tb(160);
     }
     @include i.pc-screen {
-      width: 250px;
-      height: 250px;
+      width: 230px;
+      height: 230px;
     }
   }
 }

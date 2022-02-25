@@ -41,6 +41,7 @@
     margin-inline-end: 5%;
     width: i.get_vw-sm(110);
     @include i.pc-screen {
+      height: 100%;
       margin-inline-end: 0;
       width: 100%;
     }
