@@ -37,9 +37,9 @@
   }
   &__thumbnail {
     display: block;
+    height: i.get_vw-sm(110);
     margin-inline-end: 5%;
-    object-fit: cover;
-    width: 35%;
+    width: i.get_vw-sm(110);
     @include i.pc-screen {
       margin-inline-end: 0;
       width: 100%;
