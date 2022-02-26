@@ -2,14 +2,27 @@
 
 .news {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   @include i.pc-screen {
-    flex-direction: row-reverse;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  &::before,
+  &::after {
+    @include i.pc-screen {
+      content: "";
+      display: block;
+      width: calc(100% / 4 - 15px);
+      height: 0;
+    }
+  }
+  &::before {
+    order: 1;
+  }
   &__item {
     @include i.pc-screen {
+      margin-block-end: 20px;
       width: calc(100% / 4 - 15px);
     }
     &:hover {
@@ -48,7 +61,10 @@
   }
   &__caption {
     @include i.pc-screen {
-      margin-block-start: 15px;
+      padding-block-start: 15px;
+      padding-block-end: 0;
+      padding-inline-start: 5px;
+      padding-inline-end: 5px;
     }
   }
 }
