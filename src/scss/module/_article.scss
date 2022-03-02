@@ -13,9 +13,6 @@
     margin-inline-start: auto;
     margin-inline-end: auto;
     width: 100%;
-    @include i.tb-screen {
-      width: unset;
-    }
   }
   &__jacket {
     width: 100%;
