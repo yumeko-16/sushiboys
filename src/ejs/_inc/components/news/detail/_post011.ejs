@@ -1,0 +1,29 @@
+<section class="section">
+  <article class="article">
+    <% let posts = newsData.posts; %>
+    <h2 class="heading"><%- posts[0].title %></h2>
+    <p class="content-wrap">
+      <img class="article__hero" src="<%- posts[0].image %>" alt="<%- posts[0].alt %>">
+    </p>
+    <div class="content-wrap">
+      <div class="article__text">
+        <p class="text"><%- posts[0].text %></p>
+      </div>
+    </div>
+    <div class="content-wrap">
+      <p class="article__text">
+        <img class="article__jacket-image" src="<%- posts[0].contentsImage[0] %>" alt="<%- posts[0].alt %>">
+      </p>
+    </div>
+    <div class="content-wrap">
+      <p class="article__text">
+        <img class="article__jacket-image" src="<%- posts[0].contentsImage[1] %>" alt="<%- posts[0].alt %>">
+      </p>
+    </div>
+  </article>
+  <div class="button__wrap">
+    <a class="button" href="/news/">
+      <span class="button__text">Back</span>
+    </a>
+  </div>
+</section>
