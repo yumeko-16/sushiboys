@@ -1,12 +1,12 @@
 <section class="section">
-  <ul class="news">
+  <ul class="news" data-news>
     <% let posts = newsData.posts; %>
     <% posts.forEach(function(post) { %>
     <li class="news__item">
       <a class="news__link" href="<%- post.url %>">
         <figure class="news__group">
-          <img class="news__thumbnail" src="<%- post.image %>" alt="<%- post.image %>">
-          <figcaption class="news__caption text text--bold"><%- post.title %></figcaption>
+          <img class="news__thumbnail" src="<%- post.image %>" alt="<%- post.alt %>">
+          <h2 class="news__title text text--bold"><%- post.title %></h2>
         </figure>
       </a>
     </li>
