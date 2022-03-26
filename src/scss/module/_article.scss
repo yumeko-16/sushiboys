@@ -3,88 +3,88 @@
 .article {
   display: flex;
   flex-direction: column;
-  &__inner {
-    @include i.tb-screen {
-      display: flex;
-    }
+}
+.article__inner {
+  @include i.tb-screen {
+    display: flex;
   }
-  &__hero {
-    display: block;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    width: 100%;
+}
+.article__hero {
+  display: block;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  width: 100%;
+}
+.article__jacket {
+  width: 100%;
+  @include i.tb-screen {
+    width: 40%;
   }
-  &__jacket {
-    width: 100%;
-    @include i.tb-screen {
-      width: 40%;
-    }
+}
+.article__jacket-image {
+  display: block;
+  width: 100%;
+}
+.article__caption {
+  width: 100%;
+  margin-block-start: i.get_vw-sm(20);
+  padding-block-start: 0;
+  padding-block-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  @include i.tb-screen {
+    width: 60%;
+    margin-block-start: 0;
+    padding-inline-start: i.get_vw-tb(20);
   }
-  &__jacket-image {
-    display: block;
-    width: 100%;
+  @include i.pc-screen {
+    padding-inline-start: 30px;
   }
-  &__caption {
-    width: 100%;
-    margin-block-start: i.get_vw-sm(20);
-    padding-block-start: 0;
-    padding-block-end: 0;
-    padding-inline-start: 0;
-    padding-inline-end: 0;
-    @include i.tb-screen {
-      width: 60%;
-      margin-block-start: 0;
-      padding-inline-start: i.get_vw-tb(20);
-    }
-    @include i.pc-screen {
-      padding-inline-start: 30px;
-    }
+}
+.article__caption-heading {
+  color: i.$color-white;
+  font-family: i.$font-special;
+  font-size: i.get_vw-sm(18);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  @include i.tb-screen {
+    font-size: i.get_vw-tb(20);
   }
-  &__caption-heading {
-    color: i.$color-white;
-    font-family: i.$font-special;
-    font-size: i.get_vw-sm(18);
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    @include i.tb-screen {
-      font-size: i.get_vw-tb(20);
-    }
-    @include i.pc-screen {
-      font-size: 20px;
-    }
+  @include i.pc-screen {
+    font-size: 20px;
   }
-  &__caption-list {
-    display: block;
-    margin-block-start: i.get_vw-sm(20);
-    padding-inline-start: 1rem;
-    @include i.tb-screen {
-      margin-block-start: i.get_vw-tb(20);
-    }
-    @include i.pc-screen {
-      margin-block-start: 20px;
-    }
-    &--song {
-      list-style-type: decimal-leading-zero;
-      padding-inline-start: 3rem;
-    }
+}
+.article__caption-list {
+  display: block;
+  margin-block-start: i.get_vw-sm(20);
+  padding-inline-start: 1rem;
+  @include i.tb-screen {
+    margin-block-start: i.get_vw-tb(20);
   }
-  &__caption-item {
-    color: i.$color-white;
-    display: list-item;
-    font-size: i.get_vw-sm(16);
-    font-weight: 700;
-    @include i.tb-screen {
-      font-size: i.get_vw-tb(16);
-    }
-    @include i.pc-screen {
-      font-size: 16px;
-    }
+  @include i.pc-screen {
+    margin-block-start: 20px;
   }
-  &__text {
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    @include i.pc-screen {
-      width: 700px;
-    }
+  &--song {
+    list-style-type: decimal-leading-zero;
+    padding-inline-start: 3rem;
+  }
+}
+.article__caption-item {
+  color: i.$color-white;
+  display: list-item;
+  font-size: i.get_vw-sm(16);
+  font-weight: 700;
+  @include i.tb-screen {
+    font-size: i.get_vw-tb(16);
+  }
+  @include i.pc-screen {
+    font-size: 16px;
+  }
+}
+.article__text {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  @include i.pc-screen {
+    width: 700px;
   }
 }

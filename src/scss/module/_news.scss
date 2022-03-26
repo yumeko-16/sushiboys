@@ -20,57 +20,57 @@
   &::before {
     order: 1;
   }
-  &__item {
-    @include i.pc-screen {
-      margin-block-end: 20px;
-      width: calc(100% / 4 - 15px);
-    }
-    &:hover {
-      opacity: 0.8;
-    }
+}
+.news__item {
+  @include i.pc-screen {
+    margin-block-end: 20px;
+    width: calc(100% / 4 - 15px);
   }
-  &__link {
-    display: block;
-    padding-block-start: i.get_vw-sm(15);
-    padding-block-end: i.get_vw-sm(15);
-    @include i.tb-screen {
-      padding-block-start: i.get_vw-tb(15);
-      padding-block-end: i.get_vw-tb(15);
-    }
-    @include i.pc-screen {
-      padding-block-start: 0;
-      padding-block-end: 0;
-    }
+  &:hover {
+    opacity: 0.8;
   }
-  &__group {
-    display: flex;
-    @include i.pc-screen {
-      flex-direction: column;
-    }
+}
+.news__link {
+  display: block;
+  padding-block-start: i.get_vw-sm(15);
+  padding-block-end: i.get_vw-sm(15);
+  @include i.tb-screen {
+    padding-block-start: i.get_vw-tb(15);
+    padding-block-end: i.get_vw-tb(15);
   }
-  &__thumbnail {
-    background-color: i.$color-gray;
-    display: block;
-    height: i.get_vw-sm(110);
-    margin-inline-end: 5%;
-    object-fit: contain;
-    width: i.get_vw-sm(110);
-    @include i.tb-screen {
-      height: i.get_vw-tb(110);
-      width: i.get_vw-tb(110);
-    }
-    @include i.pc-screen {
-      height: 177px;
-      margin-inline-end: 0;
-      width: 100%;
-    }
+  @include i.pc-screen {
+    padding-block-start: 0;
+    padding-block-end: 0;
   }
-  &__title {
-    @include i.pc-screen {
-      padding-block-start: 15px;
-      padding-block-end: 0;
-      padding-inline-start: 5px;
-      padding-inline-end: 5px;
-    }
+}
+.news__group {
+  display: flex;
+  @include i.pc-screen {
+    flex-direction: column;
+  }
+}
+.news__thumbnail {
+  background-color: i.$color-gray;
+  display: block;
+  height: i.get_vw-sm(110);
+  margin-inline-end: 5%;
+  object-fit: contain;
+  width: i.get_vw-sm(110);
+  @include i.tb-screen {
+    height: i.get_vw-tb(110);
+    width: i.get_vw-tb(110);
+  }
+  @include i.pc-screen {
+    height: 177px;
+    margin-inline-end: 0;
+    width: 100%;
+  }
+}
+.news__title {
+  @include i.pc-screen {
+    padding-block-start: 15px;
+    padding-block-end: 0;
+    padding-inline-start: 5px;
+    padding-inline-end: 5px;
   }
 }

@@ -8,8 +8,8 @@
   @include i.tb-screen {
     width: 50%;
   }
-  &__image {
-    display: block;
-    width: 100%;
-  }
+}
+.hero__image {
+  display: block;
+  width: 100%;
 }

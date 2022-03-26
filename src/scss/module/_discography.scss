@@ -3,59 +3,59 @@
 .discography {
   display: flex;
   flex-direction: column;
-  &__item {
-    &:not(:first-of-type) {
-      margin-block-start: i.get_vw-sm(20);
-      @include i.tb-screen {
-        margin-block-start: i.get_vw-tb(20);
-      }
-      @include i.pc-screen {
-        margin-block-start: 40px;
-      }
-    }
-  }
-  &__type-heading {
-    color: i.$color-white;
-    font-size: i.get_vw-sm(28);
-    font-weight: 700;
+}
+.discography__item {
+  &:not(:first-of-type) {
+    margin-block-start: i.get_vw-sm(20);
     @include i.tb-screen {
-      font-size: i.get_vw-tb(24);
+      margin-block-start: i.get_vw-tb(20);
     }
     @include i.pc-screen {
-      font-size: 28px;
+      margin-block-start: 40px;
     }
   }
-  &__swiper {
-    margin-block-start: i.get_vw-sm(10);
-    @include i.tb-screen {
-      margin-block-start: i.get_vw-tb(10);
-    }
-    @include i.pc-screen {
-      margin-block-start: 20px;
-    }
-    &.swiper {
-      width: 100%;
-      height: 100%;
-      overflow: visible;
-    }
+}
+.discography__type-heading {
+  color: i.$color-white;
+  font-size: i.get_vw-sm(28);
+  font-weight: 700;
+  @include i.tb-screen {
+    font-size: i.get_vw-tb(24);
   }
-  &__card {
-    &.swiper-slide {
-      width: fit-content;
-    }
+  @include i.pc-screen {
+    font-size: 28px;
   }
-  &__image {
-    display: block;
-    width: i.get_vw-sm(130);
-    height: i.get_vw-sm(130);
-    object-fit: cover;
-    @include i.tb-screen {
-      width: i.get_vw-tb(160);
-      height: i.get_vw-tb(160);
-    }
-    @include i.pc-screen {
-      width: 230px;
-      height: 230px;
-    }
+}
+.discography__swiper {
+  margin-block-start: i.get_vw-sm(10);
+  @include i.tb-screen {
+    margin-block-start: i.get_vw-tb(10);
+  }
+  @include i.pc-screen {
+    margin-block-start: 20px;
+  }
+  &.swiper {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+}
+.discography__card {
+  &.swiper-slide {
+    width: fit-content;
+  }
+}
+.discography__image {
+  display: block;
+  width: i.get_vw-sm(130);
+  height: i.get_vw-sm(130);
+  object-fit: cover;
+  @include i.tb-screen {
+    width: i.get_vw-tb(160);
+    height: i.get_vw-tb(160);
+  }
+  @include i.pc-screen {
+    width: 230px;
+    height: 230px;
   }
 }

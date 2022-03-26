@@ -11,7 +11,7 @@
   @include i.pc-screen {
     font-size: 54px;
   }
-  &__link {
-    color: i.$color-white;
-  }
+}
+.site-title__link {
+  color: i.$color-white;
 }
