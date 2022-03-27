@@ -4,8 +4,8 @@
   <%- include('../../_data/_discography'); %>
   <%
   let localmeta = {
-    title: 'DISCOGRAPHY You GARI feat.SUSHIBOYS | SUSHIBOYS',
-    description: ''
+    title: 'You GARI feat.SUSHIBOYS | SUSHIBOYS',
+    description: 'You GARI feat.SUSHIBOYS'
   };
   let localfile = {
     css: '/css/discography-detail.css',
