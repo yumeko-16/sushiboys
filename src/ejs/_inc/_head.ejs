@@ -10,12 +10,26 @@
   })(window, document, 'script', 'dataLayer', 'GTM-TG426DZ');
 </script>
 <!-- End Google Tag Manager -->
+<%
+clearcache = () => {
+  const date = new Date();
+  const param = '?';
+  const Y = date.getFullYear();
+  const M = ("00" + (date.getMonth()+1)).slice(-2);
+  const D = ("00" + date.getDate()).slice(-2);
+  const Hours = ("00" + date.getHours()).slice(-2);
+  const Minutes = ("00" + date.getMinutes()).slice(-2);
+  return param + Y + M + D + Hours + Minutes;
+}
+%>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><%= meta.title %></title>
 <meta name="description" content="<%= meta.description %>">
-<link rel="stylesheet" href="<%= file.css %>">
+<% if (file.css !== '' || null || undefined) { %>
+<link rel="stylesheet" href="<%= file.css %><%= clearcache() %>">
+<% } %>
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
