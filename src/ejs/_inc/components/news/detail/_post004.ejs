@@ -3,7 +3,7 @@
     <% let posts = newsData.posts; %>
     <h2 class="heading"><%- posts[3].title %></h2>
     <p class="content-wrap">
-      <img class="article__hero" src="<%- posts[3].image %>" alt="<%- posts[3].alt %>">
+      <img class="article__hero" src="<%- posts[3].image[0].hero %>" alt="<%- posts[3].alt[0].hero %>">
     </p>
     <div class="content-wrap">
       <div class="article__text">

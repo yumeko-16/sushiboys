@@ -5,7 +5,7 @@
     <li class="news__item">
       <a class="news__link" href="<%- post.url %>">
         <figure class="news__group">
-          <img class="news__thumbnail" src="<%- post.image %>" alt="<%- post.alt %>">
+          <img class="news__thumbnail" src="<%- post.image[0].hero %>" alt="<%- post.alt[0].hero %>">
           <h2 class="news__title text text--bold"><%- post.title %></h2>
         </figure>
       </a>
