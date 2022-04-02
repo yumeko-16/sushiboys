@@ -10,7 +10,9 @@
         <ul class="article__caption-list">
           <li class="article__caption-item">作品種別 : <%- eps[3].type %></li>
           <li class="article__caption-item">発売日 : <%- eps[3].release %></li>
+          <% if (!eps[3].price.trim() === false) { %>
           <li class="article__caption-item">価格 : <%- eps[3].price %></li>
+          <% } %>
           <li class="article__caption-item">視聴：ご視聴は<a href="<%- eps[3].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
         </ul>
         <h3 class="article__caption-heading">Song contents</h3>

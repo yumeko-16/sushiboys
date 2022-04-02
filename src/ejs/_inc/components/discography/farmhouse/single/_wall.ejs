@@ -10,6 +10,9 @@
         <ul class="article__caption-list">
           <li class="article__caption-item">作品種別 : <%- singles[1].type %></li>
           <li class="article__caption-item">発売日 : <%- singles[1].release %></li>
+          <% if (!singles[1].price.trim() === false) { %>
+          <li class="article__caption-item">価格 : <%- singles[1].price %></li>
+          <% } %>
           <li class="article__caption-item">視聴：ご視聴は<a href="<%- singles[1].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
         </ul>
         <h3 class="article__caption-heading">Song contents</h3>
