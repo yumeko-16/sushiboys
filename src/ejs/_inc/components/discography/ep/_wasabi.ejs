@@ -21,7 +21,7 @@
           </li>
           <% }); %>
         </ol>
-        <% if (!eps[3].bonusTracks[0].trim() == '') { %>
+        <% if (!eps[3].bonusTracks[0].trim() === false) { %>
         <h3 class="article__caption-heading">Bonus track</h3>
         <ol class="article__caption-list article__caption-list--song">
           <% eps[3].bonusTracks.forEach(function(bonusTrack) { %>

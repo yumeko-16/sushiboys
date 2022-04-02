@@ -20,7 +20,7 @@
           </li>
           <% }); %>
         </ol>
-        <% if (!feats[1].bonusTracks[0].trim() == '') { %>
+        <% if (!feats[1].bonusTracks[0].trim() === false) { %>
         <h3 class="article__caption-heading">Bonus track</h3>
         <ol class="article__caption-list article__caption-list--song">
           <% feats[1].bonusTracks.forEach(function(bonusTrack) { %>
