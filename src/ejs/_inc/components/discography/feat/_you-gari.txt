@@ -8,7 +8,7 @@
       <div class="article__caption">
         <h2 class="heading"><%- feats[2].title %></h2>
         <ul class="article__caption-list">
-          <li class="article__caption-item">作品種別 : <%- feats[2].kind %></li>
+          <li class="article__caption-item">作品種別 : <%- feats[2].type %></li>
           <li class="article__caption-item">発売日 : <%- feats[2].release %></li>
         </ul>
         <h3 class="article__caption-heading">Song contents</h3>
