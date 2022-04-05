@@ -30,8 +30,8 @@
     opacity: 0.8;
   }
 }
-.news__link {
-  display: block;
+.news__anchor {
+  display: flex;
   padding-block-start: i.get_vw-sm(15);
   padding-block-end: i.get_vw-sm(15);
   @include i.tb-screen {
@@ -39,22 +39,21 @@
     padding-block-end: i.get_vw-tb(15);
   }
   @include i.pc-screen {
+    flex-direction: column;
     padding-block-start: 0;
     padding-block-end: 0;
   }
 }
-.news__group {
-  display: flex;
+.news__thumbnail {
+  margin-inline-end: 5%;
   @include i.pc-screen {
-    flex-direction: column;
+    margin-inline-end: 0;
   }
 }
-.news__thumbnail {
-  background-color: i.$color-gray;
+.news__thumbnail-image {
   display: block;
   height: i.get_vw-sm(110);
-  margin-inline-end: 5%;
-  object-fit: contain;
+  object-fit: cover;
   width: i.get_vw-sm(110);
   @include i.tb-screen {
     height: i.get_vw-tb(110);
@@ -62,15 +61,21 @@
   }
   @include i.pc-screen {
     height: 177px;
-    margin-inline-end: 0;
     width: 100%;
   }
 }
 .news__title {
+  font-size: i.get_vw-sm(16);
+  width: 65%;
+  @include i.tb-screen {
+    font-size: i.get_vw-tb(16);
+  }
   @include i.pc-screen {
+    font-size: 16px;
     padding-block-start: 15px;
     padding-block-end: 0;
     padding-inline-start: 5px;
     padding-inline-end: 5px;
+    width: 100%;
   }
 }

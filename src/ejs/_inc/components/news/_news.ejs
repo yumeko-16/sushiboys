@@ -3,11 +3,11 @@
     <% let posts = newsData.posts; %>
     <% posts.forEach(function(post) { %>
     <li class="news__item">
-      <a class="news__link" href="<%- post.url %>">
-        <figure class="news__group">
-          <img class="news__thumbnail" src="<%- post.image[0].hero %>" alt="<%- post.alt[0].hero %>">
-          <h2 class="news__title text text--bold"><%- post.title %></h2>
+      <a class="news__anchor" href="<%- post.url %>">
+        <figure class="news__thumbnail">
+          <img class="news__thumbnail-image" src="<%- post.image[0].hero %>" alt="<%- post.alt[0].hero %>">
         </figure>
+        <h2 class="news__title text text--bold"><%- post.title %></h2>
       </a>
     </li>
     <% }); %>
