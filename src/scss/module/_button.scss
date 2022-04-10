@@ -1,16 +1,31 @@
 @use "../import" as i;
 
 .button {
+  align-items: initial;
+  appearance: initial;
   background-color: i.$color-black;
+  border-color: initial;
+  border-image: initial;
   border-radius: i.get_vw-sm(5);
+  border-style: initial;
+  border-width: initial;
+  color: i.$color-white;
   cursor: pointer;
   display: block;
+  letter-spacing: initial;
   padding-block-start: i.get_vw-sm(15);
   padding-block-end: i.get_vw-sm(15);
   padding-inline-start: i.get_vw-sm(25);
   padding-inline-end: i.get_vw-sm(25);
   text-align: center;
+  text-decoration: none;
+  text-indent: initial;
+  text-rendering: initial;
+  text-shadow: initial;
+  text-transform: initial;
   width: 50%;
+  word-spacing: initial;
+  writing-mode: initial;
   @include i.tb-screen {
     border-radius: i.get_vw-tb(5);
     padding-block-start: i.get_vw-tb(15);

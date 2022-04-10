@@ -28,20 +28,40 @@
 }
 .contact__input,
 .contact__textarea {
+  -webkit-rtl-ordering: initial;
+  appearance: initial;
+  background: i.$color-white;
+  border: none;
+  border-color: initial;
+  border-image: initial;
+  border-radius: i.get_vw-sm(5);
+  border-style: initial;
+  border-width: initial;
+  color: i.$color-black;
+  column-count: initial;
+  cursor: initial;
   display: block;
-  width: 100%;
+  flex-direction: initial;
+  font: initial;
+  font-size: i.get_vw-sm(16);
+  letter-spacing: 0.1em;
+  line-height: 1.6;
   margin-block-start: i.get_vw-sm(10);
+  overflow-wrap: initial;
   padding-block-start: i.get_vw-sm(15);
   padding-block-end: i.get_vw-sm(15);
   padding-inline-start: i.get_vw-sm(15);
   padding-inline-end: i.get_vw-sm(15);
-  border: none;
-  border-radius: i.get_vw-sm(5);
-  background: i.$color-white;
-  color: i.$color-black;
-  font-size: i.get_vw-sm(16);
-  line-height: 1.6;
-  letter-spacing: 0.1em;
+  resize: initial;
+  text-align: initial;
+  text-indent: initial;
+  text-rendering: initial;
+  text-shadow: initial;
+  text-transform: initial;
+  white-space: initial;
+  word-spacing: initial;
+  writing-mode: initial;
+  width: 100%;
   @include i.tb-screen {
     margin-block-start: i.get_vw-tb(10);
     padding-block-start: i.get_vw-tb(15);

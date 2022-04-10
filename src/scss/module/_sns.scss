@@ -3,7 +3,12 @@
 .sns {
   display: flex;
   justify-content: center;
-  /* ボタン全体 */
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
 }
 .sns__item {
   display: flex;
@@ -19,13 +24,14 @@
   }
 }
 .sns__link {
+  color: i.$color-white;
+  cursor: pointer;
   display: inline-block;
   position: relative;
   width: i.get_vw-sm(40);
   height: i.get_vw-sm(40);
   border-radius: 50%;
   background-color: i.$color-black;
-  color: i.$color-white;
   font-size: i.get_vw-sm(20);
   text-decoration: none;
   transition: 0.5s;

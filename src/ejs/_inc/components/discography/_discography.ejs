@@ -3,12 +3,12 @@
     <li class="discography__item">
       <h2 class="title">EP</h2>
       <div id="swiper-ep" class="swiper discography__swiper">
-        <ul class="swiper-wrapper">
+        <ul class="swiper-wrapper discography__swiper-list">
           <% let eps = discographyData.eps; %>
           <% eps.forEach(function(ep) { %>
           <li class="swiper-slide discography__card">
             <a href="<%- ep.url %>">
-              <figure>
+              <figure class="discography__frame">
                 <img class="discography__image" src="<%- ep.image %>" alt="<%- ep.alt %>">
               </figure>
             </a>
@@ -25,7 +25,7 @@
           <% singles.forEach(function(single) { %>
           <li class="swiper-slide discography__card">
             <a href="<%- single.url %>">
-              <figure>
+              <figure class="discography__frame">
                 <img class="discography__image" src="<%- single.image %>" alt="<%- single.alt %>">
               </figure>
             </a>
@@ -42,7 +42,7 @@
           <% feats.forEach(function(feat) { %>
           <li class="swiper-slide discography__card">
             <a href="<%- feat.url %>">
-              <figure>
+              <figure class="discography__frame">
                 <img class="discography__image" src="<%- feat.image %>" alt="<%- feat.alt %>">
               </figure>
             </a>
@@ -59,7 +59,7 @@
           <% records.forEach(function(record) { %>
           <li class="swiper-slide discography__card">
             <a href="<%- record.url %>">
-              <figure>
+              <figure class="discography__frame">
                 <img class="discography__image" src="<%- record.image %>" alt="<%- record.alt %>">
               </figure>
             </a>
@@ -76,7 +76,7 @@
           <% farmhouseEps.forEach(function(farmhouseEp) { %>
           <li class="swiper-slide discography__card">
             <a href="<%- farmhouseEp.url %>">
-              <figure>
+              <figure class="discography__frame">
                 <img class="discography__image" src="<%- farmhouseEp.image %>" alt="<%- farmhouseEp.alt %>">
               </figure>
             </a>
@@ -93,7 +93,7 @@
           <% santenaEps.forEach(function(santenaEp) { %>
           <li class="swiper-slide discography__card">
             <a href="<%- santenaEp.url %>">
-              <figure>
+              <figure class="discography__frame">
                 <img class="discography__image" src="<%- santenaEp.image %>" alt="<%- santenaEp.alt %>">
               </figure>
             </a>
@@ -110,7 +110,7 @@
           <% farmhouseSingles.forEach(function(farmhouseSingle) { %>
           <li class="swiper-slide discography__card">
             <a href="<%- farmhouseSingle.url %>">
-              <figure>
+              <figure class="discography__frame">
                 <img class="discography__image" src="<%- farmhouseSingle.image %>" alt="<%- farmhouseSingle.alt %>">
               </figure>
             </a>

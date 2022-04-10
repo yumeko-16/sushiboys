@@ -3,6 +3,12 @@
 .news {
   display: flex;
   flex-direction: column;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
   @include i.pc-screen {
     flex-direction: row;
     flex-wrap: wrap;
@@ -22,6 +28,7 @@
   }
 }
 .news__item {
+  display: block;
   @include i.pc-screen {
     margin-block-end: 20px;
     width: calc(100% / 4 - 15px);
@@ -31,9 +38,11 @@
   }
 }
 .news__anchor {
+  cursor: pointer;
   display: flex;
   padding-block-start: i.get_vw-sm(15);
   padding-block-end: i.get_vw-sm(15);
+  text-decoration: none;
   @include i.tb-screen {
     padding-block-start: i.get_vw-tb(15);
     padding-block-end: i.get_vw-tb(15);
@@ -45,6 +54,9 @@
   }
 }
 .news__thumbnail {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
   margin-inline-end: 5%;
   @include i.pc-screen {
     margin-inline-end: 0;
@@ -66,6 +78,11 @@
 }
 .news__title {
   font-size: i.get_vw-sm(16);
+  font-weight: 400;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   width: 65%;
   @include i.tb-screen {
     font-size: i.get_vw-tb(16);

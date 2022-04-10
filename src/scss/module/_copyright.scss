@@ -5,6 +5,9 @@
   font-family: i.$font-special;
   letter-spacing: 0.1em;
   margin-block-start: i.get_vw-sm(20);
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   text-align: center;
   @include i.tb-screen {
     margin-block-start: i.get_vw-tb(20);

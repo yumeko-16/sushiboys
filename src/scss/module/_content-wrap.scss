@@ -2,6 +2,9 @@
 
 .content-wrap {
   margin-block-start: i.get_vw-sm(20);
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   @include i.tb-screen {
     margin-block-start: i.get_vw-tb(20);
   }

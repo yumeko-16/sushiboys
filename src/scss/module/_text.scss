@@ -2,11 +2,17 @@
 
 .text {
   color: i.$color-white;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   word-break: break-all;
   &--bold {
     font-weight: 700;
   }
 }
 .text__link {
+  color: i.$color-white;
+  cursor: pointer;
   text-decoration: underline;
 }
