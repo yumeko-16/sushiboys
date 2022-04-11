@@ -7,6 +7,15 @@
   margin-inline-start: 0;
   margin-inline-end: 0;
   word-break: break-all;
+  &:not(:first-of-type) {
+    margin-block-start: i.get_vw-sm(16);
+    @include i.tb-screen {
+      margin-block-start: i.get_vw-tb(16);
+    }
+    @include i.pc-screen {
+      margin-block-start: 16px;
+    }
+  }
   &--bold {
     font-weight: 700;
   }

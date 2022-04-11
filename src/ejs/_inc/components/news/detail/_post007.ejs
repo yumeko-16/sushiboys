@@ -7,7 +7,9 @@
     </p>
     <div class="content-wrap">
       <div class="article__text">
-        <p class="text"><%- posts[6].text %></p>
+        <% posts[6].leads.forEach(function(lead) { %>
+        <p class="text"><%- lead %></p>
+        <% }); %>
       </div>
     </div>
   </article>
