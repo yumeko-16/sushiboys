@@ -88,6 +88,11 @@
   @include i.pc-screen {
     font-size: 16px;
   }
+  a {
+    color: i.$color-white;
+    cursor: pointer;
+    text-decoration: underline;
+  }
 }
 .article__text {
   margin-block-start: 0;
