@@ -1,0 +1,26 @@
+<section class="section">
+  <article class="article">
+    <% let posts = newsData.posts; %>
+    <h2 class="heading"><%- posts[11].title %></h2>
+    <p class="content-wrap">
+      <img class="article__hero" src="<%- posts[11].image[0].hero %>" alt="<%- posts[11].alt[0].hero %>">
+    </p>
+    <div class="content-wrap">
+      <div class="article__text">
+        <% posts[11].leads.forEach(function(lead) { %>
+        <p class="text"><%- lead %></p>
+        <% }); %>
+      </div>
+    </div>
+    <div class="content-wrap">
+      <p class="article__text">
+        <img class="article__jacket-image" src="<%- posts[11].image[0].content001 %>" alt="<%- posts[11].alt[0].content001 %>">
+      </p>
+    </div>
+  </article>
+  <div class="button__wrap">
+    <a class="button" href="/news/">
+      <span class="button__text">Back</span>
+    </a>
+  </div>
+</section>
