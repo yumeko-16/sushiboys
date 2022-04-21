@@ -134,7 +134,7 @@ function validation($data) {
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CONTACT | SUSHIBOYS</title>
-  <meta name="description" content="CONTACT">
+  <meta name="description" content="SUSHIBOYSの鼓膜に直接コンタクト。ご連絡おまちしております。">
   <link rel="stylesheet" href="/css/contact.css?202203292010">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
