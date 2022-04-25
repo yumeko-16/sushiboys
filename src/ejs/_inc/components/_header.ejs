@@ -20,6 +20,9 @@
             case 'discography':
               text = 'DISCOGRAPHY';
               break;
+            case 'goods':
+              text = 'GOODS';
+              break;
             case 'contact':
               text = 'CONTACT'
               break;
@@ -33,7 +36,7 @@
           <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/">HOME</a></li>
           <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/news/">NEWS</a></li>
           <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/discography/">DISCOGRAPHY</a></li>
-          <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">GOODS</a></li>
+          <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/goods/">GOODS</a></li>
           <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/contact/">CONTACT</a></li>
         </ul>
         <div class="global-navigation--sp__close-wrap">
@@ -46,7 +49,7 @@
         <li class="global-navigation--pc__item"><a class="global-navigation--pc__link<%- current == 'home' ? currentClass : '' %>" href="/">HOME</a></li>
         <li class="global-navigation--pc__item"><a class="global-navigation--pc__link<%- current == 'news' ? currentClass : '' %>" href="/news/">NEWS</a></li>
         <li class="global-navigation--pc__item"><a class="global-navigation--pc__link<%- current == 'discography' ? currentClass : '' %>" href="/discography/">DISCOGRAPHY</a></li>
-        <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">GOODS</a></li>
+        <li class="global-navigation--pc__item"><a class="global-navigation--pc__link<%- current == 'goods' ? currentClass : '' %>" href="/goods/">GOODS</a></li>
         <li class="global-navigation--pc__item"><a class="global-navigation--pc__link<%- current == 'contact' ? currentClass : '' %>" href="/contact/">CONTACT</a></li>
       </ul>
     </div>
