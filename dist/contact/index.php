@@ -165,7 +165,7 @@ function validation($data) {
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/">HOME</a></li>
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/news/">NEWS</a></li>
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/discography/">DISCOGRAPHY</a></li>
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">GOODS</a></li>
+              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/goods/">GOODS</a></li>
               <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/contact/">CONTACT</a></li>
             </ul>
             <div class="global-navigation--sp__close-wrap">
@@ -178,7 +178,7 @@ function validation($data) {
             <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/">HOME</a></li>
             <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/news/">NEWS</a></li>
             <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/discography/">DISCOGRAPHY</a></li>
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="https://sushiboys.thebase.in/" target="_blank" rel="noopener noreferrer">GOODS</a></li>
+            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/goods/">GOODS</a></li>
             <li class="global-navigation--pc__item"><a class="global-navigation--pc__link current" href="/contact/">CONTACT</a></li>
           </ul>
         </div>
