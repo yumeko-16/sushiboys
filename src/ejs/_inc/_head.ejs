@@ -27,6 +27,7 @@ clearcache = () => {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><%= meta.title %></title>
 <meta name="description" content="<%= meta.description %>">
+<link rel="canonical" href="<%= canonical.url %>">
 <% if (file.css !== '' || null || undefined) { %>
 <link rel="stylesheet" href="<%= file.css %><%= clearcache() %>">
 <% } %>
