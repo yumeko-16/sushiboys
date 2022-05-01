@@ -6,9 +6,6 @@
   margin-inline-start: 0;
   margin-inline-end: 0;
   @include i.tb-screen {
-    margin-block-start: 20px;
-  }
-  @include i.pc-screen {
     margin-block-start: 40px;
   }
 }

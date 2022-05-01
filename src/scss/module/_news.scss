@@ -9,14 +9,14 @@
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-inline-start: 0;
-  @include i.pc-screen {
+  @include i.tb-screen {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   &::before,
   &::after {
-    @include i.pc-screen {
+    @include i.tb-screen {
       content: "";
       display: block;
       height: 0;
@@ -29,7 +29,7 @@
 }
 .news__item {
   display: block;
-  @include i.pc-screen {
+  @include i.tb-screen {
     @include i.margin-block-end-vw(20);
     width: calc(100% / 4 - 15px);
   }
@@ -44,10 +44,6 @@
   display: flex;
   text-decoration: none;
   @include i.tb-screen {
-    padding-block-start: 15px;
-    padding-block-end: 15px;
-  }
-  @include i.pc-screen {
     flex-direction: column;
     padding-block-start: 0;
     padding-block-end: 0;
@@ -58,7 +54,7 @@
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 5%;
-  @include i.pc-screen {
+  @include i.tb-screen {
     margin-inline-end: 0;
   }
 }
@@ -68,10 +64,6 @@
   display: block;
   object-fit: cover;
   @include i.tb-screen {
-    height: 110px;
-    width: 110px;
-  }
-  @include i.pc-screen {
     height: 177px;
     width: 100%;
   }
@@ -86,8 +78,6 @@
   width: 65%;
   @include i.tb-screen {
     @include i.font-size(16);
-  }
-  @include i.pc-screen {
     padding-block-start: 15px;
     padding-block-end: 0;
     padding-inline-start: 5px;
