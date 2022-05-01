@@ -1,20 +1,20 @@
-@use "../import" as i;
+@use "../setting/config" as i;
 
 .title {
+  @include i.font-oswald;
+  @include i.font-size-vw(26);
   color: i.$color-white;
-  font-family: i.$font-special;
   font-weight: 400;
   letter-spacing: 0.1em;
-  font-size: i.get_vw-sm(26);
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
   @include i.tb-screen {
-    font-size: i.get_vw-tb(26);
+    @include i.font-size(26);
   }
   @include i.pc-screen {
-    font-size: 28px;
+    @include i.font-size(28);
   }
   &--center {
     text-align: center;

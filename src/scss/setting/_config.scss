@@ -1,19 +1,6 @@
 @use "sass:math";
 
-// ブレイクポイント
-$breakPoint-tb: 768px;
-$breakPoint-pc: 1024px;
-
-@function get_vw-sm($size, $viewport: 375) {
-  $rate: math.div(100, $viewport);
-  @return $rate * $size * 1vw;
-}
-@function get_vw-tb($size, $viewport: 600) {
-  $rate: math.div(100, $viewport);
-  @return $rate * $size * 1vw;
-}
-
-// サイトで使用する色
+/* colors */
 $color-white: #fff;
 $color-black: #444;
 $color-gray: #ccc;
@@ -21,9 +8,100 @@ $color-pink: #f6a4af;
 $color-blue: #2b7bb9;
 $color-error: #ff0000;
 
-// 基本書体
-$font-base: -apple-system, "BlinkMacSystemFont", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo",
-  sans-serif;
-// メイン書体
-$font-special: "Oswald", -apple-system, "BlinkMacSystemFont", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ",
-  "Meiryo", sans-serif;
+/* base window width for smartphone */
+$base-window-width: 375;
+
+/* @mixin
+----------------------------------------- */
+/* breakpoint */
+@mixin tb-screen {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin pc-screen {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+/* font size */
+@mixin font-size($px: 16) {
+  font-size: (math.div($px, 10)) + rem;
+}
+@mixin font-size-vw($px: 16) {
+  font-size: (math.div($px, $base-window-width) * 100) + vw;
+}
+
+/* font family */
+@mixin font-default {
+  font-family: -apple-system, "BlinkMacSystemFont", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+}
+@mixin font-oswald {
+  font-family: "Oswald", -apple-system, "BlinkMacSystemFont", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3",
+    "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+}
+
+/* 画面幅相対 */
+@mixin width-vw($px) {
+  width: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin height-vw($px) {
+  height: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin margin-block-start-vw($px) {
+  margin-block-start: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin margin-block-end-vw($px) {
+  margin-block-end: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin margin-inline-start-vw($px) {
+  margin-inline-start: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin margin-inline-end-vw($px) {
+  margin-inline-end: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin padding-block-start-vw($px) {
+  padding-block-start: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin padding-block-end-vw($px) {
+  padding-block-end: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin padding-inline-start-vw($px) {
+  padding-inline-start: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin padding-inline-end-vw($px) {
+  padding-inline-end: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin top-vw($px) {
+  top: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin bottom-vw($px) {
+  bottom: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin left-vw($px) {
+  left: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin right-vw($px) {
+  right: (math.div($px, $base-window-width) * 100) + vw;
+}
+
+/* normalize / reset
+----------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  @include font-default;
+  @include font-size-vw(16);
+  background-color: $color-pink;
+  display: block;
+  margin: 0;
+  @include tb-screen {
+    @include font-size(16);
+  }
+}

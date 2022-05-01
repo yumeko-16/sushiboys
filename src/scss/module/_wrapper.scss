@@ -1,13 +1,13 @@
-@use "../import" as i;
+@use "../setting/config" as i;
 
 .wrapper {
   position: relative;
   min-height: 100vh;
-  padding-bottom: i.get_vw-sm(123);
+  @include i.padding-block-end-vw(123);
   @include i.tb-screen {
-    padding-bottom: i.get_vw-tb(123);
+    padding-block-end: 123px;
   }
   @include i.pc-screen {
-    padding-bottom: 163px;
+    padding-block-end: 163px;
   }
 }

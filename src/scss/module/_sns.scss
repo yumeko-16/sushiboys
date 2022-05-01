@@ -1,4 +1,4 @@
-@use "../import" as i;
+@use "../setting/config" as i;
 
 .sns {
   display: flex;
@@ -11,48 +11,38 @@
   padding-inline-start: 0;
 }
 .sns__item {
+  @include i.padding-inline-start-vw(10);
+  @include i.padding-inline-end-vw(10);
   display: flex;
-  padding-inline-start: i.get_vw-sm(10);
-  padding-inline-end: i.get_vw-sm(10);
   @include i.tb-screen {
-    padding-inline-start: i.get_vw-tb(10);
-    padding-inline-end: i.get_vw-tb(10);
-  }
-  @include i.pc-screen {
     padding-inline-start: 10px;
     padding-inline-end: 10px;
   }
 }
 .sns__link {
+  @include i.font-size-vw(20);
+  @include i.height-vw(40);
+  @include i.width-vw(40);
+  background-color: i.$color-black;
+  border-radius: 50%;
   color: i.$color-white;
   cursor: pointer;
   display: inline-block;
   position: relative;
-  width: i.get_vw-sm(40);
-  height: i.get_vw-sm(40);
-  border-radius: 50%;
-  background-color: i.$color-black;
-  font-size: i.get_vw-sm(20);
   text-decoration: none;
   transition: 0.5s;
   &:hover {
     opacity: 0.8;
   }
   @include i.tb-screen {
-    width: i.get_vw-tb(40);
-    height: i.get_vw-tb(40);
-    font-size: i.get_vw-tb(20);
-  }
-  @include i.pc-screen {
-    width: 40px;
+    @include i.font-size(20);
     height: 40px;
-    font-size: 20px;
+    width: 40px;
   }
-  /* アイコンを真ん中に */
   i {
-    position: absolute;
-    top: 50%;
     left: 50%;
+    position: absolute;
     transform: translate(-50%, -50%);
+    top: 50%;
   }
 }

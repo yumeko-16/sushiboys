@@ -1,22 +1,22 @@
-@use "../import" as i;
+@use "../setting/config" as i;
 
 .button {
+  @include i.padding-block-start-vw(15);
+  @include i.padding-block-end-vw(15);
+  @include i.padding-inline-start-vw(25);
+  @include i.padding-inline-end-vw(25);
   align-items: initial;
   appearance: initial;
   background-color: i.$color-black;
   border-color: initial;
   border-image: initial;
-  border-radius: i.get_vw-sm(5);
+  border-radius: 5px;
   border-style: initial;
   border-width: initial;
   color: i.$color-white;
   cursor: pointer;
   display: block;
   letter-spacing: initial;
-  padding-block-start: i.get_vw-sm(15);
-  padding-block-end: i.get_vw-sm(15);
-  padding-inline-start: i.get_vw-sm(25);
-  padding-inline-end: i.get_vw-sm(25);
   text-align: center;
   text-decoration: none;
   text-indent: initial;
@@ -27,27 +27,16 @@
   word-spacing: initial;
   writing-mode: initial;
   @include i.tb-screen {
-    border-radius: i.get_vw-tb(5);
-    padding-block-start: i.get_vw-tb(15);
-    padding-block-end: i.get_vw-tb(15);
-    padding-inline-start: i.get_vw-tb(25);
-    padding-inline-end: i.get_vw-tb(25);
-    width: auto;
-  }
-  @include i.pc-screen {
-    border-radius: 5px;
     padding-block-start: 15px;
     padding-block-end: 15px;
-    padding-inline-start: 25px;
-    padding-inline-end: 25px;
+    padding-inline-start: 25;
+    padding-inline-end: 25;
+    width: auto;
   }
   &:not(:first-of-type) {
-    margin-block-end: i.get_vw-sm(30);
+    @include i.margin-block-end-vw(30);
     @include i.tb-screen {
       margin-block-end: 0;
-      margin-inline-start: i.get_vw-tb(30);
-    }
-    @include i.pc-screen {
       margin-inline-start: 30px;
     }
   }
@@ -57,41 +46,32 @@
   }
 }
 .button__wrap {
+  @include i.margin-block-start-vw(40);
   align-items: center;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
-  margin-block-start: i.get_vw-sm(40);
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
   @include i.tb-screen {
     flex-direction: row;
-    margin-block-start: i.get_vw-tb(40);
-  }
-  @include i.pc-screen {
     margin-block-start: 40px;
   }
 }
 .button__icon {
-  margin-inline-end: i.get_vw-sm(10);
+  @include i.margin-inline-end-vw(10);
   color: i.$color-white;
   @include i.tb-screen {
-    margin-inline-end: i.get_vw-tb(10);
-  }
-  @include i.pc-screen {
     margin-inline-end: 10px;
   }
 }
 .button__text {
+  @include i.font-oswald;
+  @include i.font-size-vw(16);
   color: i.$color-white;
-  font-family: i.$font-special;
-  font-size: i.get_vw-sm(16);
   letter-spacing: 0.1em;
   @include i.tb-screen {
-    font-size: i.get_vw-tb(16);
-  }
-  @include i.pc-screen {
-    font-size: 16px;
+    @include i.font-size(16);
   }
 }

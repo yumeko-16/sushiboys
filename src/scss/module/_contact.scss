@@ -1,40 +1,40 @@
-@use "../import" as i;
+@use "../setting/config" as i;
 
 .contact {
   display: flex;
   flex-direction: column;
 }
 .contact__group {
-  margin-block-start: i.get_vw-sm(20);
+  @include i.margin-block-start-vw(20);
   @include i.tb-screen {
-    margin-block-start: i.get_vw-tb(20);
-  }
-  @include i.pc-screen {
     margin-block-start: 20px;
   }
 }
 .contact__label {
+  @include i.font-oswald;
+  @include i.font-size-vw(16);
   color: i.$color-white;
   display: block;
-  font-family: i.$font-special;
-  font-size: i.get_vw-sm(16);
   letter-spacing: 0.1em;
   @include i.tb-screen {
-    font-size: i.get_vw-tb(20);
-  }
-  @include i.pc-screen {
-    font-size: 20px;
+    @include i.font-size(20);
   }
 }
 .contact__input,
 .contact__textarea {
+  @include i.font-size-vw(16);
+  @include i.margin-block-start-vw(10);
+  @include i.padding-block-start-vw(15);
+  @include i.padding-block-end-vw(15);
+  @include i.padding-inline-start-vw(15);
+  @include i.padding-inline-end-vw(15);
   -webkit-rtl-ordering: initial;
   appearance: initial;
   background: i.$color-white;
   border: none;
   border-color: initial;
   border-image: initial;
-  border-radius: i.get_vw-sm(5);
+  border-radius: 5px;
   border-style: initial;
   border-width: initial;
   color: i.$color-black;
@@ -43,15 +43,9 @@
   display: block;
   flex-direction: initial;
   font: initial;
-  font-size: i.get_vw-sm(16);
   letter-spacing: 0.1em;
   line-height: 1.6;
-  margin-block-start: i.get_vw-sm(10);
   overflow-wrap: initial;
-  padding-block-start: i.get_vw-sm(15);
-  padding-block-end: i.get_vw-sm(15);
-  padding-inline-start: i.get_vw-sm(15);
-  padding-inline-end: i.get_vw-sm(15);
   resize: initial;
   text-align: initial;
   text-indent: initial;
@@ -63,38 +57,22 @@
   writing-mode: initial;
   width: 100%;
   @include i.tb-screen {
-    margin-block-start: i.get_vw-tb(10);
-    padding-block-start: i.get_vw-tb(15);
-    padding-block-end: i.get_vw-tb(15);
-    padding-inline-start: i.get_vw-tb(15);
-    padding-inline-end: i.get_vw-tb(15);
-    border-radius: i.get_vw-tb(5);
-    font-size: i.get_vw-tb(16);
-  }
-  @include i.pc-screen {
+    @include i.font-size(16);
     margin-block-start: 10px;
     padding-block-start: 15px;
     padding-block-end: 15px;
     padding-inline-start: 15px;
     padding-inline-end: 15px;
-    border-radius: 5px;
-    font-size: 16px;
   }
   &::placeholder {
+    @include i.font-oswald;
     color: i.$color-gray;
-    font-family: i.$font-special;
     letter-spacing: 0.1em;
   }
   &:focus-visible {
-    box-shadow: 0 0 i.get_vw-sm(5) i.get_vw-sm(1) i.$color-black;
+    box-shadow: 0 0 5px 1px i.$color-black;
     outline: none;
     outline-offset: 0;
-    @include i.tb-screen {
-      box-shadow: 0 0 i.get_vw-tb(5) i.get_vw-tb(1) i.$color-black;
-    }
-    @include i.pc-screen {
-      box-shadow: 0 0 5px 1px i.$color-black;
-    }
   }
 }
 .contact__textarea {
@@ -107,18 +85,12 @@
   }
 }
 .contact__input-confirmation {
-  padding-block-start: i.get_vw-sm(15);
-  padding-block-end: i.get_vw-sm(15);
-  padding-inline-start: i.get_vw-sm(15);
-  padding-inline-end: i.get_vw-sm(15);
+  @include i.padding-block-start-vw(15);
+  @include i.padding-block-end-vw(15);
+  @include i.padding-inline-start-vw(15);
+  @include i.padding-inline-end-vw(15);
   color: i.$color-white;
   @include i.tb-screen {
-    padding-block-start: i.get_vw-tb(15);
-    padding-block-end: i.get_vw-tb(15);
-    padding-inline-start: i.get_vw-tb(15);
-    padding-inline-end: i.get_vw-tb(15);
-  }
-  @include i.pc-screen {
     padding-block-start: 15px;
     padding-block-end: 15px;
     padding-inline-start: 15px;
@@ -126,16 +98,13 @@
   }
 }
 .contact__button-wrap {
+  @include i.margin-block-start-vw(40);
   display: flex;
   justify-content: center;
-  margin-block-start: i.get_vw-tb(40);
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
   @include i.tb-screen {
-    margin-block-start: i.get_vw-tb(30);
-  }
-  @include i.pc-screen {
     margin-block-start: 30px;
   }
 }
@@ -143,15 +112,11 @@
   color: i.$color-error;
 }
 .contact__completion-text {
-  padding-block-start: i.get_vw-sm(15);
-  padding-block-end: i.get_vw-sm(15);
-  text-align: center;
+  @include i.padding-block-start-vw(15);
+  @include i.padding-block-end-vw(15);
   color: i.$color-white;
+  text-align: center;
   @include i.tb-screen {
-    padding-block-start: i.get_vw-tb(15);
-    padding-block-end: i.get_vw-tb(15);
-  }
-  @include i.pc-screen {
     padding-block-start: 15px;
     padding-block-end: 15px;
   }

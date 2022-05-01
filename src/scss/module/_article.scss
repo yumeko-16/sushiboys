@@ -1,4 +1,4 @@
-@use "../import" as i;
+@use "../setting/config" as i;
 
 .article {
   display: flex;
@@ -30,46 +30,40 @@
   width: 100%;
 }
 .article__caption {
-  width: 100%;
-  margin-block-start: i.get_vw-sm(20);
+  @include i.margin-block-start-vw(20);
   padding-block-start: 0;
   padding-block-end: 0;
   padding-inline-start: 0;
   padding-inline-end: 0;
+  width: 100%;
   @include i.tb-screen {
-    width: 60%;
     margin-block-start: 0;
-    padding-inline-start: i.get_vw-tb(20);
+    padding-inline-start: 20px;
+    width: 60%;
   }
   @include i.pc-screen {
     padding-inline-start: 30px;
   }
 }
 .article__caption-heading {
+  @include i.font-oswald;
+  @include i.font-size-vw(18);
   color: i.$color-white;
-  font-family: i.$font-special;
-  font-size: i.get_vw-sm(18);
   font-weight: 700;
   letter-spacing: 0.1em;
   @include i.tb-screen {
-    font-size: i.get_vw-tb(20);
-  }
-  @include i.pc-screen {
-    font-size: 20px;
+    @include i.font-size(20);
   }
 }
 .article__caption-list {
+  @include i.margin-block-start-vw(20);
   display: block;
   list-style-type: none;
-  margin-block-start: i.get_vw-sm(20);
   margin-block-end: 0;
   margin-inline-start: initial;
   margin-inline-end: initial;
   padding-inline-start: 1rem;
   @include i.tb-screen {
-    margin-block-start: i.get_vw-tb(20);
-  }
-  @include i.pc-screen {
     margin-block-start: 20px;
   }
   &--song {
@@ -78,15 +72,12 @@
   }
 }
 .article__caption-item {
+  @include i.font-size-vw(16);
   color: i.$color-white;
   display: list-item;
-  font-size: i.get_vw-sm(16);
   font-weight: 700;
   @include i.tb-screen {
-    font-size: i.get_vw-tb(16);
-  }
-  @include i.pc-screen {
-    font-size: 16px;
+    @include i.font-size(16);
   }
   a {
     color: i.$color-white;

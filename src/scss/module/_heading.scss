@@ -1,17 +1,17 @@
-@use "../import" as i;
+@use "../setting/config" as i;
 
 .heading {
+  @include i.font-size-vw(20);
+  @include i.margin-block-start-vw(0);
+  @include i.margin-block-end-vw(0);
+  @include i.margin-inline-start-vw(0);
+  @include i.margin-inline-end-vw(0);
   color: i.$color-white;
-  font-size: i.get_vw-sm(20);
   font-weight: 700;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
   @include i.tb-screen {
-    font-size: i.get_vw-tb(24);
+    @include i.font-size(24);
   }
   @include i.pc-screen {
-    font-size: 28px;
+    @include i.font-size(28);
   }
 }

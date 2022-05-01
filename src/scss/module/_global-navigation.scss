@@ -1,12 +1,9 @@
-@use "../import" as i;
+@use "../setting/config" as i;
 
 .global-navigation {
-  margin-block-start: i.get_vw-sm(20);
+  @include i.margin-block-start-vw(20);
   text-align: center;
   @include i.tb-screen {
-    margin-block-start: i.get_vw-tb(20);
-  }
-  @include i.pc-screen {
     margin-block-start: 20px;
   }
 }
@@ -16,64 +13,64 @@
   }
 }
 .global-navigation--sp__selector {
-  width: 100%;
   margin: 0 auto;
+  width: 100%;
 }
 .global-navigation--sp__title {
+  @include i.font-oswald;
+  @include i.font-size-vw(26);
   align-items: center;
   color: i.$color-white;
   cursor: pointer;
   display: flex;
-  font-family: i.$font-special;
-  font-size: i.get_vw-sm(26);
   justify-content: center;
   letter-spacing: 0.1em;
   &::after {
-    margin-inline-start: i.get_vw-sm(10);
+    @include i.font-size-vw(20);
+    @include i.margin-inline-start-vw(10);
     color: i.$color-white;
-    font-size: i.get_vw-sm(20);
     content: "▼";
   }
 }
 .global-navigation--sp__menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  transition: all 0.3s;
-  visibility: hidden;
+  backdrop-filter: blur(20px);
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  left: 0;
   opacity: 0;
+  position: fixed;
+  transition: all 0.3s;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
   &.js-open {
-    visibility: visible;
     opacity: 1;
+    visibility: visible;
     z-index: 2;
   }
 }
 .global-navigation--sp__close-wrap {
-  position: absolute;
   bottom: 10%;
   left: 50%;
+  position: absolute;
   transform: translatex(-50%);
 }
 .global-navigation--sp__close {
-  position: relative;
-  width: i.get_vw-sm(50);
-  height: i.get_vw-sm(50);
+  @include i.width-vw(50);
+  @include i.height-vw(50);
   background-color: i.$color-white;
   border-radius: 50%;
+  position: relative;
   &::before,
   &::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: i.get_vw-sm(3);
-    height: i.get_vw-sm(25);
+    @include i.width-vw(3);
+    @include i.height-vw(25);
     background: i.$color-black;
     content: "";
+    left: 50%;
+    position: absolute;
+    top: 50%;
   }
   &::before {
     transform: translate(-50%, -50%) rotate(45deg);
@@ -83,41 +80,41 @@
   }
 }
 .global-navigation--sp__list {
+  @include i.font-size-vw(28);
+  @include i.padding-block-start-vw(20);
+  @include i.padding-block-end-vw(20);
+  align-items: center;
+  background: radial-gradient(transparent, #000 100%);
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: flex-start;
   list-style-type: none;
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding-block-start: i.get_vw-sm(20);
-  padding-block-end: i.get_vw-sm(20);
   padding-inline-start: 0;
   padding-inline-end: 0;
-  background: radial-gradient(transparent, #000 100%);
-  font-size: i.get_vw-sm(28);
   overflow-y: scroll;
+  width: 100%;
 }
 .global-navigation--sp__link {
+  color: i.$color-white;
   cursor: pointer;
   display: block;
-  color: i.$color-white;
   text-decoration: none;
 }
 .global-navigation--sp__item {
-  font-family: i.$font-special;
+  @include i.font-oswald;
+  @include i.padding-block-start-vw(20);
+  @include i.padding-block-end-vw(20);
+  @include i.padding-inline-start-vw(70);
+  @include i.padding-inline-end-vw(70);
+  @include i.width-vw(300);
   display: block;
   letter-spacing: 0.1em;
-  padding-block-start: i.get_vw-sm(20);
-  padding-block-end: i.get_vw-sm(20);
-  padding-inline-start: i.get_vw-sm(70);
-  padding-inline-end: i.get_vw-sm(70);
   text-align: center;
-  width: i.get_vw-sm(300);
 }
 .global-navigation--pc {
   display: none;
@@ -126,39 +123,35 @@
   }
 }
 .global-navigation--pc__list {
-  @include i.tb-screen {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    width: 100%;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: auto;
-    margin-inline-end: auto;
-    padding-inline-start: 0;
-  }
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  padding-inline-start: 0;
+  width: 100%;
 }
 .global-navigation--pc__item {
+  @include i.font-oswald;
+  letter-spacing: 0.1em;
   @include i.tb-screen {
-    font-family: i.$font-special;
-    font-size: i.get_vw-tb(24);
-    letter-spacing: 0.1em;
-    padding-inline-start: i.get_vw-tb(15);
-    padding-inline-end: i.get_vw-tb(15);
-  }
-  @include i.pc-screen {
-    font-size: 28px;
+    @include i.font-size(24);
     padding-inline-start: 15px;
     padding-inline-end: 15px;
+  }
+  @include i.pc-screen {
+    @include i.font-size(28);
   }
   &:hover {
     opacity: 0.8;
   }
 }
 .global-navigation--pc__link {
+  color: i.$color-white;
   cursor: pointer;
   display: block;
-  color: i.$color-white;
   text-decoration: none;
   &.current {
     color: i.$color-black;
