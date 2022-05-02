@@ -7,13 +7,16 @@
     title: 'PEDAL 配信開始 | SUSHIBOYS',
     description: 'FARMHOUSE SOLO EP 『PEDAL』がデジタル配信開始となりました。'
   };
+  const localcanonical = {
+    url: 'https://sushiboys350.com/news/detail/post004.html',
+  };
   let localfile = {
     css: '/css/news-detail.css',
     js: '/js/newsDetail.js'
   };
   let newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

@@ -7,13 +7,16 @@
     title: 'pocket full of gum feat.SUSHIBOYS | SUSHIBOYS',
     description: 'pocket full of gum feat.SUSHIBOYS'
   };
+  const localcanonical = {
+    url: 'https://sushiboys350.com/discography/feat/pocket-full-of-gum.html',
+  };
   let localfile = {
     css: '/css/discography-detail.css',
     js: '/js/discographyDetail.js'
   };
   let discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

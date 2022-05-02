@@ -7,13 +7,16 @@
     title: 'DRUG | SUSHIBOYS',
     description: 'DRUG'
   };
+  const localcanonical = {
+    url: 'https://sushiboys350.com/discography/single/drug.html',
+  };
   let localfile = {
     css: '/css/discography-detail.css',
     js: '/js/discographyDetail.js'
   };
   let discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

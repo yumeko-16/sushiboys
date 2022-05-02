@@ -7,13 +7,16 @@
     title: '350 | SUSHIBOYS',
     description: 'Shopping Cart Racer 味の素 Drivin 8月32日 遊戯王 USB'
   };
+  const localcanonical = {
+    url: 'https://sushiboys350.com/discography/ep/350.html',
+  };
   let localfile = {
     css: '/css/discography-detail.css',
     js: '/js/discographyDetail.js'
   };
   let discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

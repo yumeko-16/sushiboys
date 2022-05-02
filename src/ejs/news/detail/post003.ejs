@@ -7,13 +7,16 @@
     title: '俺たちは不良、じゃなくて不良品。 | SUSHIBOYS',
     description: 'ナタリーでのインタビューが公開となりました。'
   };
+  const localcanonical = {
+    url: 'https://sushiboys350.com/news/detail/post003.html',
+  };
   let localfile = {
     css: '/css/news-detail.css',
     js: '/js/newsDetail.js'
   };
   let newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

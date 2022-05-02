@@ -7,13 +7,16 @@
     title: 'TOEIC Listening test 1 type beat. | SUSHIBOYS',
     description: '??TOEIC Listening test 1 type beat.?? ??out now??'
   };
+  const localcanonical = {
+    url: 'https://sushiboys350.com/news/detail/post010.html',
+  };
   let localfile = {
     css: '/css/news-detail.css',
     js: '/js/newsDetail.js'
   };
   let newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

@@ -7,13 +7,16 @@
     title: 'You GARI feat.SUSHIBOYS | SUSHIBOYS',
     description: 'You GARI feat.SUSHIBOYS'
   };
+  const localcanonical = {
+    url: '',
+  };
   let localfile = {
     css: '/css/discography-detail.css',
     js: '/js/discographyDetail.js'
   };
   let discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

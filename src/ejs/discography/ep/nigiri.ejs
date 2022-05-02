@@ -7,13 +7,16 @@
     title: 'NIGIRI | SUSHIBOYS',
     description: 'Catch ur dream 遊園地 ダンボルギーニ OMG だけど元気 思ったよりも ブルーハワイ Yossy Peace club 軽自動車 NIGIRI'
   };
+  const localcanonical = {
+    url: 'https://sushiboys350.com/discography/ep/nigiri.html',
+  };
   let localfile = {
     css: '/css/discography-detail.css',
     js: '/js/discographyDetail.js'
   };
   let discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

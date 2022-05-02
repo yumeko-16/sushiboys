@@ -22,8 +22,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>GOODS | SUSHIBOYS</title>
 <meta name="description" content="SUSHIBOYSのグッズ一覧。グッズ購入・商品詳細ページへご案内いたします。">
+<link rel="canonical" href="https://sushiboys350.com/goods/">
 
-<link rel="stylesheet" href="/css/goods.css?202204262039">
+<link rel="stylesheet" href="/css/goods.css?202205022113">
 
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,10 +87,18 @@
       <section class="section">
   <ul class="discography">
     <li class="discography__item">
-      <h2 class="title">Ashtray</h2>
-      <div id="swiper-ashtray" class="swiper discography__swiper">
+      <h2 class="title">Knickknack</h2>
+      <div id="swiper-knickknack" class="swiper discography__swiper">
         <ul class="swiper-wrapper discography__swiper-list">
           
+          
+          <li class="swiper-slide discography__card">
+            <a href="https://sushiboys.thebase.in/items/49765243" target="_blank" rel="noopener noreferrer">
+              <figure class="discography__frame">
+                <img class="discography__image" src="/img/goods/handkerchief_paddle_white.jpg" alt="Paddle ハンカチ (white)">
+              </figure>
+            </a>
+          </li>
           
           <li class="swiper-slide discography__card">
             <a href="https://sushiboys.thebase.in/items/31079997" target="_blank" rel="noopener noreferrer">
@@ -98,15 +107,6 @@
               </figure>
             </a>
           </li>
-          
-        </ul>
-      </div>
-    </li>
-    <li class="discography__item">
-      <h2 class="title">Mug</h2>
-      <div id="swiper-mug" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
-          
           
           <li class="swiper-slide discography__card">
             <a href="https://sushiboys.thebase.in/items/31080022" target="_blank" rel="noopener noreferrer">
@@ -120,27 +120,18 @@
       </div>
     </li>
     <li class="discography__item">
-      <h2 class="title">Handkerchief</h2>
-      <div id="swiper-handkerchief" class="swiper discography__swiper">
+      <h2 class="title">Recording media</h2>
+      <div id="swiper-recording-media" class="swiper discography__swiper">
         <ul class="swiper-wrapper discography__swiper-list">
           
           
           <li class="swiper-slide discography__card">
-            <a href="https://sushiboys.thebase.in/items/49765243" target="_blank" rel="noopener noreferrer">
+            <a href="https://sushiboys.thebase.in/items/49748367" target="_blank" rel="noopener noreferrer">
               <figure class="discography__frame">
-                <img class="discography__image" src="/img/goods/handkerchief_paddle_white.jpg" alt="Paddle ハンカチ (white)">
+                <img class="discography__image" src="/img/goods/cassette-tape_farmhouse_paddle.jpg" alt="FARMHOUSE - Paddle (カセットテープ)">
               </figure>
             </a>
           </li>
-          
-        </ul>
-      </div>
-    </li>
-    <li class="discography__item">
-      <h2 class="title">CD</h2>
-      <div id="swiper-cd" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
-          
           
           <li class="swiper-slide discography__card">
             <a href="https://sushiboys.thebase.in/items/24241903" target="_blank" rel="noopener noreferrer">
@@ -178,24 +169,7 @@
       </div>
     </li>
     <li class="discography__item">
-      <h2 class="title">CASSETTE TAPE</h2>
-      <div id="swiper-cassette-tape" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
-          
-          
-          <li class="swiper-slide discography__card">
-            <a href="https://sushiboys.thebase.in/items/49748367" target="_blank" rel="noopener noreferrer">
-              <figure class="discography__frame">
-                <img class="discography__image" src="/img/goods/cassette-tape_farmhouse_paddle.jpg" alt="FARMHOUSE - Paddle (カセットテープ)">
-              </figure>
-            </a>
-          </li>
-          
-        </ul>
-      </div>
-    </li>
-    <li class="discography__item">
-      <h2 class="title">HOODIE</h2>
+      <h2 class="title">Hoodie</h2>
       <div id="swiper-hoodie" class="swiper discography__swiper">
         <ul class="swiper-wrapper discography__swiper-list">
           
@@ -440,7 +414,13 @@
 
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script>
-    const swiperCassetteTape = new Swiper('#swiper-cassette-tape', {
+    const swiperKnickknack = new Swiper('#swiper-knickknack', {
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+    });
+
+    const swiperRecordingMedias = new Swiper('#swiper-recording-media', {
       loop: false,
       slidesPerView: 'auto',
       spaceBetween: 20,
@@ -452,25 +432,7 @@
       spaceBetween: 20,
     });
 
-    const swiperHandkerchief = new Swiper('#swiper-handkerchief', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperAshtray = new Swiper('#swiper-ashtray', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperMug = new Swiper('#swiper-mug', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperCap = new Swiper('#swiper-cap', {
+    const swiperCassetteTape = new Swiper('#swiper-cassette-tape', {
       loop: false,
       slidesPerView: 'auto',
       spaceBetween: 20,
@@ -495,6 +457,12 @@
     });
 
     const swiperTShirt = new Swiper('#swiper-t-shirt', {
+      loop: false,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+    });
+
+    const swiperCap = new Swiper('#swiper-cap', {
       loop: false,
       slidesPerView: 'auto',
       spaceBetween: 20,

@@ -7,13 +7,16 @@
     title: 'WASABI | SUSHIBOYS',
     description: 'KUNG FU アヒルボート ゲートボーラー 旅に出よう 問題ねぇ ママチャリ remix'
   };
+  const localcanonical = {
+    url: 'https://sushiboys350.com/discography/ep/wasabi.html',
+  };
   let localfile = {
     css: '/css/discography-detail.css',
     js: '/js/discographyDetail.js'
   };
   let discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

@@ -1,15 +1,15 @@
 <section class="section">
   <ul class="discography">
     <li class="discography__item">
-      <h2 class="title">Ashtray</h2>
-      <div id="swiper-ashtray" class="swiper discography__swiper">
+      <h2 class="title">Knickknack</h2>
+      <div id="swiper-knickknack" class="swiper discography__swiper">
         <ul class="swiper-wrapper discography__swiper-list">
-          <% let ashtrays = goodsData.ashtrays; %>
-          <% ashtrays.forEach(function(ashtray) { %>
+          <% let knickknacks = goodsData.knickknacks; %>
+          <% knickknacks.forEach(function(knickknack) { %>
           <li class="swiper-slide discography__card">
-            <a href="<%- ashtray.url %>" target="_blank" rel="noopener noreferrer">
+            <a href="<%- knickknack.url %>" target="_blank" rel="noopener noreferrer">
               <figure class="discography__frame">
-                <img class="discography__image" src="<%- ashtray.image %>" alt="<%- ashtray.alt %>">
+                <img class="discography__image" src="<%- knickknack.image %>" alt="<%- knickknack.alt %>">
               </figure>
             </a>
           </li>
@@ -18,15 +18,15 @@
       </div>
     </li>
     <li class="discography__item">
-      <h2 class="title">Mug</h2>
-      <div id="swiper-mug" class="swiper discography__swiper">
+      <h2 class="title">Recording media</h2>
+      <div id="swiper-recording-media" class="swiper discography__swiper">
         <ul class="swiper-wrapper discography__swiper-list">
-          <% let mugs = goodsData.mugs; %>
-          <% mugs.forEach(function(mug) { %>
+          <% let recordingMedias = goodsData.recordingMedias; %>
+          <% recordingMedias.forEach(function(recordingMedias) { %>
           <li class="swiper-slide discography__card">
-            <a href="<%- mug.url %>" target="_blank" rel="noopener noreferrer">
+            <a href="<%- recordingMedias.url %>" target="_blank" rel="noopener noreferrer">
               <figure class="discography__frame">
-                <img class="discography__image" src="<%- mug.image %>" alt="<%- mug.alt %>">
+                <img class="discography__image" src="<%- recordingMedias.image %>" alt="<%- recordingMedias.alt %>">
               </figure>
             </a>
           </li>
@@ -35,58 +35,7 @@
       </div>
     </li>
     <li class="discography__item">
-      <h2 class="title">Handkerchief</h2>
-      <div id="swiper-handkerchief" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
-          <% let handkerchiefs = goodsData.handkerchiefs; %>
-          <% handkerchiefs.forEach(function(handkerchief) { %>
-          <li class="swiper-slide discography__card">
-            <a href="<%- handkerchief.url %>" target="_blank" rel="noopener noreferrer">
-              <figure class="discography__frame">
-                <img class="discography__image" src="<%- handkerchief.image %>" alt="<%- handkerchief.alt %>">
-              </figure>
-            </a>
-          </li>
-          <% }); %>
-        </ul>
-      </div>
-    </li>
-    <li class="discography__item">
-      <h2 class="title">CD</h2>
-      <div id="swiper-cd" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
-          <% let cds = goodsData.cds; %>
-          <% cds.forEach(function(cd) { %>
-          <li class="swiper-slide discography__card">
-            <a href="<%- cd.url %>" target="_blank" rel="noopener noreferrer">
-              <figure class="discography__frame">
-                <img class="discography__image" src="<%- cd.image %>" alt="<%- cd.alt %>">
-              </figure>
-            </a>
-          </li>
-          <% }); %>
-        </ul>
-      </div>
-    </li>
-    <li class="discography__item">
-      <h2 class="title">CASSETTE TAPE</h2>
-      <div id="swiper-cassette-tape" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
-          <% let cassetteTapes = goodsData.cassetteTapes; %>
-          <% cassetteTapes.forEach(function(cassetteTape) { %>
-          <li class="swiper-slide discography__card">
-            <a href="<%- cassetteTape.url %>" target="_blank" rel="noopener noreferrer">
-              <figure class="discography__frame">
-                <img class="discography__image" src="<%- cassetteTape.image %>" alt="<%- cassetteTape.alt %>">
-              </figure>
-            </a>
-          </li>
-          <% }); %>
-        </ul>
-      </div>
-    </li>
-    <li class="discography__item">
-      <h2 class="title">HOODIE</h2>
+      <h2 class="title">Hoodie</h2>
       <div id="swiper-hoodie" class="swiper discography__swiper">
         <ul class="swiper-wrapper discography__swiper-list">
           <% let hoodies = goodsData.hoodies; %>

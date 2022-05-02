@@ -7,13 +7,16 @@
     title: 'なぜ笑いと強い共感を呼ぶのか？ | SUSHIBOYS',
     description: 'DI:GAオンラインにてインタビューが掲載されました。プレゼント企画がございます。'
   };
+  const localcanonical = {
+    url: 'https://sushiboys350.com/news/detail/post001.html',
+  };
   let localfile = {
     css: '/css/news-detail.css',
     js: '/js/newsDetail.js'
   };
   let newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>
