@@ -1,5 +1,6 @@
 .DS_Store
-node_modules/
+node_modules/*
+.htaccess
 
 .sass-cache/
 *.css.map
@@ -7,3 +8,5 @@ node_modules/
 *.scss.map
 
 dist/_*/
+
+dist/wordpress/*

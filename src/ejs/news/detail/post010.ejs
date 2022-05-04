@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'TOEIC Listening test 1 type beat. | SUSHIBOYS',
-    description: '??TOEIC Listening test 1 type beat.?? ??out now??'
-  };
-  const localcanonical = {
+    description: '??TOEIC Listening test 1 type beat.?? ??out now??',
     url: 'https://sushiboys350.com/news/detail/post010.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

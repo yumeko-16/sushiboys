@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'DISCOGRAPHY | SUSHIBOYS',
-    description: 'SUSHIBOYSが世に送り出した楽曲情報を余すことなくお届けいたします。ぜひご視聴ください。'
-  };
-  const localcanonical = {
+    description: 'SUSHIBOYSが世に送り出した楽曲情報を余すことなくお届けいたします。ぜひご視聴ください。',
     url: 'https://sushiboys350.com/discography/',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let discographyData = discography();
   %>
-  <%- include('../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../_inc/components/_googletagmanager'); %>

@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'GARI | SUSHIBOYS',
-    description: '軽自動車 なんでもできる ダンボルギーニ'
-  };
-  const localcanonical = {
+    description: '軽自動車 なんでもできる ダンボルギーニ',
     url: 'https://sushiboys350.com/discography/record/gari.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

@@ -4,9 +4,7 @@
   <%
   const localmeta = {
     title: 'SUSHIBOYS',
-    description: 'SUSHIBOYSオフィシャルウェブサイト。メンバーはFARMHOUSE、サンテナ、DJ兼カメラマン兼マネージャー兼運転手兼スーパーバイザーのneo yosikawa。ライブ、ディスコグラフィ、グッズなどの最新情報を掲載しています。'
-  };
-  const localcanonical = {
+    description: 'SUSHIBOYSオフィシャルウェブサイト。メンバーはFARMHOUSE、サンテナ、DJ兼カメラマン兼マネージャー兼運転手兼スーパーバイザーのneo yosikawa。ライブ、ディスコグラフィ、グッズなどの最新情報を掲載しています。',
     url: 'https://sushiboys350.com/',
   };
   const localfile = {
@@ -14,7 +12,7 @@
     js: '/js/home.js'
   };
   %>
-  <%- include('./_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('./_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('./_inc/components/_googletagmanager'); %>

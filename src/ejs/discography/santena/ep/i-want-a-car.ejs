@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'I want a car | SUSHIBOYS',
-    description: 'Sky Dive 1LDK DORANEKO マグナ50 PeroPeroCandy!! YANI'
-  };
-  const localcanonical = {
+    description: 'Sky Dive 1LDK DORANEKO マグナ50 PeroPeroCandy!! YANI',
     url: 'https://sushiboys350.com/discography/santena/ep/i-want-a-car.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let discographyData = discography();
   %>
-  <%- include('../../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../../_inc/components/_googletagmanager'); %>

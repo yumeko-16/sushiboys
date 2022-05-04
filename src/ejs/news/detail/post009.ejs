@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'SUSHIBOYS to Bboy TSUKKI | SUSHIBOYS',
-    description: '“ブレイキン”としての「HIP HOP」“ラップ” としての「HIP HOP」同じカルチャーから生まれた2つが交錯するとき、どのようなセッションが生まれるのか。'
-  };
-  const localcanonical = {
+    description: '“ブレイキン”としての「HIP HOP」“ラップ” としての「HIP HOP」同じカルチャーから生まれた2つが交錯するとき、どのようなセッションが生まれるのか。',
     url: 'https://sushiboys350.com/news/detail/post009.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

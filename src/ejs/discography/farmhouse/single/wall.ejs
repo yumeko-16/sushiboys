@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'WALL | SUSHIBOYS',
-    description: 'WALL'
-  };
-  const localcanonical = {
+    description: 'WALL',
     url: 'https://sushiboys350.com/discography/farmhouse/single/wall.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let discographyData = discography();
   %>
-  <%- include('../../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../../_inc/components/_googletagmanager'); %>

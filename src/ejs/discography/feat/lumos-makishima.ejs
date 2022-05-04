@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'ルーモス牧島 feat.SUSHIBOYS | SUSHIBOYS',
-    description: 'ルーモス牧島 feat.SUSHIBOYS'
-  };
-  const localcanonical = {
+    description: 'ルーモス牧島 feat.SUSHIBOYS',
     url: 'https://sushiboys350.com/discography/feat/lumos-makishima.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

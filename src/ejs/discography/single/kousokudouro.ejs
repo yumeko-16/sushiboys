@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: '高速道路 | SUSHIBOYS',
-    description: '高速道路'
-  };
-  const localcanonical = {
+    description: '高速道路',
     url: 'https://sushiboys350.com/discography/single/kousokudouro.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}) %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}) %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

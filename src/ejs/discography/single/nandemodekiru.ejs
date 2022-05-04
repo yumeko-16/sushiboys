@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'なんでもできる | SUSHIBOYS',
-    description: 'なんでもできる'
-  };
-  const localcanonical = {
+    description: 'なんでもできる',
     url: 'https://sushiboys350.com/discography/single/nandemodekiru.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: '新作EP『350』を語る | SUSHIBOYS',
-    description: 'エンタメ特化型情報メディアSPICEにてインタビューが掲載されました。'
-  };
-  const localcanonical = {
+    description: 'エンタメ特化型情報メディアSPICEにてインタビューが掲載されました。',
     url: 'https://sushiboys350.com/news/detail/post002.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

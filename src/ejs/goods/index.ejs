@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'GOODS | SUSHIBOYS',
-    description: 'SUSHIBOYSのグッズ一覧。グッズ購入・商品詳細ページへご案内いたします。'
-  };
-  const localcanonical = {
+    description: 'SUSHIBOYSのグッズ一覧。グッズ購入・商品詳細ページへご案内いたします。',
     url: 'https://sushiboys350.com/goods/',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let goodsData = goods();
   %>
-  <%- include('../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../_inc/components/_googletagmanager'); %>

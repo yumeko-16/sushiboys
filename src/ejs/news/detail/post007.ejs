@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'みんなでわいわい | SUSHIBOYS',
-    description: 'みんなでわいわい – SUSHIBOYS 【OFFICIAL MUSIC VIDEO】Youtube Channelにて公開しました！この楽曲はゲーム「みんなでワイワイ！スペランカー」のイメージソングです。'
-  };
-  const localcanonical = {
+    description: 'みんなでわいわい – SUSHIBOYS 【OFFICIAL MUSIC VIDEO】Youtube Channelにて公開しました！この楽曲はゲーム「みんなでワイワイ！スペランカー」のイメージソングです。',
     url: 'https://sushiboys350.com/news/detail/post007.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

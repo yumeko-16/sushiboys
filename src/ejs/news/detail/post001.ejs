@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'なぜ笑いと強い共感を呼ぶのか？ | SUSHIBOYS',
-    description: 'DI:GAオンラインにてインタビューが掲載されました。プレゼント企画がございます。'
-  };
-  const localcanonical = {
+    description: 'DI:GAオンラインにてインタビューが掲載されました。プレゼント企画がございます。',
     url: 'https://sushiboys350.com/news/detail/post001.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

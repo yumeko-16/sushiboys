@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'NIGIRI | SUSHIBOYS',
-    description: 'Catch ur dream 遊園地 ダンボルギーニ OMG だけど元気 思ったよりも ブルーハワイ Yossy Peace club 軽自動車 NIGIRI'
-  };
-  const localcanonical = {
+    description: 'Catch ur dream 遊園地 ダンボルギーニ OMG だけど元気 思ったよりも ブルーハワイ Yossy Peace club 軽自動車 NIGIRI',
     url: 'https://sushiboys350.com/discography/ep/nigiri.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

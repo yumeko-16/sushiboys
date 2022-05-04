@@ -5,9 +5,7 @@
   <%
   let localmeta = {
     title: 'Paddle | SUSHIBOYS',
-    description: '東京フラットシート Sunflower (feat. Jeter) WALL (feat. Hys plasma) SLEEP SLEEP SHEEP Knock! Knock! Knock! RAP RAP RAP KIRA KIRA カイエン青山 靴下 (feat. kojikoji) 絵 朝が来るまで'
-  };
-  const localcanonical = {
+    description: '東京フラットシート Sunflower (feat. Jeter) WALL (feat. Hys plasma) SLEEP SLEEP SHEEP Knock! Knock! Knock! RAP RAP RAP KIRA KIRA カイエン青山 靴下 (feat. kojikoji) 絵 朝が来るまで',
     url: 'https://sushiboys350.com/discography/farmhouse/ep/paddle.html',
   };
   let localfile = {
@@ -16,7 +14,7 @@
   };
   let discographyData = discography();
   %>
-  <%- include('../../../_inc/_head', {meta: localmeta, canonical: localcanonical, file: localfile}); %>
+  <%- include('../../../_inc/_head', {meta: localmeta, file: localfile}); %>
 </head>
 <body>
   <%- include('../../../_inc/components/_googletagmanager'); %>
