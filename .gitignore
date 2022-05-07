@@ -10,3 +10,8 @@ node_modules/*
 dist/_*/
 
 dist/wordpress/*
+!dist/wordpress/wp-content
+dist/wordpress/wp-content/*
+!dist/wordpress/wp-content/themes
+dist/wordpress/wp-content/themes/*
+!dist/wordpress/wp-content/themes/sushiboys/
