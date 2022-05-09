@@ -8,13 +8,18 @@
     description: 'YATSUI FESTIVAL! 2022 出演決定いたしやした！ 我々SUSHIBOYSは6/18(土)出演します！',
     url: 'https://sushiboys350.com/news/detail/post012.html',
   };
+  const localogp = {
+    title: localmeta.title,
+    description: localmeta.description,
+    url: localmeta.url,
+  };
   let localfile = {
     css: '/css/news-detail.css',
     js: '/js/newsDetail.js'
   };
   let newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

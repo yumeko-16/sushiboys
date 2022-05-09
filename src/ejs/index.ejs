@@ -7,12 +7,17 @@
     description: 'SUSHIBOYSオフィシャルウェブサイト。メンバーはFARMHOUSE、サンテナ、DJ兼カメラマン兼マネージャー兼運転手兼スーパーバイザーのneo yosikawa。ライブ、ディスコグラフィ、グッズなどの最新情報を掲載しています。',
     url: 'https://sushiboys350.com/',
   };
+  const localogp = {
+    title: localmeta.title,
+    description: localmeta.description,
+    url: localmeta.url,
+  };
   const localfile = {
     css: '/css/home.css',
     js: '/js/home.js'
   };
   %>
-  <%- include('./_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('./_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('./_inc/components/_googletagmanager'); %>

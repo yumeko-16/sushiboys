@@ -8,13 +8,18 @@
     description: 'ここ日本では社会のシステムを妨害する発言などは”騒音”としてカテゴライズされてしまう。己に正直になった結果それが騒音と言われるのなら、騒音として世に出してしまおうじゃないか。聴いてくれ俺らの騒音。',
     url: 'https://sushiboys350.com/news/detail/post008.html',
   };
+  const localogp = {
+    title: localmeta.title,
+    description: localmeta.description,
+    url: localmeta.url,
+  };
   let localfile = {
     css: '/css/news-detail.css',
     js: '/js/newsDetail.js'
   };
   let newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, file: localfile}); %>
+  <%- include('../../_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>
