@@ -1,0 +1,21 @@
+<section class="section">
+  <article class="article">
+    <% let posts = newsData.posts; %>
+    <h2 class="heading"><%- posts[12].title %></h2>
+    <p class="content-wrap">
+      <img class="article__hero" src="<%- posts[12].image[0].hero %>" alt="<%- posts[12].alt[0].hero %>">
+    </p>
+    <div class="content-wrap">
+      <div class="article__text">
+        <% posts[12].leads.forEach(function(lead) { %>
+        <p class="text"><%- lead %></p>
+        <% }); %>
+      </div>
+    </div>
+  </article>
+  <div class="button__wrap">
+    <a class="button" href="/news/">
+      <span class="button__text">Back</span>
+    </a>
+  </div>
+</section>

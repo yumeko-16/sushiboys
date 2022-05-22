@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%- include('../../_data/_news'); %>
+  <%
+  let localmeta = {
+    title: 'RUSHBALLスピンオフイベント『ATMC』出演決定 | SUSHIBOYS',
+    description: 'RUSH BALLのスピンオフイベント 「ATMC」が、恒例の七夕に開催決定',
+    url: 'https://sushiboys350.com/news/detail/post013.html',
+  };
+  const localogp = {
+    title: localmeta.title,
+    description: localmeta.description,
+    url: localmeta.url,
+  };
+  let localfile = {
+    css: '/css/news-detail.css',
+    js: '/js/newsDetail.js'
+  };
+  let newsData = news();
+  %>
+  <%- include('../../_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+</head>
+<body>
+  <%- include('../../_inc/components/_googletagmanager'); %>
+  <div class="wrapper">
+    <%- include('../../_inc/components/_header', {current: 'news'}); %>
+    <main class="main">
+      <%- include('../../_inc/components/news/detail/_post013', {newsData: newsData}); %>
+    </main>
+    <%- include('../../_inc/components/_footer'); %>
+  </div>
+</body>
+</html>
