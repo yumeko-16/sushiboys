@@ -3,7 +3,8 @@
 <head>
   <%- include('../_data/_goods'); %>
   <%
-  let localmeta = {
+  const pageid = 'goods';
+  const localmeta = {
     title: 'GOODS | SUSHIBOYS',
     description: 'SUSHIBOYSのグッズ一覧。グッズ購入・商品詳細ページへご案内いたします。',
     url: 'https://sushiboys350.com/goods/',
@@ -13,13 +14,13 @@
     description: localmeta.description,
     url: localmeta.url,
   };
-  let localfile = {
+  const localfile = {
     css: '/css/goods.css',
     js: '/js/goods.js'
   };
-  let goodsData = goods();
+  const goodsData = goods();
   %>
-  <%- include('../_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../_inc/components/_googletagmanager'); %>
@@ -30,62 +31,5 @@
     </main>
     <%- include('../_inc/components/_footer'); %>
   </div>
-
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script>
-    const swiperKnickknack = new Swiper('#swiper-knickknack', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperRecordingMedias = new Swiper('#swiper-recording-media', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperCd = new Swiper('#swiper-cd', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperCassetteTape = new Swiper('#swiper-cassette-tape', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperHoodie = new Swiper('#swiper-hoodie', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperParker = new Swiper('#swiper-parker', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperLongTShirt = new Swiper('#swiper-long-t-shirt', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperTShirt = new Swiper('#swiper-t-shirt', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperCap = new Swiper('#swiper-cap', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-  </script>
 </body>
 </html>

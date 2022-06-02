@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
   <%
+  const pageid = 'home';
   const localmeta = {
     title: 'SUSHIBOYS',
     description: 'SUSHIBOYSオフィシャルウェブサイト。メンバーはFARMHOUSE、サンテナ、DJ兼カメラマン兼マネージャー兼運転手兼スーパーバイザーのneo yosikawa。ライブ、ディスコグラフィ、グッズなどの最新情報を掲載しています。',
@@ -17,7 +18,7 @@
     js: '/js/home.js'
   };
   %>
-  <%- include('./_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('./_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('./_inc/components/_googletagmanager'); %>

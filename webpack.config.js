@@ -12,6 +12,7 @@ module.exports = {
     newsDetail: __dirname + '/src/newsDetail.js',
     discography: __dirname + '/src/discography.js',
     discographyDetail: __dirname + '/src/discographyDetail.js',
+    goods: __dirname + '/src/goods.js',
     contact: __dirname + '/src/contact.js',
   },
   output: {

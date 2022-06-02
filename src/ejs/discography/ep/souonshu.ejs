@@ -3,7 +3,8 @@
 <head>
   <%- include('../../_data/_discography'); %>
   <%
-  let localmeta = {
+  const pageid = 'discography';
+  const localmeta = {
     title: 'SUSHIBOYSの騒音集 VOL.1 | SUSHIBOYS',
     description: 'DA-DA-DA SUIMIN 幽霊です テニス ISCREAM 疲れました LOUD 必要ない',
     url: 'https://sushiboys350.com/discography/ep/souonshu.html',
@@ -13,13 +14,13 @@
     description: localmeta.description,
     url: localmeta.url,
   };
-  let localfile = {
+  const localfile = {
     css: '/css/discography-detail.css',
     js: '/js/discographyDetail.js'
   };
-  let discographyData = discography();
+  const discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

@@ -1,2 +1,2 @@
-import './js/global-navigation';
-import './js/random-hero';
+import { GlobalNavigation } from 'js/global-navigation';
+import { RandomHero } from 'js/hero';

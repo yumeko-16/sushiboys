@@ -3,7 +3,8 @@
 <head>
   <%- include('../../../_data/_discography'); %>
   <%
-  let localmeta = {
+  const pageid = 'discography';
+  const localmeta = {
     title: 'Paddle | SUSHIBOYS',
     description: '東京フラットシート Sunflower (feat. Jeter) WALL (feat. Hys plasma) SLEEP SLEEP SHEEP Knock! Knock! Knock! RAP RAP RAP KIRA KIRA カイエン青山 靴下 (feat. kojikoji) 絵 朝が来るまで',
     url: 'https://sushiboys350.com/discography/farmhouse/ep/paddle.html',
@@ -13,13 +14,13 @@
     description: localmeta.description,
     url: localmeta.url,
   };
-  let localfile = {
+  const localfile = {
     css: '/css/discography-detail.css',
     js: '/js/discographyDetail.js'
   };
-  let discographyData = discography();
+  const discographyData = discography();
   %>
-  <%- include('../../../_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../../../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../../../_inc/components/_googletagmanager'); %>

@@ -1,2 +1,2 @@
-import './js/global-navigation';
-import './js/sort-news';
+import { GlobalNavigation } from 'js/global-navigation';
+import { Sort } from 'js/sort';

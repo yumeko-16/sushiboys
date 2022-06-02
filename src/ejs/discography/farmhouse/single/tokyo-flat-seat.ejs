@@ -3,7 +3,8 @@
 <head>
   <%- include('../../../_data/_discography'); %>
   <%
-  let localmeta = {
+  const pageid = 'discography';
+  const localmeta = {
     title: '東京フラットシート | SUSHIBOYS',
     description: '東京フラットシート',
     url: 'https://sushiboys350.com/discography/farmhouse/single/tokyo-flat-seat.html',
@@ -13,13 +14,13 @@
     description: localmeta.description,
     url: localmeta.url,
   };
-  let localfile = {
+  const localfile = {
     css: '/css/discography-detail.css',
     js: '/js/discographyDetail.js'
   };
-  let discographyData = discography();
+  const discographyData = discography();
   %>
-  <%- include('../../../_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../../../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../../../_inc/components/_googletagmanager'); %>

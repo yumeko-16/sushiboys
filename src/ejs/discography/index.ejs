@@ -3,7 +3,8 @@
 <head>
   <%- include('../_data/_discography'); %>
   <%
-  let localmeta = {
+  const pageid = 'discography';
+  const localmeta = {
     title: 'DISCOGRAPHY | SUSHIBOYS',
     description: 'SUSHIBOYSが世に送り出した楽曲情報を余すことなくお届けいたします。ぜひご視聴ください。',
     url: 'https://sushiboys350.com/discography/',
@@ -13,13 +14,13 @@
     description: localmeta.description,
     url: localmeta.url,
   };
-  let localfile = {
+  const localfile = {
     css: '/css/discography.css',
     js: '/js/discography.js'
   };
-  let discographyData = discography();
+  const discographyData = discography();
   %>
-  <%- include('../_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../_inc/components/_googletagmanager'); %>
@@ -30,44 +31,5 @@
     </main>
     <%- include('../_inc/components/_footer'); %>
   </div>
-
-  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-  <script>
-    const swiperEp = new Swiper('#swiper-ep', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperSingle = new Swiper('#swiper-single', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperFeat = new Swiper('#swiper-feat', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperRecord = new Swiper('#swiper-record', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperFarmhouseEp = new Swiper('#swiper-farmhouse-ep', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-
-    const swiperFarmhouseSingle = new Swiper('#swiper-farmhouse-single', {
-      loop: false,
-      slidesPerView: 'auto',
-      spaceBetween: 20,
-    });
-  </script>
 </body>
 </html>

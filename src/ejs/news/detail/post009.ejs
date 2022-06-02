@@ -3,7 +3,8 @@
 <head>
   <%- include('../../_data/_news'); %>
   <%
-  let localmeta = {
+  const pageid = 'news';
+  const localmeta = {
     title: 'SUSHIBOYS to Bboy TSUKKI | SUSHIBOYS',
     description: '“ブレイキン”としての「HIP HOP」“ラップ” としての「HIP HOP」同じカルチャーから生まれた2つが交錯するとき、どのようなセッションが生まれるのか。',
     url: 'https://sushiboys350.com/news/detail/post009.html',
@@ -13,13 +14,13 @@
     description: localmeta.description,
     url: localmeta.url,
   };
-  let localfile = {
+  const localfile = {
     css: '/css/news-detail.css',
     js: '/js/newsDetail.js'
   };
-  let newsData = news();
+  const newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>

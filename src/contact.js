@@ -1,1 +1,1 @@
-import './js/global-navigation';
+import { GlobalNavigation } from 'js/global-navigation';

@@ -3,7 +3,8 @@
 <head>
   <%- include('../../_data/_news'); %>
   <%
-  let localmeta = {
+  const pageid = 'news';
+  const localmeta = {
     title: '『死んだら骨』10/25リリース！ | SUSHIBOYS',
     description: '10月25日、SUSHIBOYSの新作EP『死んだら骨』が発売決定いたしました。ファームハウス、サンテナの2人体制となり、「SANAGI」「DRUG」「高速道路」と新曲を発表してきたSUSHIBOYSがEPとして新作を発表致します。',
     url: 'https://sushiboys350.com/news/detail/post006.html',
@@ -13,13 +14,13 @@
     description: localmeta.description,
     url: localmeta.url,
   };
-  let localfile = {
+  const localfile = {
     css: '/css/news-detail.css',
     js: '/js/newsDetail.js'
   };
-  let newsData = news();
+  const newsData = news();
   %>
-  <%- include('../../_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>
