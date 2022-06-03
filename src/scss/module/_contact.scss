@@ -1,43 +1,43 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .contact {
   display: flex;
   flex-direction: column;
 }
 .contact__group {
-  @include i.margin-block-start-vw(20);
-  @include i.tb-screen {
+  @include margin-block-start-vw(20);
+  @include tb-screen {
     margin-block-start: 20px;
   }
 }
 .contact__label {
-  @include i.font-oswald;
-  @include i.font-size-vw(16);
-  color: i.$color-white;
+  @include font-oswald;
+  @include font-size-vw(16);
+  color: $color-white;
   display: block;
   letter-spacing: 0.1em;
-  @include i.tb-screen {
-    @include i.font-size(20);
+  @include tb-screen {
+    @include font-size(20);
   }
 }
 .contact__input,
 .contact__textarea {
-  @include i.font-size-vw(16);
-  @include i.margin-block-start-vw(10);
-  @include i.padding-block-start-vw(15);
-  @include i.padding-block-end-vw(15);
-  @include i.padding-inline-start-vw(15);
-  @include i.padding-inline-end-vw(15);
+  @include font-size-vw(16);
+  @include margin-block-start-vw(10);
+  @include padding-block-start-vw(15);
+  @include padding-block-end-vw(15);
+  @include padding-inline-start-vw(15);
+  @include padding-inline-end-vw(15);
   -webkit-rtl-ordering: initial;
   appearance: initial;
-  background: i.$color-white;
+  background: $color-white;
   border: none;
   border-color: initial;
   border-image: initial;
   border-radius: 5px;
   border-style: initial;
   border-width: initial;
-  color: i.$color-black;
+  color: $color-black;
   column-count: initial;
   cursor: initial;
   display: block;
@@ -56,8 +56,8 @@
   word-spacing: initial;
   writing-mode: initial;
   width: 100%;
-  @include i.tb-screen {
-    @include i.font-size(16);
+  @include tb-screen {
+    @include font-size(16);
     margin-block-start: 10px;
     padding-block-start: 15px;
     padding-block-end: 15px;
@@ -65,32 +65,32 @@
     padding-inline-end: 15px;
   }
   &::placeholder {
-    @include i.font-oswald;
-    color: i.$color-gray;
+    @include font-oswald;
+    color: $color-gray;
     letter-spacing: 0.1em;
   }
   &:focus-visible {
-    box-shadow: 0 0 5px 1px i.$color-black;
+    box-shadow: 0 0 5px 1px $color-black;
     outline: none;
     outline-offset: 0;
   }
 }
 .contact__textarea {
   height: calc(1.6em * 5 + 8vw);
-  @include i.tb-screen {
+  @include tb-screen {
     height: calc(1.6em * 5 + 5vw);
   }
-  @include i.pc-screen {
+  @include pc-screen {
     height: calc(1.6em * 5 + 30px);
   }
 }
 .contact__input-confirmation {
-  @include i.padding-block-start-vw(15);
-  @include i.padding-block-end-vw(15);
-  @include i.padding-inline-start-vw(15);
-  @include i.padding-inline-end-vw(15);
-  color: i.$color-white;
-  @include i.tb-screen {
+  @include padding-block-start-vw(15);
+  @include padding-block-end-vw(15);
+  @include padding-inline-start-vw(15);
+  @include padding-inline-end-vw(15);
+  color: $color-white;
+  @include tb-screen {
     padding-block-start: 15px;
     padding-block-end: 15px;
     padding-inline-start: 15px;
@@ -98,25 +98,25 @@
   }
 }
 .contact__button-wrap {
-  @include i.margin-block-start-vw(40);
+  @include margin-block-start-vw(40);
   display: flex;
   justify-content: center;
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  @include i.tb-screen {
+  @include tb-screen {
     margin-block-start: 30px;
   }
 }
 .contact__error {
-  color: i.$color-error;
+  color: $color-error;
 }
 .contact__completion-text {
-  @include i.padding-block-start-vw(15);
-  @include i.padding-block-end-vw(15);
-  color: i.$color-white;
+  @include padding-block-start-vw(15);
+  @include padding-block-end-vw(15);
+  color: $color-white;
   text-align: center;
-  @include i.tb-screen {
+  @include tb-screen {
     padding-block-start: 15px;
     padding-block-end: 15px;
   }

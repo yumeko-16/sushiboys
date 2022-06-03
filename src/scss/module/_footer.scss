@@ -1,16 +1,16 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .footer {
-  @include i.padding-block-start-vw(20);
-  @include i.padding-block-end-vw(20);
+  @include padding-block-start-vw(20);
+  @include padding-block-end-vw(20);
   bottom: 0;
   position: absolute;
   width: 100%;
-  @include i.tb-screen {
+  @include tb-screen {
     padding-block-start: 20px;
     padding-block-end: 20px;
   }
-  @include i.pc-screen {
+  @include pc-screen {
     padding-block-start: 40px;
     padding-block-end: 40px;
   }

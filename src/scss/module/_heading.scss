@@ -1,17 +1,23 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .heading {
-  @include i.font-size-vw(20);
-  @include i.margin-block-start-vw(0);
-  @include i.margin-block-end-vw(0);
-  @include i.margin-inline-start-vw(0);
-  @include i.margin-inline-end-vw(0);
-  color: i.$color-white;
+  display: none;
   font-weight: 700;
-  @include i.tb-screen {
-    @include i.font-size(24);
+  text-align: center;
+  @include tb-screen {
+    @include font-size(18);
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 50px;
   }
-  @include i.pc-screen {
-    @include i.font-size(28);
+  &::before {
+    @include font-oswald;
+    @include font-size-vw(26);
+    content: attr(data-heading);
+    display: block;
+    text-transform: uppercase;
+    @include tb-screen {
+      @include font-size(32);
+    }
   }
 }

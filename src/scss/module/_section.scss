@@ -1,21 +1,21 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .section {
-  @include i.padding-block-start-vw(20);
-  @include i.padding-block-end-vw(20);
-  @include i.padding-inline-start-vw(20);
-  @include i.padding-inline-end-vw(20);
+  @include padding-block-start-vw(20);
+  @include padding-block-end-vw(20);
+  @include padding-inline-start-vw(20);
+  @include padding-inline-end-vw(20);
   margin-inline-start: auto;
   margin-inline-end: auto;
   max-width: 768px;
   width: 100%;
-  @include i.tb-screen {
+  @include tb-screen {
     padding-block-start: 20px;
     padding-block-end: 20px;
     padding-inline-start: 20px;
     padding-inline-end: 20px;
   }
-  @include i.pc-screen {
+  @include pc-screen {
     padding-block-start: 40px;
     padding-block-end: 40px;
     padding-inline-start: 0;

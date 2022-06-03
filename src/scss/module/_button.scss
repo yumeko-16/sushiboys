@@ -1,19 +1,19 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .button {
-  @include i.padding-block-start-vw(15);
-  @include i.padding-block-end-vw(15);
-  @include i.padding-inline-start-vw(25);
-  @include i.padding-inline-end-vw(25);
+  @include padding-block-start-vw(15);
+  @include padding-block-end-vw(15);
+  @include padding-inline-start-vw(25);
+  @include padding-inline-end-vw(25);
   align-items: initial;
   appearance: initial;
-  background-color: i.$color-black;
+  background-color: $color-black;
   border-color: initial;
   border-image: initial;
   border-radius: 5px;
   border-style: initial;
   border-width: initial;
-  color: i.$color-white;
+  color: $color-white;
   cursor: pointer;
   display: block;
   letter-spacing: initial;
@@ -26,7 +26,7 @@
   width: 50%;
   word-spacing: initial;
   writing-mode: initial;
-  @include i.tb-screen {
+  @include tb-screen {
     padding-block-start: 15px;
     padding-block-end: 15px;
     padding-inline-start: 25;
@@ -34,8 +34,8 @@
     width: auto;
   }
   &:not(:first-of-type) {
-    @include i.margin-block-end-vw(30);
-    @include i.tb-screen {
+    @include margin-block-end-vw(30);
+    @include tb-screen {
       margin-block-end: 0;
       margin-inline-start: 30px;
     }
@@ -46,7 +46,7 @@
   }
 }
 .button__wrap {
-  @include i.margin-block-start-vw(40);
+  @include margin-block-start-vw(40);
   align-items: center;
   display: flex;
   flex-direction: column-reverse;
@@ -54,24 +54,24 @@
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  @include i.tb-screen {
+  @include tb-screen {
     flex-direction: row;
     margin-block-start: 40px;
   }
 }
 .button__icon {
-  @include i.margin-inline-end-vw(10);
-  color: i.$color-white;
-  @include i.tb-screen {
+  @include margin-inline-end-vw(10);
+  color: $color-white;
+  @include tb-screen {
     margin-inline-end: 10px;
   }
 }
 .button__text {
-  @include i.font-oswald;
-  @include i.font-size-vw(16);
-  color: i.$color-white;
+  @include font-oswald;
+  @include font-size-vw(16);
+  color: $color-white;
   letter-spacing: 0.1em;
-  @include i.tb-screen {
-    @include i.font-size(16);
+  @include tb-screen {
+    @include font-size(16);
   }
 }

@@ -1,4 +1,4 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .news {
   display: flex;
@@ -9,14 +9,14 @@
   margin-inline-start: 0;
   margin-inline-end: 0;
   padding-inline-start: 0;
-  @include i.tb-screen {
+  @include tb-screen {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
   }
   &::before,
   &::after {
-    @include i.tb-screen {
+    @include tb-screen {
       content: "";
       display: block;
       height: 0;
@@ -29,8 +29,8 @@
 }
 .news__item {
   display: block;
-  @include i.tb-screen {
-    @include i.margin-block-end-vw(20);
+  @include tb-screen {
+    @include margin-block-end-vw(20);
     width: calc(100% / 4 - 15px);
   }
   &:hover {
@@ -38,12 +38,12 @@
   }
 }
 .news__anchor {
-  @include i.padding-block-start-vw(15);
-  @include i.padding-block-end-vw(15);
+  @include padding-block-start-vw(15);
+  @include padding-block-end-vw(15);
   cursor: pointer;
   display: flex;
   text-decoration: none;
-  @include i.tb-screen {
+  @include tb-screen {
     flex-direction: column;
     padding-block-start: 0;
     padding-block-end: 0;
@@ -54,34 +54,35 @@
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 5%;
-  @include i.tb-screen {
+  @include tb-screen {
     margin-inline-end: 0;
   }
 }
 .news__thumbnail-image {
-  @include i.height-vw(110);
-  @include i.width-vw(110);
+  @include height-vw(110);
+  @include width-vw(110);
   display: block;
   object-fit: cover;
-  @include i.tb-screen {
+  @include tb-screen {
     height: 177px;
     width: 100%;
   }
 }
 .news__title {
-  @include i.font-size-vw(16);
-  font-weight: 400;
+  @include font-size-vw(16);
+  color: $color-black;
+  font-weight: 700;
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  width: 65%;
-  @include i.tb-screen {
-    @include i.font-size(16);
-    padding-block-start: 15px;
-    padding-block-end: 0;
-    padding-inline-start: 5px;
-    padding-inline-end: 5px;
+  word-break: break-all;
+  @include tb-screen {
+    @include font-size(16);
+    padding-block-start: 20px;
+    padding-block-end: 20px;
+    padding-inline-start: 10px;
+    padding-inline-end: 10px;
     width: 100%;
   }
 }

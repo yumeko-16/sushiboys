@@ -1,14 +1,10 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .header {
-  @include i.padding-block-start-vw(20);
-  @include i.padding-block-end-vw(20);
-  @include i.tb-screen {
+  @include padding-block-start-vw(20);
+  @include padding-block-end-vw(20);
+  @include tb-screen {
     padding-block-start: 20px;
     padding-block-end: 20px;
-  }
-  @include i.pc-screen {
-    padding-block-start: 40px;
-    padding-block-end: 40px;
   }
 }

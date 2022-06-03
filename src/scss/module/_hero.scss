@@ -1,4 +1,4 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .hero {
   width: 70%;
@@ -7,7 +7,7 @@
   margin-inline-start: auto;
   margin-inline-end: auto;
   pointer-events: none;
-  @include i.tb-screen {
+  @include tb-screen {
     width: 50%;
   }
 }

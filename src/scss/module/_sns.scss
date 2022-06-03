@@ -1,4 +1,4 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .sns {
   display: flex;
@@ -11,21 +11,21 @@
   padding-inline-start: 0;
 }
 .sns__item {
-  @include i.padding-inline-start-vw(10);
-  @include i.padding-inline-end-vw(10);
+  @include padding-inline-start-vw(10);
+  @include padding-inline-end-vw(10);
   display: flex;
-  @include i.tb-screen {
+  @include tb-screen {
     padding-inline-start: 10px;
     padding-inline-end: 10px;
   }
 }
 .sns__link {
-  @include i.font-size-vw(20);
-  @include i.height-vw(40);
-  @include i.width-vw(40);
-  background-color: i.$color-black;
+  @include font-size-vw(20);
+  @include height-vw(40);
+  @include width-vw(40);
+  background-color: $color-black;
   border-radius: 50%;
-  color: i.$color-white;
+  color: $color-white;
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -34,8 +34,8 @@
   &:hover {
     opacity: 0.8;
   }
-  @include i.tb-screen {
-    @include i.font-size(20);
+  @include tb-screen {
+    @include font-size(20);
     height: 40px;
     width: 40px;
   }

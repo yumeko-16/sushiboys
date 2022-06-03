@@ -142,7 +142,6 @@ function validation($data) {
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
   <script defer src="/js/contact.js"></script>
 </head>
 <body>
@@ -153,21 +152,21 @@ function validation($data) {
   <div class="wrapper">
     <header class="header">
       <h1 class="site-title">
-        <a class="site-title__link" href="/">SUSHIBOYS</a>
+        <a class="site-title__link" href="/">Sushiboys</a>
       </h1>
 
       <nav class="global-navigation">
         <div class="global-navigation--sp">
           <div id="js-global-navigation--sp__selector" class="global-navigation--sp__selector">
-            <div class="global-navigation--sp__title">CONTACT</div>
+            <div class="global-navigation--sp__title">Contact</div>
           </div>
           <div id="js-global-navigation--sp__menu" class="global-navigation--sp__menu">
             <ul class="global-navigation--sp__list">
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/">HOME</a></li>
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/news/">NEWS</a></li>
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/discography/">DISCOGRAPHY</a></li>
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/goods/">GOODS</a></li>
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/contact/">CONTACT</a></li>
+              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/">Home</a></li>
+              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/news/">News</a></li>
+              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/discography/">Discography</a></li>
+              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/goods/">Goods</a></li>
+              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/contact/">Contact</a></li>
             </ul>
             <div class="global-navigation--sp__close-wrap">
               <div id="js-global-navigation--sp__close" class="global-navigation--sp__close"></div>
@@ -176,11 +175,11 @@ function validation($data) {
         </div>
         <div class="global-navigation--pc">
           <ul class="global-navigation--pc__list">
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/">HOME</a></li>
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/news/">NEWS</a></li>
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/discography/">DISCOGRAPHY</a></li>
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/goods/">GOODS</a></li>
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link current" href="/contact/">CONTACT</a></li>
+            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/">Home</a></li>
+            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/news/">News</a></li>
+            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/discography/">Discography</a></li>
+            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/goods/">Goods</a></li>
+            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link current" href="/contact/">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -311,7 +310,7 @@ function validation($data) {
         </li>
       </ul>
       <p class="copyright">
-        <small>&copy; 2022 SUSHIBOYS</small>
+        <small class="copyright-text">&copy; 2022 Sushiboys</small>
       </p>
     </footer>
   </div>

@@ -1,15 +1,16 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .text {
-  color: i.$color-white;
+  color: $color-black;
+  line-height: 1.8;
   margin-block-start: 0;
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
   word-break: break-all;
   &:not(:first-of-type) {
-    @include i.margin-block-start-vw(16);
-    @include i.tb-screen {
+    @include margin-block-start-vw(16);
+    @include tb-screen {
       margin-block-start: 16px;
     }
   }
@@ -17,7 +18,7 @@
     font-weight: 700;
   }
   a {
-    color: i.$color-white;
+    color: $color-black;
     cursor: pointer;
     text-decoration: underline;
   }

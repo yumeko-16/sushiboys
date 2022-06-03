@@ -1,19 +1,37 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .article {
   display: flex;
   flex-direction: column;
 }
 .article__inner {
-  @include i.tb-screen {
+  @include tb-screen {
     display: flex;
   }
 }
 .article__hero {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.article__hero-image {
   display: block;
   margin-inline-start: auto;
   margin-inline-end: auto;
   width: 100%;
+}
+.article__title {
+  @include font-size-vw(18);
+  @include margin-block-start-vw(15);
+  @include margin-block-end-vw(15);
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  @include tb-screen {
+    @include font-size(30);
+    margin-block-start: 25px;
+    margin-block-end: 25px;
+  }
 }
 .article__jacket {
   margin-block-start: 0;
@@ -21,7 +39,7 @@
   margin-inline-start: 0;
   margin-inline-end: 0;
   width: 100%;
-  @include i.tb-screen {
+  @include tb-screen {
     width: 40%;
   }
 }
@@ -30,37 +48,36 @@
   width: 100%;
 }
 .article__caption {
-  @include i.margin-block-start-vw(20);
+  @include margin-block-start-vw(20);
   padding-block-start: 0;
   padding-block-end: 0;
   padding-inline-start: 0;
   padding-inline-end: 0;
   width: 100%;
-  @include i.tb-screen {
+  @include tb-screen {
     margin-block-start: 0;
     padding-inline-start: 30px;
     width: 60%;
   }
 }
 .article__caption-heading {
-  @include i.font-oswald;
-  @include i.font-size-vw(18);
-  color: i.$color-white;
+  @include font-oswald;
+  @include font-size-vw(18);
   font-weight: 700;
   letter-spacing: 0.1em;
-  @include i.tb-screen {
-    @include i.font-size(20);
+  @include tb-screen {
+    @include font-size(20);
   }
 }
 .article__caption-list {
-  @include i.margin-block-start-vw(20);
+  @include margin-block-start-vw(20);
   display: block;
   list-style-type: none;
   margin-block-end: 0;
   margin-inline-start: initial;
   margin-inline-end: initial;
   padding-inline-start: 1rem;
-  @include i.tb-screen {
+  @include tb-screen {
     margin-block-start: 20px;
   }
   &--song {
@@ -69,15 +86,13 @@
   }
 }
 .article__caption-item {
-  @include i.font-size-vw(16);
-  color: i.$color-white;
+  @include font-size-vw(16);
   display: list-item;
-  font-weight: 700;
-  @include i.tb-screen {
-    @include i.font-size(16);
+  @include tb-screen {
+    @include font-size(16);
   }
   a {
-    color: i.$color-white;
+    color: $color-black;
     cursor: pointer;
     text-decoration: underline;
   }
@@ -87,7 +102,7 @@
   margin-block-end: 0;
   margin-inline-start: auto;
   margin-inline-end: auto;
-  @include i.tb-screen {
+  @include tb-screen {
     width: 90%;
   }
 }

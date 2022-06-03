@@ -1,15 +1,18 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .copyright {
-  @include i.font-oswald;
-  @include i.margin-block-start-vw(20);
-  color: i.$color-black;
-  letter-spacing: 0.1em;
+  @include margin-block-start-vw(20);
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
   text-align: center;
-  @include i.tb-screen {
+  @include tb-screen {
     margin-block-start: 20px;
   }
+}
+.copyright-text {
+  @include font-oswald;
+  color: $color-black;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }

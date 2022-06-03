@@ -1,10 +1,13 @@
 <section class="section">
+  <h2 class="heading" data-heading="News">
+    お知らせ
+  </h2>
   <article class="article">
     <% let posts = newsData.posts; %>
+    <figure class="article__hero">
+      <img class="article__hero-image" src="<%- posts[1].image[0].hero %>" alt="<%- posts[1].alt[0].hero %>">
+    </figure>
     <h2 class="heading"><%- posts[1].title %></h2>
-    <p class="content-wrap">
-      <img class="article__hero" src="<%- posts[1].image[0].hero %>" alt="<%- posts[1].alt[0].hero %>">
-    </p>
     <div class="content-wrap">
       <div class="article__text">
         <% posts[1].leads.forEach(function(lead) { %>

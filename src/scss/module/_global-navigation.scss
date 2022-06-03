@@ -1,14 +1,14 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .global-navigation {
-  @include i.margin-block-start-vw(20);
+  @include margin-block-start-vw(20);
   text-align: center;
-  @include i.tb-screen {
+  @include tb-screen {
     margin-block-start: 20px;
   }
 }
 .global-navigation--sp {
-  @include i.tb-screen {
+  @include tb-screen {
     display: none;
   }
 }
@@ -17,18 +17,17 @@
   width: 100%;
 }
 .global-navigation--sp__title {
-  @include i.font-oswald;
-  @include i.font-size-vw(26);
+  @include font-oswald;
+  @include font-size-vw(26);
   align-items: center;
-  color: i.$color-white;
   cursor: pointer;
   display: flex;
   justify-content: center;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
   &::after {
-    @include i.font-size-vw(20);
-    @include i.margin-inline-start-vw(10);
-    color: i.$color-white;
+    @include font-size-vw(20);
+    @include margin-inline-start-vw(10);
     content: "▼";
   }
 }
@@ -57,16 +56,16 @@
   transform: translatex(-50%);
 }
 .global-navigation--sp__close {
-  @include i.width-vw(50);
-  @include i.height-vw(50);
-  background-color: i.$color-white;
+  @include width-vw(50);
+  @include height-vw(50);
+  background-color: $color-white;
   border-radius: 50%;
   position: relative;
   &::before,
   &::after {
-    @include i.width-vw(3);
-    @include i.height-vw(25);
-    background: i.$color-black;
+    @include width-vw(3);
+    @include height-vw(25);
+    background: $color-black;
     content: "";
     left: 50%;
     position: absolute;
@@ -80,9 +79,9 @@
   }
 }
 .global-navigation--sp__list {
-  @include i.font-size-vw(28);
-  @include i.padding-block-start-vw(20);
-  @include i.padding-block-end-vw(20);
+  @include font-size-vw(28);
+  @include padding-block-start-vw(20);
+  @include padding-block-end-vw(20);
   align-items: center;
   background: radial-gradient(transparent, #000 100%);
   display: flex;
@@ -100,25 +99,26 @@
   width: 100%;
 }
 .global-navigation--sp__link {
-  color: i.$color-white;
+  color: $color-white;
   cursor: pointer;
   display: block;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .global-navigation--sp__item {
-  @include i.font-oswald;
-  @include i.padding-block-start-vw(20);
-  @include i.padding-block-end-vw(20);
-  @include i.padding-inline-start-vw(70);
-  @include i.padding-inline-end-vw(70);
-  @include i.width-vw(300);
+  @include font-oswald;
+  @include padding-block-start-vw(20);
+  @include padding-block-end-vw(20);
+  @include padding-inline-start-vw(70);
+  @include padding-inline-end-vw(70);
+  @include width-vw(300);
   display: block;
   letter-spacing: 0.1em;
   text-align: center;
 }
 .global-navigation--pc {
   display: none;
-  @include i.tb-screen {
+  @include tb-screen {
     display: block;
   }
 }
@@ -131,29 +131,37 @@
   margin-inline-start: auto;
   margin-inline-end: auto;
   padding-inline-start: 0;
+  padding-inline-end: 0;
   width: 100%;
+  @include tb-screen {
+    border-block-start: 1px solid #171717;
+    border-block-end: 1px solid #171717;
+    padding-block-start: 15px;
+    padding-block-end: 15px;
+  }
 }
 .global-navigation--pc__item {
-  @include i.font-oswald;
-  letter-spacing: 0.1em;
-  @include i.tb-screen {
-    @include i.font-size(24);
+  @include tb-screen {
     padding-inline-start: 15px;
     padding-inline-end: 15px;
-  }
-  @include i.pc-screen {
-    @include i.font-size(28);
   }
   &:hover {
     opacity: 0.8;
   }
 }
 .global-navigation--pc__link {
-  color: i.$color-white;
+  @include font-oswald;
+  color: $color-black;
   cursor: pointer;
   display: block;
   text-decoration: none;
+  text-transform: uppercase;
+  @include tb-screen {
+    @include font-size(20);
+  }
   &.current {
-    color: i.$color-black;
+    @include tb-screen {
+      color: $color-hover-red;
+    }
   }
 }

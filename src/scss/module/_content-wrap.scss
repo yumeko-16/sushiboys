@@ -1,11 +1,11 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .content-wrap {
-  @include i.margin-block-start-vw(20);
+  @include margin-block-start-vw(20);
   margin-block-end: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  @include i.tb-screen {
+  @include tb-screen {
     margin-block-start: 40px;
   }
 }

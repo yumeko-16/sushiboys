@@ -1,4 +1,4 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .discography {
   display: flex;
@@ -13,29 +13,29 @@
 .discography__item {
   display: block;
   &:not(:first-of-type) {
-    @include i.margin-block-start-vw(20);
-    @include i.tb-screen {
+    @include margin-block-start-vw(20);
+    @include tb-screen {
       margin-block-start: 20px;
     }
-    @include i.pc-screen {
+    @include pc-screen {
       margin-block-start: 40px;
     }
   }
 }
 .discography__type-heading {
-  @include i.font-size-vw(28);
-  color: i.$color-white;
+  @include font-size-vw(28);
+  color: $color-white;
   font-weight: 700;
-  @include i.tb-screen {
-    @include i.font-size(28);
+  @include tb-screen {
+    @include font-size(28);
   }
 }
 .discography__swiper {
-  @include i.margin-block-start-vw(10);
-  @include i.tb-screen {
+  @include margin-block-start-vw(10);
+  @include tb-screen {
     margin-block-start: 10px;
   }
-  @include i.pc-screen {
+  @include pc-screen {
     margin-block-start: 20px;
   }
   &.swiper {
@@ -66,15 +66,15 @@
   padding-inline-start: 0;
 }
 .discography__image {
-  @include i.height-vw(130);
-  @include i.width-vw(130);
+  @include height-vw(130);
+  @include width-vw(130);
   display: block;
   object-fit: cover;
-  @include i.tb-screen {
+  @include tb-screen {
     height: 160px;
     width: 160px;
   }
-  @include i.pc-screen {
+  @include pc-screen {
     height: 230px;
     width: 230px;
   }

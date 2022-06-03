@@ -2,11 +2,13 @@
 
 /* colors */
 $color-white: #fff;
-$color-black: #444;
+$color-black: #171717;
 $color-gray: #ccc;
-$color-pink: #f6a4af;
+$color-pink: #f4cdc9;
+$color-pink-sub: #ffe4e1;
 $color-blue: #2b7bb9;
 $color-error: #ff0000;
+$color-hover-red: #c16452;
 
 /* base window width for smartphone */
 $base-window-width: 375;
@@ -41,6 +43,7 @@ $base-window-width: 375;
 @mixin font-oswald {
   font-family: "Oswald", -apple-system, "BlinkMacSystemFont", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3",
     "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
+  letter-spacing: 0.1em;
 }
 
 /* 画面幅相対 */
@@ -99,7 +102,9 @@ body {
   @include font-default;
   @include font-size-vw(16);
   background-color: $color-pink;
+  color: $color-black;
   display: block;
+  font-weight: 400;
   margin: 0;
   @include tb-screen {
     @include font-size(16);

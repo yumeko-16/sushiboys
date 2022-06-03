@@ -1,13 +1,13 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .wrapper {
   position: relative;
   min-height: 100vh;
-  @include i.padding-block-end-vw(123);
-  @include i.tb-screen {
+  @include padding-block-end-vw(123);
+  @include tb-screen {
     padding-block-end: 123px;
   }
-  @include i.pc-screen {
+  @include pc-screen {
     padding-block-end: 163px;
   }
 }

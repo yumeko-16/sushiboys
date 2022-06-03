@@ -1,4 +1,4 @@
-@use "../setting/config" as i;
+@use "../setting/config" as *;
 
 .biography {
   display: flex;
