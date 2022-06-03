@@ -187,6 +187,9 @@ function validation($data) {
 
     <main class="main">
       <section class="section">
+        <h2 class="heading" data-heading="Contact">
+          お問い合わせ
+        </h2>
 
 <?php if ($page_flag === 1) : ?>
 

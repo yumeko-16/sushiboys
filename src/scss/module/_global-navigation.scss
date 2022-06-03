@@ -109,8 +109,6 @@
   @include font-oswald;
   @include padding-block-start-vw(20);
   @include padding-block-end-vw(20);
-  @include padding-inline-start-vw(70);
-  @include padding-inline-end-vw(70);
   @include width-vw(300);
   display: block;
   letter-spacing: 0.1em;

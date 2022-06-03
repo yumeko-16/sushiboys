@@ -53,6 +53,9 @@ $base-window-width: 375;
 @mixin height-vw($px) {
   height: (math.div($px, $base-window-width) * 100) + vw;
 }
+@mixin margin-all-vw($px) {
+  margin: (math.div($px, $base-window-width) * 100) + vw;
+}
 @mixin margin-block-start-vw($px) {
   margin-block-start: (math.div($px, $base-window-width) * 100) + vw;
 }
@@ -64,6 +67,9 @@ $base-window-width: 375;
 }
 @mixin margin-inline-end-vw($px) {
   margin-inline-end: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin padding-all-vw($px) {
+  padding: (math.div($px, $base-window-width) * 100) + vw;
 }
 @mixin padding-block-start-vw($px) {
   padding-block-start: (math.div($px, $base-window-width) * 100) + vw;
@@ -88,6 +94,21 @@ $base-window-width: 375;
 }
 @mixin right-vw($px) {
   right: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin border-all-radius-vw($px) {
+  border-radius: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin border-top-left-radius-vw($px) {
+  border-top-left-radius: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin border-top-right-radius-vw($px) {
+  border-top-right-radius: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin border-bottom-left-radius-vw($px) {
+  border-bottom-left-radius: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin border-top-right-radius-vw($px) {
+  border-bottom-right-radius: (math.div($px, $base-window-width) * 100) + vw;
 }
 
 /* normalize / reset

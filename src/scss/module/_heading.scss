@@ -1,8 +1,10 @@
 @use "../setting/config" as *;
 
 .heading {
-  display: none;
+  @include font-size-vw(14);
   font-weight: 700;
+  @include margin-block-start-vw(0);
+  @include margin-block-end-vw(15);
   text-align: center;
   @include tb-screen {
     @include font-size(18);

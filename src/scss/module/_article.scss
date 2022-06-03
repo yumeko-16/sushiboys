@@ -5,8 +5,15 @@
   flex-direction: column;
 }
 .article__inner {
+  @include padding-block-start-vw(25);
+  @include padding-block-end-vw(25);
   @include tb-screen {
     display: flex;
+    margin: 0 auto;
+    padding: 0 25px;
+    padding-block-start: 25px;
+    padding-block-end: 25px;
+    width: 90%;
   }
 }
 .article__hero {
@@ -95,14 +102,5 @@
     color: $color-black;
     cursor: pointer;
     text-decoration: underline;
-  }
-}
-.article__text {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  @include tb-screen {
-    width: 90%;
   }
 }

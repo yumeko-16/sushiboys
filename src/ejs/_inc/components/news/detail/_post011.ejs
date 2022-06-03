@@ -1,16 +1,14 @@
 <section class="section">
-  <h2 class="heading" data-heading="News">
-    お知らせ
-  </h2>
+  <h2 class="heading" data-heading="News">お知らせ</h2>
   <article class="article">
     <% let posts = newsData.posts; %>
     <figure class="article__hero">
       <img class="article__hero-image" src="<%- posts[10].image[0].hero %>" alt="<%- posts[10].alt[0].hero %>">
     </figure>
-    <h2 class="heading"><%- posts[10].title %></h2>
+    <h2 class="article__title"><%- posts[10].title %></h2>
     <div class="content-wrap">
       <div class="article__text">
-        <% posts[10].leads.forEach(function(lead) { %>
+        <% posts[10].leads.forEach(lead => { %>
         <p class="text"><%- lead %></p>
         <% }); %>
       </div>

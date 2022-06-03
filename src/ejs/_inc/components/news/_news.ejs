@@ -1,16 +1,14 @@
 <section class="section">
-  <h2 class="heading" data-heading="News">
-    お知らせ
-  </h2>
-  <ul class="news" data-news>
+  <h2 class="heading" data-heading="News">お知らせ</h2>
+  <ul class="card" data-news>
     <% let posts = newsData.posts; %>
-    <% posts.forEach(function(post) { %>
-    <li class="news__item">
-      <a class="news__anchor" href="<%- post.url %>">
-        <figure class="news__thumbnail">
-          <img class="news__thumbnail-image" src="<%- post.image[0].hero %>" alt="<%- post.alt[0].hero %>">
+    <% posts.forEach(post => { %>
+    <li class="card__item">
+      <a class="card__anchor" href="<%- post.url %>">
+        <figure class="card__image-wrap">
+          <img class="card__image" src="<%- post.image[0].hero %>" alt="<%- post.alt[0].hero %>">
         </figure>
-        <h2 class="news__title"><%- post.title %></h2>
+        <h2 class="card__title"><%- post.title %></h2>
       </a>
     </li>
     <% }); %>
