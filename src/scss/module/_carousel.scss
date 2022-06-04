@@ -70,6 +70,7 @@
 .carousel__image {
   @include height-vw(130);
   @include width-vw(130);
+  background-color: #fff;
   display: block;
   object-fit: cover;
   @include tb-screen {
