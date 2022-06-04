@@ -3,15 +3,20 @@
   <article class="article">
     <% let posts = newsData.posts; %>
     <figure class="article__hero">
-      <img class="article__hero-image" src="<%- posts[3].image[0].hero %>" alt="<%- posts[3].alt[0].hero %>">
+      <img class="article__hero-image" src="<%- posts[3].hero.image %>" alt="<%- posts[3].hero.alt %>">
     </figure>
-    <h2 class="article__title"><%- posts[3].title %></h2>
-    <div class="content-wrap">
-      <div class="article__text">
-        <% posts[3].leads.forEach(lead => { %>
-        <p class="text"><%- lead %></p>
-        <% }); %>
-      </div>
+    <div class="article__inner">
+      <h2 class="article__title"><%- posts[3].title %></h2>
+      <% posts[3].leads.forEach(lead => { %>
+      <p class="text"><%- lead %></p>
+      <% }); %>
+      <% if (posts[3].photos.length !== 0) { %>
+      <% posts[3].photos.forEach(photo => { %>
+      <figure class="article__image-wrap">
+        <img class="article__image" src="<%- photo.image %>" alt="<%- photo.alt %>">
+      </figure>
+      <% }); %>
+      <% } %>
     </div>
   </article>
   <div class="button__wrap">

@@ -3,22 +3,16 @@
 .section {
   @include padding-block-start-vw(20);
   @include padding-block-end-vw(20);
-  @include padding-inline-start-vw(20);
-  @include padding-inline-end-vw(20);
   margin-inline-start: auto;
   margin-inline-end: auto;
-  max-width: 768px;
+  max-width: 1024px;
   width: 100%;
   @include tb-screen {
     padding-block-start: 20px;
     padding-block-end: 20px;
-    padding-inline-start: 20px;
-    padding-inline-end: 20px;
   }
   @include pc-screen {
     padding-block-start: 40px;
     padding-block-end: 40px;
-    padding-inline-start: 0;
-    padding-inline-end: 0;
   }
 }

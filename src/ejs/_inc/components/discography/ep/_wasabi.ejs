@@ -2,14 +2,14 @@
   <h2 class="heading" data-heading="Discography">
     楽曲
   </h2>
-  <div class="article">
+  <div class="article article--row">
     <% let eps = discographyData.eps; %>
-    <div class="article__inner">
-      <p class="article__jacket">
-        <img class="article__jacket-image" src="<%- eps[3].image %>" alt="<%- eps[3].alt %>">
-      </p>
+    <figure class="article__hero article__hero--row">
+      <img class="article__hero-image" src="<%- eps[3].image %>" alt="<%- eps[3].alt %>">
+    </figure>
+    <div class="article__inner article__inner--row">
+      <h2 class="article__title article__title--row"><%- eps[3].title %></h2>
       <div class="article__caption">
-        <h2 class="heading"><%- eps[3].title %></h2>
         <ul class="article__caption-list">
           <li class="article__caption-item">作品種別 : <%- eps[3].type %></li>
           <li class="article__caption-item">発売日 : <%- eps[3].release %></li>

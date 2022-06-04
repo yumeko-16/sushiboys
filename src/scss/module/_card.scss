@@ -1,18 +1,17 @@
 @use "../setting/config" as *;
 
 .card {
-  display: flex;
-  flex-direction: column;
+  @include padding-inline-start-vw(20);
+  @include padding-inline-end-vw(20);
   list-style-type: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 0;
+  margin: 0;
   @include tb-screen {
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
   }
   &::before,
   &::after {
@@ -31,6 +30,7 @@
   @include border-all-radius-vw(8);
   @include margin-block-end-vw(20);
   background-color: #fff;
+  box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
   display: block;
   overflow: hidden;
   width: 100%;

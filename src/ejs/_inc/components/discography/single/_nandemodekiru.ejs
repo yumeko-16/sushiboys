@@ -2,14 +2,14 @@
   <h2 class="heading" data-heading="Discography">
     楽曲
   </h2>
-  <div class="article">
+  <div class="article article--row">
     <% let singles = discographyData.singles; %>
-    <div class="article__inner">
-      <p class="article__jacket">
-        <img class="article__jacket-image" src="<%- singles[2].image %>" alt="<%- singles[2].alt %>">
-      </p>
+    <figure class="article__hero article__hero--row">
+      <img class="article__hero-image" src="<%- singles[2].image %>" alt="<%- singles[2].alt %>">
+    </figure>
+    <div class="article__inner article__inner--row">
+      <h2 class="article__title article__title--row"><%- singles[2].title %></h2>
       <div class="article__caption">
-        <h2 class="heading"><%- singles[2].title %></h2>
         <ul class="article__caption-list">
           <li class="article__caption-item">作品種別 : <%- singles[2].type %></li>
           <li class="article__caption-item">発売日 : <%- singles[2].release %></li>
@@ -18,7 +18,7 @@
           <% } %>
           <li class="article__caption-item">視聴：ご視聴は<a href="<%- singles[2].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
         </ul>
-        <h3 class="article__caption-heading">Song contents</h3>
+        <h3 class="article__caption-article__title">Song contents</h3>
         <ol class="article__caption-list article__caption-list--song">
           <% singles[2].songs.forEach(function(song) { %>
           <li class="article__caption-item">

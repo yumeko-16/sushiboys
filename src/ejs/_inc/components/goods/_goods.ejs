@@ -2,17 +2,17 @@
   <h2 class="heading" data-heading="Goods">
     グッズ
   </h2>
-  <ul class="discography">
-    <li class="discography__item">
+  <ul class="carousel">
+    <li class="carousel__item">
       <h2 class="title">Knickknack</h2>
-      <div id="swiper-knickknack" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
+      <div id="swiper-knickknack" class="swiper carousel__swiper">
+        <ul class="swiper-wrapper carousel__swiper-list">
           <% let knickknacks = goodsData.knickknacks; %>
           <% knickknacks.forEach(function(knickknack) { %>
-          <li class="swiper-slide discography__card">
+          <li class="swiper-slide carousel__card">
             <a href="<%- knickknack.url %>" target="_blank" rel="noopener noreferrer">
-              <figure class="discography__frame">
-                <img class="discography__image" src="<%- knickknack.image %>" alt="<%- knickknack.alt %>">
+              <figure class="carousel__frame">
+                <img class="carousel__image" src="<%- knickknack.image %>" alt="<%- knickknack.alt %>">
               </figure>
             </a>
           </li>
@@ -20,16 +20,16 @@
         </ul>
       </div>
     </li>
-    <li class="discography__item">
+    <li class="carousel__item">
       <h2 class="title">Recording media</h2>
-      <div id="swiper-recording-media" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
+      <div id="swiper-recording-media" class="swiper carousel__swiper">
+        <ul class="swiper-wrapper carousel__swiper-list">
           <% let recordingMedias = goodsData.recordingMedias; %>
           <% recordingMedias.forEach(function(recordingMedias) { %>
-          <li class="swiper-slide discography__card">
+          <li class="swiper-slide carousel__card">
             <a href="<%- recordingMedias.url %>" target="_blank" rel="noopener noreferrer">
-              <figure class="discography__frame">
-                <img class="discography__image" src="<%- recordingMedias.image %>" alt="<%- recordingMedias.alt %>">
+              <figure class="carousel__frame">
+                <img class="carousel__image" src="<%- recordingMedias.image %>" alt="<%- recordingMedias.alt %>">
               </figure>
             </a>
           </li>
@@ -37,16 +37,16 @@
         </ul>
       </div>
     </li>
-    <li class="discography__item">
+    <li class="carousel__item">
       <h2 class="title">Hoodie</h2>
-      <div id="swiper-hoodie" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
+      <div id="swiper-hoodie" class="swiper carousel__swiper">
+        <ul class="swiper-wrapper carousel__swiper-list">
           <% let hoodies = goodsData.hoodies; %>
           <% hoodies.forEach(function(hoodie) { %>
-          <li class="swiper-slide discography__card">
+          <li class="swiper-slide carousel__card">
             <a href="<%- hoodie.url %>" target="_blank" rel="noopener noreferrer">
-              <figure class="discography__frame">
-                <img class="discography__image" src="<%- hoodie.image %>" alt="<%- hoodie.alt %>">
+              <figure class="carousel__frame">
+                <img class="carousel__image" src="<%- hoodie.image %>" alt="<%- hoodie.alt %>">
               </figure>
             </a>
           </li>
@@ -54,16 +54,16 @@
         </ul>
       </div>
     </li>
-    <li class="discography__item">
+    <li class="carousel__item">
       <h2 class="title">Parker</h2>
-      <div id="swiper-parker" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
+      <div id="swiper-parker" class="swiper carousel__swiper">
+        <ul class="swiper-wrapper carousel__swiper-list">
           <% let parkers = goodsData.parkers; %>
           <% parkers.forEach(function(parker) { %>
-          <li class="swiper-slide discography__card">
+          <li class="swiper-slide carousel__card">
             <a href="<%- parker.url %>" target="_blank" rel="noopener noreferrer">
-              <figure class="discography__frame">
-                <img class="discography__image" src="<%- parker.image %>" alt="<%- parker.alt %>">
+              <figure class="carousel__frame">
+                <img class="carousel__image" src="<%- parker.image %>" alt="<%- parker.alt %>">
               </figure>
             </a>
           </li>
@@ -71,16 +71,16 @@
         </ul>
       </div>
     </li>
-    <li class="discography__item">
+    <li class="carousel__item">
       <h2 class="title">Long T-Shirt</h2>
-      <div id="swiper-long-t-shirt" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
+      <div id="swiper-long-t-shirt" class="swiper carousel__swiper">
+        <ul class="swiper-wrapper carousel__swiper-list">
           <% let longTShirts = goodsData.longTShirts; %>
           <% longTShirts.forEach(function(longTShirt) { %>
-          <li class="swiper-slide discography__card">
+          <li class="swiper-slide carousel__card">
             <a href="<%- longTShirt.url %>" target="_blank" rel="noopener noreferrer">
-              <figure class="discography__frame">
-                <img class="discography__image" src="<%- longTShirt.image %>" alt="<%- longTShirt.alt %>">
+              <figure class="carousel__frame">
+                <img class="carousel__image" src="<%- longTShirt.image %>" alt="<%- longTShirt.alt %>">
               </figure>
             </a>
           </li>
@@ -88,16 +88,16 @@
         </ul>
       </div>
     </li>
-    <li class="discography__item">
+    <li class="carousel__item">
       <h2 class="title">T-Shirt</h2>
-      <div id="swiper-t-shirt" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
+      <div id="swiper-t-shirt" class="swiper carousel__swiper">
+        <ul class="swiper-wrapper carousel__swiper-list">
           <% let tShirts = goodsData.tShirts; %>
           <% tShirts.forEach(function(tShirt) { %>
-          <li class="swiper-slide discography__card">
+          <li class="swiper-slide carousel__card">
             <a href="<%- tShirt.url %>" target="_blank" rel="noopener noreferrer">
-              <figure class="discography__frame">
-                <img class="discography__image" src="<%- tShirt.image %>" alt="<%- tShirt.alt %>">
+              <figure class="carousel__frame">
+                <img class="carousel__image" src="<%- tShirt.image %>" alt="<%- tShirt.alt %>">
               </figure>
             </a>
           </li>
@@ -105,16 +105,16 @@
         </ul>
       </div>
     </li>
-    <li class="discography__item">
+    <li class="carousel__item">
       <h2 class="title">Cap</h2>
-      <div id="swiper-cap" class="swiper discography__swiper">
-        <ul class="swiper-wrapper discography__swiper-list">
+      <div id="swiper-cap" class="swiper carousel__swiper">
+        <ul class="swiper-wrapper carousel__swiper-list">
           <% let caps = goodsData.caps; %>
           <% caps.forEach(function(cap) { %>
-          <li class="swiper-slide discography__card">
+          <li class="swiper-slide carousel__card">
             <a href="<%- cap.url %>" target="_blank" rel="noopener noreferrer">
-              <figure class="discography__frame">
-                <img class="discography__image" src="<%- cap.image %>" alt="<%- cap.alt %>">
+              <figure class="carousel__frame">
+                <img class="carousel__image" src="<%- cap.image %>" alt="<%- cap.alt %>">
               </figure>
             </a>
           </li>

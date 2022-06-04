@@ -13,7 +13,6 @@
 .contact__label {
   @include font-oswald;
   @include font-size-vw(16);
-  color: $color-white;
   display: block;
   letter-spacing: 0.1em;
   @include tb-screen {

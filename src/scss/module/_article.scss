@@ -3,24 +3,19 @@
 .article {
   display: flex;
   flex-direction: column;
-}
-.article__inner {
-  @include padding-block-start-vw(25);
-  @include padding-block-end-vw(25);
-  @include tb-screen {
-    display: flex;
-    margin: 0 auto;
-    padding: 0 25px;
-    padding-block-start: 25px;
-    padding-block-end: 25px;
-    width: 90%;
+  &--row {
+    @include tb-screen {
+      flex-direction: row;
+    }
   }
 }
 .article__hero {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+  margin: 0;
+  &--row {
+    @include tb-screen {
+      width: 45%;
+    }
+  }
 }
 .article__hero-image {
   display: block;
@@ -28,15 +23,31 @@
   margin-inline-end: auto;
   width: 100%;
 }
+.article__inner {
+  @include padding-inline-start-vw(20);
+  @include padding-inline-end-vw(20);
+  @include tb-screen {
+    padding-block-start: 25px;
+    padding-block-end: 25px;
+    padding-inline-start: 30px;
+    padding-inline-end: 30px;
+  }
+  &--row {
+    @include tb-screen {
+      padding: 0;
+      margin-inline-start: 45px;
+    }
+  }
+}
 .article__title {
-  @include font-size-vw(18);
+  @include font-size-vw(26);
   @include margin-block-start-vw(15);
   @include margin-block-end-vw(15);
   margin-inline-start: 0;
   margin-inline-end: 0;
   @include tb-screen {
     @include font-size(30);
-    margin-block-start: 25px;
+    margin-block-start: 0;
     margin-block-end: 25px;
   }
 }
@@ -50,22 +61,20 @@
     width: 40%;
   }
 }
-.article__jacket-image {
+.article__image-wrap {
+  margin-block-start: 2em;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+.article__image {
   display: block;
   width: 100%;
 }
 .article__caption {
-  @include margin-block-start-vw(20);
-  padding-block-start: 0;
-  padding-block-end: 0;
-  padding-inline-start: 0;
-  padding-inline-end: 0;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  @include tb-screen {
-    margin-block-start: 0;
-    padding-inline-start: 30px;
-    width: 60%;
-  }
 }
 .article__caption-heading {
   @include font-oswald;
@@ -77,13 +86,10 @@
   }
 }
 .article__caption-list {
-  @include margin-block-start-vw(20);
   display: block;
   list-style-type: none;
-  margin-block-end: 0;
-  margin-inline-start: initial;
-  margin-inline-end: initial;
-  padding-inline-start: 1rem;
+  margin: 0;
+  padding: 0;
   @include tb-screen {
     margin-block-start: 20px;
   }
@@ -93,7 +99,6 @@
   }
 }
 .article__caption-item {
-  @include font-size-vw(16);
   display: list-item;
   @include tb-screen {
     @include font-size(16);
