@@ -1,12 +1,10 @@
-@use "./setting/config";
-
+@use "./module/setting";
 @use "./module/wrapper";
 @use "./module/header";
 @use "./module/main";
 @use "./module/footer";
 @use "./module/copyright";
-@use "./module/site-title";
-@use "./module/global-navigation";
+@use "./module/navigation";
 @use "./module/sns";
 @use "./module/section";
 @use "./module/title";

@@ -1,4 +1,4 @@
-@use "../setting/config" as *;
+@use "../module/setting" as *;
 
 .button {
   @include padding-block-start-vw(15);

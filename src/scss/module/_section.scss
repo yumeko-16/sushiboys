@@ -1,4 +1,4 @@
-@use "../setting/config" as *;
+@use "../module/setting" as *;
 
 .section {
   @include padding-block-start-vw(20);
@@ -14,5 +14,13 @@
   @include pc-screen {
     padding-block-start: 40px;
     padding-block-end: 40px;
+  }
+}
+.section__inner {
+  @include padding-inline-start-vw(20);
+  @include padding-inline-end-vw(20);
+  @include tb-screen {
+    padding-inline-start: 0;
+    padding-inline-end: 0;
   }
 }

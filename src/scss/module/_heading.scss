@@ -1,4 +1,4 @@
-@use "../setting/config" as *;
+@use "../module/setting" as *;
 
 .heading {
   @include font-size-vw(14);

@@ -1,10 +1,61 @@
-@use "../setting/config" as *;
+@use "../module/setting" as *;
 
 .header {
-  @include padding-block-start-vw(20);
-  @include padding-block-end-vw(20);
+  @include height-vw(60);
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
   @include tb-screen {
-    padding-block-start: 20px;
-    padding-block-end: 20px;
+    flex-direction: column;
+    height: auto;
+  }
+}
+.header__title {
+  @include font-oswald;
+  @include font-size-vw(22);
+  font-weight: 400;
+  margin: 0;
+  @include tb-screen {
+    @include font-size(45);
+  }
+  @include pc-screen {
+    @include font-size(54);
+  }
+}
+.header__title-anchor {
+  color: $color-black;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.header__button {
+  @include right-vw(30);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  pointer-events: auto;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1002;
+  @include tb-screen {
+    display: none;
+  }
+  &.js-hide {
+    display: none;
+  }
+}
+.header__button-bar {
+  @include height-vw(2);
+  @include margin-block-end-vw(7);
+  @include width-vw(25);
+  background-color: $color-black;
+  display: block;
+  transition: all 0.15s ease-in-out;
+  &:last-of-type {
+    margin-block-end: 0;
   }
 }

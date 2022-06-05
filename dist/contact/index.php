@@ -190,97 +190,99 @@ function validation($data) {
         <h2 class="heading" data-heading="Contact">
           お問い合わせ
         </h2>
+        <div class="section__inner">
 
 <?php if ($page_flag === 1) : ?>
 
-        <!-- 確認ページ start -->
-        <form class="contact" method="post" action="">
-          <!-- 表示用 start-->
-          <div class="contact__group">
-            <label class="contact__label" for="">Name</label>
-            <p class="contact__input-confirmation"><?= $clean['name']; ?></p>
-          </div>
-          <div class="contact__group">
-            <label class="contact__label" for="">Email</label>
-            <p class="contact__input-confirmation"><?= $clean['email']; ?></p>
-          </div>
-          <div class="contact__group">
-            <label class="contact__label" for="">Subject</label>
-            <p class="contact__input-confirmation"><?= $clean['subject']; ?></p>
-          </div>
-          <div class="contact__group">
-            <label class="contact__label" for="">Message</label>
-            <p class="contact__input-confirmation"><?= nl2br($clean['message']); ?></p>
-          </div>
-          <div class="button__wrap">
-            <button class="button" type="submit" name="button_back" value="Back">
-              <span class="button__text">Back</span>
-            </button>
-            <button class="button" type="submit" name="button_submit" value="Send">
-              <i class="button__icon fas fa-paper-plane"></i><span class="button__text">Send</span>
-            </button>
-          </div>
-          <!-- 表示用 end -->
+          <!-- 確認ページ start -->
+          <form class="contact" method="post" action="">
+            <!-- 表示用 start-->
+            <div class="contact__group">
+              <label class="contact__label" for="">Name</label>
+              <p class="contact__input-confirmation"><?= $clean['name']; ?></p>
+            </div>
+            <div class="contact__group">
+              <label class="contact__label" for="">Email</label>
+              <p class="contact__input-confirmation"><?= $clean['email']; ?></p>
+            </div>
+            <div class="contact__group">
+              <label class="contact__label" for="">Subject</label>
+              <p class="contact__input-confirmation"><?= $clean['subject']; ?></p>
+            </div>
+            <div class="contact__group">
+              <label class="contact__label" for="">Message</label>
+              <p class="contact__input-confirmation"><?= nl2br($clean['message']); ?></p>
+            </div>
+            <div class="button__wrap">
+              <button class="button" type="submit" name="button_back" value="Back">
+                <span class="button__text">Back</span>
+              </button>
+              <button class="button" type="submit" name="button_submit" value="Send">
+                <i class="button__icon fas fa-paper-plane"></i><span class="button__text">Send</span>
+              </button>
+            </div>
+            <!-- 表示用 end -->
 
-          <!-- 入力値の受け渡し用 start -->
-          <input type="hidden" name="name" value="<?= $clean['name']; ?>">
-          <input type="hidden" name="email" value="<?= $clean['email']; ?>">
-          <input type="hidden" name="subject" value="<?= $clean['subject']; ?>">
-          <input type="hidden" name="message" value="<?= $clean['message']; ?>">
-          <!-- 入力値の受け渡し用 end -->
-        </form>
-        <!-- 確認ページ end -->
+            <!-- 入力値の受け渡し用 start -->
+            <input type="hidden" name="name" value="<?= $clean['name']; ?>">
+            <input type="hidden" name="email" value="<?= $clean['email']; ?>">
+            <input type="hidden" name="subject" value="<?= $clean['subject']; ?>">
+            <input type="hidden" name="message" value="<?= $clean['message']; ?>">
+            <!-- 入力値の受け渡し用 end -->
+          </form>
+          <!-- 確認ページ end -->
 
 <?php elseif ($page_flag === 2) : ?>
 
-        <!-- 完了ページ start -->
-        <div class="contact">
-          <p class="contact__completion-text">Your request has been sent.</p>
-          <div class="button__wrap">
-            <a class="button" href="/contact/">
-              <span class="button__text">Back</span>
-            </a>
+          <!-- 完了ページ start -->
+          <div class="contact">
+            <p class="contact__completion-text">Your request has been sent.</p>
+            <div class="button__wrap">
+              <a class="button" href="/contact/">
+                <span class="button__text">Back</span>
+              </a>
+            </div>
           </div>
-        </div>
-        <!-- 完了ページ end -->
+          <!-- 完了ページ end -->
 
 <?php else : ?>
 
-        <!-- 入力ページ start -->
+          <!-- 入力ページ start -->
   <?php if (!empty($error)) : ?>
-        <ul>
+          <ul>
     <?php foreach ($error as $value) : ?>
-          <li class="contact__error"><?= $value; ?></li>
+            <li class="contact__error"><?= $value; ?></li>
     <?php endforeach; ?>
-        </ul>
+          </ul>
   <?php endif; ?>
-        <form class="contact" method="post" action="" novalidate>
-          <div>
-            <label class="contact__label" for="">Name</label>
-            <input class="contact__input" type="text" name="name" value="<?php if (!empty($clean['name'])) {echo $clean['name'];} ?>" placeholder="neo yoshikawa" autocomplete="off" required>
-          </div>
-          <div class="contact__group">
-            <label class="contact__label" for="">Email</label>
-            <input class="contact__input" type="email" name="email" value="<?php if (!empty($clean['email'])) {echo $clean['email'];} ?>" placeholder="sushiboys350@yahoo.co.jp" autocomplete="off" required>
-          </div>
-          <div class="contact__group">
-            <label class="contact__label" for="">Subject</label>
-            <input class="contact__input" type="subject" name="subject" value="<?php if (!empty($clean['subject'])) {echo $clean['subject'];} ?>" placeholder="About your inquiry for our products" autocomplete="off" required>
-          </div>
-          <div class="contact__group">
-            <label class="contact__label" for="">Message</label>
-            <textarea class="contact__textarea" name="message" placeholder="I have a question regarding your online shop." autocomplete="off" required><?php if (!empty($clean['message'])) {echo $clean['message'];} ?></textarea>
-          </div>
-          <div class="button__wrap">
-            <button class="button" type="submit" name="button_confirm" value="Confirm">
-              <i class="button__icon fas fa-paper-plane"></i><span class="button__text">Confirm</span>
-            </button>
-          </div>
-        </form>
-        <!-- 入力ページ end -->
+          <form class="contact" method="post" action="" novalidate>
+            <div>
+              <label class="contact__label" for="">Name</label>
+              <input class="contact__input" type="text" name="name" value="<?php if (!empty($clean['name'])) {echo $clean['name'];} ?>" placeholder="neo yoshikawa" autocomplete="off" required>
+            </div>
+            <div class="contact__group">
+              <label class="contact__label" for="">Email</label>
+              <input class="contact__input" type="email" name="email" value="<?php if (!empty($clean['email'])) {echo $clean['email'];} ?>" placeholder="sushiboys350@yahoo.co.jp" autocomplete="off" required>
+            </div>
+            <div class="contact__group">
+              <label class="contact__label" for="">Subject</label>
+              <input class="contact__input" type="subject" name="subject" value="<?php if (!empty($clean['subject'])) {echo $clean['subject'];} ?>" placeholder="About your inquiry for our products" autocomplete="off" required>
+            </div>
+            <div class="contact__group">
+              <label class="contact__label" for="">Message</label>
+              <textarea class="contact__textarea" name="message" placeholder="I have a question regarding your online shop." autocomplete="off" required><?php if (!empty($clean['message'])) {echo $clean['message'];} ?></textarea>
+            </div>
+            <div class="button__wrap">
+              <button class="button" type="submit" name="button_confirm" value="Confirm">
+                <i class="button__icon fas fa-paper-plane"></i><span class="button__text">Confirm</span>
+              </button>
+            </div>
+          </form>
+          <!-- 入力ページ end -->
 
 <?php endif; ?>
 
+        </div>
       </section>
     </main>
 

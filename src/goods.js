@@ -1,2 +1,2 @@
-import { GlobalNavigation } from 'js/global-navigation';
+import { Navigation } from 'js/navigation';
 import { SwiperGoods } from 'js/swiper';
