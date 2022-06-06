@@ -3,12 +3,22 @@
 .header {
   @include height-vw(60);
   align-items: center;
+  background-color: $color-pink;
   display: flex;
   justify-content: center;
-  position: relative;
+  left: 0;
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  transition: $transition-default;
+  width: 100%;
+  z-index: 1000;
   @include tb-screen {
     flex-direction: column;
-    height: auto;
+    height: 165px;
+  }
+  &.js-hide {
+    opacity: 0;
   }
 }
 .header__title {
@@ -25,10 +35,22 @@
 }
 .header__title-anchor {
   color: $color-black;
-  cursor: pointer;
   display: block;
+  pointer-events: auto;
   text-decoration: none;
   text-transform: uppercase;
+}
+.header__checkbox {
+  display: none;
+  &:checked {
+    & ~ .navigation-sm {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+    & ~ .header__button {
+      display: none;
+    }
+  }
 }
 .header__button {
   @include right-vw(30);
@@ -42,9 +64,6 @@
   transform: translateY(-50%);
   z-index: 1002;
   @include tb-screen {
-    display: none;
-  }
-  &.js-hide {
     display: none;
   }
 }

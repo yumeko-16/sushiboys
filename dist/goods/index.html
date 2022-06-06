@@ -32,7 +32,7 @@
 <!-- /OGP -->
 
 
-<link rel="stylesheet" href="/css/goods.css?202206052154">
+<link rel="stylesheet" href="/css/goods.css?202206062228">
 
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,18 +58,17 @@
 <!-- End Google Tag Manager (noscript) -->
 
   <div class="wrapper">
-    <header class="header">
+    <header class="header" data-header>
   <h1 class="header__title">
     <a class="header__title-anchor" href="/">Sushiboys</a>
   </h1>
-
-  <label class="header__button" for="humberger" data-humberger>
+  <input id="humberger" class="header__checkbox" type="checkbox" data-humberger-toggle>
+  <label class="header__button" for="humberger">
     <i class="header__button-bar"></i>
     <i class="header__button-bar"></i>
     <i class="header__button-bar"></i>
   </label>
-
-  <nav class="navigation-sm" data-navigation>
+  <nav class="navigation-sm" data-humberger-content>
     <ul class="navigation-sm__list">
       <li class="navigation-sm__item">
         <a class="navigation-sm__anchor" href="/">Home</a>

@@ -111,6 +111,7 @@ function validation($data) {
 
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <!-- Google Tag Manager -->
   <script>
@@ -144,6 +145,7 @@ function validation($data) {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script defer src="/js/contact.js"></script>
 </head>
+
 <body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG426DZ" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -151,37 +153,44 @@ function validation($data) {
 
   <div class="wrapper">
     <header class="header">
-      <h1 class="site-title">
-        <a class="site-title__link" href="/">Sushiboys</a>
+      <h1 class="header__title">
+        <a class="header__title-anchor" href="/">Sushiboys</a>
       </h1>
-
-      <nav class="global-navigation">
-        <div class="global-navigation--sp">
-          <div id="js-global-navigation--sp__selector" class="global-navigation--sp__selector">
-            <div class="global-navigation--sp__title">Contact</div>
-          </div>
-          <div id="js-global-navigation--sp__menu" class="global-navigation--sp__menu">
-            <ul class="global-navigation--sp__list">
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/">Home</a></li>
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/news/">News</a></li>
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/discography/">Discography</a></li>
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/goods/">Goods</a></li>
-              <li class="global-navigation--sp__item"><a class="global-navigation--sp__link" href="/contact/">Contact</a></li>
-            </ul>
-            <div class="global-navigation--sp__close-wrap">
-              <div id="js-global-navigation--sp__close" class="global-navigation--sp__close"></div>
-            </div>
-          </div>
+      <span class="header__button" for="humberger" data-humberger>
+        <i class="header__button-bar"></i>
+        <i class="header__button-bar"></i>
+        <i class="header__button-bar"></i>
+      </span>
+      <nav class="navigation-sm" data-navigation>
+        <ul class="navigation-sm__list">
+          <li class="navigation-sm__item">
+            <a class="navigation-sm__anchor" href="/">Home</a>
+          </li>
+          <li class="navigation-sm__item">
+            <a class="navigation-sm__anchor" href="/news/">News</a>
+          </li>
+          <li class="navigation-sm__item">
+            <a class="navigation-sm__anchor" href="/discography/">Discography</a>
+          </li>
+          <li class="navigation-sm__item">
+            <a class="navigation-sm__anchor" href="/goods/">Goods</a>
+          </li>
+          <li class="navigation-sm__item">
+            <a class="navigation-sm__anchor" href="/contact/">Ccntact</a>
+          </li>
+        </ul>
+        <div class="navigation-sm__close-wrap">
+          <div class="navigation-sm__close" data-navigation-close></div>
         </div>
-        <div class="global-navigation--pc">
-          <ul class="global-navigation--pc__list">
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/">Home</a></li>
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/news/">News</a></li>
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/discography/">Discography</a></li>
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link" href="/goods/">Goods</a></li>
-            <li class="global-navigation--pc__item"><a class="global-navigation--pc__link current" href="/contact/">Contact</a></li>
-          </ul>
-        </div>
+      </nav>
+      <nav class="navigation-pc">
+        <ul class="navigation-pc__list">
+          <li class="navigation-pc__item"><a class="navigation-pc__anchor" href="/">Home</a></li>
+          <li class="navigation-pc__item"><a class="navigation-pc__anchor" href="/news/">News</a></li>
+          <li class="navigation-pc__item"><a class="navigation-pc__anchor" href="/discography/">Discography</a></li>
+          <li class="navigation-pc__item"><a class="navigation-pc__anchor" href="/goods/">Goods</a></li>
+          <li class="navigation-pc__item"><a class="navigation-pc__anchor current" href="/contact/">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -192,95 +201,103 @@ function validation($data) {
         </h2>
         <div class="section__inner">
 
-<?php if ($page_flag === 1) : ?>
+          <?php if ($page_flag === 1) : ?>
 
-          <!-- 確認ページ start -->
-          <form class="contact" method="post" action="">
-            <!-- 表示用 start-->
-            <div class="contact__group">
-              <label class="contact__label" for="">Name</label>
-              <p class="contact__input-confirmation"><?= $clean['name']; ?></p>
-            </div>
-            <div class="contact__group">
-              <label class="contact__label" for="">Email</label>
-              <p class="contact__input-confirmation"><?= $clean['email']; ?></p>
-            </div>
-            <div class="contact__group">
-              <label class="contact__label" for="">Subject</label>
-              <p class="contact__input-confirmation"><?= $clean['subject']; ?></p>
-            </div>
-            <div class="contact__group">
-              <label class="contact__label" for="">Message</label>
-              <p class="contact__input-confirmation"><?= nl2br($clean['message']); ?></p>
-            </div>
-            <div class="button__wrap">
-              <button class="button" type="submit" name="button_back" value="Back">
-                <span class="button__text">Back</span>
-              </button>
-              <button class="button" type="submit" name="button_submit" value="Send">
-                <i class="button__icon fas fa-paper-plane"></i><span class="button__text">Send</span>
-              </button>
-            </div>
-            <!-- 表示用 end -->
+            <!-- 確認ページ start -->
+            <form class="contact" method="post" action="">
+              <!-- 表示用 start-->
+              <div class="contact__group">
+                <label class="contact__label" for="">Name</label>
+                <p class="contact__input-confirmation"><?= $clean['name']; ?></p>
+              </div>
+              <div class="contact__group">
+                <label class="contact__label" for="">Email</label>
+                <p class="contact__input-confirmation"><?= $clean['email']; ?></p>
+              </div>
+              <div class="contact__group">
+                <label class="contact__label" for="">Subject</label>
+                <p class="contact__input-confirmation"><?= $clean['subject']; ?></p>
+              </div>
+              <div class="contact__group">
+                <label class="contact__label" for="">Message</label>
+                <p class="contact__input-confirmation"><?= nl2br($clean['message']); ?></p>
+              </div>
+              <div class="button__wrap">
+                <button class="button" type="submit" name="button_back" value="Back">
+                  <span class="button__text">Back</span>
+                </button>
+                <button class="button" type="submit" name="button_submit" value="Send">
+                  <i class="button__icon fas fa-paper-plane"></i><span class="button__text">Send</span>
+                </button>
+              </div>
+              <!-- 表示用 end -->
 
-            <!-- 入力値の受け渡し用 start -->
-            <input type="hidden" name="name" value="<?= $clean['name']; ?>">
-            <input type="hidden" name="email" value="<?= $clean['email']; ?>">
-            <input type="hidden" name="subject" value="<?= $clean['subject']; ?>">
-            <input type="hidden" name="message" value="<?= $clean['message']; ?>">
-            <!-- 入力値の受け渡し用 end -->
-          </form>
-          <!-- 確認ページ end -->
+              <!-- 入力値の受け渡し用 start -->
+              <input type="hidden" name="name" value="<?= $clean['name']; ?>">
+              <input type="hidden" name="email" value="<?= $clean['email']; ?>">
+              <input type="hidden" name="subject" value="<?= $clean['subject']; ?>">
+              <input type="hidden" name="message" value="<?= $clean['message']; ?>">
+              <!-- 入力値の受け渡し用 end -->
+            </form>
+            <!-- 確認ページ end -->
 
-<?php elseif ($page_flag === 2) : ?>
+          <?php elseif ($page_flag === 2) : ?>
 
-          <!-- 完了ページ start -->
-          <div class="contact">
-            <p class="contact__completion-text">Your request has been sent.</p>
-            <div class="button__wrap">
-              <a class="button" href="/contact/">
-                <span class="button__text">Back</span>
-              </a>
+            <!-- 完了ページ start -->
+            <div class="contact">
+              <p class="contact__completion-text">Your request has been sent.</p>
+              <div class="button__wrap">
+                <a class="button" href="/contact/">
+                  <span class="button__text">Back</span>
+                </a>
+              </div>
             </div>
-          </div>
-          <!-- 完了ページ end -->
+            <!-- 完了ページ end -->
 
-<?php else : ?>
+          <?php else : ?>
 
-          <!-- 入力ページ start -->
-  <?php if (!empty($error)) : ?>
-          <ul>
-    <?php foreach ($error as $value) : ?>
-            <li class="contact__error"><?= $value; ?></li>
-    <?php endforeach; ?>
-          </ul>
-  <?php endif; ?>
-          <form class="contact" method="post" action="" novalidate>
-            <div>
-              <label class="contact__label" for="">Name</label>
-              <input class="contact__input" type="text" name="name" value="<?php if (!empty($clean['name'])) {echo $clean['name'];} ?>" placeholder="neo yoshikawa" autocomplete="off" required>
-            </div>
-            <div class="contact__group">
-              <label class="contact__label" for="">Email</label>
-              <input class="contact__input" type="email" name="email" value="<?php if (!empty($clean['email'])) {echo $clean['email'];} ?>" placeholder="sushiboys350@yahoo.co.jp" autocomplete="off" required>
-            </div>
-            <div class="contact__group">
-              <label class="contact__label" for="">Subject</label>
-              <input class="contact__input" type="subject" name="subject" value="<?php if (!empty($clean['subject'])) {echo $clean['subject'];} ?>" placeholder="About your inquiry for our products" autocomplete="off" required>
-            </div>
-            <div class="contact__group">
-              <label class="contact__label" for="">Message</label>
-              <textarea class="contact__textarea" name="message" placeholder="I have a question regarding your online shop." autocomplete="off" required><?php if (!empty($clean['message'])) {echo $clean['message'];} ?></textarea>
-            </div>
-            <div class="button__wrap">
-              <button class="button" type="submit" name="button_confirm" value="Confirm">
-                <i class="button__icon fas fa-paper-plane"></i><span class="button__text">Confirm</span>
-              </button>
-            </div>
-          </form>
-          <!-- 入力ページ end -->
+            <!-- 入力ページ start -->
+            <?php if (!empty($error)) : ?>
+              <ul>
+                <?php foreach ($error as $value) : ?>
+                  <li class="contact__error"><?= $value; ?></li>
+                <?php endforeach; ?>
+              </ul>
+            <?php endif; ?>
+            <form class="contact" method="post" action="" novalidate>
+              <div>
+                <label class="contact__label" for="">Name</label>
+                <input class="contact__input" type="text" name="name" value="<?php if (!empty($clean['name'])) {
+                                                                                echo $clean['name'];
+                                                                              } ?>" placeholder="neo yoshikawa" autocomplete="off" required>
+              </div>
+              <div class="contact__group">
+                <label class="contact__label" for="">Email</label>
+                <input class="contact__input" type="email" name="email" value="<?php if (!empty($clean['email'])) {
+                                                                                  echo $clean['email'];
+                                                                                } ?>" placeholder="sushiboys350@yahoo.co.jp" autocomplete="off" required>
+              </div>
+              <div class="contact__group">
+                <label class="contact__label" for="">Subject</label>
+                <input class="contact__input" type="subject" name="subject" value="<?php if (!empty($clean['subject'])) {
+                                                                                      echo $clean['subject'];
+                                                                                    } ?>" placeholder="About your inquiry for our products" autocomplete="off" required>
+              </div>
+              <div class="contact__group">
+                <label class="contact__label" for="">Message</label>
+                <textarea class="contact__textarea" name="message" placeholder="I have a question regarding your online shop." autocomplete="off" required><?php if (!empty($clean['message'])) {
+                                                                                                                                                              echo $clean['message'];
+                                                                                                                                                            } ?></textarea>
+              </div>
+              <div class="button__wrap">
+                <button class="button" type="submit" name="button_confirm" value="Confirm">
+                  <i class="button__icon fas fa-paper-plane"></i><span class="button__text">Confirm</span>
+                </button>
+              </div>
+            </form>
+            <!-- 入力ページ end -->
 
-<?php endif; ?>
+          <?php endif; ?>
 
         </div>
       </section>
@@ -320,4 +337,5 @@ function validation($data) {
     </footer>
   </div>
 </body>
+
 </html>

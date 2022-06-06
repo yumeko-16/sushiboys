@@ -20,6 +20,10 @@
   @include padding-inline-start-vw(20);
   @include padding-inline-end-vw(20);
   @include tb-screen {
+    padding-inline-start: 20px;
+    padding-inline-end: 20px;
+  }
+  @include pc-screen {
     padding-inline-start: 0;
     padding-inline-end: 0;
   }
