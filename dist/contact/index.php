@@ -152,16 +152,17 @@ function validation($data) {
   <!-- End Google Tag Manager (noscript) -->
 
   <div class="wrapper">
-    <header class="header">
+    <header class="header" data-header>
       <h1 class="header__title">
         <a class="header__title-anchor" href="/">Sushiboys</a>
       </h1>
-      <span class="header__button" for="humberger" data-humberger>
+      <input id="humberger" class="header__checkbox" type="checkbox" data-humberger-toggle>
+      <label class="header__button" for="humberger">
         <i class="header__button-bar"></i>
         <i class="header__button-bar"></i>
         <i class="header__button-bar"></i>
-      </span>
-      <nav class="navigation-sm" data-navigation>
+      </label>
+      <nav class="navigation-sm" data-humberger-content>
         <ul class="navigation-sm__list">
           <li class="navigation-sm__item">
             <a class="navigation-sm__anchor" href="/">Home</a>
@@ -176,7 +177,7 @@ function validation($data) {
             <a class="navigation-sm__anchor" href="/goods/">Goods</a>
           </li>
           <li class="navigation-sm__item">
-            <a class="navigation-sm__anchor" href="/contact/">Ccntact</a>
+            <a class="navigation-sm__anchor" href="/contact/">Contact</a>
           </li>
         </ul>
         <div class="navigation-sm__close-wrap">
