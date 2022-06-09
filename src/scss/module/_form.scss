@@ -1,0 +1,127 @@
+@use "../module/setting" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  @include tb-screen {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+.form__row {
+  position: relative;
+  &:not(:first-of-type) {
+    @include margin-block-start-vw(30);
+    @include tb-screen {
+      margin-block-start: 30px;
+    }
+  }
+}
+.form__label {
+  @include font-oswald;
+  @include font-size-vw(16);
+  color: $color-white;
+  display: block;
+  letter-spacing: 0.1em;
+  @include tb-screen {
+    @include font-size(20);
+  }
+}
+.form__input,
+.form__textarea {
+  @include font-size-vw(16);
+  @include margin-block-start-vw(10);
+  @include padding-block-start-vw(15);
+  @include padding-block-end-vw(15);
+  @include padding-inline-start-vw(15);
+  @include padding-inline-end-vw(15);
+  -webkit-rtl-ordering: initial;
+  appearance: initial;
+  background: $color-white;
+  border: none;
+  border-color: initial;
+  border-image: initial;
+  border-radius: 5px;
+  border-style: initial;
+  border-width: initial;
+  color: $color-black;
+  column-count: initial;
+  cursor: initial;
+  display: block;
+  flex-direction: initial;
+  font: initial;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  overflow-wrap: initial;
+  resize: initial;
+  text-align: initial;
+  text-indent: initial;
+  text-rendering: initial;
+  text-shadow: initial;
+  text-transform: initial;
+  white-space: initial;
+  word-spacing: initial;
+  writing-mode: initial;
+  width: 100%;
+  @include tb-screen {
+    @include font-size(16);
+    margin-block-start: 10px;
+    padding-block-start: 15px;
+    padding-block-end: 15px;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
+  }
+  &::placeholder {
+    @include font-oswald;
+    color: $color-gray;
+    letter-spacing: 0.1em;
+  }
+  &:focus-visible {
+    box-shadow: 0 0 5px 1px $color-black;
+    outline: none;
+    outline-offset: 0;
+  }
+}
+.form__textarea {
+  height: calc(1.6em * 5 + 8vw);
+  @include tb-screen {
+    height: calc(1.6em * 5 + 5vw);
+  }
+  @include pc-screen {
+    height: calc(1.6em * 5 + 30px);
+  }
+}
+.form__button-wrap {
+  @include margin-block-start-vw(40);
+  display: flex;
+  justify-content: center;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  @include tb-screen {
+    margin-block-start: 30px;
+  }
+}
+.form__success-message,
+.form__error-message {
+  @include font-size-vw(12);
+  margin: 0;
+  opacity: 0;
+  position: absolute;
+  transition: $transition-default;
+  @include tb-screen {
+    @include font-size(14);
+  }
+}
+.form__success-message {
+  color: $color-success;
+  &.js-success {
+    opacity: 1;
+  }
+}
+.form__error-message {
+  color: $color-error;
+  &.js-error {
+    opacity: 1;
+  }
+}

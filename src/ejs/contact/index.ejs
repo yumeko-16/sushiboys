@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%
+  const pageid = 'contact';
+  const localmeta = {
+    title: 'CONTACT | SUSHIBOYS',
+    description: 'SUSHIBOYSの鼓膜に直接コンタクト。ご連絡おまちしております。',
+    url: 'https://sushiboys350.com/contact/',
+  };
+  const localogp = {
+    title: localmeta.title,
+    description: localmeta.description,
+    url: localmeta.url,
+  };
+  const localfile = {
+    css: '/css/contact.css',
+    js: '/js/contact.js'
+  };
+  %>
+  <%- include('../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
+</head>
+<body>
+  <%- include('../_inc/components/_googletagmanager'); %>
+  <div class="wrapper">
+    <%- include('../_inc/components/_header', {current: 'contact'}); %>
+    <main class="main">
+      <%- include('../_inc/components/contact/_form'); %>
+    </main>
+    <%- include('../_inc/components/_footer'); %>
+  </div>
+</body>
+</html>

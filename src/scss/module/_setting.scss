@@ -7,6 +7,7 @@ $color-gray: #ccc;
 $color-pink: #e8b6b4;
 $color-pink-sub: #ffe4e1;
 $color-blue: #2b7bb9;
+$color-success: #00be28;
 $color-error: #ff0000;
 $color-hover-red: #c16452;
 
@@ -97,6 +98,21 @@ $base-window-width: 375;
 }
 @mixin right-vw($px) {
   right: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin border-all-vw($px) {
+  border-width: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin border-top-width-vw($px) {
+  border-top-width: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin border-bottom-width-vw($px) {
+  border-bottom-width: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin border-left-width-vw($px) {
+  border-left-width: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin border-right-width-vw($px) {
+  border-right-width: (math.div($px, $base-window-width) * 100) + vw;
 }
 @mixin border-all-radius-vw($px) {
   border-radius: (math.div($px, $base-window-width) * 100) + vw;

@@ -44,6 +44,18 @@
     opacity: 0.9;
     transition: 0.1s;
   }
+  &:disabled {
+    background-color: transparent;
+    border: 1px solid $color-black;
+    color: $color-black;
+    @include border-all-vw(1);
+    @include tb-screen {
+      border: 1px solid $color-black;
+    }
+    & > .button__icon {
+      color: $color-black;
+    }
+  }
 }
 .button__wrap {
   @include margin-block-start-vw(40);
