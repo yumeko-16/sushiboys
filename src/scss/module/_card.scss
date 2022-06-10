@@ -19,7 +19,7 @@
       content: "";
       display: block;
       height: 0;
-      width: calc(100% / 4 - 15px);
+      width: calc(100% / 3 - 15px);
     }
   }
   &::before {
@@ -59,6 +59,9 @@
   width: 100%;
   @include tb-screen {
     height: 170px;
+  }
+  &--no-image {
+    object-position: center;
   }
 }
 .card__title {

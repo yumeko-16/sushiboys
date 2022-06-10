@@ -2,9 +2,11 @@
   <h2 class="heading" data-heading="News">お知らせ</h2>
   <article class="article">
     <% let posts = newsData.posts; %>
+    <% if (posts[6].hero.image !== '') { %>
     <figure class="article__hero">
       <img class="article__hero-image" src="<%- posts[6].hero.image %>" alt="<%- posts[6].hero.alt %>">
     </figure>
+    <% } %>
     <div class="article__inner">
       <h2 class="article__title"><%- posts[6].title %></h2>
       <% posts[6].leads.forEach(lead => { %>
