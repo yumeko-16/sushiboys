@@ -20,7 +20,6 @@
 .form__label {
   @include font-oswald;
   @include font-size-vw(16);
-  color: $color-white;
   display: block;
   letter-spacing: 0.1em;
   @include tb-screen {
@@ -30,20 +29,11 @@
 .form__input,
 .form__textarea {
   @include font-size-vw(16);
-  @include margin-block-start-vw(10);
-  @include padding-block-start-vw(15);
-  @include padding-block-end-vw(15);
-  @include padding-inline-start-vw(15);
-  @include padding-inline-end-vw(15);
   -webkit-rtl-ordering: initial;
   appearance: initial;
   background: $color-white;
-  border: none;
-  border-color: initial;
-  border-image: initial;
   border-radius: 5px;
-  border-style: initial;
-  border-width: initial;
+  border: 1px solid $color-black;
   color: $color-black;
   column-count: initial;
   cursor: initial;
@@ -63,8 +53,15 @@
   word-spacing: initial;
   writing-mode: initial;
   width: 100%;
+  @include border-all-vw(1);
+  @include margin-block-start-vw(10);
+  @include padding-block-start-vw(15);
+  @include padding-block-end-vw(15);
+  @include padding-inline-start-vw(15);
+  @include padding-inline-end-vw(15);
   @include tb-screen {
     @include font-size(16);
+    border: 1px solid $color-black;
     margin-block-start: 10px;
     padding-block-start: 15px;
     padding-block-end: 15px;
