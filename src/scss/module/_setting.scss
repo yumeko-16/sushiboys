@@ -20,6 +20,11 @@ $base-window-width: 375;
 /* @mixin
 ----------------------------------------- */
 /* breakpoint */
+@mixin sm-screen {
+  @media screen and (min-width: 375px) {
+    @content;
+  }
+}
 @mixin tb-screen {
   @media screen and (min-width: 768px) {
     @content;
@@ -60,11 +65,17 @@ $base-window-width: 375;
 @mixin margin-all-vw($px) {
   margin: (math.div($px, $base-window-width) * 100) + vw;
 }
+@mixin margin-block-vw($px) {
+  margin-block: (math.div($px, $base-window-width) * 100) + vw;
+}
 @mixin margin-block-start-vw($px) {
   margin-block-start: (math.div($px, $base-window-width) * 100) + vw;
 }
 @mixin margin-block-end-vw($px) {
   margin-block-end: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin margin-inline-vw($px) {
+  margin-inline: (math.div($px, $base-window-width) * 100) + vw;
 }
 @mixin margin-inline-start-vw($px) {
   margin-inline-start: (math.div($px, $base-window-width) * 100) + vw;
@@ -75,11 +86,17 @@ $base-window-width: 375;
 @mixin padding-all-vw($px) {
   padding: (math.div($px, $base-window-width) * 100) + vw;
 }
+@mixin padding-block-vw($px) {
+  padding-block: (math.div($px, $base-window-width) * 100) + vw;
+}
 @mixin padding-block-start-vw($px) {
   padding-block-start: (math.div($px, $base-window-width) * 100) + vw;
 }
 @mixin padding-block-end-vw($px) {
   padding-block-end: (math.div($px, $base-window-width) * 100) + vw;
+}
+@mixin padding-inline-vw($px) {
+  padding-inline: (math.div($px, $base-window-width) * 100) + vw;
 }
 @mixin padding-inline-start-vw($px) {
   padding-inline-start: (math.div($px, $base-window-width) * 100) + vw;
@@ -146,12 +163,15 @@ html {
 }
 body {
   @include font-default;
-  @include font-size-vw(16);
+  @include font-size(16);
   background-color: $color-pink;
   color: $color-black;
   font-weight: 400;
   line-height: 1.8;
   margin: 0;
+  @include sm-screen {
+    @include font-size-vw(16);
+  }
   @include tb-screen {
     @include font-size(16);
   }

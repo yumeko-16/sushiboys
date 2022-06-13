@@ -1,8 +1,11 @@
 @use "../module/setting" as *;
 
 .main {
-  @include margin-block-start-vw(60);
+  margin-block-start: 60px;
   overflow: hidden;
+  @include sm-screen {
+    @include margin-block-start-vw(60);
+  }
   @include tb-screen {
     margin-block-start: 165px;
   }

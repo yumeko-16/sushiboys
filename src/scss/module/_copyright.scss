@@ -1,11 +1,11 @@
 @use "../module/setting" as *;
 
 .copyright {
-  @include margin-block-start-vw(20);
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+  margin: 20px 0 0;
   text-align: center;
+  @include sm-screen {
+    @include margin-block-start-vw(20);
+  }
   @include tb-screen {
     margin-block-start: 20px;
   }

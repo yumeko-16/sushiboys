@@ -5,14 +5,16 @@
   flex-direction: column;
 }
 .contact__group {
-  @include margin-block-start-vw(20);
+  margin-block-start: 20px;
+  @include sm-screen {
+    @include margin-block-start-vw(20);
+  }
   @include tb-screen {
     margin-block-start: 20px;
   }
 }
 .contact__label {
   @include font-oswald;
-  @include font-size-vw(16);
   display: block;
   letter-spacing: 0.1em;
   @include tb-screen {
@@ -21,12 +23,6 @@
 }
 .contact__input,
 .contact__textarea {
-  @include font-size-vw(16);
-  @include margin-block-start-vw(10);
-  @include padding-block-start-vw(15);
-  @include padding-block-end-vw(15);
-  @include padding-inline-start-vw(15);
-  @include padding-inline-end-vw(15);
   -webkit-rtl-ordering: initial;
   appearance: initial;
   background: $color-white;
@@ -41,10 +37,11 @@
   cursor: initial;
   display: block;
   flex-direction: initial;
-  font: initial;
   letter-spacing: 0.1em;
   line-height: 1.6;
+  margin-block-start: 10px;
   overflow-wrap: initial;
+  padding: 15px;
   resize: initial;
   text-align: initial;
   text-indent: initial;
@@ -55,13 +52,13 @@
   word-spacing: initial;
   writing-mode: initial;
   width: 100%;
+  @include sm-screen {
+    @include margin-block-start-vw(10);
+    @include padding-all-vw(15);
+  }
   @include tb-screen {
-    @include font-size(16);
     margin-block-start: 10px;
-    padding-block-start: 15px;
-    padding-block-end: 15px;
-    padding-inline-start: 15px;
-    padding-inline-end: 15px;
+    padding: 15px;
   }
   &::placeholder {
     @include font-oswald;
@@ -84,25 +81,22 @@
   }
 }
 .contact__input-confirmation {
-  @include padding-block-start-vw(15);
-  @include padding-block-end-vw(15);
-  @include padding-inline-start-vw(15);
-  @include padding-inline-end-vw(15);
+  padding: 15px;
   color: $color-white;
+  @include sm-screen {
+    @include padding-all-vw(15);
+  }
   @include tb-screen {
-    padding-block-start: 15px;
-    padding-block-end: 15px;
-    padding-inline-start: 15px;
-    padding-inline-end: 15px;
+    padding: 15px;
   }
 }
 .contact__button-wrap {
-  @include margin-block-start-vw(40);
   display: flex;
   justify-content: center;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+  margin: 40px 0 0;
+  @include sm-screen {
+    @include margin-block-start-vw(40);
+  }
   @include tb-screen {
     margin-block-start: 30px;
   }
@@ -111,12 +105,13 @@
   color: $color-error;
 }
 .contact__completion-text {
-  @include padding-block-start-vw(15);
-  @include padding-block-end-vw(15);
   color: $color-white;
+  margin-block: 15px;
   text-align: center;
+  @include sm-screen {
+    @include padding-block-vw(15);
+  }
   @include tb-screen {
-    padding-block-start: 15px;
-    padding-block-end: 15px;
+    padding-block: 15px;
   }
 }

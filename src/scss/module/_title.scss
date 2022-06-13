@@ -2,13 +2,13 @@
 
 .title {
   @include font-oswald;
-  @include font-size-vw(26);
+  @include font-size(26);
   font-weight: 400;
   letter-spacing: 0.1em;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+  margin: 0;
+  @include sm-screen {
+    @include font-size-vw(26);
+  }
   @include tb-screen {
     @include font-size(26);
   }

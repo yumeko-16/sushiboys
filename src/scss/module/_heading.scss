@@ -1,23 +1,28 @@
 @use "../module/setting" as *;
 
 .heading {
-  @include font-size-vw(14);
+  @include font-size(14);
   font-weight: 700;
-  @include margin-block-start-vw(0);
-  @include margin-block-end-vw(15);
+  margin: 0 0 15px;
   text-align: center;
+  @include sm-screen {
+    @include font-size-vw(14);
+    @include margin-block-end-vw(15);
+  }
   @include tb-screen {
     @include font-size(18);
     display: block;
-    margin-block-start: 0;
     margin-block-end: 50px;
   }
   &::before {
     @include font-oswald;
-    @include font-size-vw(26);
+    @include font-size(26);
     content: attr(data-heading);
     display: block;
     text-transform: uppercase;
+    @include sm-screen {
+      @include font-size-vw(26);
+    }
     @include tb-screen {
       @include font-size(32);
     }

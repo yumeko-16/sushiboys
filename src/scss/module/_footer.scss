@@ -1,17 +1,17 @@
 @use "../module/setting" as *;
 
 .footer {
-  @include padding-block-start-vw(20);
-  @include padding-block-end-vw(20);
   bottom: 0;
+  padding-block: 20px;
   position: absolute;
   width: 100%;
+  @include sm-screen {
+    @include padding-block-vw(20);
+  }
   @include tb-screen {
-    padding-block-start: 20px;
-    padding-block-end: 20px;
+    padding-block: 20px;
   }
   @include pc-screen {
-    padding-block-start: 40px;
-    padding-block-end: 40px;
+    padding-block: 40px;
   }
 }

@@ -1,17 +1,18 @@
 @use "../module/setting" as *;
 
 .card {
-  @include padding-inline-start-vw(20);
-  @include padding-inline-end-vw(20);
   list-style-type: none;
   margin: 0;
+  padding: 0 20px;
+  @include sm-screen {
+    @include padding-inline-vw(20);
+  }
   @include tb-screen {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-inline-start: 0;
-    padding-inline-end: 0;
+    padding-inline: 0;
   }
   &::before,
   &::after {
@@ -27,13 +28,16 @@
   }
 }
 .card__item {
-  @include border-all-radius-vw(8);
-  @include margin-block-end-vw(20);
   background-color: #fff;
+  border-radius: 8px;
   box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
   display: block;
   overflow: hidden;
   width: 100%;
+  @include sm-screen {
+    @include border-all-radius-vw(8);
+    @include margin-block-end-vw(20);
+  }
   @include tb-screen {
     border-radius: 8px;
     margin-block-end: 25px;
@@ -52,11 +56,14 @@
   margin: 0;
 }
 .card__image {
-  @include height-vw(200);
   display: block;
+  height: 200px;
   object-fit: cover;
   object-position: 50% 0;
   width: 100%;
+  @include sm-screen {
+    @include height-vw(200);
+  }
   @include tb-screen {
     height: 170px;
   }
@@ -65,18 +72,19 @@
   }
 }
 .card__title {
-  @include font-size-vw(16);
-  @include padding-all-vw(15);
+  @include font-size(16);
   color: $color-black;
   font-weight: 700;
   margin: 0;
   min-height: 82px;
+  padding: 15px;
   word-break: break-all;
+  @include sm-screen {
+    @include font-size-vw(16);
+    @include padding-all-vw(15);
+  }
   @include tb-screen {
     @include font-size(16);
-    padding-block-start: 15px;
-    padding-block-end: 15px;
-    padding-inline-start: 15px;
-    padding-inline-end: 15px;
+    padding: 15px;
   }
 }

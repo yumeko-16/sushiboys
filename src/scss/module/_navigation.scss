@@ -21,9 +21,7 @@
   }
 }
 .navigation-sm__list {
-  @include font-size-vw(28);
-  @include padding-block-start-vw(20);
-  @include padding-block-end-vw(20);
+  @include font-size(28);
   align-items: center;
   background: radial-gradient(transparent, #000 100%);
   display: flex;
@@ -31,23 +29,26 @@
   height: 100%;
   justify-content: flex-start;
   list-style-type: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
-  padding-inline-start: 0;
-  padding-inline-end: 0;
+  margin: 0;
+  padding: 20px 0;
   overflow-y: scroll;
   width: 100%;
+  @include sm-screen {
+    @include font-size-vw(28);
+    @include padding-block-vw(20);
+  }
 }
 .navigation-sm__item {
   @include font-oswald;
-  @include padding-block-start-vw(20);
-  @include padding-block-end-vw(20);
-  @include width-vw(300);
   display: block;
   letter-spacing: 0.1em;
+  padding: 20px 0;
   text-align: center;
+  width: 300px;
+  @include sm-screen {
+    @include padding-block-vw(20);
+    @include width-vw(300);
+  }
 }
 .navigation-sm__anchor {
   color: $color-white;
@@ -63,20 +64,28 @@
   transform: translatex(-50%);
 }
 .navigation-sm__close {
-  @include width-vw(50);
-  @include height-vw(50);
   background-color: $color-white;
   border-radius: 50%;
+  height: 50px;
   position: relative;
+  width: 50px;
+  @include sm-screen {
+    @include height-vw(50);
+    @include width-vw(50);
+  }
   &::before,
   &::after {
-    @include width-vw(3);
-    @include height-vw(25);
     background: $color-black;
     content: "";
+    height: 25px;
     left: 50%;
     position: absolute;
     top: 50%;
+    width: 3px;
+    @include sm-screen {
+      @include height-vw(25);
+      @include width-vw(3);
+    }
   }
   &::before {
     transform: translate(-50%, -50%) rotate(45deg);
@@ -97,22 +106,16 @@
   display: flex;
   justify-content: center;
   list-style-type: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  padding-inline-start: 0;
-  padding-inline-end: 0;
+  margin: 0 auto;
+  padding: 0;
   width: 100%;
   @include tb-screen {
-    padding-block-start: 15px;
-    padding-block-end: 15px;
+    padding-block: 15px;
   }
 }
 .navigation-pc__item {
   @include tb-screen {
-    padding-inline-start: 15px;
-    padding-inline-end: 15px;
+    padding-inline: 15px;
   }
   &:hover {
     opacity: 0.8;

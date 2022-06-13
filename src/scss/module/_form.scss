@@ -11,7 +11,10 @@
 .form__row {
   position: relative;
   &:not(:first-of-type) {
-    @include margin-block-start-vw(30);
+    margin-block-start: 30px;
+    @include sm-screen {
+      @include margin-block-start-vw(30);
+    }
     @include tb-screen {
       margin-block-start: 30px;
     }
@@ -19,7 +22,6 @@
 }
 .form__label {
   @include font-oswald;
-  @include font-size-vw(16);
   display: block;
   letter-spacing: 0.1em;
   @include tb-screen {
@@ -28,18 +30,17 @@
 }
 .form__input,
 .form__textarea {
-  @include font-size-vw(16);
+  @include font-size(16);
   -webkit-rtl-ordering: initial;
   appearance: initial;
-  background: $color-white;
-  border-radius: 5px;
+  background-color: $color-white;
   border: 1px solid $color-black;
+  border-radius: 5px;
   color: $color-black;
   column-count: initial;
   cursor: initial;
   display: block;
   flex-direction: initial;
-  font: initial;
   letter-spacing: 0.1em;
   line-height: 1.6;
   overflow-wrap: initial;
@@ -53,20 +54,19 @@
   word-spacing: initial;
   writing-mode: initial;
   width: 100%;
-  @include border-all-vw(1);
-  @include margin-block-start-vw(10);
-  @include padding-block-start-vw(15);
-  @include padding-block-end-vw(15);
-  @include padding-inline-start-vw(15);
-  @include padding-inline-end-vw(15);
+  @include sm-screen {
+    @include border-all-vw(1);
+    @include border-all-radius-vw(5);
+    @include font-size-vw(16);
+    @include margin-block-start-vw(10);
+    @include padding-block-vw(15);
+    @include padding-inline-vw(15);
+  }
   @include tb-screen {
     @include font-size(16);
-    border: 1px solid $color-black;
+    border-width: 1px;
     margin-block-start: 10px;
-    padding-block-start: 15px;
-    padding-block-end: 15px;
-    padding-inline-start: 15px;
-    padding-inline-end: 15px;
+    padding: 15px;
   }
   &::placeholder {
     @include font-oswald;
@@ -89,23 +89,26 @@
   }
 }
 .form__button-wrap {
-  @include margin-block-start-vw(40);
   display: flex;
   justify-content: center;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+  margin: 40px 0 0;
+  @include sm-screen {
+    @include margin-block-start-vw(40);
+  }
   @include tb-screen {
     margin-block-start: 30px;
   }
 }
 .form__success-message,
 .form__error-message {
-  @include font-size-vw(12);
+  @include font-size(12);
   margin: 0;
   opacity: 0;
   position: absolute;
   transition: $transition-default;
+  @include sm-screen {
+    @include font-size-vw(12);
+  }
   @include tb-screen {
     @include font-size(14);
   }

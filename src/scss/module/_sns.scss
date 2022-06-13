@@ -4,40 +4,43 @@
   display: flex;
   justify-content: center;
   list-style-type: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
-  margin-inline-start: 0;
-  margin-inline-end: 0;
+  margin: 0;
   padding-inline-start: 0;
 }
 .sns__item {
-  @include padding-inline-start-vw(10);
-  @include padding-inline-end-vw(10);
   display: flex;
+  padding: 0 10px;
+  @include sm-screen {
+    @include padding-inline-vw(10);
+  }
   @include tb-screen {
-    padding-inline-start: 10px;
-    padding-inline-end: 10px;
+    padding-inline: 10px;
   }
 }
 .sns__link {
-  @include font-size-vw(20);
-  @include height-vw(40);
-  @include width-vw(40);
+  @include font-size(20);
   background-color: $color-black;
   border-radius: 50%;
   color: $color-white;
   cursor: pointer;
   display: inline-block;
+  height: 40px;
   position: relative;
   text-decoration: none;
   transition: 0.5s;
-  &:hover {
-    opacity: 0.8;
+  width: 40px;
+  @include sm-screen {
+    @include font-size-vw(20);
+    @include height-vw(40);
+    @include width-vw(40);
   }
   @include tb-screen {
     @include font-size(20);
     height: 40px;
     width: 40px;
+  }
+  &:hover {
+    opacity: 0.8;
   }
   i {
     left: 50%;
