@@ -59,12 +59,12 @@
     @include border-all-radius-vw(5);
     @include font-size-vw(16);
     @include margin-block-start-vw(10);
-    @include padding-block-vw(15);
-    @include padding-inline-vw(15);
+    @include padding-all-vw(15);
   }
   @include tb-screen {
     @include font-size(16);
     border-width: 1px;
+    border-radius: 5px;
     margin-block-start: 10px;
     padding: 15px;
   }
