@@ -84,17 +84,17 @@ export const Submit = (() => {
 
   const postFetch = () => {
     let formData = new FormData(form);
-    const url = 'https://sushiboys350.com';
-    const current = `${location.origin}${location.pathname}`;
+    const url_base = 'https://sushiboys350.com';
+    const url = `${location.origin}${location.pathname}`;
     let id = null;
 
-    if (current.includes('sushiboys350.com')) {
+    if (url.includes('sushiboys350.com')) {
       id = 5;
     } else {
       id = 8;
     }
 
-    const api_endpoint = `${url}/wordpress/wp-json/contact-form-7/v1/contact-forms/${id}/feedback`;
+    const api_endpoint = `${url_base}/wordpress/wp-json/contact-form-7/v1/contact-forms/${id}/feedback`;
 
     fetch(api_endpoint, {
       method: 'POST',
