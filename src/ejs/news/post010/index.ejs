@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%- include('../../_data/_news'); %>
+  <%
+  const pageid = 'news';
+  const localmeta = {
+    title: 'TOEIC Listening test 1 type beat. | SUSHIBOYS',
+    description: '??TOEIC Listening test 1 type beat.?? ??out now??',
+    url: 'https://sushiboys350.com/news/post010',
+  };
+  const localogp = {
+    title: localmeta.title,
+    description: localmeta.description,
+    url: localmeta.url,
+  };
+  const localfile = {
+    css: '/css/news-detail.css',
+    js: '/js/newsDetail.js'
+  };
+  const newsData = news();
+  %>
+  <%- include('../../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
+</head>
+<body>
+  <%- include('../../_inc/components/_googletagmanager'); %>
+  <div class="wrapper">
+    <%- include('../../_inc/components/_header', {current: 'news'}); %>
+    <main class="main">
+      <%- include('../../_inc/components/news/detail/_post010', {newsData: newsData}); %>
+    </main>
+    <%- include('../../_inc/components/_footer'); %>
+  </div>
+</body>
+</html>

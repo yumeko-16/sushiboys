@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%- include('../../_data/_news'); %>
+  <%
+  const pageid = 'news';
+  const localmeta = {
+    title: 'YATSUI FESTIVAL! 2022 出演決定 | SUSHIBOYS',
+    description: 'YATSUI FESTIVAL! 2022 出演決定いたしやした！ 我々SUSHIBOYSは6/18(土)出演します！',
+    url: 'https://sushiboys350.com/news/post012',
+  };
+  const localogp = {
+    title: localmeta.title,
+    description: localmeta.description,
+    url: localmeta.url,
+  };
+  const localfile = {
+    css: '/css/news-detail.css',
+    js: '/js/newsDetail.js'
+  };
+  const newsData = news();
+  %>
+  <%- include('../../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
+</head>
+<body>
+  <%- include('../../_inc/components/_googletagmanager'); %>
+  <div class="wrapper">
+    <%- include('../../_inc/components/_header', {current: 'news'}); %>
+    <main class="main">
+      <%- include('../../_inc/components/news/detail/_post012', {newsData: newsData}); %>
+    </main>
+    <%- include('../../_inc/components/_footer'); %>
+  </div>
+</body>
+</html>
