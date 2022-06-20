@@ -1,0 +1,50 @@
+<section class="section">
+  <h2 class="heading" data-heading="Discography">
+    楽曲
+  </h2>
+  <article class="article article--row">
+    <%
+    let singles = discographyData.farmhouseSingles,
+      reverseSingles = singles.reverse();
+    %>
+    <figure class="article__hero article__hero--row">
+      <img class="article__hero-image" src="<%- reverseSingles[index].image %>" alt="<%- reverseSingles[index].alt %>">
+    </figure>
+    <div class="article__inner article__inner--row">
+      <h3 class="article__title article__title--row"><%- reverseSingles[index].title %></h3>
+      <div class="article__caption">
+        <ul class="article__caption-list">
+          <li class="article__caption-item">作品種別 : <%- reverseSingles[index].type %></li>
+          <li class="article__caption-item">発売日 : <%- reverseSingles[index].release %></li>
+          <% if (!reverseSingles[index].price.trim() === false) { %>
+          <li class="article__caption-item">価格 : <%- reverseSingles[index].price %></li>
+          <% } %>
+          <li class="article__caption-item">視聴：ご視聴・ご購入は<a href="<%- reverseSingles[index].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
+        </ul>
+        <h3 class="article__caption-heading">Song contents</h3>
+        <ol class="article__caption-list article__caption-list--song">
+          <% reverseSingles[index].songs.forEach(function(song) { %>
+          <li class="article__caption-item">
+            <%- song %>
+          </li>
+          <% }); %>
+        </ol>
+        <% if (!reverseSingles[index].bonusTracks[0].trim() === false) { %>
+        <h3 class="article__caption-heading">Bonus track</h3>
+        <ol class="article__caption-list article__caption-list--song">
+          <% reverseSingles[index].bonusTracks.forEach(function(bonusTrack) { %>
+          <li class="article__caption-item">
+            <%- bonusTrack %>
+          </li>
+          <% }); %>
+        </ol>
+        <% } %>
+      </div>
+    </div>
+  </article>
+  <div class="button__wrap">
+    <a class="button" href="/discography/">
+      <span class="button__text">Back</span>
+    </a>
+  </div>
+</section>

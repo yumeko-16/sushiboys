@@ -3,33 +3,36 @@
     楽曲
   </h2>
   <article class="article article--row">
-    <% let feats = discographyData.feats; %>
+    <%
+    let feats = discographyData.feats,
+      reverseFeats = feat.reverse();
+    %>
     <figure class="article__hero article__hero--row">
-      <img class="article__hero-image" src="<%- feats[1].image %>" alt="<%- feats[1].alt %>">
+      <img class="article__hero-image" src="<%- reverseFeats[index].image %>" alt="<%- reverseFeats[index].alt %>">
     </figure>
     <div class="article__inner article__inner--row">
-      <h3 class="article__title article__title--row"><%- feats[1].title %></h3>
+      <h3 class="article__title article__title--row"><%- reverseFeats[index].title %></h3>
       <div class="article__caption">
         <ul class="article__caption-list">
-          <li class="article__caption-item">作品種別 : <%- feats[1].type %></li>
-          <li class="article__caption-item">発売日 : <%- feats[1].release %></li>
-          <% if (!feats[1].price.trim() === false) { %>
-          <li class="article__caption-item">価格 : <%- feats[1].price %></li>
+          <li class="article__caption-item">作品種別 : <%- reverseFeats[index].type %></li>
+          <li class="article__caption-item">発売日 : <%- reverseFeats[index].release %></li>
+          <% if (!reverseFeats[index].price.trim() === false) { %>
+          <li class="article__caption-item">価格 : <%- reverseFeats[index].price %></li>
           <% } %>
-          <li class="article__caption-item">視聴：ご視聴は<a href="<%- feats[1].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
+          <li class="article__caption-item">視聴：ご視聴・ご購入は<a href="<%- reverseFeats[index].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
         </ul>
         <h3 class="article__caption-heading">Song contents</h3>
         <ol class="article__caption-list article__caption-list--song">
-          <% feats[1].songs.forEach(function(song) { %>
+          <% reverseFeats[index].songs.forEach(function(song) { %>
           <li class="article__caption-item">
             <%- song %>
           </li>
           <% }); %>
         </ol>
-        <% if (!feats[1].bonusTracks[0].trim() === false) { %>
+        <% if (!reverseFeats[index].bonusTracks[0].trim() === false) { %>
         <h3 class="article__caption-heading">Bonus track</h3>
         <ol class="article__caption-list article__caption-list--song">
-          <% feats[1].bonusTracks.forEach(function(bonusTrack) { %>
+          <% reverseFeats[index].bonusTracks.forEach(function(bonusTrack) { %>
           <li class="article__caption-item">
             <%- bonusTrack %>
           </li>

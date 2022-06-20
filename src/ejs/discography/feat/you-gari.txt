@@ -27,7 +27,7 @@
   <div class="wrapper">
     <%- include('../../_inc/components/_header', {current: 'discography'}); %>
     <main class="main">
-      <%- include('../../_inc/components/discography/feat/_you-gari', {discographyData: discographyData}); %>
+      <%- include('../../_inc/components/discography/feat/_feat', {discographyData: discographyData, index: feat}); %>
     </main>
     <%- include('../../_inc/components/_footer'); %>
   </div>

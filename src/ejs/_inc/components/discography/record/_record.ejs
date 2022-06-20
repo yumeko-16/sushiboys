@@ -3,33 +3,35 @@
     楽曲
   </h2>
   <article class="article article--row">
-    <% let eps = discographyData.farmhouseEps; %>
+    <%
+    let records = discographyData.records,
+      reverseRecords = records.reverse();
+    %>
     <figure class="article__hero article__hero--row">
-      <img class="article__hero-image" src="<%- eps[1].image %>" alt="<%- eps[1].alt %>">
+      <img class="article__hero-image" src="<%- reverseRecords[index].image %>" alt="<%- reverseRecords[index].alt %>">
     </figure>
     <div class="article__inner article__inner--row">
-      <h3 class="article__title article__title--row"><%- eps[1].title %></h3>
+      <h3 class="article__title article__title--row"><%- reverseRecords[index].title %></h3>
       <div class="article__caption">
         <ul class="article__caption-list">
-          <li class="article__caption-item">作品種別 : <%- eps[1].type %></li>
-          <li class="article__caption-item">発売日 : <%- eps[1].release %></li>
-          <% if (!eps[1].price.trim() === false) { %>
-          <li class="article__caption-item">価格 : <%- eps[1].price %></li>
+          <li class="article__caption-item">作品種別 : <%- reverseRecords[index].type %></li>
+          <li class="article__caption-item">発売日 : <%- reverseRecords[index].release %></li>
+          <% if (!reverseRecords[index].price.trim() === false) { %>
+          <li class="article__caption-item">価格 : <%- reverseRecords[index].price %></li>
           <% } %>
-          <li class="article__caption-item">視聴：ご視聴は<a href="<%- eps[1].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
         </ul>
         <h3 class="article__caption-heading">Song contents</h3>
         <ol class="article__caption-list article__caption-list--song">
-          <% eps[1].songs.forEach(function(song) { %>
+          <% reverseRecords[index].songs.forEach(function(song) { %>
           <li class="article__caption-item">
             <%- song %>
           </li>
           <% }); %>
         </ol>
-        <% if (!eps[1].bonusTracks[0].trim() === false) { %>
+        <% if (!reverseRecords[index].bonusTracks[0].trim() === false) { %>
         <h3 class="article__caption-heading">Bonus track</h3>
         <ol class="article__caption-list article__caption-list--song">
-          <% eps[1].bonusTracks.forEach(function(bonusTrack) { %>
+          <% reverseRecords[index].bonusTracks.forEach(function(bonusTrack) { %>
           <li class="article__caption-item">
             <%- bonusTrack %>
           </li>
