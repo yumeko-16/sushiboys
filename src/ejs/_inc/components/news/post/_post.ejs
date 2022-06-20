@@ -1,19 +1,22 @@
 <section class="section">
   <h2 class="heading" data-heading="News">お知らせ</h2>
   <article class="article">
-    <% let posts = newsData.posts; %>
-    <% if (posts[index].hero.image !== '') { %>
+    <%
+    let posts = newsData.posts;
+    let reversePosts = posts.reverse();
+    %>
+    <% if (reversePosts[index].hero.image !== '') { %>
     <figure class="article__hero">
-      <img class="article__hero-image" src="<%- posts[index].hero.image %>" alt="<%- posts[index].hero.alt %>">
+      <img class="article__hero-image" src="<%- reversePosts[index].hero.image %>" alt="<%- reversePosts[index].hero.alt %>">
     </figure>
     <% } %>
     <div class="article__inner">
-      <h2 class="article__title"><%- posts[index].title %></h2>
-      <% posts[index].leads.forEach(lead => { %>
+      <h2 class="article__title"><%- reversePosts[index].title %></h2>
+      <% reversePosts[index].leads.forEach(lead => { %>
       <p class="text"><%- lead %></p>
       <% }); %>
-      <% if (posts[index].photos.length !== 0) { %>
-      <% posts[index].photos.forEach(photo => { %>
+      <% if (reversePosts[index].photos.length !== 0) { %>
+      <% reversePosts[index].photos.forEach(photo => { %>
       <figure class="article__image-wrap">
         <img class="article__image" src="<%- photo.image %>" alt="<%- photo.alt %>">
       </figure>
