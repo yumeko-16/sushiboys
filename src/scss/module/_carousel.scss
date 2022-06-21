@@ -3,13 +3,13 @@
 .carousel {
   display: block;
   list-style-type: none;
-  margin: 0;
-  padding-inline: 20px;
+  margin: 0 20px;
+  padding: 0;
   @include sm-screen {
-    @include padding-inline-vw(20);
+    @include margin-inline-vw(20);
   }
   @include tb-screen {
-    padding-inline: 0;
+    margin-inline: 0;
   }
 }
 .carousel__item {
