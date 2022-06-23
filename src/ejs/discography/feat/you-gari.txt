@@ -7,7 +7,7 @@
   const localmeta = {
     title: 'You GARI feat.SUSHIBOYS | SUSHIBOYS',
     description: 'You GARI feat.SUSHIBOYS',
-    url: '',
+    url: 'https://sushiboys350.com/discography/feat/pocket-full-of-gum.html',
   };
   const localogp = {
     title: localmeta.title,
