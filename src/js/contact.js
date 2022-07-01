@@ -13,7 +13,7 @@ export const Validation = (() => {
       const successMessage = input.nextElementSibling;
       const errorMessage = successMessage.nextElementSibling;
 
-      input.addEventListener('focusout', () => {
+      input.addEventListener('input', () => {
         switch (input.name) {
           case 'your-name':
             if (input.value.length === 0) {
@@ -85,7 +85,7 @@ export const Submit = (() => {
   const postFetch = () => {
     let formData = new FormData(form);
     const url_base = 'https://sushiboys350.com';
-    const url = `${location.origin}${location.pathname}`;
+    const url = location.href;
     let id = null;
 
     if (url.includes('sushiboys350.com')) {
