@@ -2,15 +2,12 @@
 
 .wrapper {
   min-height: 100vh;
-  padding-block-end: 123px;
+  padding-block-end: 130px;
   position: relative;
   @include sm-screen {
-    @include padding-block-end-vw(123);
+    @include padding-block-end-vw(130);
   }
   @include tb-screen {
-    padding-block-end: 123px;
-  }
-  @include pc-screen {
-    padding-block-end: 163px;
+    padding-block-end: 130px;
   }
 }

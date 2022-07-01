@@ -2,16 +2,16 @@
 
 .footer {
   bottom: 0;
-  padding-block: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 130px;
+  justify-content: center;
   position: absolute;
   width: 100%;
   @include sm-screen {
-    @include padding-block-vw(20);
+    @include height-vw(130);
   }
   @include tb-screen {
-    padding-block: 20px;
-  }
-  @include pc-screen {
-    padding-block: 40px;
+    height: 130px;
   }
 }
