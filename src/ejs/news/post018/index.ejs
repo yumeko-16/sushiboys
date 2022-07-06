@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%- include('../../_data/_news'); %>
+  <%
+  const pageid = 'news';
+  const localmeta = {
+    title: '8/17（Wed.)Mega Shinnosuke 『ハンサムなDANCE☆SHOW』出演決定 | SUSHIBOYS',
+    description: 'Mega Shinnosuke 『ハンサムなDANCE☆SHOW』8/17（Wed.)東京LIQUIDROOMにて握りやす 8/13（Sat.）大阪味園ユニバース 8/17（Wed.)東京LIQUIDROOM',
+    url: 'https://sushiboys350.com/news/post018/',
+  };
+  const localogp = {
+    title: localmeta.title,
+    description: localmeta.description,
+    url: localmeta.url,
+  };
+  const localfile = {
+    css: '/css/news-detail.css',
+    js: '/js/newsDetail.js'
+  };
+  const newsData = news();
+  %>
+  <%- include('../../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
+</head>
+<body>
+  <%- include('../../_inc/components/_googletagmanager'); %>
+  <div class="wrapper">
+    <%- include('../../_inc/components/_header', {current: 'news'}); %>
+    <main class="main">
+      <%- include('../../_inc/components/news/post/_post', {newsData: newsData, index: 17}); %>
+    </main>
+    <%- include('../../_inc/components/_footer'); %>
+  </div>
+</body>
+</html>
