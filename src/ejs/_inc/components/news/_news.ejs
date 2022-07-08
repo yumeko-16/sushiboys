@@ -1,22 +1,24 @@
 <section class="section">
-  <h2 class="heading" data-heading="News">お知らせ</h2>
-  <ul class="card" data-news>
-    <% let posts = newsData.posts; %>
-    <% posts.forEach(post => { %>
-    <li class="card__item">
-      <a class="card__anchor" href="<%- post.url %>">
-        <% if (post.hero.image !== '') { %>
-        <figure class="card__image-wrap">
-          <img class="card__image" src="<%- post.hero.image %>" alt="<%- post.hero.alt %>">
-        </figure>
-        <% } else { %>
-        <figure class="card__image-wrap">
-          <img class="card__image card__image--no-image" src="/img/news/no-image.png" alt="No image">
-        </figure>
-        <% } %>
-        <h2 class="card__title"><%- post.title %></h2>
-      </a>
-    </li>
-    <% }); %>
-  </ul>
+  <div class="section__inner">
+    <h2 class="heading" data-heading="News">お知らせ</h2>
+    <ul class="card" data-news>
+      <% let posts = newsData.posts; %>
+      <% posts.forEach(post => { %>
+      <li class="card__item">
+        <a class="card__anchor" href="<%- post.url %>">
+          <% if (post.hero.image !== '') { %>
+          <figure class="card__image-wrap">
+            <img class="card__image" src="<%- post.hero.image %>" alt="<%- post.hero.alt %>">
+          </figure>
+          <% } else { %>
+          <figure class="card__image-wrap">
+            <img class="card__image card__image--no-image" src="/img/news/no-image.png" alt="No image">
+          </figure>
+          <% } %>
+          <h2 class="card__title"><%- post.title %></h2>
+        </a>
+      </li>
+      <% }); %>
+    </ul>
+  </div>
 </section>

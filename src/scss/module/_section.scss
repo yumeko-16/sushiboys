@@ -16,12 +16,14 @@
   }
 }
 .section__inner {
-  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 970px;
+  padding: 0 30px;
   @include sm-screen {
-    @include padding-inline-vw(20);
+    @include padding-inline-vw(30);
   }
   @include tb-screen {
-    padding-inline: 20px;
+    padding-inline: 30px;
   }
   @include pc-screen {
     padding-inline: 0;
