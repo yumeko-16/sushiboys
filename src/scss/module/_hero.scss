@@ -1,9 +1,12 @@
 @use "../module/setting" as *;
 
 .hero {
-  width: 70%;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
   margin: 0 auto;
-  pointer-events: none;
+  width: 70%;
   @include tb-screen {
     width: 50%;
   }
