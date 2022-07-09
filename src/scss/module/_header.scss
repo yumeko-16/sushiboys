@@ -7,7 +7,6 @@
   height: 60px;
   justify-content: center;
   left: 0;
-  pointer-events: none;
   position: fixed;
   top: 0;
   transition: $transition-default;
@@ -41,7 +40,6 @@
 .header__title-anchor {
   color: $color-black;
   display: block;
-  pointer-events: auto;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -49,7 +47,7 @@
   display: none;
   &:checked {
     & ~ .navigation-sm {
-      opacity: 1;
+      display: block;
       transform: translate3d(0, 0, 0);
     }
     & ~ .header__button {
