@@ -36,23 +36,33 @@ $base-window-width: 375;
   }
 }
 
+/* font family */
+@mixin font-default {
+  @include font-not-sans-jp-regular;
+}
+@mixin font-not-sans-jp-regular {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+@mixin font-not-sans-jp-bold {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+}
+@mixin font-oswald-regular {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+}
+@mixin font-oswald-medium {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+
 /* font size */
 @mixin font-size($px: 16) {
   font-size: (math.div($px, 10)) + rem;
 }
 @mixin font-size-vw($px: 16) {
   font-size: (math.div($px, $base-window-width) * 100) + vw;
-}
-
-/* font family */
-@mixin font-default {
-  font-family: -apple-system, "BlinkMacSystemFont", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3",
-    "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
-}
-@mixin font-oswald {
-  font-family: "Oswald", -apple-system, "BlinkMacSystemFont", "游ゴシック", "YuGothic", "ヒラギノ角ゴ ProN W3",
-    "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", sans-serif;
-  letter-spacing: 0.1em;
 }
 
 /* 画面幅相対 */
@@ -166,7 +176,7 @@ body {
   @include font-size(16);
   background-color: $color-pink;
   color: $color-black;
-  font-weight: 400;
+  letter-spacing: 0.05em;
   line-height: 1.8;
   margin: 0;
   @include sm-screen {

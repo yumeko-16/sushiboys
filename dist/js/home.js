@@ -1,1 +1,116 @@
-(()=>{"use strict";function e(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}window.addEventListener("DOMContentLoaded",(function(){var e=document.querySelector("[data-header]"),t=0;null!==e&&window.addEventListener("scroll",(function(){window.scrollY<t?e.classList.remove("js-hide"):e.classList.add("js-hide"),(t=window.scrollY)<=10&&e.classList.remove("js-hide")}))})),window.addEventListener("DOMContentLoaded",(function(){var t,n=document.querySelector("html"),r=document.querySelector("[data-header]"),o=document.querySelector("[data-humberger-toggle]"),s=document.querySelectorAll("[data-humberger-content] a"),i=document.querySelector("[data-navigation-close]"),a=null;null!==o&&null!==s&&(o.addEventListener("change",(function(e){!0===e.target.checked?(a=window.pageYOffset,setTimeout((function(){n.classList.add("js-scroll-prevent")}),300)):(n.classList.remove("js-scroll-prevent"),window.scrollTo(0,a),a=null,setTimeout((function(){r.classList.remove("js-hide")}),100))}),!1),(t=s,function(t){if(Array.isArray(t))return e(t)}(t)||function(e){if("undefined"!=typeof Symbol&&null!=e[Symbol.iterator]||null!=e["@@iterator"])return Array.from(e)}(t)||function(t,n){if(t){if("string"==typeof t)return e(t,n);var r=Object.prototype.toString.call(t).slice(8,-1);return"Object"===r&&t.constructor&&(r=t.constructor.name),"Map"===r||"Set"===r?Array.from(t):"Arguments"===r||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)?e(t,n):void 0}}(t)||function(){throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}()).map((function(e){e.addEventListener("click",(function(e){e.target.href.includes("#")?(o.checked=!1,n.classList.remove("js-scroll-prevent")):n.classList.remove("js-scroll-prevent")}),!1)})),i.addEventListener("click",(function(){o.checked=!1,n.classList.remove("js-scroll-prevent")}),!1))}),!1),window.addEventListener("DOMContentLoaded",(function(){var e=document.querySelector("[hero-image]"),t=["/img/sushiboys.png","/img/sushiboys_logo.png"],n=Math.floor(Math.random()*t.length);e.src=t[n]}))})();
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/home.js":
+/*!*********************!*\
+  !*** ./src/home.js ***!
+  \*********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var js_header__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! js/header */ \"./src/js/header.js\");\n/* harmony import */ var _js_navigation__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/navigation */ \"./src/js/navigation.js\");\n/* harmony import */ var js_hero__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! js/hero */ \"./src/js/hero.js\");\n\n\n\n\n//# sourceURL=webpack://sushiboys/./src/home.js?");
+
+/***/ }),
+
+/***/ "./src/js/header.js":
+/*!**************************!*\
+  !*** ./src/js/header.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"ToggleHeader\": () => (/* binding */ ToggleHeader)\n/* harmony export */ });\nvar ToggleHeader = function () {\n  window.addEventListener('DOMContentLoaded', function () {\n    var header = document.querySelector('[data-header]');\n    var positionY = 0;\n\n    if (header === null) {\n      return;\n    }\n\n    window.addEventListener('scroll', function () {\n      if (window.scrollY < positionY) {\n        header.classList.remove('js-hide');\n      } else {\n        header.classList.add('js-hide');\n      }\n\n      positionY = window.scrollY;\n\n      if (positionY <= 10) {\n        header.classList.remove('js-hide');\n      }\n    });\n  });\n}();\n\n//# sourceURL=webpack://sushiboys/./src/js/header.js?");
+
+/***/ }),
+
+/***/ "./src/js/hero.js":
+/*!************************!*\
+  !*** ./src/js/hero.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"RandomHero\": () => (/* binding */ RandomHero)\n/* harmony export */ });\nvar RandomHero = function () {\n  window.addEventListener('DOMContentLoaded', function () {\n    var imageArea = document.querySelector('[hero-image]');\n    var images = ['/img/sushiboys.png', '/img/sushiboys_logo.png'];\n    var imageNo = Math.floor(Math.random() * images.length);\n    imageArea.src = images[imageNo];\n  });\n}();\n\n//# sourceURL=webpack://sushiboys/./src/js/hero.js?");
+
+/***/ }),
+
+/***/ "./src/js/navigation.js":
+/*!******************************!*\
+  !*** ./src/js/navigation.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"HumbergerToggle\": () => (/* binding */ HumbergerToggle)\n/* harmony export */ });\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance.\\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.\"); }\n\nfunction _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === \"string\") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === \"Object\" && o.constructor) n = o.constructor.name; if (n === \"Map\" || n === \"Set\") return Array.from(o); if (n === \"Arguments\" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }\n\nfunction _iterableToArray(iter) { if (typeof Symbol !== \"undefined\" && iter[Symbol.iterator] != null || iter[\"@@iterator\"] != null) return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }\n\nfunction _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }\n\nvar HumbergerToggle = function () {\n  window.addEventListener('DOMContentLoaded', function () {\n    var html = document.querySelector('html'),\n        header = document.querySelector('[data-header]'),\n        toggle = document.querySelector('[data-humberger-toggle]'),\n        links = document.querySelectorAll('[data-humberger-content] a'),\n        close = document.querySelector('[data-navigation-close]');\n    var scrollY = null;\n\n    if (toggle === null || links === null) {\n      return;\n    }\n\n    toggle.addEventListener('change', function (e) {\n      if (e.target.checked === true) {\n        scrollY = window.pageYOffset;\n        setTimeout(function () {\n          html.classList.add('js-scroll-prevent');\n        }, 300);\n      } else {\n        html.classList.remove('js-scroll-prevent');\n        window.scrollTo(0, scrollY);\n        scrollY = null;\n        setTimeout(function () {\n          header.classList.remove('js-hide');\n        }, 100);\n      }\n    }, false);\n\n    _toConsumableArray(links).map(function (link) {\n      link.addEventListener('click', function (e) {\n        if (e.target.href.includes('#')) {\n          toggle.checked = false;\n          html.classList.remove('js-scroll-prevent');\n        } else {\n          html.classList.remove('js-scroll-prevent');\n        }\n      }, false);\n    });\n\n    close.addEventListener('click', function () {\n      toggle.checked = false;\n      html.classList.remove('js-scroll-prevent');\n    }, false);\n  }, false);\n}();\n\n//# sourceURL=webpack://sushiboys/./src/js/navigation.js?");
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module can't be inlined because the eval devtool is used.
+/******/ 	var __webpack_exports__ = __webpack_require__("./src/home.js");
+/******/ 	
+/******/ })()
+;

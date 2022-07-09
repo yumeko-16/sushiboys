@@ -11,8 +11,7 @@
   }
 }
 .copyright-text {
-  @include font-oswald;
+  @include font-oswald-regular;
   color: $color-black;
-  letter-spacing: 0.1em;
   text-transform: uppercase;
 }

@@ -70,10 +70,8 @@
   width: 100%;
 }
 .article__caption-heading {
-  @include font-oswald;
+  @include font-oswald-medium;
   @include font-size(18);
-  font-weight: 700;
-  letter-spacing: 0.1em;
   @include sm-screen {
     @include font-size-vw(18);
   }

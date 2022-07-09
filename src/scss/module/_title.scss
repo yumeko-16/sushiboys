@@ -1,10 +1,8 @@
 @use "../module/setting" as *;
 
 .title {
-  @include font-oswald;
+  @include font-oswald-regular;
   @include font-size(26);
-  font-weight: 400;
-  letter-spacing: 0.1em;
   margin: 0;
   @include sm-screen {
     @include font-size-vw(26);

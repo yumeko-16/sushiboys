@@ -25,9 +25,8 @@
   }
 }
 .header__title {
-  @include font-oswald;
+  @include font-oswald-medium;
   @include font-size(22);
-  font-weight: 400;
   margin: 0;
   @include sm-screen {
     @include font-size-vw(22);

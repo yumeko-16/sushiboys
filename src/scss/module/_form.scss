@@ -21,9 +21,8 @@
   }
 }
 .form__label {
-  @include font-oswald;
+  @include font-oswald-regular;
   display: block;
-  letter-spacing: 0.1em;
   @include tb-screen {
     @include font-size(20);
   }
@@ -69,9 +68,8 @@
     padding: 15px;
   }
   &::placeholder {
-    @include font-oswald;
+    @include font-oswald-regular;
     color: $color-gray;
-    letter-spacing: 0.1em;
   }
   &:focus-visible {
     box-shadow: 0 0 5px 1px $color-black;

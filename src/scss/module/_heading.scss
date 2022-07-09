@@ -2,7 +2,7 @@
 
 .heading {
   @include font-size(14);
-  font-weight: 700;
+  font-weight: 400;
   margin: 0 0 15px;
   text-align: center;
   @include sm-screen {
@@ -15,7 +15,7 @@
     margin-block-end: 50px;
   }
   &::before {
-    @include font-oswald;
+    @include font-oswald-medium;
     @include font-size(26);
     content: attr(data-heading);
     display: block;

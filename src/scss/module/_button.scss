@@ -88,10 +88,9 @@
   }
 }
 .button__text {
-  @include font-oswald;
+  @include font-oswald-regular;
   @include font-size(16);
   color: $color-white;
-  letter-spacing: 0.1em;
   @include sm-screen {
     @include font-size-vw(16);
   }
