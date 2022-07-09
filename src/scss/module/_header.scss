@@ -21,7 +21,7 @@
     height: 165px;
   }
   &.js-hide {
-    opacity: 0;
+    display: none;
   }
 }
 .header__title {
@@ -53,7 +53,9 @@
       transform: translate3d(0, 0, 0);
     }
     & ~ .header__button {
-      display: none;
+      .header__button-bar {
+        background-color: $color-white;
+      }
     }
   }
 }
@@ -62,7 +64,6 @@
   -moz-appearance: none;
   appearance: none;
   cursor: pointer;
-  pointer-events: auto;
   position: absolute;
   right: 30px;
   top: 50%;

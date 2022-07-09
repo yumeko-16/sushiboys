@@ -38,11 +38,6 @@ export const HumbergerToggle = (() => {
       }, false);
     });
 
-    close.addEventListener('click', () => {
-      toggle.checked = false;
-      html.classList.remove('js-scroll-prevent');
-    }, false);
-
   }, false);
 
 })();
