@@ -2,4 +2,10 @@
 
 .main {
   overflow: hidden;
+  @include tb-screen {
+    margin-block-start: 165px;
+  }
+  &--home {
+    margin-block-start: 0;
+  }
 }

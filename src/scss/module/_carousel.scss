@@ -3,14 +3,8 @@
 .carousel {
   display: block;
   list-style-type: none;
-  margin: 0 20px;
+  margin: 0;
   padding: 0;
-  @include sm-screen {
-    @include margin-inline-vw(20);
-  }
-  @include tb-screen {
-    margin-inline: 0;
-  }
 }
 .carousel__item {
   display: block;

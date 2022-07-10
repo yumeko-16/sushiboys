@@ -21,11 +21,7 @@
     padding-inline: 30px;
   }
   @include pc-screen {
-    max-width: 1400px;
+    max-width: 980px;
     padding-inline: 0;
-  }
-  @include tb-to-lt {
-    max-width: 1100px;
-    padding-inline: 30px;
   }
 }
