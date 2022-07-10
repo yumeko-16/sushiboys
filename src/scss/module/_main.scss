@@ -3,7 +3,7 @@
 .main {
   overflow: hidden;
   @include tb-screen {
-    margin-block-start: 165px;
+    margin-block-start: 100px;
   }
   &--home {
     margin-block-start: 0;

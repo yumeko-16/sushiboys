@@ -10,7 +10,7 @@
     @include margin-block-end-vw(15);
   }
   @include tb-screen {
-    @include font-size(18);
+    @include font-size(14);
     display: block;
     margin-block-end: 50px;
   }
