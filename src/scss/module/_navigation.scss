@@ -104,9 +104,6 @@
   margin: 0 auto;
   padding: 0;
   width: 100%;
-  @include tb-screen {
-    padding-block: 15px;
-  }
 }
 .navigation-pc__item {
   @include tb-screen {
