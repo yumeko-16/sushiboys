@@ -26,12 +26,12 @@
   justify-content: flex-start;
   list-style-type: none;
   margin: 0;
-  padding: 20px 0;
+  padding: 60px 0 0;
   overflow-y: scroll;
   width: 100%;
   @include sm-screen {
     @include font-size-vw(28);
-    @include padding-block-vw(20);
+    @include padding-block-start-vw(60);
   }
 }
 .navigation-sm__item {
@@ -39,16 +39,15 @@
   display: block;
   padding: 20px 0;
   text-align: center;
-  width: 300px;
+  width: 100%;
   @include sm-screen {
     @include padding-block-vw(20);
-    @include width-vw(300);
   }
 }
 .navigation-sm__anchor {
   color: $color-white;
   cursor: pointer;
-  display: block;
+  display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
 }

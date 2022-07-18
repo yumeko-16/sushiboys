@@ -3,11 +3,11 @@
 .heading {
   @include font-size(14);
   font-weight: 400;
-  margin: 0 0 15px;
+  margin: 0 0 30px;
   text-align: center;
   @include sm-screen {
     @include font-size-vw(14);
-    @include margin-block-end-vw(15);
+    @include margin-block-end-vw(30);
   }
   @include tb-screen {
     @include font-size(14);

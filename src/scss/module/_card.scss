@@ -33,12 +33,19 @@
   width: 100%;
   @include sm-screen {
     @include border-all-radius-vw(8);
-    @include margin-block-end-vw(20);
   }
   @include tb-screen {
     border-radius: 8px;
-    margin-block-end: 25px;
     width: calc(100% / 3 - 15px);
+  }
+  &:not(:first-of-type) {
+    margin-block-start: 20px;
+    @include sm-screen {
+      @include margin-block-start-vw(20);
+    }
+    @include tb-screen {
+      margin-block-start: 25px;
+    }
   }
   &:hover {
     opacity: 0.8;

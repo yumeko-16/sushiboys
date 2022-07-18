@@ -6,13 +6,13 @@
     let posts = newsData.posts;
     let reversePosts = posts.reverse();
     %>
+      <h2 class="article__title"><%- reversePosts[index].title %></h2>
       <% if (reversePosts[index].hero.image !== '') { %>
       <figure class="article__hero">
         <img class="article__hero-image" src="<%- reversePosts[index].hero.image %>" alt="<%- reversePosts[index].hero.alt %>">
       </figure>
       <% } %>
       <div class="article__inner">
-        <h2 class="article__title"><%- reversePosts[index].title %></h2>
         <% reversePosts[index].leads.forEach(lead => { %>
         <p class="text"><%- lead %></p>
         <% }); %>
