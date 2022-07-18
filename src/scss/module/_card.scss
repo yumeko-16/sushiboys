@@ -38,7 +38,16 @@
     border-radius: 8px;
     width: calc(100% / 3 - 15px);
   }
-  &:not(:first-of-type) {
+  &:nth-of-type(-n + 3) {
+    margin-block-start: 20px;
+    @include sm-screen {
+      @include margin-block-start-vw(20);
+    }
+    @include tb-screen {
+      margin-block-start: 0;
+    }
+  }
+  &:nth-of-type(n + 4) {
     margin-block-start: 20px;
     @include sm-screen {
       @include margin-block-start-vw(20);
