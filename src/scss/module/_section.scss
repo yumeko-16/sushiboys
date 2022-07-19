@@ -13,6 +13,7 @@
 }
 .section__inner {
   margin: 0 auto;
+  max-width: 980px;
   padding: 0 20px;
   @include sm-screen {
     @include padding-inline-vw(20);
@@ -21,7 +22,6 @@
     padding-inline: 30px;
   }
   @include pc-screen {
-    max-width: 980px;
     padding-inline: 0;
   }
 }

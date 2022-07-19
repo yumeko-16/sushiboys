@@ -162,6 +162,31 @@ $base-window-width: 375;
   border-bottom-right-radius: (math.div($px, $base-window-width) * 100) + vw;
 }
 
+%extrude {
+  margin: 0 calc(50% - 50vw);
+  &:not(:first-of-type) {
+    margin: 40px calc(50% - 50vw) 0;
+    @include sm-screen {
+      @include margin-block-start-vw(40);
+    }
+    @include tb-screen {
+      margin: 50px calc(50% - 50vw) 0;
+    }
+  }
+}
+%carousel__inner {
+  padding: 0 20px;
+  @include sm-screen {
+    @include padding-inline-vw(20);
+  }
+  @include tb-screen {
+    padding-inline: 30px;
+  }
+  @include pc-screen {
+    padding-inline: 60px;
+  }
+}
+
 /* normalize / reset
 ----------------------------------------- */
 * {

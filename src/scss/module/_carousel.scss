@@ -1,5 +1,69 @@
 @use "../module/setting" as *;
 
+.carousel2 {
+  @extend %extrude;
+}
+.carousel2__title {
+  @extend %carousel__inner;
+  @include font-oswald-medium;
+  @include font-size(18);
+  margin: 0 0 10px;
+  @include sm-screen {
+    @include font-size-vw(18);
+    @include margin-block-end-vw(10);
+  }
+  @include tb-screen {
+    @include font-size(24);
+    margin-block-end: 10px;
+  }
+}
+.carousel2__list {
+  @extend %carousel__inner;
+  list-style-type: none;
+  margin: 0;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /*Firefox対応のスクロールバー非表示コード*/
+  -ms-overflow-style: none; /*Internet Explore対応のスクロールバー非表示コード*/
+  white-space: nowrap;
+  &::-webkit-scrollbar {
+    display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
+  }
+}
+.carousel2__card {
+  display: inline-block;
+  height: 200px;
+  scroll-snap-align: center;
+  vertical-align: bottom;
+  width: 200px;
+  white-space: normal;
+  @include sm-screen {
+    @include height-vw(200);
+    @include width-vw(200);
+  }
+  @include tb-screen {
+    height: 250px;
+    width: 250px;
+  }
+  &:not(:first-of-type) {
+    margin-inline-start: 10px;
+    @include sm-screen {
+      @include margin-inline-start-vw(10);
+    }
+    @include tb-screen {
+      margin-inline-start: 20px;
+    }
+  }
+}
+.carousel2__image {
+  background-color: #fff;
+  box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
 .carousel {
   display: block;
   list-style-type: none;
