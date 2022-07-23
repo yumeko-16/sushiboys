@@ -60,55 +60,36 @@
 }
 
 .carousel {
-  display: block;
-  list-style-type: none;
   margin: 0;
-  padding: 0;
-}
-.carousel__item {
-  display: block;
   &:not(:first-of-type) {
-    margin-block-start: 20px;
+    margin: 40px 0 0;
     @include sm-screen {
-      @include margin-block-start-vw(20);
+      @include margin-block-start-vw(40);
     }
     @include tb-screen {
-      margin-block-start: 20px;
-    }
-    @include pc-screen {
-      margin-block-start: 40px;
+      margin: 50px 0 0;
     }
   }
 }
-.carousel__type-heading {
-  @include font-size(28);
-  color: $color-white;
-  font-weight: 700;
+.carousel__title {
+  @include font-oswald-medium;
+  @include font-size(18);
+  margin: 0 0 10px;
   @include sm-screen {
-    @include font-size-vw(28);
+    @include font-size-vw(18);
+    @include margin-block-end-vw(10);
   }
   @include tb-screen {
-    @include font-size(28);
+    @include font-size(24);
+    margin-block-end: 10px;
   }
 }
-.carousel__swiper {
-  margin-block-start: 10px;
-  @include sm-screen {
-    @include margin-block-start-vw(10);
-  }
-  @include tb-screen {
-    margin-block-start: 10px;
-  }
-  @include pc-screen {
-    margin-block-start: 20px;
-  }
+.carousel__content {
   &.swiper {
-    width: 100%;
-    height: 100%;
     overflow: visible;
   }
 }
-.carousel__swiper-list {
+.carousel__list {
   list-style-type: none;
   margin: 0;
   padding-inline-start: 0;
@@ -118,28 +99,22 @@
   display: block;
   &.swiper-slide {
     width: fit-content;
+    height: 285px;
+    width: 285px;
+    @include sm-screen {
+      @include height-vw(285);
+      @include width-vw(285);
+    }
+    @include tb-screen {
+      height: 250px;
+      width: 250px;
+    }
   }
-}
-.carousel__frame {
-  margin: 0;
-  padding-inline-start: 0;
 }
 .carousel__image {
   background-color: #fff;
   display: block;
-  height: 130px;
+  height: 100%;
   object-fit: cover;
-  width: 130px;
-  @include sm-screen {
-    @include height-vw(130);
-    @include width-vw(130);
-  }
-  @include tb-screen {
-    height: 160px;
-    width: 160px;
-  }
-  @include pc-screen {
-    height: 230px;
-    width: 230px;
-  }
+  width: 100%;
 }
