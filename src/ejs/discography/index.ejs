@@ -27,6 +27,7 @@
   <div class="wrapper">
     <%- include('../_inc/components/_header', {current: 'discography'}); %>
     <main class="main">
+      <%- include('../_inc/components/_heading', {currentPrimary: 'Discography', currentSecondary: '楽曲'}); %>
       <%- include('../_inc/components/discography/_discography', {discographyData: discographyData}); %>
     </main>
     <%- include('../_inc/components/_footer'); %>

@@ -27,6 +27,7 @@
   <div class="wrapper">
     <%- include('../../_inc/components/_header', {current: 'news'}); %>
     <main class="main">
+      <%- include('../../_inc/components/_heading', {currentPrimary: 'News', currentSecondary: 'お知らせ'}); %>
       <%- include('../../_inc/components/news/post/_post', {newsData: newsData, index: 14}); %>
     </main>
     <%- include('../../_inc/components/_footer'); %>

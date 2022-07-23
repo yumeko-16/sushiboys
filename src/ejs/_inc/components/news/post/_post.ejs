@@ -1,11 +1,10 @@
 <section class="section">
   <div class="section__inner">
-    <h2 class="heading" data-heading="News">お知らせ</h2>
     <article class="article">
       <%
-    let posts = newsData.posts;
-    let reversePosts = posts.reverse();
-    %>
+      let posts = newsData.posts,
+        reversePosts = posts.reverse();
+      %>
       <h2 class="article__title"><%- reversePosts[index].title %></h2>
       <% if (reversePosts[index].hero.image !== '') { %>
       <figure class="article__hero">

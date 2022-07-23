@@ -1,11 +1,10 @@
 <section class="section">
   <div class="section__inner">
-    <h2 class="heading" data-heading="Discography">楽曲</h2>
     <article class="article article--row">
       <%
-    let eps = discographyData.eps,
-      reverseEps = eps.reverse();
-    %>
+      let eps = discographyData.eps,
+        reverseEps = eps.reverse();
+      %>
       <figure class="article__hero article__hero--row">
         <img class="article__hero-image" src="<%- reverseEps[index].image %>" alt="<%- reverseEps[index].alt %>">
       </figure>

@@ -10,6 +10,9 @@
   @include tb-screen {
     padding-block: 100px;
   }
+  &:first-of-type {
+    padding-block-start: 0;
+  }
 }
 .section__inner {
   margin: 0 auto;
@@ -23,5 +26,33 @@
   }
   @include pc-screen {
     padding-inline: 0;
+  }
+}
+.section__title {
+  @include font-size(14);
+  font-weight: 400;
+  margin: 0 0 30px;
+  text-align: center;
+  @include sm-screen {
+    @include font-size-vw(14);
+    @include margin-block-end-vw(30);
+  }
+  @include tb-screen {
+    @include font-size(14);
+    display: block;
+    margin-block-end: 50px;
+  }
+  &::before {
+    @include font-oswald-medium;
+    @include font-size(26);
+    content: attr(data-heading);
+    display: block;
+    text-transform: uppercase;
+    @include sm-screen {
+      @include font-size-vw(26);
+    }
+    @include tb-screen {
+      @include font-size(32);
+    }
   }
 }

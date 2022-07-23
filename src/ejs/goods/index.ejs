@@ -27,6 +27,7 @@
   <div class="wrapper">
     <%- include('../_inc/components/_header', {current: 'goods'}); %>
     <main class="main">
+      <%- include('../_inc/components/_heading', {currentPrimary: 'Goods', currentSecondary: 'グッズ'}); %>
       <%- include('../_inc/components/goods/_goods', {goodsData: goodsData}); %>
     </main>
     <%- include('../_inc/components/_footer'); %>

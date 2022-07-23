@@ -3,16 +3,16 @@
 .heading {
   @include font-size(14);
   font-weight: 400;
-  margin: 0 0 30px;
+  margin: 30px 0;
   text-align: center;
   @include sm-screen {
     @include font-size-vw(14);
-    @include margin-block-end-vw(30);
+    @include margin-block-vw(30);
   }
   @include tb-screen {
     @include font-size(14);
     display: block;
-    margin-block-end: 50px;
+    margin-block: 50px;
   }
   &::before {
     @include font-oswald-medium;
