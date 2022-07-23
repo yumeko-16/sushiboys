@@ -34,6 +34,7 @@
     "@babel/preset-env": "^7.14.8",
     "babel-loader": "^8.2.2",
     "chokidar-cli": "^3.0.0",
+    "dragscroll": "^0.0.8",
     "ejs-cli": "^2.2.1",
     "ejs-lint": "^1.2.1",
     "imagemin": "^8.0.0",

@@ -19,27 +19,23 @@
 }
 .carousel2__list {
   @extend %carousel__inner;
+  -webkit-overflow-scrolling: touch;
+  cursor: grab;
   list-style-type: none;
   margin: 0;
   overflow-x: scroll;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none; /*Firefox対応のスクロールバー非表示コード*/
-  -ms-overflow-style: none; /*Internet Explore対応のスクロールバー非表示コード*/
+  -webkit-user-drag: element;
   white-space: nowrap;
-  &::-webkit-scrollbar {
-    display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
-  }
 }
 .carousel2__card {
   display: inline-block;
-  height: 200px;
+  height: 285px;
   scroll-snap-align: center;
-  vertical-align: bottom;
-  width: 200px;
+  width: 285px;
   white-space: normal;
   @include sm-screen {
-    @include height-vw(200);
-    @include width-vw(200);
+    @include height-vw(285);
+    @include width-vw(285);
   }
   @include tb-screen {
     height: 250px;
@@ -57,7 +53,6 @@
 }
 .carousel2__image {
   background-color: #fff;
-  box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
   display: block;
   height: 100%;
   object-fit: cover;
