@@ -1,109 +1,119 @@
 <section class="section">
   <div class="section__inner">
-    <div class="carousel">
-      <h3 class="carousel__title">EP</h3>
-      <div id="swiper-ep" class="swiper carousel__content">
-        <ul class="swiper-wrapper carousel__list">
-          <% let eps = discographyData.eps; %>
-          <% eps.forEach(function(ep) { %>
-          <li class="swiper-slide carousel__card">
-            <a href="<%- ep.url %>">
-              <img class="carousel__image" src="<%- ep.image %>" alt="<%- ep.alt %>">
-            </a>
-          </li>
-          <% }); %>
-        </ul>
-      </div>
+    <h3 class="section__heading section__heading--en">EP</h3>
+    <div id="swiper-ep" class="swiper carousel">
+      <ul class="swiper-wrapper carousel__list">
+        <% let eps = discographyData.eps; %>
+        <% eps.forEach(function(ep) { %>
+        <li class="swiper-slide carousel__card">
+          <a href="<%- ep.url %>">
+            <img class="carousel__image" src="<%- ep.image %>" alt="<%- ep.alt %>">
+          </a>
+        </li>
+        <% }); %>
+      </ul>
     </div>
-    <div class="carousel">
-      <h3 class="carousel__title">Single</h3>
-      <div id="swiper-single" class="swiper carousel__content">
-        <ul class="swiper-wrapper carousel__list">
-          <% let singles = discographyData.singles; %>
-          <% singles.forEach(function(single) { %>
-          <li class="swiper-slide carousel__card">
-            <a href="<%- single.url %>">
-              <img class="carousel__image" src="<%- single.image %>" alt="<%- single.alt %>">
-            </a>
-          </li>
-          <% }); %>
-        </ul>
-      </div>
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">Single</h3>
+    <div id="swiper-single" class="swiper carousel">
+      <ul class="swiper-wrapper carousel__list">
+        <% let singles = discographyData.singles; %>
+        <% singles.forEach(function(single) { %>
+        <li class="swiper-slide carousel__card">
+          <a href="<%- single.url %>">
+            <img class="carousel__image" src="<%- single.image %>" alt="<%- single.alt %>">
+          </a>
+        </li>
+        <% }); %>
+      </ul>
     </div>
-    <div class="carousel">
-      <h3 class="carousel__title">feat.</h3>
-      <div id="swiper-feat" class="swiper carousel__content">
-        <ul class="swiper-wrapper carousel__list">
-          <% let feats = discographyData.feats; %>
-          <% feats.forEach(function(feat) { %>
-          <li class="swiper-slide carousel__card">
-            <a href="<%- feat.url %>">
-              <img class="carousel__image" src="<%- feat.image %>" alt="<%- feat.alt %>">
-            </a>
-          </li>
-          <% }); %>
-        </ul>
-      </div>
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">feat.</h3>
+    <div id="swiper-feat" class="swiper carousel">
+      <ul class="swiper-wrapper carousel__list">
+        <% let feats = discographyData.feats; %>
+        <% feats.forEach(function(feat) { %>
+        <li class="swiper-slide carousel__card">
+          <a href="<%- feat.url %>">
+            <img class="carousel__image" src="<%- feat.image %>" alt="<%- feat.alt %>">
+          </a>
+        </li>
+        <% }); %>
+      </ul>
     </div>
-    <div class="carousel">
-      <h3 class="carousel__title">Record</h3>
-      <div id="swiper-record" class="swiper carousel__content">
-        <ul class="swiper-wrapper carousel__list">
-          <% let records = discographyData.records; %>
-          <% records.forEach(function(record) { %>
-          <li class="swiper-slide carousel__card">
-            <a href="<%- record.url %>">
-              <img class="carousel__image" src="<%- record.image %>" alt="<%- record.alt %>">
-            </a>
-          </li>
-          <% }); %>
-        </ul>
-      </div>
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">Record</h3>
+    <div id="swiper-record" class="swiper carousel">
+      <ul class="swiper-wrapper carousel__list">
+        <% let records = discographyData.records; %>
+        <% records.forEach(function(record) { %>
+        <li class="swiper-slide carousel__card">
+          <a href="<%- record.url %>">
+            <img class="carousel__image" src="<%- record.image %>" alt="<%- record.alt %>">
+          </a>
+        </li>
+        <% }); %>
+      </ul>
     </div>
-    <div class="carousel">
-      <h3 class="carousel__title">FARMHOUSE EP</h3>
-      <div id="swiper-farmhouse-ep" class="swiper carousel__content">
-        <ul class="swiper-wrapper carousel__list">
-          <% let farmhouseEps = discographyData.farmhouseEps; %>
-          <% farmhouseEps.forEach(function(farmhouseEp) { %>
-          <li class="swiper-slide carousel__card">
-            <a href="<%- farmhouseEp.url %>">
-              <img class="carousel__image" src="<%- farmhouseEp.image %>" alt="<%- farmhouseEp.alt %>">
-            </a>
-          </li>
-          <% }); %>
-        </ul>
-      </div>
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">FARMHOUSE EP</h3>
+    <div id="swiper-farmhouse-ep" class="swiper carousel">
+      <ul class="swiper-wrapper carousel__list">
+        <% let farmhouseEps = discographyData.farmhouseEps; %>
+        <% farmhouseEps.forEach(function(farmhouseEp) { %>
+        <li class="swiper-slide carousel__card">
+          <a href="<%- farmhouseEp.url %>">
+            <img class="carousel__image" src="<%- farmhouseEp.image %>" alt="<%- farmhouseEp.alt %>">
+          </a>
+        </li>
+        <% }); %>
+      </ul>
     </div>
-    <div class="carousel">
-      <h3 class="carousel__title">SANTENA EP</h3>
-      <div id="swiper-santena-ep" class="swiper carousel__content">
-        <ul class="swiper-wrapper carousel__list">
-          <% let santenaEps = discographyData.santenaEps; %>
-          <% santenaEps.forEach(function(santenaEp) { %>
-          <li class="swiper-slide carousel__card">
-            <a href="<%- santenaEp.url %>">
-              <img class="carousel__image" src="<%- santenaEp.image %>" alt="<%- santenaEp.alt %>">
-            </a>
-          </li>
-          <% }); %>
-        </ul>
-      </div>
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">SANTENA EP</h3>
+    <div id="swiper-santena-ep" class="swiper carousel">
+      <ul class="swiper-wrapper carousel__list">
+        <% let santenaEps = discographyData.santenaEps; %>
+        <% santenaEps.forEach(function(santenaEp) { %>
+        <li class="swiper-slide carousel__card">
+          <a href="<%- santenaEp.url %>">
+            <img class="carousel__image" src="<%- santenaEp.image %>" alt="<%- santenaEp.alt %>">
+          </a>
+        </li>
+        <% }); %>
+      </ul>
     </div>
-    <div class="carousel">
-      <h3 class="carousel__title">FARMHOUSE Single</h3>
-      <div id="swiper-farmhouse-single" class="swiper carousel__content">
-        <ul class="swiper-wrapper carousel__list">
-          <% let farmhouseSingles = discographyData.farmhouseSingles; %>
-          <% farmhouseSingles.forEach(function(farmhouseSingle) { %>
-          <li class="swiper-slide carousel__card">
-            <a href="<%- farmhouseSingle.url %>">
-              <img class="carousel__image" src="<%- farmhouseSingle.image %>" alt="<%- farmhouseSingle.alt %>">
-            </a>
-          </li>
-          <% }); %>
-        </ul>
-      </div>
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">FARMHOUSE Single</h3>
+    <div id="swiper-farmhouse-single" class="swiper carousel">
+      <ul class="swiper-wrapper carousel__list">
+        <% let farmhouseSingles = discographyData.farmhouseSingles; %>
+        <% farmhouseSingles.forEach(function(farmhouseSingle) { %>
+        <li class="swiper-slide carousel__card">
+          <a href="<%- farmhouseSingle.url %>">
+            <img class="carousel__image" src="<%- farmhouseSingle.image %>" alt="<%- farmhouseSingle.alt %>">
+          </a>
+        </li>
+        <% }); %>
+      </ul>
     </div>
   </div>
 </section>

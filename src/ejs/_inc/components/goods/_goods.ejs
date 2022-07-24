@@ -1,91 +1,115 @@
 <section class="section">
   <div class="section__inner">
-    <div class="carousel2">
-      <h3 class="carousel2__title">Knickknack</h3>
-      <ul class="carousel2__list dragscroll">
+    <h3 class="section__heading section__heading--en">Knickknack</h3>
+    <div id="swiper-knickknack" class="swiper carousel">
+      <ul class="swiper-wrapper carousel__list">
         <% let knickknacks = goodsData.knickknacks; %>
         <% knickknacks.forEach(function(knickknack) { %>
-        <li class="carousel2__card">
+        <li class="swiper-slide carousel__card">
           <a href="<%- knickknack.url %>" target="_blank" rel="noopener noreferrer">
-            <img class="carousel2__image" src="<%- knickknack.image %>" alt="<%- knickknack.alt %>">
+            <img class="carousel__image" src="<%- knickknack.image %>" alt="<%- knickknack.alt %>">
           </a>
         </li>
         <% }); %>
       </ul>
     </div>
-    <div class="carousel2">
-      <h3 class="carousel2__title">Recording media</h3>
-      <ul class="carousel2__list dragscroll">
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">Recording media</h3>
+    <div id="swiper-recording-media" class="carousel">
+      <ul class="swiper-wrapper carousel__list">
         <% let recordingMedias = goodsData.recordingMedias; %>
         <% recordingMedias.forEach(function(recordingMedias) { %>
-        <li class="carousel2__card">
+        <li class="swiper-slide carousel__card">
           <a href="<%- recordingMedias.url %>" target="_blank" rel="noopener noreferrer">
-            <img class="carousel2__image" src="<%- recordingMedias.image %>" alt="<%- recordingMedias.alt %>">
+            <img class="carousel__image" src="<%- recordingMedias.image %>" alt="<%- recordingMedias.alt %>">
           </a>
         </li>
         <% }); %>
       </ul>
     </div>
-    <div class="carousel2">
-      <h3 class="carousel2__title">Hoodie</h3>
-      <ul class="carousel2__list dragscroll">
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">Hoodie</h3>
+    <div id="swiper-hoodie" class="carousel">
+      <ul class="swiper-wrapper carousel__list">
         <% let hoodies = goodsData.hoodies; %>
         <% hoodies.forEach(function(hoodie) { %>
-        <li class="carousel2__card">
+        <li class="swiper-slide carousel__card">
           <a href="<%- hoodie.url %>" target="_blank" rel="noopener noreferrer">
-            <img class="carousel2__image" src="<%- hoodie.image %>" alt="<%- hoodie.alt %>">
+            <img class="carousel__image" src="<%- hoodie.image %>" alt="<%- hoodie.alt %>">
           </a>
         </li>
         <% }); %>
       </ul>
     </div>
-    <div class="carousel2">
-      <h3 class="carousel2__title">Parker</h3>
-      <ul class="carousel2__list dragscroll">
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">Parker</h3>
+    <div id="swiper-parker" class="carousel">
+      <ul class="swiper-wrapper carousel__list">
         <% let parkers = goodsData.parkers; %>
         <% parkers.forEach(function(parker) { %>
-        <li class="carousel2__card">
+        <li class="swiper-slide carousel__card">
           <a href="<%- parker.url %>" target="_blank" rel="noopener noreferrer">
-            <img class="carousel2__image" src="<%- parker.image %>" alt="<%- parker.alt %>">
+            <img class="carousel__image" src="<%- parker.image %>" alt="<%- parker.alt %>">
           </a>
         </li>
         <% }); %>
       </ul>
     </div>
-    <div class="carousel2">
-      <h3 class="carousel2__title">Long T-Shirt</h3>
-      <ul class="carousel2__list dragscroll">
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">Long T-Shirt</h3>
+    <div id="swiper-long-t-shirt" class="carousel">
+      <ul class="swiper-wrapper carousel__list">
         <% let longTShirts = goodsData.longTShirts; %>
         <% longTShirts.forEach(function(longTShirt) { %>
-        <li class="carousel2__card">
+        <li class="swiper-slide carousel__card">
           <a href="<%- longTShirt.url %>" target="_blank" rel="noopener noreferrer">
-            <img class="carousel2__image" src="<%- longTShirt.image %>" alt="<%- longTShirt.alt %>">
+            <img class="carousel__image" src="<%- longTShirt.image %>" alt="<%- longTShirt.alt %>">
           </a>
         </li>
         <% }); %>
       </ul>
     </div>
-    <div class="carousel2">
-      <h3 class="carousel2__title">T-Shirt</h3>
-      <ul class="carousel2__list dragscroll">
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">T-Shirt</h3>
+    <div id="swiper-t-shirt" class="carousel">
+      <ul class="swiper-wrapper carousel__list">
         <% let tShirts = goodsData.tShirts; %>
         <% tShirts.forEach(function(tShirt) { %>
-        <li class="carousel2__card">
+        <li class="swiper-slide carousel__card">
           <a href="<%- tShirt.url %>" target="_blank" rel="noopener noreferrer">
-            <img class="carousel2__image" src="<%- tShirt.image %>" alt="<%- tShirt.alt %>">
+            <img class="carousel__image" src="<%- tShirt.image %>" alt="<%- tShirt.alt %>">
           </a>
         </li>
         <% }); %>
       </ul>
     </div>
-    <div class="carousel2">
-      <h3 class="carousel2__title">Cap</h3>
-      <ul class="carousel2__list dragscroll">
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
+    <h3 class="section__heading section__heading--en">Cap</h3>
+    <div id="swiper-cap" class="carousel">
+      <ul class="swiper-wrapper carousel__list">
         <% let caps = goodsData.caps; %>
         <% caps.forEach(function(cap) { %>
-        <li class="carousel2__card">
+        <li class="swiper-slide carousel__card">
           <a href="<%- cap.url %>" target="_blank" rel="noopener noreferrer">
-            <img class="carousel2__image" src="<%- cap.image %>" alt="<%- cap.alt %>">
+            <img class="carousel__image" src="<%- cap.image %>" alt="<%- cap.alt %>">
           </a>
         </li>
         <% }); %>
