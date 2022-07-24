@@ -1,6 +1,7 @@
 @use "../module/setting" as *;
 
 .button {
+  @include font-size(16);
   padding: 15px 25px;
   align-items: initial;
   appearance: initial;
@@ -25,10 +26,12 @@
   writing-mode: initial;
   @include sm-screen {
     @include border-all-radius-vw(5);
+    @include font-size-vw(16);
     @include padding-block-vw(15);
     @include padding-inline-vw(25);
   }
   @include tb-screen {
+    @include font-size(20);
     border-radius: 5px;
     padding-block: 15px;
     padding-inline: 70px;

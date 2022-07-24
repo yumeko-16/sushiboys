@@ -63,10 +63,8 @@
 .card__anchor {
   cursor: pointer;
   display: block;
+  height: 100%;
   text-decoration: none;
-}
-.card__image-wrap {
-  margin: 0;
 }
 .card__image {
   display: block;
@@ -78,6 +76,12 @@
     @include height-vw(200);
   }
   @include tb-screen {
+    height: 170px;
+  }
+  @include pc-screen {
+    height: 270px;
+  }
+  @include lt-screen {
     height: 170px;
   }
   &--no-image {
@@ -99,5 +103,8 @@
   @include tb-screen {
     @include font-size(16);
     padding: 15px;
+  }
+  @include pc-screen {
+    padding: 30px;
   }
 }

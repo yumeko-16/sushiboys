@@ -12,17 +12,21 @@
   }
 }
 .section__inner {
+  box-sizing: content-box;
   margin: 0 auto;
-  max-width: 980px;
+  max-width: 1200px;
   padding: 0 20px;
   @include sm-screen {
     @include padding-inline-vw(20);
   }
   @include tb-screen {
-    padding-inline: 30px;
+    padding-inline: 40px;
   }
   @include pc-screen {
-    padding-inline: 0;
+    padding-inline: 100px;
+  }
+  @include lt-screen {
+    padding-inline: 40px;
   }
 }
 .section__heading {
@@ -34,7 +38,7 @@
   }
   @include tb-screen {
     @include font-size(32);
-    margin-block-end: 60px;
+    margin-block-end: 30px;
   }
   &--ja {
     @include font-not-sans-jp-bold;

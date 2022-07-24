@@ -35,7 +35,7 @@ $base-window-width: 375;
     @content;
   }
 }
-@mixin tb-to-lt {
+@mixin lt-screen {
   @media screen and (min-width: 1024px) and (max-width: 1400px) {
     @content;
   }
