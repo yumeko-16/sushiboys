@@ -1,16 +1,16 @@
 <section class="section">
   <div class="section__inner">
-    <article class="article article--row">
+    <article class="article">
       <%
       let eps = discographyData.farmhouseEps,
         reverseEps = eps.reverse();
       %>
-      <figure class="article__hero article__hero--row">
+      <figure class="article__hero">
         <img class="article__hero-image" src="<%- reverseEps[index].image %>" alt="<%- reverseEps[index].alt %>">
       </figure>
-      <div class="article__inner article__inner--row">
-        <h3 class="article__title article__title--row"><%- reverseEps[index].title %></h3>
-        <div class="article__caption">
+      <div class="article__inner">
+        <h3 class="article__title"><%- reverseEps[index].title %></h3>
+        <div class="article__body">
           <ul class="article__caption-list">
             <li class="article__caption-item">作品種別 : <%- reverseEps[index].type %></li>
             <li class="article__caption-item">発売日 : <%- reverseEps[index].release %></li>

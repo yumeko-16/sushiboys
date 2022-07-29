@@ -1,16 +1,16 @@
 <section class="section">
   <div class="section__inner">
-    <article class="article article--row">
+    <article class="article">
       <%
       let singles = discographyData.singles,
         reverseSingles = singles.reverse();
       %>
-      <figure class="article__hero article__hero--row">
+      <figure class="article__hero">
         <img class="article__hero-image" src="<%- reverseSingles[index].image %>" alt="<%- reverseSingles[index].alt %>">
       </figure>
-      <div class="article__inner article__inner--row">
-        <h3 class="article__title article__title--row"><%- reverseSingles[index].title %></h3>
-        <div class="article__caption">
+      <div class="article__inner">
+        <h3 class="article__title"><%- reverseSingles[index].title %></h3>
+        <div class="article__body">
           <ul class="article__caption-list">
             <li class="article__caption-item">作品種別 : <%- reverseSingles[index].type %></li>
             <li class="article__caption-item">発売日 : <%- reverseSingles[index].release %></li>

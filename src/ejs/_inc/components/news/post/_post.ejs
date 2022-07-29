@@ -5,23 +5,25 @@
       let posts = newsData.posts,
         reversePosts = posts.reverse();
       %>
-      <h2 class="article__title"><%- reversePosts[index].title %></h2>
       <% if (reversePosts[index].hero.image !== '') { %>
       <figure class="article__hero">
         <img class="article__hero-image" src="<%- reversePosts[index].hero.image %>" alt="<%- reversePosts[index].hero.alt %>">
       </figure>
       <% } %>
       <div class="article__inner">
-        <% reversePosts[index].leads.forEach(lead => { %>
-        <p class="text"><%- lead %></p>
-        <% }); %>
-        <% if (reversePosts[index].photos.length !== 0) { %>
-        <% reversePosts[index].photos.forEach(photo => { %>
-        <figure class="article__image-wrap">
-          <img class="article__image" src="<%- photo.image %>" alt="<%- photo.alt %>">
-        </figure>
-        <% }); %>
-        <% } %>
+        <h3 class="article__title"><%- reversePosts[index].title %></h3>
+        <div class="article__body">
+          <% reversePosts[index].leads.forEach(lead => { %>
+          <p class="text"><%- lead %></p>
+          <% }); %>
+          <% if (reversePosts[index].photos.length !== 0) { %>
+          <% reversePosts[index].photos.forEach(photo => { %>
+          <figure class="article__image-wrap">
+            <img class="article__image" src="<%- photo.image %>" alt="<%- photo.alt %>">
+          </figure>
+          <% }); %>
+          <% } %>
+        </div>
       </div>
     </article>
     <div class="button__wrap">
