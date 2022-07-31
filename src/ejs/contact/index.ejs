@@ -2,7 +2,11 @@
 <html lang="ja">
 <head>
   <%
-  const pageid = 'contact';
+  const localpage = {
+    id: 'contact',
+    primary: 'Contact',
+    Secondary: 'お問い合わせ',
+  };
   const localmeta = {
     title: 'CONTACT | SUSHIBOYS',
     description: 'SUSHIBOYSの鼓膜に直接コンタクト。ご連絡おまちしております。',
@@ -18,14 +22,14 @@
     js: '/js/contact.js'
   };
   %>
-  <%- include('../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../_inc/_head', {page: localpage, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../_inc/components/_googletagmanager'); %>
   <div class="wrapper">
-    <%- include('../_inc/components/_header', {current: 'contact'}); %>
+    <%- include('../_inc/components/_header', {page: localpage}); %>
     <main class="main">
-      <%- include('../_inc/components/_heading', {currentPrimary: 'Contact', currentSecondary: 'お問い合わせ'}); %>
+      <%- include('../_inc/components/_heading', {page: localpage}); %>
       <%- include('../_inc/components/contact/_form'); %>
     </main>
     <%- include('../_inc/components/_footer'); %>

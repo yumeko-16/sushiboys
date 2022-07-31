@@ -3,7 +3,11 @@
 <head>
   <%- include('../_data/_goods'); %>
   <%
-  const pageid = 'goods';
+  const localpage = {
+    id: 'goods',
+    primary: 'Goods',
+    secondary: 'グッズ',
+  };
   const localmeta = {
     title: 'GOODS | SUSHIBOYS',
     description: 'SUSHIBOYSのグッズ一覧。グッズ購入・商品詳細ページへご案内いたします。',
@@ -20,14 +24,14 @@
   };
   const goodsData = goods();
   %>
-  <%- include('../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../_inc/_head', {page: localpage, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../_inc/components/_googletagmanager'); %>
   <div class="wrapper">
-    <%- include('../_inc/components/_header', {current: 'goods'}); %>
+    <%- include('../_inc/components/_header', {page: localpage}); %>
     <main class="main">
-      <%- include('../_inc/components/_heading', {currentPrimary: 'Goods', currentSecondary: 'グッズ'}); %>
+      <%- include('../_inc/components/_heading', {page: localpage}); %>
       <%- include('../_inc/components/goods/_goods', {goodsData: goodsData}); %>
     </main>
     <%- include('../_inc/components/_footer'); %>

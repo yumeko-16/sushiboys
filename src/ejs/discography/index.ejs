@@ -3,7 +3,11 @@
 <head>
   <%- include('../_data/_discography'); %>
   <%
-  const pageid = 'discography';
+  const localpage = {
+    id: 'discography',
+    primary: 'Discography',
+    Secondary: '楽曲',
+  };
   const localmeta = {
     title: 'DISCOGRAPHY | SUSHIBOYS',
     description: 'SUSHIBOYSが世に送り出した楽曲情報を余すことなくお届けいたします。ぜひご視聴ください。',
@@ -20,14 +24,14 @@
   };
   const discographyData = discography();
   %>
-  <%- include('../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../_inc/_head', {page: localpage, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../_inc/components/_googletagmanager'); %>
   <div class="wrapper">
-    <%- include('../_inc/components/_header', {current: 'discography'}); %>
+    <%- include('../_inc/components/_header', {page: localpage}); %>
     <main class="main">
-      <%- include('../_inc/components/_heading', {currentPrimary: 'Discography', currentSecondary: '楽曲'}); %>
+      <%- include('../_inc/components/_heading', {page: localpage}); %>
       <%- include('../_inc/components/discography/_discography', {discographyData: discographyData}); %>
     </main>
     <%- include('../_inc/components/_footer'); %>

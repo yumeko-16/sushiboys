@@ -3,7 +3,12 @@
 <head>
   <%- include('../../../_data/_discography'); %>
   <%
-  const pageid = 'discography';
+  const localpage = {
+    id: 'discography',
+    primary: 'Discography',
+    Secondary: '楽曲',
+    index: 2,
+  };
   const localmeta = {
     title: '東京フラットシート | SUSHIBOYS',
     description: '東京フラットシート',
@@ -20,15 +25,15 @@
   };
   const discographyData = discography();
   %>
-  <%- include('../../../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../../../_inc/_head', {page: localpage, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../../../_inc/components/_googletagmanager'); %>
   <div class="wrapper">
-    <%- include('../../../_inc/components/_header', {current: 'discography'}); %>
+    <%- include('../../../_inc/components/_header', {page: localpage}); %>
     <main class="main">
-      <%- include('../../../_inc/components/_heading', {currentPrimary: 'Discography', currentSecondary: '楽曲'}); %>
-      <%- include('../../../_inc/components/discography/farmhouse/single/_single', {discographyData: discographyData, index: 2}); %>
+      <%- include('../../../_inc/components/_heading', {page: localpage}); %>
+      <%- include('../../../_inc/components/discography/farmhouse/single/_single', {discographyData: discographyData, page: localpage}); %>
     </main>
     <%- include('../../../_inc/components/_footer'); %>
   </div>

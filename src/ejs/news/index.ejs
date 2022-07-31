@@ -3,7 +3,11 @@
 <head>
   <%- include('../_data/_news'); %>
   <%
-  const pageid = 'news';
+  const localpage = {
+    id: 'news',
+    primary: 'News',
+    Secondary: 'お知らせ',
+  };
   const localmeta = {
     title: 'NEWS | SUSHIBOYS',
     description: 'SUSHIBOYSニュース。ライブ出演、リリース情報、メディア掲載等の最新情報をご覧いただけます。',
@@ -20,14 +24,14 @@
   };
   const newsData = news();
   %>
-  <%- include('../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../_inc/_head', {page: localpage, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../_inc/components/_googletagmanager'); %>
   <div class="wrapper">
-    <%- include('../_inc/components/_header', {current: 'news'}); %>
+    <%- include('../_inc/components/_header', {page: localpage}); %>
     <main class="main">
-      <%- include('../_inc/components/_heading', {currentPrimary: 'News', currentSecondary: 'お知らせ'}); %>
+      <%- include('../_inc/components/_heading', {page: localpage}); %>
       <%- include('../_inc/components/news/_news', {newsData: newsData}); %>
     </main>
     <%- include('../_inc/components/_footer'); %>

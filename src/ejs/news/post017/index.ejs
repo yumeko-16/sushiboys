@@ -3,7 +3,12 @@
 <head>
   <%- include('../../_data/_news'); %>
   <%
-  const pageid = 'news';
+  const localpage = {
+    id: 'news',
+    primary: 'News',
+    Secondary: 'お知らせ',
+    index: 16,
+  };
   const localmeta = {
     title: '7.8（Fri.）道玄坂48 卒業式 =SOUND MUSEUM VISION出演決定 | SUSHIBOYS',
     description: '道玄坂48 卒業式 =SOUND MUSEUM VISION CLOSING KICK OFF PARTY= ＠SOUND MUSEUM VISION OPEN:21:00 DOOR:\3,500　ADV3,000',
@@ -20,15 +25,15 @@
   };
   const newsData = news();
   %>
-  <%- include('../../_inc/_head', {pageid: pageid, meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include('../../_inc/_head', {page: localpage, meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
   <%- include('../../_inc/components/_googletagmanager'); %>
   <div class="wrapper">
-    <%- include('../../_inc/components/_header', {current: 'news'}); %>
+    <%- include('../../_inc/components/_header', {page: localpage}); %>
     <main class="main">
-      <%- include('../../_inc/components/_heading', {currentPrimary: 'News', currentSecondary: 'お知らせ'}); %>
-      <%- include('../../_inc/components/news/post/_post', {newsData: newsData, index: 16}); %>
+      <%- include('../../_inc/components/_heading', {page: localpage}); %>
+      <%- include('../../_inc/components/news/post/_post', {newsData: newsData, page: localpage}); %>
     </main>
     <%- include('../../_inc/components/_footer'); %>
   </div>
