@@ -6,8 +6,7 @@
   const localpage = {
     id: 'discography',
     primary: 'Discography',
-    Secondary: '楽曲',
-    index: ,
+    secondary: '楽曲',
   };
   const localmeta = {
     title: 'You GARI feat.SUSHIBOYS | SUSHIBOYS',
