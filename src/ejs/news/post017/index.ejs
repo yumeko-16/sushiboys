@@ -5,8 +5,6 @@
   <%
   const localpage = {
     id: 'news',
-    primary: 'News',
-    secondary: 'お知らせ',
     index: 16,
   };
   const localmeta = {
@@ -33,7 +31,7 @@
     <%- include('../../_inc/components/_header', {page: localpage}); %>
     <main class="main">
       <%- include('../../_inc/components/_heading', {page: localpage}); %>
-      <%- include('../../_inc/components/news/post/_post', {newsData: newsData, page: localpage}); %>
+      <%- include('../../_inc/components/news/post/_post', {page: localpage, newsData: newsData}); %>
     </main>
     <%- include('../../_inc/components/_footer'); %>
   </div>

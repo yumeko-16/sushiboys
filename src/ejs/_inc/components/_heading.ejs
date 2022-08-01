@@ -1,1 +1,22 @@
-<h2 class="heading" data-heading="<%- page.primary %>"><%- page.secondary %></h2>
+<%
+switch (page.id) {
+  case 'news':
+    primary = 'News';
+    secondary = 'お知らせ';
+    break;
+  case 'discography':
+    primary = 'Discography';
+    secondary = '楽曲';
+    break;
+  case 'goods':
+    primary = 'Goods';
+    secondary = 'グッズ';
+    break;
+  case 'contact':
+    primary = 'Contact';
+    secondary = 'お問い合わせ';
+    break;
+}
+%>
+
+<h2 class="heading" data-heading="<%= primary %>"><%= secondary %></h2>
