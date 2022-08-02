@@ -3,18 +3,17 @@
 <head>
   <%- include('../../_data/_discography'); %>
   <%
-  const localpage = {
-    id: 'discography',
-  };
   const localmeta = {
     title: 'You GARI feat.SUSHIBOYS | SUSHIBOYS',
     description: 'You GARI feat.SUSHIBOYS',
     url: 'https://sushiboys350.com/discography/feat/pocket-full-of-gum.html',
+    id: 'discography',
+    path: '../../'
   };
   const localogp = {
     title: localmeta.title,
     description: localmeta.description,
-    url: localmeta.url,
+    url: localmeta.url
   };
   const localfile = {
     css: '/css/discography-detail.css',
@@ -22,17 +21,17 @@
   };
   const discographyData = discography();
   %>
-  <%- include('../../_inc/_head', {page: localpage, meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
-  <%- include('../../_inc/components/_googletagmanager'); %>
+  <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>
   <div class="wrapper">
-    <%- include('../../_inc/components/_header', {page: localpage}); %>
+    <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
     <main class="main">
-      <%- include('../../_inc/components/_heading', {page: localpage}); %>
-      <%- include('../../_inc/components/discography/feat/_feat', {page: localpage, discographyData: discographyData}); %>
+      <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
+      <%- include(localmeta.path + '_inc/components/discography/feat/_feat', {meta: localmeta, discographyData: discographyData}); %>
     </main>
-    <%- include('../../_inc/components/_footer'); %>
+    <%- include(localmeta.path + '_inc/components/_footer'); %>
   </div>
 </body>
 </html>

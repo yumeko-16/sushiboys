@@ -3,19 +3,18 @@
 <head>
   <%- include('../../_data/_news'); %>
   <%
-  const localpage = {
-    id: 'news',
-    index: 5,
-  };
   const localmeta = {
     title: '『死んだら骨』10/25リリース！ | SUSHIBOYS',
     description: '10月25日、SUSHIBOYSの新作EP『死んだら骨』が発売決定いたしました。ファームハウス、サンテナの2人体制となり、「SANAGI」「DRUG」「高速道路」と新曲を発表してきたSUSHIBOYSがEPとして新作を発表致します。',
     url: 'https://sushiboys350.com/news/post006/',
+    id: 'news',
+    index: 5,
+    path: '../../'
   };
   const localogp = {
     title: localmeta.title,
     description: localmeta.description,
-    url: localmeta.url,
+    url: localmeta.url
   };
   const localfile = {
     css: '/css/news-detail.css',
@@ -23,17 +22,17 @@
   };
   const newsData = news();
   %>
-  <%- include('../../_inc/_head', {page: localpage, meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
-  <%- include('../../_inc/components/_googletagmanager'); %>
+  <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>
   <div class="wrapper">
-    <%- include('../../_inc/components/_header', {page: localpage}); %>
+    <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
     <main class="main">
-      <%- include('../../_inc/components/_heading', {page: localpage}); %>
-      <%- include('../../_inc/components/news/post/_post', {page: localpage, newsData: newsData}); %>
+      <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
+      <%- include(localmeta.path + '_inc/components/news/post/_post', {meta: localmeta, newsData: newsData}); %>
     </main>
-    <%- include('../../_inc/components/_footer'); %>
+    <%- include(localmeta.path + '_inc/components/_footer'); %>
   </div>
 </body>
 </html>
