@@ -8,6 +8,7 @@
     description: 'Catch ur dream 遊園地 ダンボルギーニ OMG だけど元気 思ったよりも ブルーハワイ Yossy Peace club 軽自動車 NIGIRI',
     url: 'https://sushiboys350.com/discography/ep/nigiri.html',
     id: 'discography',
+    type: 'ep',
     index: 0,
     path: '../../'
   };
@@ -30,7 +31,7 @@
     <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
     <main class="main">
       <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
-      <%- include(localmeta.path + '_inc/components/discography/ep/_ep', {meta: localmeta, discographyData: discographyData}); %>
+      <%- include(localmeta.path + '_inc/components/discography/detail/_article', {meta: localmeta, discographyData: discographyData}); %>
     </main>
     <%- include(localmeta.path + '_inc/components/_footer'); %>
   </div>

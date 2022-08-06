@@ -8,6 +8,7 @@
     description: 'LOUD 死んだら骨',
     url: 'https://sushiboys350.com/discography/record/shindarahone.html',
     id: 'discography',
+    type: 'record',
     index: 1,
     path: '../../'
   };
@@ -30,7 +31,7 @@
     <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
     <main class="main">
       <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
-      <%- include(localmeta.path + '_inc/components/discography/record/_record', {meta: localmeta, discographyData: discographyData}); %>
+      <%- include(localmeta.path + '_inc/components/discography/detail/_article', {meta: localmeta, discographyData: discographyData}); %>
     </main>
     <%- include(localmeta.path + '_inc/components/_footer'); %>
   </div>

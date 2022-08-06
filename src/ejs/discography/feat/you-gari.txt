@@ -8,6 +8,7 @@
     description: 'You GARI feat.SUSHIBOYS',
     url: 'https://sushiboys350.com/discography/feat/pocket-full-of-gum.html',
     id: 'discography',
+    type: 'feat',
     path: '../../'
   };
   const localogp = {
@@ -29,7 +30,7 @@
     <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
     <main class="main">
       <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
-      <%- include(localmeta.path + '_inc/components/discography/feat/_feat', {meta: localmeta, discographyData: discographyData}); %>
+      <%- include(localmeta.path + '_inc/components/discography/detail/_article', {meta: localmeta, discographyData: discographyData}); %>
     </main>
     <%- include(localmeta.path + '_inc/components/_footer'); %>
   </div>

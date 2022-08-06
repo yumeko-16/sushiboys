@@ -1,0 +1,80 @@
+<% let data = null; %>
+<% let reverseData = null; %>
+<%
+switch (meta.type) {
+  case 'ep':
+    data = discographyData.eps;
+    reverseData = data.reverse();
+    break;
+  case 'farmhouseEp':
+    data = discographyData.farmhouseEps;
+    reverseData = data.reverse();
+    break;
+  case 'farmhouseSingle':
+    data = discographyData.farmhouseSingles;
+    reverseData = data.reverse();
+    break;
+  case 'feat':
+    data = discographyData.feats;
+    reverseData = data.reverse();
+    break;
+  case 'record':
+    data = discographyData.records;
+    reverseData = data.reverse();
+    break;
+  case 'santenaEp':
+    data = discographyData.santenaEps;
+    reverseData = data.reverse();
+    break;
+  case 'single':
+    data = discographyData.singles;
+    reverseData = data.reverse();
+    break;
+}
+%>
+
+<section class="section">
+  <div class="section__inner">
+    <article class="article">
+      <figure class="article__hero">
+        <img class="article__hero-image" src="<%- reverseData[meta.index].image %>" alt="<%- reverseData[meta.index].alt %>">
+      </figure>
+      <div class="article__inner">
+        <h3 class="article__title"><%- reverseData[meta.index].title %></h3>
+        <div class="article__body">
+          <ul class="article__caption-list">
+            <li class="article__caption-item">作品種別 : <%- reverseData[meta.index].type %></li>
+            <li class="article__caption-item">発売日 : <%- reverseData[meta.index].release %></li>
+            <% if (!reverseData[meta.index].price.trim() === false) { %>
+            <li class="article__caption-item">価格 : <%- reverseData[meta.index].price %></li>
+            <% } %>
+            <li class="article__caption-item">視聴：ご視聴・ご購入は<a href="<%- reverseData[meta.index].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
+          </ul>
+          <h3 class="article__caption-heading">Song contents</h3>
+          <ol class="article__caption-list article__caption-list--song">
+            <% reverseData[meta.index].songs.forEach(function(song) { %>
+            <li class="article__caption-item">
+              <%- song %>
+            </li>
+            <% }); %>
+          </ol>
+          <% if (!reverseData[meta.index].bonusTracks[0].trim() === false) { %>
+          <h3 class="article__caption-heading">Bonus track</h3>
+          <ol class="article__caption-list article__caption-list--song">
+            <% reverseData[meta.index].bonusTracks.forEach(function(bonusTrack) { %>
+            <li class="article__caption-item">
+              <%- bonusTrack %>
+            </li>
+            <% }); %>
+          </ol>
+          <% } %>
+        </div>
+      </div>
+    </article>
+    <div class="button__wrap">
+      <a class="button" href="/discography/">
+        <span class="button__text">Back</span>
+      </a>
+    </div>
+  </div>
+</section>

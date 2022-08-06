@@ -8,6 +8,7 @@
     description: 'swim リスタート (feat. kou-kei) 緑茶 ネットサーフィン ママチャリ SANAGI (feat. SANTENA) BABY Good Day (feat. SANTENA & O.D.A) アップデート (feat. SUSHIBOYS)',
     url: 'https://sushiboys350.com/discography/farmhouse/ep/pedal.html',
     id: 'discography',
+    type: 'farmhouseEp',
     index: 0,
     path: '../../../'
   };
@@ -30,7 +31,7 @@
     <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
     <main class="main">
       <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
-      <%- include(localmeta.path + '_inc/components/discography/farmhouse/ep/_ep', {meta: localmeta, discographyData: discographyData}); %>
+      <%- include(localmeta.path + '_inc/components/discography/detail/_article', {meta: localmeta, discographyData: discographyData}); %>
     </main>
     <%- include(localmeta.path + '_inc/components/_footer'); %>
   </div>

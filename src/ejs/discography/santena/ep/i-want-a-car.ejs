@@ -8,6 +8,7 @@
     description: 'Sky Dive 1LDK DORANEKO マグナ50 PeroPeroCandy!! YANI',
     url: 'https://sushiboys350.com/discography/santena/ep/i-want-a-car.html',
     id: 'discography',
+    type: 'santenaEp',
     index: 0,
     path: '../../../'
   };
@@ -30,7 +31,7 @@
     <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
     <main class="main">
       <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
-      <%- include(localmeta.path + '_inc/components/discography/santena/ep/_ep', {meta: localmeta, discographyData: discographyData}); %>
+      <%- include(localmeta.path + '_inc/components/discography/detail/_article', {meta: localmeta, discographyData: discographyData}); %>
     </main>
     <%- include(localmeta.path + '_inc/components/_footer'); %>
   </div>

@@ -8,6 +8,7 @@
     description: 'Shopping Cart Racer 味の素 Drivin 8月32日 遊戯王 USB',
     url: 'https://sushiboys350.com/discography/ep/350.html',
     id: 'discography',
+    type: 'ep',
     index: 2,
     path: '../../'
   };
@@ -30,7 +31,7 @@
     <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
     <main class="main">
       <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
-      <%- include(localmeta.path + '_inc/components/discography/ep/_ep', {meta: localmeta, discographyData: discographyData}); %>
+      <%- include(localmeta.path + '_inc/components/discography/detail/_article', {meta: localmeta, discographyData: discographyData}); %>
     </main>
     <%- include(localmeta.path + '_inc/components/_footer'); %>
   </div>
