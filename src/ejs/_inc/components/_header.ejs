@@ -31,11 +31,11 @@
   <% let currentClass = ' current'; %>
   <nav class="navigation-pc">
     <ul class="navigation-pc__list">
-      <li class="navigation-pc__item"><a class="navigation-pc__anchor<%- meta.id == 'home' ? currentClass : '' %>" href="/">Home</a></li>
-      <li class="navigation-pc__item"><a class="navigation-pc__anchor<%- meta.id == 'news' ? currentClass : '' %>" href="/news/">News</a></li>
-      <li class="navigation-pc__item"><a class="navigation-pc__anchor<%- meta.id == 'discography' ? currentClass : '' %>" href="/discography/">Discography</a></li>
-      <li class="navigation-pc__item"><a class="navigation-pc__anchor<%- meta.id == 'goods' ? currentClass : '' %>" href="/goods/">Goods</a></li>
-      <li class="navigation-pc__item"><a class="navigation-pc__anchor<%- meta.id == 'contact' ? currentClass : '' %>" href="/contact/">Contact</a></li>
+      <li class="navigation-pc__item"><a class="navigation-pc__anchor<%- meta.pageid == 'home' ? currentClass : '' %>" href="/">Home</a></li>
+      <li class="navigation-pc__item"><a class="navigation-pc__anchor<%- meta.pageid == 'news' ? currentClass : '' %>" href="/news/">News</a></li>
+      <li class="navigation-pc__item"><a class="navigation-pc__anchor<%- meta.pageid == 'discography' ? currentClass : '' %>" href="/discography/">Discography</a></li>
+      <li class="navigation-pc__item"><a class="navigation-pc__anchor<%- meta.pageid == 'goods' ? currentClass : '' %>" href="/goods/">Goods</a></li>
+      <li class="navigation-pc__item"><a class="navigation-pc__anchor<%- meta.pageid == 'contact' ? currentClass : '' %>" href="/contact/">Contact</a></li>
     </ul>
   </nav>
 </header>
