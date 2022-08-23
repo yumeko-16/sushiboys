@@ -3,8 +3,8 @@ module.exports = {
   cache: {
     type: 'filesystem',
     buildDependencies: {
-      config: [__filename],
-    },
+      config: [__filename]
+    }
   },
   entry: {
     home: __dirname + '/src/home.js',
@@ -13,15 +13,16 @@ module.exports = {
     discography: __dirname + '/src/discography.js',
     discographyDetail: __dirname + '/src/discographyDetail.js',
     goods: __dirname + '/src/goods.js',
-    contact: __dirname + '/src/contact.js',
+    picture: __dirname + '/src/picturePost.js',
+    contact: __dirname + '/src/contact.js'
   },
   output: {
     path: __dirname + '/dist/js',
-    filename: '[name].js',
+    filename: '[name].js'
   },
   devServer: {
     contentBase: './dist',
-    open: true,
+    open: true
   },
   module: {
     rules: [
@@ -33,14 +34,14 @@ module.exports = {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-            },
-          },
-        ],
-      },
-    ],
+            }
+          }
+        ]
+      }
+    ]
   },
   resolve: {
     modules: [`${__dirname}/src`, 'node_modules'],
-    extensions: ['.js'],
-  },
+    extensions: ['.js']
+  }
 };

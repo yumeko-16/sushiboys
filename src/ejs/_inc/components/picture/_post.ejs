@@ -1,0 +1,12 @@
+<%
+posts = pictureData.looks;
+reversePosts = posts.reverse();
+%>
+
+<section class="section">
+  <div class="section__inner">
+    <% reversePosts[meta.index].images.forEach(function(image) { %>
+      <img class="article__image" src="<%- image %>">
+    <% }); %>
+  </div>
+</section>
