@@ -13,7 +13,7 @@ module.exports = {
     discography: __dirname + '/src/discography.js',
     discographyDetail: __dirname + '/src/discographyDetail.js',
     goods: __dirname + '/src/goods.js',
-    picture: __dirname + '/src/picturePost.js',
+    picturePost: __dirname + '/src/picturePost.js',
     contact: __dirname + '/src/contact.js'
   },
   output: {
@@ -33,7 +33,7 @@ module.exports = {
           {
             loader: 'babel-loader',
             options: {
-              presets: ['@babel/preset-env'],
+              presets: ['@babel/preset-env']
             }
           }
         ]
