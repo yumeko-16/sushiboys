@@ -125,7 +125,7 @@
   }
   &.current {
     @include tb-screen {
-      color: $color-hover-red;
+      color: $navigation-hover;
     }
   }
 }

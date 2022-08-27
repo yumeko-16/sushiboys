@@ -37,7 +37,7 @@
     @include margin-block-end-vw(10);
   }
   @include tb-screen {
-    @include font-size(32);
+    @include font-size(48);
     margin-block-end: 30px;
   }
   &--ja {
