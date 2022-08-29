@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%- include('../../_data/_news'); %>
+  <%
+  const localmeta = {
+    title: 'liQuid SPARK Edition 出演 | SUSHIBOYS',
+    description: '光り輝く個性を繋ぐ | liQuid vol.6が「SPARK」をテーマに開催 今の音楽シーンにおいてジャンルに縛られず自分の「個性」を輝かせているアーティスト/DJが集結。多様な「個性」が混ざり合うフロアはどのような光を放つのか。彼らが放つSPARKを体感してほしい。',
+    url: 'https://sushiboys350.com/news/post020/',
+    pageid: 'news',
+    index: 19,
+    path: '../../'
+  };
+  const localogp = {
+    title: localmeta.title,
+    description: localmeta.description,
+    url: localmeta.url
+  };
+  const localfile = {
+    css: '/css/news-detail.css',
+    js: '/js/newsDetail.js'
+  };
+  const newsData = news();
+  %>
+  <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+</head>
+<body>
+  <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>
+  <div class="wrapper">
+    <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
+    <main class="main">
+      <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
+      <%- include(localmeta.path + '_inc/components/news/post/_post', {meta: localmeta, newsData: newsData}); %>
+    </main>
+    <%- include(localmeta.path + '_inc/components/_footer'); %>
+  </div>
+</body>
+</html>
