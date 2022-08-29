@@ -49,6 +49,18 @@
     margin-block-start: 45px;
   }
 }
+.article__picture-wrap {
+  margin: 0;
+  &:not(:first-of-type) {
+    margin: 15px 0 0;
+    @include sm-screen {
+      @include margin-block-start-vw(15);
+    }
+    @include tb-screen {
+      margin-block-start: 15px;
+    }
+  }
+}
 .article__image-wrap {
   margin: 2em 0 0;
 }

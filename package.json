@@ -15,9 +15,7 @@
     "ejs:watch": "chokidar \"src/ejs/\" -c \"npm run ejs\" --initial",
     "ejs:lint": "ejslint src/ejs/",
     "remove": "rm -rfv dist/_inc/ dist/_data/",
-    "prettier": "prettier --write \"src/js/*.js\"",
-    "imagemin": "node imagemin.js",
-    "imagemin:watch": "onchange \"src/img/**/*.{jpg, png, gif, svg}\" -- npm run imagemin"
+    "prettier": "prettier --write \"src/js/*.js\""
   },
   "repository": {
     "type": "git",
@@ -37,7 +35,6 @@
     "dragscroll": "^0.0.8",
     "ejs-cli": "^2.2.1",
     "ejs-lint": "^1.2.1",
-    "imagemin": "^8.0.0",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-keep-folder": "^5.3.2",
     "imagemin-mozjpeg": "^9.0.0",

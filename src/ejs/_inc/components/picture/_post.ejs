@@ -7,7 +7,9 @@ reversePosts = posts.reverse();
   <div class="section__inner">
     <h3 class="section__heading">夏休み編</h3>
     <% reversePosts[meta.index].images.forEach(function(image) { %>
-      <img class="article__image" src="<%- image %>">
+      <figure class="article__picture-wrap">
+        <img class="article__image" src="<%- image %>" alt="">
+      </figure>
     <% }); %>
   </div>
 </section>
