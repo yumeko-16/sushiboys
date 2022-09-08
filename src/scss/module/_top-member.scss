@@ -1,0 +1,25 @@
+@use "../module/setting" as *;
+
+.top-member {
+  @include tb-screen {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.top-member__image-wrap {
+  margin: 0;
+  &:not(:first-of-type) {
+    margin-block-start: 15px;
+    @include sm-screen {
+      @include margin-block-start-vw(15);
+    }
+    @include tb-screen {
+      margin: 0;
+    }
+  }
+}
+.top-member__image {
+  display: block;
+  width: 100%;
+}

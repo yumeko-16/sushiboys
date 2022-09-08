@@ -53,6 +53,17 @@
     & ~ .header__button {
       .header__button-bar {
         background-color: $color-white;
+        &:first-of-type {
+          transform: rotate(45deg);
+          transform-origin: left bottom;
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:last-of-type {
+          transform: rotate(-45deg);
+          transform-origin: left top;
+        }
       }
     }
   }
@@ -79,7 +90,7 @@
   display: block;
   height: 2px;
   margin-block-end: 7px;
-  transition: all 0.15s ease-in-out;
+  transition: all 0.3s ease-in-out;
   width: 25px;
   @include sm-screen {
     @include height-vw(2);
