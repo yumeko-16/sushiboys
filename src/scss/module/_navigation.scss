@@ -5,48 +5,39 @@
   backdrop-filter: blur(20px);
   background-color: rgba(0, 0, 0, 0.7);
   display: none;
-  height: 100vh;
+  height: 100%;
   left: 0;
-  position: absolute;
+  position: fixed;
   top: 0;
   transform: translate3d(0, -100%, 0);
   width: 100%;
   z-index: 1001;
-  @include tb-screen {
-    display: none;
-  }
 }
 .navigation-sm__list {
-  @include font-size(28);
-  align-items: center;
   background: radial-gradient(transparent, #000 100%);
-  display: flex;
-  flex-direction: column;
   height: 100%;
-  justify-content: flex-start;
   list-style-type: none;
   margin: 0;
-  padding: 60px 0 0;
+  padding: 60px 0;
+  position: fixed;
+  -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   width: 100%;
-  @include sm-screen {
-    @include font-size-vw(28);
-    @include padding-block-start-vw(60);
-  }
 }
 .navigation-sm__item {
   @include font-oswald-medium;
+  @include font-size(28);
   display: block;
   padding: 20px 0;
   text-align: center;
   width: 100%;
   @include sm-screen {
+    @include font-size-vw(28);
     @include padding-block-vw(20);
   }
 }
 .navigation-sm__anchor {
   color: $color-white;
-  cursor: pointer;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -102,7 +93,6 @@
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
-  width: 100%;
 }
 .navigation-pc__item {
   @include tb-screen {
@@ -115,9 +105,7 @@
 .navigation-pc__anchor {
   @include font-oswald-medium;
   color: $color-black;
-  cursor: pointer;
   display: block;
-  pointer-events: auto;
   text-decoration: none;
   text-transform: uppercase;
   @include tb-screen {
