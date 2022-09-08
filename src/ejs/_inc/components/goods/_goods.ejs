@@ -34,6 +34,23 @@
 </section>
 <section class="section">
   <div class="section__inner">
+    <h3 class="section__heading section__heading--en">Cap</h3>
+    <div id="swiper-cap" class="carousel">
+      <ul class="swiper-wrapper carousel__list">
+        <% let caps = goodsData.caps; %>
+        <% caps.forEach(function(cap) { %>
+        <li class="swiper-slide carousel__card">
+          <a href="<%- cap.url %>" target="_blank" rel="noopener noreferrer">
+            <img class="carousel__image" src="<%- cap.image %>" alt="<%- cap.alt %>">
+          </a>
+        </li>
+        <% }); %>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="section__inner">
     <h3 class="section__heading section__heading--en">Hoodie</h3>
     <div id="swiper-hoodie" class="carousel">
       <ul class="swiper-wrapper carousel__list">
@@ -102,14 +119,14 @@
 </section>
 <section class="section">
   <div class="section__inner">
-    <h3 class="section__heading section__heading--en">Cap</h3>
-    <div id="swiper-cap" class="carousel">
+    <h3 class="section__heading section__heading--en">Shorts</h3>
+    <div id="swiper-shorts" class="carousel">
       <ul class="swiper-wrapper carousel__list">
-        <% let caps = goodsData.caps; %>
-        <% caps.forEach(function(cap) { %>
+        <% let aLotsOfShorts = goodsData.aLotsOfShorts; %>
+        <% aLotsOfShorts.forEach(function(shorts) { %>
         <li class="swiper-slide carousel__card">
-          <a href="<%- cap.url %>" target="_blank" rel="noopener noreferrer">
-            <img class="carousel__image" src="<%- cap.image %>" alt="<%- cap.alt %>">
+          <a href="<%- shorts.url %>" target="_blank" rel="noopener noreferrer">
+            <img class="carousel__image" src="<%- shorts.image %>" alt="<%- shorts.alt %>">
           </a>
         </li>
         <% }); %>
