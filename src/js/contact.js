@@ -1,6 +1,7 @@
 const form = document.querySelector('[data-form]');
 const inputs = document.querySelectorAll('[data-form-require]');
 const submit = document.querySelector('[data-form-submit]');
+const toaster = document.querySelector('[data-form-toaster]');
 let successes = null;
 
 export const Validation = (() => {
@@ -101,17 +102,29 @@ export const Submit = (() => {
       body: formData,
     }).then((response) => {
       if (!response.ok) {
-        console.log('error!');
+        // console.log('error!');
+        toaster.innerHTML = `入力内容を確認して、もう一度試すんだお…`;
+        toaster.classList.add('js-error');
         submit.disabled = false;
+        setTimeout(() => {
+          toaster.classList.remove('js-error');
+        }, 3000);
       } else {
-        console.log('ok!');
+        // console.log('ok!');
       }
       return response.json();
     }).then((data) => {
       console.log(data);
       if (data.status === 'validation_failed') {
+        toaster.innerHTML = `入力内容を確認して、もう一度試すんだお…`;
+        toaster.classList.add('js-error');
         submit.disabled = false;
+        setTimeout(() => {
+          toaster.classList.remove('js-error');
+        }, 3000);
       } else {
+        toaster.innerHTML = `送信完了だお！<br>自動返信メールを確認するんだお！`;
+        toaster.classList.add('js-success');
         submit.disabled = true;
         Array.from(document.querySelectorAll('input')).forEach(
           input => (input.value = '')
@@ -119,7 +132,7 @@ export const Submit = (() => {
         document.querySelector('textarea').value = '';
         setTimeout(() => {
           checkError();
-        }, 300);
+        }, 3000);
         const checkError = () => {
           successes = document.querySelectorAll('.js-success');
           successes.forEach(success => {
@@ -128,8 +141,13 @@ export const Submit = (() => {
         }
       }
     }).catch((error) => {
-      console.log(error);
+      // console.log(error);
+      toaster.innerHTML = `入力内容を確認して、もう一度試すんだお…`;
+      toaster.classList.add('js-error');
       submit.disabled = false;
+      setTimeout(() => {
+        toaster.classList.remove('js-error');
+      }, 3000);
     });
   };
 

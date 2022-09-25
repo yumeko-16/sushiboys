@@ -123,3 +123,38 @@
     opacity: 1;
   }
 }
+.form__toaster {
+  @include font-size(12);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
+  color: $color-white;
+  display: inline-block;
+  position: fixed;
+  right: 0;
+  top: 20px;
+  transition: all 0.5s ease-out;
+  transform: translate3d(100%, 0, 0);
+  z-index: 1000;
+  @include sm-screen {
+    @include border-bottom-left-radius-vw(5);
+    @include border-top-left-radius-vw(5);
+    @include font-size-vw(12);
+    @include padding-block-vw(10);
+    @include padding-inline-vw(15);
+    @include top-vw(20);
+  }
+  @include tb-screen {
+    @include font-size(16);
+    border-radius: 5px;
+    padding: 15px 20px;
+  }
+  &.js-success {
+    background-color: $color-success;
+    transform: translate3d(0, 0, 0);
+  }
+  &.js-error {
+    background-color: $color-error;
+    transform: translate3d(0, 0, 0);
+  }
+}
