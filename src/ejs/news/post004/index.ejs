@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%
+  <%_
     const localmeta = {
       title: 'PEDAL 配信開始 | SUSHIBOYS',
       description: 'FARMHOUSE SOLO EP 『PEDAL』がデジタル配信開始となりました。',
@@ -19,10 +19,10 @@
       css: '/css/news-detail.css',
       js: '/js/newsDetail.js'
     };
-  %>
+  _%>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
   <%- include(localmeta.path + '_data/_news'); %>
-  <% newsData = news(); %>
+  <%_ newsData = news(); _%>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

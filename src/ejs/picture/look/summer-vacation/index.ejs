@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%
+  <%_
     const localmeta = {
       title: '夏休み編 | SUSHIBOYS',
       description: '',
@@ -19,10 +19,10 @@
       css: '/css/picture-post.css',
       js: '/js/picturePost.js'
     };
-  %>
+  _%>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
   <%- include(localmeta.path + '_data/_picture'); %>
-  <% pictureData = picture(); %>
+  <%_ pictureData = picture(); _%>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

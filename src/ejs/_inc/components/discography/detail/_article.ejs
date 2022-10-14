@@ -1,6 +1,6 @@
-<% let data = {}; %>
-<% let reverseData = {}; %>
-<%
+<%_ let data = {}; _%>
+<%_ let reverseData = {}; _%>
+<%_
   switch (meta.type) {
     case 'ep':
       data = discographyData.eps;
@@ -31,7 +31,7 @@
       reverseData = data.reverse();
       break;
   }
-%>
+_%>
 
 <section class="section">
   <div class="section__inner">
@@ -45,29 +45,29 @@
           <ul class="article__caption-list">
             <li class="article__caption-item">作品種別 : <%- reverseData[meta.index].type %></li>
             <li class="article__caption-item">発売日 : <%- reverseData[meta.index].release %></li>
-            <% if (!reverseData[meta.index].price.trim() === false) { %>
+            <%_ if (!reverseData[meta.index].price.trim() === false) { _%>
             <li class="article__caption-item">価格 : <%- reverseData[meta.index].price %></li>
-            <% } %>
+            <%_ } _%>
             <li class="article__caption-item">視聴：ご視聴・ご購入は<a href="<%- reverseData[meta.index].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
           </ul>
           <h3 class="article__caption-heading">Song contents</h3>
           <ol class="article__caption-list article__caption-list--song">
-            <% reverseData[meta.index].songs.forEach(function(song) { %>
+            <%_ reverseData[meta.index].songs.forEach(function(song) { _%>
             <li class="article__caption-item">
               <%- song %>
             </li>
-            <% }); %>
+            <%_ }); _%>
           </ol>
-          <% if (!reverseData[meta.index].bonusTracks[0].trim() === false) { %>
+          <%_ if (!reverseData[meta.index].bonusTracks[0].trim() === false) { _%>
           <h3 class="article__caption-heading">Bonus track</h3>
           <ol class="article__caption-list article__caption-list--song">
-            <% reverseData[meta.index].bonusTracks.forEach(function(bonusTrack) { %>
+            <%_ reverseData[meta.index].bonusTracks.forEach(function(bonusTrack) { _%>
             <li class="article__caption-item">
               <%- bonusTrack %>
             </li>
-            <% }); %>
+            <%_ }); _%>
           </ol>
-          <% } %>
+          <%_ } _%>
         </div>
       </div>
     </article>

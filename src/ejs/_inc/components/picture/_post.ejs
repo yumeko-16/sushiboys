@@ -1,14 +1,14 @@
 <section class="section">
   <div class="section__inner">
     <h3 class="section__heading">夏休み編</h3>
-    <%
+    <%_
       const posts = pictureData.looks;
       const reversePosts = posts.reverse();
-    %>
-    <% reversePosts[meta.index].images.forEach(function(image) { %>
+    _%>
+    <%_ reversePosts[meta.index].images.forEach(function(image) { _%>
     <figure class="article__picture-wrap">
       <img class="article__image" src="<%- image %>" alt="">
     </figure>
-    <% }); %>
+    <%_ }); _%>
   </div>
 </section>

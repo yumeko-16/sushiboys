@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%
+  <%_
     const localmeta = {
       title: 'SYNCHRONICITY’22 出演決定 | SUSHIBOYS',
       description: '『SYNCHRONICITY’22』開催日時：2022年4月2日(土) 2022年4月3日(日) openstart 13:00 開催場所：Spotify O-EAST, Spotify O-WEST, Spotify O-nest, duo MUSIC EXCHANGE, clubasia',
@@ -19,10 +19,10 @@
       css: '/css/news-detail.css',
       js: '/js/newsDetail.js'
     };
-  %>
+  _%>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
   <%- include(localmeta.path + '_data/_news'); %>
-  <% newsData = news(); %>
+  <%_ newsData = news(); _%>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

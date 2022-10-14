@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%
+  <%_
     const localmeta = {
       title: 'liQuid SPARK Edition 出演 | SUSHIBOYS',
       description: '光り輝く個性を繋ぐ | liQuid vol.6が「SPARK」をテーマに開催 今の音楽シーンにおいてジャンルに縛られず自分の「個性」を輝かせているアーティスト/DJが集結。多様な「個性」が混ざり合うフロアはどのような光を放つのか。彼らが放つSPARKを体感してほしい。',
@@ -19,10 +19,10 @@
       css: '/css/news-detail.css',
       js: '/js/newsDetail.js'
     };
-  %>
+  _%>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
   <%- include(localmeta.path + '_data/_news'); %>
-  <% newsData = news(); %>
+  <%_ newsData = news(); _%>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

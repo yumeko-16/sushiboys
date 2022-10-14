@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%
+  <%_
     const localmeta = {
       title: 'SUSHIBOYSの騒音集 VOL.1 | SUSHIBOYS',
       description: 'DA-DA-DA SUIMIN 幽霊です テニス ISCREAM 疲れました LOUD 必要ない',
@@ -20,10 +20,10 @@
       css: '/css/discography-detail.css',
       js: '/js/discographyDetail.js'
     };
-  %>
+  _%>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
   <%- include(localmeta.path + '_data/_discography'); %>
-  <% discographyData = discography(); %>
+  <%_ discographyData = discography(); _%>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

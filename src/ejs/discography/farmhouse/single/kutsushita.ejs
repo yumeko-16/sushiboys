@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%
+  <%_
     const localmeta = {
       title: '靴下 | SUSHIBOYS',
       description: '靴下',
@@ -20,10 +20,10 @@
       css: '/css/discography-detail.css',
       js: '/js/discographyDetail.js'
     };
-  %>
+  _%>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
   <%- include(localmeta.path + '_data/_discography'); %>
-  <% discographyData = discography(); %>
+  <%_ discographyData = discography(); _%>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

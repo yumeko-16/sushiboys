@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%
+  <%_
     const localmeta = {
       title: 'GOODS | SUSHIBOYS',
       description: 'SUSHIBOYSのグッズ一覧。グッズ購入・商品詳細ページへご案内いたします。',
@@ -18,10 +18,10 @@
       css: '/css/goods.css',
       js: '/js/goods.js'
     };
-  %>
+  _%>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
   <%- include(localmeta.path + '_data/_goods'); %>
-  <% goodsData = goods(); %>
+  <%_ goodsData = goods(); _%>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

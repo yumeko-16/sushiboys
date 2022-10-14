@@ -1,6 +1,6 @@
-<% let primary = ''; %>
-<% let secondary = ''; %>
-<%
+<%_ let primary = ''; _%>
+<%_ let secondary = ''; _%>
+<%_
   switch (meta.pageid) {
     case 'news':
       primary = 'News';
@@ -23,6 +23,5 @@
       secondary = 'お問い合わせ';
       break;
   }
-%>
-
+_%>
 <h2 class="heading" data-heading="<%= primary %>"><%= secondary %></h2>

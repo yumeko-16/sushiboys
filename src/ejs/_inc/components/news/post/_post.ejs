@@ -1,28 +1,28 @@
 <section class="section">
   <div class="section__inner">
     <article class="article">
-      <%
-      const posts = newsData.posts;
-      const reversePosts = posts.reverse();
-      %>
-      <% if (reversePosts[meta.index].hero.image !== '') { %>
+      <%_
+        const posts = newsData.posts;
+        const reversePosts = posts.reverse();
+      _%>
+      <%_ if (reversePosts[meta.index].hero.image !== '') { _%>
       <figure class="article__hero">
         <img class="article__hero-image" src="<%- reversePosts[meta.index].hero.image %>" alt="<%- reversePosts[meta.index].hero.alt %>">
       </figure>
-      <% } %>
+      <%_ } _%>
       <div class="article__inner">
         <h3 class="article__title"><%- reversePosts[meta.index].title %></h3>
         <div class="article__body">
-          <% reversePosts[meta.index].leads.forEach(lead => { %>
+          <%_ reversePosts[meta.index].leads.forEach(lead => { _%>
           <p class="text"><%- lead %></p>
-          <% }); %>
-          <% if (reversePosts[meta.index].photos.length !== 0) { %>
-          <% reversePosts[meta.index].photos.forEach(photo => { %>
+          <%_ }); _%>
+          <%_ if (reversePosts[meta.index].photos.length !== 0) { _%>
+          <%_ reversePosts[meta.index].photos.forEach(photo => { _%>
           <figure class="article__image-wrap">
             <img class="article__image" src="<%- photo.image %>" alt="<%- photo.alt %>">
           </figure>
-          <% }); %>
-          <% } %>
+          <%_ }); _%>
+          <%_ } _%>
         </div>
       </div>
     </article>

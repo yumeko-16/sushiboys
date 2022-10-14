@@ -1,19 +1,19 @@
 <section class="section">
   <div class="section__inner">
     <ul class="card" data-news>
-      <% const posts = newsData.posts; %>
-      <% posts.forEach(post => { %>
+      <%_ const posts = newsData.posts; _%>
+      <%_ posts.forEach(post => { _%>
       <li class="card__item">
         <a class="card__anchor" href="<%- post.url %>">
-          <% if (post.hero.image !== '') { %>
+          <%_ if (post.hero.image !== '') { _%>
           <img class="card__image" src="<%- post.hero.image %>" alt="<%- post.hero.alt %>">
-          <% } else { %>
+          <%_ } else { _%>
           <img class="card__image card__image--no-image" src="/img/news/no-image.png" alt="No image">
-          <% } %>
+          <%_ } _%>
           <h2 class="card__title"><%- post.title %></h2>
         </a>
       </li>
-      <% }); %>
+      <%_ }); _%>
     </ul>
   </div>
 </section>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%
+  <%_
     const localmeta = {
       title: '6/18（土）出演 YATSUI FESTIVAL!2022 タイムテーブル発表 | SUSHIBOYS',
       description: 'sushiboysはclubasiaで16：00～出演でございます。やついフェスYouTube channelで無料配信もございます。',
@@ -19,10 +19,10 @@
       css: '/css/news-detail.css',
       js: '/js/newsDetail.js'
     };
-  %>
+  _%>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
   <%- include(localmeta.path + '_data/_news'); %>
-  <% newsData = news(); %>
+  <%_ newsData = news(); _%>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>
