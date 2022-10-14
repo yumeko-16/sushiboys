@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../../_data/_discography'); %>
   <%
-  const localmeta = {
-    title: 'WASABI | SUSHIBOYS',
-    description: 'KUNG FU アヒルボート ゲートボーラー 旅に出よう 問題ねぇ ママチャリ remix',
-    url: 'https://sushiboys350.com/discography/ep/wasabi.html',
-    pageid: 'discography',
-    type: 'ep',
-    index: 1,
-    path: '../../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/discography-detail.css',
-    js: '/js/discographyDetail.js'
-  };
-  const discographyData = discography();
+    const localmeta = {
+      title: 'WASABI | SUSHIBOYS',
+      description: 'KUNG FU アヒルボート ゲートボーラー 旅に出よう 問題ねぇ ママチャリ remix',
+      url: 'https://sushiboys350.com/discography/ep/wasabi.html',
+      pageid: 'discography',
+      type: 'ep',
+      index: 1,
+      path: '../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/discography-detail.css',
+      js: '/js/discographyDetail.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_discography'); %>
+  <% discographyData = discography(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

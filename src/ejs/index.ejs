@@ -2,22 +2,22 @@
 <html lang="ja">
 <head>
   <%
-  const localmeta = {
-    title: 'SUSHIBOYS',
-    description: 'SUSHIBOYSオフィシャルウェブサイト。メンバーはFARMHOUSE、サンテナ、DJ兼カメラマン兼マネージャー兼運転手兼スーパーバイザーのneo yosikawa。寿司ボーイズのライブ、ディスコグラフィ、グッズなどの最新情報を掲載しています。',
-    url: 'https://sushiboys350.com/',
-    pageid: 'home',
-    path: './'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/home.css',
-    js: '/js/home.js'
-  };
+    const localmeta = {
+      title: 'SUSHIBOYS',
+      description: 'SUSHIBOYSオフィシャルウェブサイト。メンバーはFARMHOUSE、サンテナ、DJ兼カメラマン兼マネージャー兼運転手兼スーパーバイザーのneo yosikawa。寿司ボーイズのライブ、ディスコグラフィ、グッズなどの最新情報を掲載しています。',
+      url: 'https://sushiboys350.com/',
+      pageid: 'home',
+      path: './'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/home.css',
+      js: '/js/home.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>

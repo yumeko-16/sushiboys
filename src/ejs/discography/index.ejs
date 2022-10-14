@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../_data/_discography'); %>
   <%
-  const localmeta = {
-    title: 'DISCOGRAPHY | SUSHIBOYS',
-    description: 'SUSHIBOYSが世に送り出した楽曲情報を余すことなくお届けいたします。ぜひご視聴ください。',
-    url: 'https://sushiboys350.com/discography/',
-    pageid: 'discography',
-    path: '../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/discography.css',
-    js: '/js/discography.js'
-  };
-  const discographyData = discography();
+    const localmeta = {
+      title: 'DISCOGRAPHY | SUSHIBOYS',
+      description: 'SUSHIBOYSが世に送り出した楽曲情報を余すことなくお届けいたします。ぜひご視聴ください。',
+      url: 'https://sushiboys350.com/discography/',
+      pageid: 'discography',
+      path: '../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/discography.css',
+      js: '/js/discography.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_discography'); %>
+  <% discographyData = discography(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

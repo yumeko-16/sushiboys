@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../../../_data/_discography'); %>
   <%
-  const localmeta = {
-    title: 'Paddle | SUSHIBOYS',
-    description: '東京フラットシート Sunflower (feat. Jeter) WALL (feat. Hys plasma) SLEEP SLEEP SHEEP Knock! Knock! Knock! RAP RAP RAP KIRA KIRA カイエン青山 靴下 (feat. kojikoji) 絵 朝が来るまで',
-    url: 'https://sushiboys350.com/discography/farmhouse/ep/paddle.html',
-    pageid: 'discography',
-    type: 'farmhouseEp',
-    index: 1,
-    path: '../../../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/discography-detail.css',
-    js: '/js/discographyDetail.js'
-  };
-  const discographyData = discography();
+    const localmeta = {
+      title: 'Paddle | SUSHIBOYS',
+      description: '東京フラットシート Sunflower (feat. Jeter) WALL (feat. Hys plasma) SLEEP SLEEP SHEEP Knock! Knock! Knock! RAP RAP RAP KIRA KIRA カイエン青山 靴下 (feat. kojikoji) 絵 朝が来るまで',
+      url: 'https://sushiboys350.com/discography/farmhouse/ep/paddle.html',
+      pageid: 'discography',
+      type: 'farmhouseEp',
+      index: 1,
+      path: '../../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/discography-detail.css',
+      js: '/js/discographyDetail.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_discography'); %>
+  <% discographyData = discography(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

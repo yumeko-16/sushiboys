@@ -1,36 +1,36 @@
-<% let data = null; %>
-<% let reverseData = null; %>
+<% let data = {}; %>
+<% let reverseData = {}; %>
 <%
-switch (meta.type) {
-  case 'ep':
-    data = discographyData.eps;
-    reverseData = data.reverse();
-    break;
-  case 'farmhouseEp':
-    data = discographyData.farmhouseEps;
-    reverseData = data.reverse();
-    break;
-  case 'farmhouseSingle':
-    data = discographyData.farmhouseSingles;
-    reverseData = data.reverse();
-    break;
-  case 'feat':
-    data = discographyData.feats;
-    reverseData = data.reverse();
-    break;
-  case 'record':
-    data = discographyData.records;
-    reverseData = data.reverse();
-    break;
-  case 'santenaEp':
-    data = discographyData.santenaEps;
-    reverseData = data.reverse();
-    break;
-  case 'single':
-    data = discographyData.singles;
-    reverseData = data.reverse();
-    break;
-}
+  switch (meta.type) {
+    case 'ep':
+      data = discographyData.eps;
+      reverseData = data.reverse();
+      break;
+    case 'farmhouseEp':
+      data = discographyData.farmhouseEps;
+      reverseData = data.reverse();
+      break;
+    case 'farmhouseSingle':
+      data = discographyData.farmhouseSingles;
+      reverseData = data.reverse();
+      break;
+    case 'feat':
+      data = discographyData.feats;
+      reverseData = data.reverse();
+      break;
+    case 'record':
+      data = discographyData.records;
+      reverseData = data.reverse();
+      break;
+    case 'santenaEp':
+      data = discographyData.santenaEps;
+      reverseData = data.reverse();
+      break;
+    case 'single':
+      data = discographyData.singles;
+      reverseData = data.reverse();
+      break;
+  }
 %>
 
 <section class="section">

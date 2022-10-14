@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../../_data/_discography'); %>
   <%
-  const localmeta = {
-    title: 'You GARI feat.SUSHIBOYS | SUSHIBOYS',
-    description: 'You GARI feat.SUSHIBOYS',
-    url: 'https://sushiboys350.com/discography/feat/pocket-full-of-gum.html',
-    pageid: 'discography',
-    type: 'feat',
-    path: '../../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/discography-detail.css',
-    js: '/js/discographyDetail.js'
-  };
-  const discographyData = discography();
+    const localmeta = {
+      title: 'You GARI feat.SUSHIBOYS | SUSHIBOYS',
+      description: 'You GARI feat.SUSHIBOYS',
+      url: 'https://sushiboys350.com/discography/feat/pocket-full-of-gum.html',
+      pageid: 'discography',
+      type: 'feat',
+      path: '../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/discography-detail.css',
+      js: '/js/discographyDetail.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_discography'); %>
+  <% discographyData = discography(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

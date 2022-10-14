@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../../_data/_news'); %>
   <%
-  const localmeta = {
-    title: '6/18（土）出演 YATSUI FESTIVAL!2022 タイムテーブル発表 | SUSHIBOYS',
-    description: 'sushiboysはclubasiaで16：00～出演でございます。やついフェスYouTube channelで無料配信もございます。',
-    url: 'https://sushiboys350.com/news/post014/',
-    pageid: 'news',
-    index: 13,
-    path: '../../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/news-detail.css',
-    js: '/js/newsDetail.js'
-  };
-  const newsData = news();
+    const localmeta = {
+      title: '6/18（土）出演 YATSUI FESTIVAL!2022 タイムテーブル発表 | SUSHIBOYS',
+      description: 'sushiboysはclubasiaで16：00～出演でございます。やついフェスYouTube channelで無料配信もございます。',
+      url: 'https://sushiboys350.com/news/post014/',
+      pageid: 'news',
+      index: 13,
+      path: '../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/news-detail.css',
+      js: '/js/newsDetail.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_news'); %>
+  <% newsData = news(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

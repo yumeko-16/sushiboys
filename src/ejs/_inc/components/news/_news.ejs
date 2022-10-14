@@ -1,9 +1,7 @@
-<% let posts = null; %>
-<% posts = newsData.posts; %>
-
 <section class="section">
   <div class="section__inner">
     <ul class="card" data-news>
+      <% const posts = newsData.posts; %>
       <% posts.forEach(post => { %>
       <li class="card__item">
         <a class="card__anchor" href="<%- post.url %>">

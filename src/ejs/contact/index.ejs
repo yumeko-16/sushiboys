@@ -2,22 +2,22 @@
 <html lang="ja">
 <head>
   <%
-  const localmeta = {
-    title: 'CONTACT | SUSHIBOYS',
-    description: 'SUSHIBOYSの鼓膜に直接コンタクト。ご連絡おまちしております。',
-    url: 'https://sushiboys350.com/contact/',
-    pageid: 'contact',
-    path: '../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/contact.css',
-    js: '/js/contact.js'
-  };
+    const localmeta = {
+      title: 'CONTACT | SUSHIBOYS',
+      description: 'SUSHIBOYSの鼓膜に直接コンタクト。ご連絡おまちしております。',
+      url: 'https://sushiboys350.com/contact/',
+      pageid: 'contact',
+      path: '../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/contact.css',
+      js: '/js/contact.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>

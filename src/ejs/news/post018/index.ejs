@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../../_data/_news'); %>
   <%
-  const localmeta = {
-    title: '8/17（Wed.)Mega Shinnosuke 『ハンサムなDANCE☆SHOW』出演決定 | SUSHIBOYS',
-    description: 'Mega Shinnosuke 『ハンサムなDANCE☆SHOW』8/17（Wed.)東京LIQUIDROOMにて握りやす 8/13（Sat.）大阪味園ユニバース 8/17（Wed.)東京LIQUIDROOM',
-    url: 'https://sushiboys350.com/news/post018/',
-    pageid: 'news',
-    index: 17,
-    path: '../../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/news-detail.css',
-    js: '/js/newsDetail.js'
-  };
-  const newsData = news();
+    const localmeta = {
+      title: '8/17（Wed.)Mega Shinnosuke 『ハンサムなDANCE☆SHOW』出演決定 | SUSHIBOYS',
+      description: 'Mega Shinnosuke 『ハンサムなDANCE☆SHOW』8/17（Wed.)東京LIQUIDROOMにて握りやす 8/13（Sat.）大阪味園ユニバース 8/17（Wed.)東京LIQUIDROOM',
+      url: 'https://sushiboys350.com/news/post018/',
+      pageid: 'news',
+      index: 17,
+      path: '../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/news-detail.css',
+      js: '/js/newsDetail.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_news'); %>
+  <% newsData = news(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

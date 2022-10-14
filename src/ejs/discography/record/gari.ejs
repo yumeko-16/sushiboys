@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../../_data/_discography'); %>
   <%
   const localmeta = {
     title: 'GARI | SUSHIBOYS',
@@ -21,9 +20,10 @@
     css: '/css/discography-detail.css',
     js: '/js/discographyDetail.js'
   };
-  const discographyData = discography();
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_discography'); %>
+  <% discographyData = discography(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

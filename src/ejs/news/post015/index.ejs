@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../../_data/_news'); %>
   <%
-  const localmeta = {
-    title: 'RUSH BALL 2022 出演決定 | SUSHIBOYS',
-    description: 'RUSH BALL 2022 2022年8月27日(土)、28日(日) OPEN 9:30 / START 11:00 会場：泉大津フェニックスATMCステージ出演者発表 SUSHIBOYSは8月28日（日）に出演しやす。',
-    url: 'https://sushiboys350.com/news/post015/',
-    pageid: 'news',
-    index: 14,
-    path: '../../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/news-detail.css',
-    js: '/js/newsDetail.js'
-  };
-  const newsData = news();
+    const localmeta = {
+      title: 'RUSH BALL 2022 出演決定 | SUSHIBOYS',
+      description: 'RUSH BALL 2022 2022年8月27日(土)、28日(日) OPEN 9:30 / START 11:00 会場：泉大津フェニックスATMCステージ出演者発表 SUSHIBOYSは8月28日（日）に出演しやす。',
+      url: 'https://sushiboys350.com/news/post015/',
+      pageid: 'news',
+      index: 14,
+      path: '../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/news-detail.css',
+      js: '/js/newsDetail.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_news'); %>
+  <% newsData = news(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

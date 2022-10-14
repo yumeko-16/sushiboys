@@ -1,26 +1,28 @@
+<% let primary = ''; %>
+<% let secondary = ''; %>
 <%
-switch (meta.pageid) {
-  case 'news':
-    primary = 'News';
-    secondary = 'お知らせ';
-    break;
-  case 'discography':
-    primary = 'Discography';
-    secondary = '楽曲';
-    break;
-  case 'goods':
-    primary = 'Goods';
-    secondary = 'グッズ';
-    break;
-  case 'picture':
-    primary = 'Picture';
-    secondary = '視覚表現';
-    break;
-  case 'contact':
-    primary = 'Contact';
-    secondary = 'お問い合わせ';
-    break;
-}
+  switch (meta.pageid) {
+    case 'news':
+      primary = 'News';
+      secondary = 'お知らせ';
+      break;
+    case 'discography':
+      primary = 'Discography';
+      secondary = '楽曲';
+      break;
+    case 'goods':
+      primary = 'Goods';
+      secondary = 'グッズ';
+      break;
+    case 'picture':
+      primary = 'Picture';
+      secondary = '視覚表現';
+      break;
+    case 'contact':
+      primary = 'Contact';
+      secondary = 'お問い合わせ';
+      break;
+  }
 %>
 
 <h2 class="heading" data-heading="<%= primary %>"><%= secondary %></h2>

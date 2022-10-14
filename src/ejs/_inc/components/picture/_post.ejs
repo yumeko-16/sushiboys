@@ -1,15 +1,14 @@
-<%
-posts = pictureData.looks;
-reversePosts = posts.reverse();
-%>
-
 <section class="section">
   <div class="section__inner">
     <h3 class="section__heading">夏休み編</h3>
+    <%
+      const posts = pictureData.looks;
+      const reversePosts = posts.reverse();
+    %>
     <% reversePosts[meta.index].images.forEach(function(image) { %>
-      <figure class="article__picture-wrap">
-        <img class="article__image" src="<%- image %>" alt="">
-      </figure>
+    <figure class="article__picture-wrap">
+      <img class="article__image" src="<%- image %>" alt="">
+    </figure>
     <% }); %>
   </div>
 </section>

@@ -1,11 +1,10 @@
-<%
-posts = newsData.posts;
-reversePosts = posts.reverse();
-%>
-
 <section class="section">
   <div class="section__inner">
     <article class="article">
+      <%
+      const posts = newsData.posts;
+      const reversePosts = posts.reverse();
+      %>
       <% if (reversePosts[meta.index].hero.image !== '') { %>
       <figure class="article__hero">
         <img class="article__hero-image" src="<%- reversePosts[meta.index].hero.image %>" alt="<%- reversePosts[meta.index].hero.alt %>">

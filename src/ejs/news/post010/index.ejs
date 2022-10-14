@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../../_data/_news'); %>
   <%
-  const localmeta = {
-    title: 'TOEIC Listening test 1 type beat. | SUSHIBOYS',
-    description: '??TOEIC Listening test 1 type beat.?? ??out now??',
-    url: 'https://sushiboys350.com/news/post010/',
-    pageid: 'news',
-    index: 9,
-    path: '../../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/news-detail.css',
-    js: '/js/newsDetail.js'
-  };
-  const newsData = news();
+    const localmeta = {
+      title: 'TOEIC Listening test 1 type beat. | SUSHIBOYS',
+      description: '??TOEIC Listening test 1 type beat.?? ??out now??',
+      url: 'https://sushiboys350.com/news/post010/',
+      pageid: 'news',
+      index: 9,
+      path: '../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/news-detail.css',
+      js: '/js/newsDetail.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_news'); %>
+  <% newsData = news(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../../../_data/_picture'); %>
   <%
-  const localmeta = {
-    title: '夏休み編 | SUSHIBOYS',
-    description: '',
-    url: 'https://sushiboys350.com/picture/look/summer-vacation/',
-    pageid: 'picture',
-    index: 0,
-    path: '../../../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/picture-post.css',
-    js: '/js/picturePost.js'
-  };
-  const pictureData = picture();
+    const localmeta = {
+      title: '夏休み編 | SUSHIBOYS',
+      description: '',
+      url: 'https://sushiboys350.com/picture/look/summer-vacation/',
+      pageid: 'picture',
+      index: 0,
+      path: '../../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/picture-post.css',
+      js: '/js/picturePost.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_picture'); %>
+  <% pictureData = picture(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../_data/_goods'); %>
   <%
-  const localmeta = {
-    title: 'GOODS | SUSHIBOYS',
-    description: 'SUSHIBOYSのグッズ一覧。グッズ購入・商品詳細ページへご案内いたします。',
-    url: 'https://sushiboys350.com/goods/',
-    pageid: 'goods',
-    path: '../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/goods.css',
-    js: '/js/goods.js'
-  };
-  const goodsData = goods();
+    const localmeta = {
+      title: 'GOODS | SUSHIBOYS',
+      description: 'SUSHIBOYSのグッズ一覧。グッズ購入・商品詳細ページへご案内いたします。',
+      url: 'https://sushiboys350.com/goods/',
+      pageid: 'goods',
+      path: '../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/goods.css',
+      js: '/js/goods.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_goods'); %>
+  <% goodsData = goods(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

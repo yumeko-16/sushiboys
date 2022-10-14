@@ -3,7 +3,7 @@
     <h3 class="section__heading section__heading--en">Knickknack</h3>
     <div id="swiper-knickknack" class="swiper carousel">
       <ul class="swiper-wrapper carousel__list">
-        <% let knickknacks = goodsData.knickknacks; %>
+        <% const knickknacks = goodsData.knickknacks; %>
         <% knickknacks.forEach(function(knickknack) { %>
         <li class="swiper-slide carousel__card">
           <a href="<%- knickknack.url %>" target="_blank" rel="noopener noreferrer">
@@ -20,7 +20,7 @@
     <h3 class="section__heading section__heading--en">Recording media</h3>
     <div id="swiper-recording-media" class="carousel">
       <ul class="swiper-wrapper carousel__list">
-        <% let recordingMedias = goodsData.recordingMedias; %>
+        <% const recordingMedias = goodsData.recordingMedias; %>
         <% recordingMedias.forEach(function(recordingMedias) { %>
         <li class="swiper-slide carousel__card">
           <a href="<%- recordingMedias.url %>" target="_blank" rel="noopener noreferrer">
@@ -37,7 +37,7 @@
     <h3 class="section__heading section__heading--en">Cap</h3>
     <div id="swiper-cap" class="carousel">
       <ul class="swiper-wrapper carousel__list">
-        <% let caps = goodsData.caps; %>
+        <% const caps = goodsData.caps; %>
         <% caps.forEach(function(cap) { %>
         <li class="swiper-slide carousel__card">
           <a href="<%- cap.url %>" target="_blank" rel="noopener noreferrer">
@@ -54,7 +54,7 @@
     <h3 class="section__heading section__heading--en">Hoodie</h3>
     <div id="swiper-hoodie" class="carousel">
       <ul class="swiper-wrapper carousel__list">
-        <% let hoodies = goodsData.hoodies; %>
+        <% const hoodies = goodsData.hoodies; %>
         <% hoodies.forEach(function(hoodie) { %>
         <li class="swiper-slide carousel__card">
           <a href="<%- hoodie.url %>" target="_blank" rel="noopener noreferrer">
@@ -71,7 +71,7 @@
     <h3 class="section__heading section__heading--en">Parker</h3>
     <div id="swiper-parker" class="carousel">
       <ul class="swiper-wrapper carousel__list">
-        <% let parkers = goodsData.parkers; %>
+        <% const parkers = goodsData.parkers; %>
         <% parkers.forEach(function(parker) { %>
         <li class="swiper-slide carousel__card">
           <a href="<%- parker.url %>" target="_blank" rel="noopener noreferrer">
@@ -88,7 +88,7 @@
     <h3 class="section__heading section__heading--en">Long T-Shirt</h3>
     <div id="swiper-long-t-shirt" class="carousel">
       <ul class="swiper-wrapper carousel__list">
-        <% let longTShirts = goodsData.longTShirts; %>
+        <% const longTShirts = goodsData.longTShirts; %>
         <% longTShirts.forEach(function(longTShirt) { %>
         <li class="swiper-slide carousel__card">
           <a href="<%- longTShirt.url %>" target="_blank" rel="noopener noreferrer">
@@ -105,7 +105,7 @@
     <h3 class="section__heading section__heading--en">T-Shirt</h3>
     <div id="swiper-t-shirt" class="carousel">
       <ul class="swiper-wrapper carousel__list">
-        <% let tShirts = goodsData.tShirts; %>
+        <% const tShirts = goodsData.tShirts; %>
         <% tShirts.forEach(function(tShirt) { %>
         <li class="swiper-slide carousel__card">
           <a href="<%- tShirt.url %>" target="_blank" rel="noopener noreferrer">
@@ -122,7 +122,7 @@
     <h3 class="section__heading section__heading--en">Shorts</h3>
     <div id="swiper-shorts" class="carousel">
       <ul class="swiper-wrapper carousel__list">
-        <% let aLotsOfShorts = goodsData.aLotsOfShorts; %>
+        <% const aLotsOfShorts = goodsData.aLotsOfShorts; %>
         <% aLotsOfShorts.forEach(function(shorts) { %>
         <li class="swiper-slide carousel__card">
           <a href="<%- shorts.url %>" target="_blank" rel="noopener noreferrer">

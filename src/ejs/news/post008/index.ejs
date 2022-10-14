@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <%- include('../../_data/_news'); %>
   <%
-  const localmeta = {
-    title: 'SUSHIBOYSの騒音集 VOL.1 | SUSHIBOYS',
-    description: 'ここ日本では社会のシステムを妨害する発言などは”騒音”としてカテゴライズされてしまう。己に正直になった結果それが騒音と言われるのなら、騒音として世に出してしまおうじゃないか。聴いてくれ俺らの騒音。',
-    url: 'https://sushiboys350.com/news/post008/',
-    pageid: 'news',
-    index: 7,
-    path: '../../'
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: '/css/news-detail.css',
-    js: '/js/newsDetail.js'
-  };
-  const newsData = news();
+    const localmeta = {
+      title: 'SUSHIBOYSの騒音集 VOL.1 | SUSHIBOYS',
+      description: 'ここ日本では社会のシステムを妨害する発言などは”騒音”としてカテゴライズされてしまう。己に正直になった結果それが騒音と言われるのなら、騒音として世に出してしまおうじゃないか。聴いてくれ俺らの騒音。',
+      url: 'https://sushiboys350.com/news/post008/',
+      pageid: 'news',
+      index: 7,
+      path: '../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/news-detail.css',
+      js: '/js/newsDetail.js'
+    };
   %>
   <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + '_data/_news'); %>
+  <% newsData = news(); %>
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>

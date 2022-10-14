@@ -11,16 +11,16 @@
 </script>
 <!-- End Google Tag Manager -->
 <%
-clearcache = () => {
-  const date = new Date();
-  const param = '?';
-  const Y = date.getFullYear();
-  const M = ("00" + (date.getMonth()+1)).slice(-2);
-  const D = ("00" + date.getDate()).slice(-2);
-  const Hours = ("00" + date.getHours()).slice(-2);
-  const Minutes = ("00" + date.getMinutes()).slice(-2);
-  return param + Y + M + D + Hours + Minutes;
-}
+  clearcache = () => {
+    const date = new Date();
+    const param = '?';
+    const Y = date.getFullYear();
+    const M = ("00" + (date.getMonth()+1)).slice(-2);
+    const D = ("00" + date.getDate()).slice(-2);
+    const Hours = ("00" + date.getHours()).slice(-2);
+    const Minutes = ("00" + date.getMinutes()).slice(-2);
+    return param + Y + M + D + Hours + Minutes;
+  }
 %>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
