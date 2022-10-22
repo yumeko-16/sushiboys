@@ -7,8 +7,8 @@
 }
 .carousel__title {
   @include font-oswald-medium;
-  @include font-size(18);
-  margin: 0 0 10px;
+  margin-block-start: 0;
+  margin-inline: 0;
   @include sm-screen {
     @include font-size-vw(18);
     @include margin-block-end-vw(10);
@@ -28,7 +28,6 @@
   box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
   display: block;
   &:not(:first-of-type) {
-    margin-inline-start: 20px;
     @include sm-screen {
       @include margin-inline-start-vw(20);
     }
@@ -37,8 +36,6 @@
     }
   }
   &.swiper-slide {
-    height: 190px;
-    width: 190px;
     @include sm-screen {
       @include height-vw(190);
       @include width-vw(190);

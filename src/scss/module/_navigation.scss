@@ -26,9 +26,8 @@
 }
 .navigation-sm__item {
   @include font-oswald-medium;
-  @include font-size(28);
   display: block;
-  padding: 20px 0;
+  padding-inline: 0;
   text-align: center;
   width: 100%;
   @include sm-screen {

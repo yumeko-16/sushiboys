@@ -164,7 +164,7 @@ $base-window-width: 375;
   margin: 0 calc(50% - 50vw);
 }
 %carousel__inner {
-  padding: 0 20px;
+  padding-block: 0;
   @include sm-screen {
     @include padding-inline-vw(20);
   }
@@ -192,7 +192,6 @@ html {
 }
 body {
   @include font-default;
-  @include font-size(16);
   background-color: $background;
   color: $color-black;
   letter-spacing: 0.05em;

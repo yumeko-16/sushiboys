@@ -9,7 +9,7 @@
 }
 .sns__item {
   display: flex;
-  padding: 0 10px;
+  padding-block: 0;
   @include sm-screen {
     @include padding-inline-vw(10);
   }
@@ -18,17 +18,14 @@
   }
 }
 .sns__link {
-  @include font-size(20);
   background-color: $color-black;
   border-radius: 50%;
   color: $color-white;
   cursor: pointer;
   display: inline-block;
-  height: 40px;
   position: relative;
   text-decoration: none;
   transition: 0.5s;
-  width: 40px;
   @include sm-screen {
     @include font-size-vw(20);
     @include height-vw(40);

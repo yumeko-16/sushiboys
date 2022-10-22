@@ -2,7 +2,6 @@
 
 .main {
   overflow: hidden;
-  margin-block-start: 60px;
   @include sm-screen {
     @include margin-block-start-vw(60);
   }

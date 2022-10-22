@@ -10,7 +10,6 @@
 .top-member__image-wrap {
   margin: 0;
   &:not(:first-of-type) {
-    margin-block-start: 15px;
     @include sm-screen {
       @include margin-block-start-vw(15);
     }

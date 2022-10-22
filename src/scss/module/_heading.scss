@@ -1,9 +1,8 @@
 @use "../module/setting" as *;
 
 .heading {
-  @include font-size(14);
   font-weight: 400;
-  margin: 30px 0;
+  margin-inline: 0;
   text-align: center;
   @include sm-screen {
     @include font-size-vw(14);
@@ -16,7 +15,6 @@
   }
   &::before {
     @include font-oswald-medium;
-    @include font-size(26);
     content: attr(data-heading);
     display: block;
     text-transform: uppercase;

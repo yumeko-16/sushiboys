@@ -2,7 +2,6 @@
 
 .wrapper {
   min-height: 100vh;
-  padding-block-end: 130px;
   position: relative;
   @include sm-screen {
     @include padding-block-end-vw(130);

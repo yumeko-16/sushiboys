@@ -1,14 +1,11 @@
 @use "../module/setting" as *;
 
 .button {
-  @include font-size(16);
-  padding: 15px 25px;
   align-items: initial;
   appearance: initial;
   background-color: $color-black;
   border-color: initial;
   border-image: initial;
-  border-radius: 5px;
   border-style: initial;
   border-width: initial;
   color: $color-white;
@@ -38,7 +35,6 @@
     width: auto;
   }
   &:not(:first-of-type) {
-    margin-block-end: 30px;
     @include sm-screen {
       @include margin-block-end-vw(30);
     }
@@ -53,7 +49,8 @@
   }
   &:disabled {
     background-color: transparent;
-    border: 1px solid $color-black;
+    border-color: $color-black;
+    border-style: solid;
     color: $color-black;
     @include sm-screen {
       @include border-all-vw(1);
@@ -71,7 +68,8 @@
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
-  margin: 30px 0 0;
+  margin-block-end: 0;
+  margin-inline: 0;
   @include sm-screen {
     @include margin-block-start-vw(30);
   }
@@ -82,7 +80,6 @@
 }
 .button__icon {
   color: $color-white;
-  margin-inline-end: 10px;
   @include sm-screen {
     @include margin-inline-end-vw(10);
   }
@@ -92,7 +89,6 @@
 }
 .button__text {
   @include font-oswald-regular;
-  @include font-size(16);
   color: $color-white;
   @include sm-screen {
     @include font-size-vw(16);

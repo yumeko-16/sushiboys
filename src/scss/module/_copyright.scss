@@ -1,8 +1,9 @@
 @use "../module/setting" as *;
 
 .copyright {
-  margin: 20px 0 0;
   text-align: center;
+  margin-block-end: 0;
+  margin-inline: 0;
   @include sm-screen {
     @include margin-block-start-vw(20);
   }

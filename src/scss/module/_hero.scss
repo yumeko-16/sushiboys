@@ -6,7 +6,6 @@
   height: 100vh;
   justify-content: center;
   margin: 0 auto;
-  padding-block-start: 60px;
   width: 70%;
   @include sm-screen {
     @include padding-block-start-vw(60);
