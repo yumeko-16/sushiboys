@@ -1,12 +1,8 @@
-const form = document.querySelector('[data-form]');
-const inputs = document.querySelectorAll('[data-form-require]');
-const submit = document.querySelector('[data-form-submit]');
-const toaster = document.querySelector('[data-form-toaster]');
-let successes = null;
-
 export const Validation = (() => {
 
   window.addEventListener('load', () => {
+
+    const inputs = document.querySelectorAll('[data-form-require]');
 
     if (inputs === undefined || inputs === null) { return }
 
@@ -61,7 +57,8 @@ export const Validation = (() => {
       });
 
       const checkError = () => {
-        successes = document.querySelectorAll('.js-success');
+        const submit = document.querySelector('[data-form-submit]');
+        const successes = document.querySelectorAll('.js-success');
         if (inputs.length === successes.length) {
           submit.disabled = false;
         } else {
@@ -77,6 +74,8 @@ export const Validation = (() => {
 
 export const Submit = (() => {
 
+  const submit = document.querySelector('[data-form-submit]');
+
   submit.addEventListener('click', (e) => {
     e.preventDefault();
     submit.disabled = true;
@@ -84,6 +83,7 @@ export const Submit = (() => {
   });
 
   const postFetch = () => {
+    const form = document.querySelector('[data-form]');
     let formData = new FormData(form);
     const url_base = 'https://sushiboys350.com';
     const url = location.href;
@@ -96,6 +96,9 @@ export const Submit = (() => {
     }
 
     const api_endpoint = `${url_base}/wordpress/wp-json/contact-form-7/v1/contact-forms/${id}/feedback`;
+    const toaster = document.querySelector('[data-form-toaster]');
+    let successes = null;
+
 
     fetch(api_endpoint, {
       method: 'POST',
