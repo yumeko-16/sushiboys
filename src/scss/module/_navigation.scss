@@ -112,7 +112,7 @@
   }
   &.current {
     @include tb-screen {
-      color: $navigation-hover;
+      border-block-end: 2px solid $color-black;
     }
   }
 }
