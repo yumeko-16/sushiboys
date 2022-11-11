@@ -13,6 +13,6 @@
 }
 .copyright-text {
   @include font-oswald-regular;
-  color: $color-black;
+  color: $color_base;
   text-transform: uppercase;
 }

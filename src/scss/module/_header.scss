@@ -2,7 +2,7 @@
 
 .header {
   align-items: center;
-  background-color: $background;
+  background-color: $background-color_base;
   display: flex;
   justify-content: center;
   left: 0;
@@ -36,7 +36,7 @@
   }
 }
 .header__title-anchor {
-  color: $color-black;
+  color: $color_base;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -50,7 +50,7 @@
     }
     & ~ .header__button {
       .header__button-bar {
-        background-color: $color-white;
+        background-color: $color_white;
         &:first-of-type {
           transform: rotate(45deg);
           transform-origin: left bottom;
@@ -83,7 +83,7 @@
   }
 }
 .header__button-bar {
-  background-color: $color-black;
+  background-color: $background-color_main;
   display: block;
   transition: all 0.3s ease-in-out;
   @include sm-screen {

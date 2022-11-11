@@ -1,12 +1,15 @@
 @use "sass:math";
 
 /* colors */
-$background: #f9e621;
-$color-white: #fff;
-$color-black: #171717;
-$color-gray: #ccc;
-$color-success: #2ea44f;
-$color-error: #cf222e;
+$background-color_base: #f9e621;
+$background-color_main: #171717;
+$background-color_accent: #00be28;
+$border-color_base: #171717;
+$color_base: #171717;
+$color_white: #fff;
+$color_gray: #ccc;
+$color_success: #00be28;
+$color_error: #ff6753;
 
 /* transition */
 $transition-default: all 0.15s ease-in-out;
@@ -191,8 +194,8 @@ html {
 }
 body {
   @include font-default;
-  background-color: $background;
-  color: $color-black;
+  background-color: $background-color_base;
+  color: $color_base;
   letter-spacing: 0.05em;
   line-height: 1.8;
   margin: 0;

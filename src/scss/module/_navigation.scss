@@ -36,7 +36,7 @@
   }
 }
 .navigation-sm__anchor {
-  color: $color-white;
+  color: $color_white;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -48,7 +48,7 @@
 //  transform: translatex(-50%);
 //}
 //.navigation-sm__close {
-//  background-color: $color-white;
+//  background-color: $color_white;
 //  border-radius: 50%;
 //  height: 50px;
 //  position: relative;
@@ -59,7 +59,7 @@
 //  }
 //  &::before,
 //  &::after {
-//    background: $color-black;
+//    background: $background-color_main;
 //    content: "";
 //    height: 25px;
 //    left: 50%;
@@ -103,7 +103,7 @@
 }
 .navigation-pc__anchor {
   @include font-oswald-medium;
-  color: $color-black;
+  color: $color_base;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -112,7 +112,7 @@
   }
   &.current {
     @include tb-screen {
-      border-block-end: 2px solid $color-black;
+      border-block-end: 2px solid $border-color_base;
     }
   }
 }
