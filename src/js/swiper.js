@@ -1,6 +1,6 @@
 export const SwiperDiscography = (() => {
 
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
 
     const swiperEp = new Swiper('#swiper-ep', {
       freeMode: true,
@@ -44,7 +44,7 @@ export const SwiperDiscography = (() => {
 
 export const SwiperGoods = (() => {
 
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
 
     const swiperKnickknack = new Swiper('#swiper-knickknack', {
       freeMode: true,

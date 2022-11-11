@@ -4,7 +4,6 @@ export const HumbergerToggle = (() => {
   const header = document.querySelector('[data-header]');
   const toggle = document.querySelector('[data-humberger-toggle]');
   const links = document.querySelectorAll('[data-humberger-content] a');
-  const close = document.querySelector('[data-navigation-close]');
   let scrollY = null;
 
   if (toggle === null || links === null) { return }

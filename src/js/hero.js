@@ -1,6 +1,6 @@
 export const RandomHero = (() => {
 
-  window.addEventListener('DOMContentLoaded', () => {
+  window.addEventListener('load', () => {
 
     const imageArea = document.querySelector('[hero-image]');
     const images = ['/img/sushiboys.png', '/img/sushiboys_logo.png'];
