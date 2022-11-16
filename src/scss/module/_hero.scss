@@ -7,9 +7,6 @@
   justify-content: center;
   margin: 0 auto;
   width: 70%;
-  @include sm-screen {
-    @include padding-block-start-vw(60);
-  }
   @include tb-screen {
     padding-block-start: 165px;
     width: 50%;
