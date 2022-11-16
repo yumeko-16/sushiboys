@@ -1,0 +1,110 @@
+@use "../module/setting" as *;
+
+.toggle-checkbox {
+  display: none;
+  &:checked {
+    & ~ .toggle-menu {
+      display: block;
+      transform: translate3d(0, 0, 0);
+    }
+    // & ~ .toggle-button {
+    //   .toggle-button__bar {
+    //     background-color: $color_white;
+    //     &:first-of-type {
+    //       transform: translate(-50%, 0) rotate(45deg);
+    //       transform-origin: left bottom;
+    //     }
+    //     &:nth-child(2) {
+    //       opacity: 0;
+    //     }
+    //     &:last-of-type {
+    //       transform: rotate(-45deg);
+    //       transform-origin: left top;
+    //     }
+    //   }
+    // }
+  }
+}
+.toggle-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: $background-color_base;
+  border-radius: 50%;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+  cursor: pointer;
+  position: fixed;
+  z-index: 1002;
+  @include sm-screen {
+    @include bottom-vw(30);
+    @include height-vw(50);
+    @include left-vw(30);
+    @include width-vw(50);
+  }
+  @include tb-screen {
+    display: none;
+  }
+}
+.toggle-button__bar {
+  background-color: $background-color_main;
+  display: block;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+  transition: all 0.3s ease-in-out;
+  @include sm-screen {
+    @include height-vw(2);
+    @include width-vw(25);
+  }
+  &:first-of-type {
+    top: 30%;
+  }
+  &:nth-child(2) {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:last-of-type {
+    bottom: 30%;
+  }
+}
+.toggle-menu {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translate3d(0, -100%, 0);
+  width: 100%;
+  z-index: 1001;
+}
+.toggle-menu__list {
+  background: radial-gradient(transparent, #000 100%);
+  height: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 60px 0;
+  position: fixed;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll;
+  width: 100%;
+}
+.toggle-menu__item {
+  @include font-oswald-medium;
+  display: block;
+  padding-inline: 0;
+  text-align: center;
+  width: 100%;
+  @include sm-screen {
+    @include font-size-vw(28);
+    @include padding-block-vw(20);
+  }
+}
+.toggle-menu__anchor {
+  color: $color_white;
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+}

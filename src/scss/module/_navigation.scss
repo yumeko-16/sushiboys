@@ -1,99 +1,20 @@
 @use "../module/setting" as *;
 
-.navigation-sm {
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
-  background-color: rgba(0, 0, 0, 0.7);
-  display: none;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
-  transform: translate3d(0, -100%, 0);
-  width: 100%;
-  z-index: 1001;
-}
-.navigation-sm__list {
-  background: radial-gradient(transparent, #000 100%);
-  height: 100%;
-  list-style-type: none;
-  margin: 0;
-  padding: 60px 0;
-  position: fixed;
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-  width: 100%;
-}
-.navigation-sm__item {
-  @include font-oswald-medium;
-  display: block;
-  padding-inline: 0;
-  text-align: center;
-  width: 100%;
-  @include sm-screen {
-    @include font-size-vw(28);
-    @include padding-block-vw(20);
-  }
-}
-.navigation-sm__anchor {
-  color: $color_white;
-  display: inline-block;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-//.navigation-sm__close-wrap {
-//  bottom: 10%;
-//  left: 50%;
-//  position: absolute;
-//  transform: translatex(-50%);
-//}
-//.navigation-sm__close {
-//  background-color: $color_white;
-//  border-radius: 50%;
-//  height: 50px;
-//  position: relative;
-//  width: 50px;
-//  @include sm-screen {
-//    @include height-vw(50);
-//    @include width-vw(50);
-//  }
-//  &::before,
-//  &::after {
-//    background: $background-color_main;
-//    content: "";
-//    height: 25px;
-//    left: 50%;
-//    position: absolute;
-//    top: 50%;
-//    width: 3px;
-//    @include sm-screen {
-//      @include height-vw(25);
-//      @include width-vw(3);
-//    }
-//  }
-//  &::before {
-//    transform: translate(-50%, -50%) rotate(45deg);
-//  }
-//  &::after {
-//    transform: translate(-50%, -50%) rotate(-45deg);
-//  }
-//}
-
-.navigation-pc {
+.navigation {
   display: none;
   width: 100%;
   @include tb-screen {
     display: block;
   }
 }
-.navigation-pc__list {
+.navigation__list {
   display: flex;
   justify-content: center;
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
 }
-.navigation-pc__item {
+.navigation__item {
   @include tb-screen {
     padding-inline: 15px;
   }
@@ -101,7 +22,7 @@
     opacity: 0.8;
   }
 }
-.navigation-pc__anchor {
+.navigation__anchor {
   @include font-oswald-medium;
   color: $color_base;
   display: block;
