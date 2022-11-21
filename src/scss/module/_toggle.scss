@@ -38,7 +38,7 @@
   @include sm-screen {
     @include bottom-vw(30);
     @include height-vw(50);
-    @include left-vw(30);
+    @include right-vw(30);
     @include width-vw(50);
   }
   @include tb-screen {
@@ -85,17 +85,19 @@
   height: 100%;
   list-style-type: none;
   margin: 0;
-  padding: 60px 0;
   position: fixed;
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
   width: 100%;
+  @include sm-screen {
+    @include padding-all-vw(30);
+  }
 }
 .toggle-menu__item {
   @include font-oswald-medium;
   display: block;
   padding-inline: 0;
-  text-align: center;
+  text-align: left;
   width: 100%;
   @include sm-screen {
     @include font-size-vw(28);
