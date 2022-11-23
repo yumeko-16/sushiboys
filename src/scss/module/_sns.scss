@@ -1,18 +1,18 @@
 @use "../module/setting" as *;
 
 .sns {
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  margin: 0;
-  padding-inline-start: 0;
+  display: none;
+  @include tb-screen {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding-inline-start: 0;
+  }
 }
 .sns__item {
   display: flex;
   padding-block: 0;
-  @include sm-screen {
-    @include padding-inline-vw(10);
-  }
   @include tb-screen {
     padding-inline: 10px;
   }
@@ -26,11 +26,6 @@
   position: relative;
   text-decoration: none;
   transition: 0.5s;
-  @include sm-screen {
-    @include font-size-vw(20);
-    @include height-vw(40);
-    @include width-vw(40);
-  }
   @include tb-screen {
     @include font-size(20);
     height: 40px;
