@@ -29,7 +29,7 @@
     @include font-size-vw(22);
   }
   @include tb-screen {
-    @include font-size(45);
+    @include font-size(32);
   }
   @include pc-screen {
     @include font-size(54);

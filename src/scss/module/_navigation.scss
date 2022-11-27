@@ -29,6 +29,9 @@
   text-decoration: none;
   text-transform: uppercase;
   @include tb-screen {
+    @include font-size(18);
+  }
+  @include pc-screen {
     @include font-size(20);
   }
   &.current {
