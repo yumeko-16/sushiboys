@@ -3,12 +3,15 @@
 .copyright {
   text-align: center;
   margin: 0;
-  @include tb-screen {
-    margin-block-start: 20px;
-  }
 }
 .copyright-text {
   @include font-oswald-regular;
-  color: $color_base;
+  color: #fff;
   text-transform: uppercase;
+  @include sm-screen {
+    @include font-size-vw(16);
+  }
+  @include tb-screen {
+    @include font-size(16);
+  }
 }

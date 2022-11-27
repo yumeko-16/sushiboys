@@ -1,6 +1,7 @@
 @use "../module/setting" as *;
 
 .footer {
+  background-color: $main;
   bottom: 0;
   display: flex;
   flex-direction: column;
@@ -8,9 +9,9 @@
   position: absolute;
   width: 100%;
   @include sm-screen {
-    @include height-vw(130);
+    @include padding-block-vw(20);
   }
   @include tb-screen {
-    height: 130px;
+    padding-block: 50px;
   }
 }

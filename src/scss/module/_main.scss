@@ -3,12 +3,12 @@
 .main {
   overflow: hidden;
   @include sm-screen {
-    @include margin-block-start-vw(60);
+    @include padding-block-vw(60);
   }
   @include tb-screen {
-    margin-block-start: 165px;
+    padding-block: 165px;
   }
   &--home {
-    margin-block-start: 0;
+    padding-block-start: 0;
   }
 }

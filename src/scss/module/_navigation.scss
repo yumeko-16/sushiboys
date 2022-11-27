@@ -3,7 +3,7 @@
 .navigation {
   display: none;
   width: 100%;
-  @include tb-screen {
+  @include pc-screen {
     display: block;
   }
 }
@@ -15,7 +15,7 @@
   padding: 0;
 }
 .navigation__item {
-  @include tb-screen {
+  @include pc-screen {
     padding-inline: 15px;
   }
   &:hover {
@@ -28,14 +28,11 @@
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  @include tb-screen {
-    @include font-size(18);
-  }
   @include pc-screen {
     @include font-size(20);
   }
   &.current {
-    @include tb-screen {
+    @include pc-screen {
       border-block-end: 2px solid $border-color_base;
     }
   }

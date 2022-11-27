@@ -2,37 +2,36 @@
 
 .sns {
   display: none;
-  @include tb-screen {
+  @include pc-screen {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    margin: 0;
+    margin: 0 0 35px;
     padding-inline-start: 0;
   }
 }
 .sns__item {
   display: flex;
   padding-block: 0;
-  @include tb-screen {
-    padding-inline: 10px;
+  @include pc-screen {
+    padding-inline: .625em;
   }
 }
 .sns__link {
-  background-color: $background-color_main;
   border-radius: 50%;
-  color: $color_white;
+  color: #fff;
   cursor: pointer;
   display: inline-block;
   position: relative;
   text-decoration: none;
-  transition: 0.5s;
-  @include tb-screen {
-    @include font-size(20);
-    height: 40px;
-    width: 40px;
+  transition: .5s;
+  @include pc-screen {
+    @include font-size(30);
+    height: 1.3em;
+    width: 1.3em;
   }
   &:hover {
-    opacity: 0.8;
+    opacity: .8;
   }
   i {
     left: 50%;

@@ -31,7 +31,7 @@
   appearance: none;
   background-color: $background-color_base;
   border-radius: 50%;
-  box-shadow: 0 5px 15px rgb(0 0 0 / 10%);
+  box-shadow: 0 0 10px rgb(0 0 0 / 15%);
   cursor: pointer;
   position: fixed;
   z-index: 1002;
@@ -42,6 +42,12 @@
     @include width-vw(50);
   }
   @include tb-screen {
+    bottom: 1.875em;
+    height: 50px;
+    right: 1.875em;
+    width: 50px;
+  }
+  @include pc-screen {
     display: none;
   }
 }
@@ -55,6 +61,10 @@
   @include sm-screen {
     @include height-vw(2);
     @include width-vw(25);
+  }
+  @include tb-screen {
+    height: 2px;
+    width: 25px;
   }
   &:first-of-type {
     top: 30%;
@@ -92,6 +102,9 @@
   @include sm-screen {
     @include padding-all-vw(30);
   }
+  @include tb-screen {
+    padding: 1.875em;
+  }
 }
 .toggle-menu__item {
   @include font-oswald-medium;
@@ -102,6 +115,10 @@
   @include sm-screen {
     @include font-size-vw(28);
     @include padding-block-vw(15);
+  }
+  @include tb-screen {
+    @include font-size(42);
+    padding-block: .35714285714285715em;
   }
 }
 .toggle-menu__anchor {
@@ -121,6 +138,10 @@
     @include bottom-vw(122);
     @include right-vw(30);
   }
+  @include tb-screen {
+    bottom: 7.625em;
+    right: 1.875em;
+  }
 }
 .toggle-sns__item {
   align-items: center;
@@ -128,19 +149,27 @@
   justify-content: center;
   @include sm-screen {
     @include padding-block-vw(8);
-    @include width-vw(50);
+  }
+  @include tb-screen {
+    padding-block: 1.25em;
   }
 }
 .toggle-sns__link {
   border-radius: 50%;
-  color: $color_white;
+  color: #fff;
   cursor: pointer;
   position: relative;
   text-decoration: none;
-  transition: 0.5s;
+  transition: .5s;
   @include sm-screen {
-    @include font-size-vw(27);
-    @include height-vw(40);
+    @include font-size(27);
+    @include height-vw(50);
+    @include width-vw(50);
+  }
+  @include tb-screen {
+    @include font-size(42);
+    height: 1.1904761904761905em;
+    width: 1.1904761904761905em;
   }
   &:hover {
     opacity: 0.8;
