@@ -195,7 +195,6 @@ html {
 }
 body {
   @include font-default;
-  background-color: $background-color_base;
   color: $color_base;
   letter-spacing: 0.05em;
   line-height: 1.8;
