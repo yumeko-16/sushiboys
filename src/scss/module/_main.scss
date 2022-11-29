@@ -1,7 +1,6 @@
 @use "../module/setting" as *;
 
 .main {
-  background-color: $background-color_base;
   overflow: hidden;
   @include sm-screen {
     @include padding-block-vw(60);

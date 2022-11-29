@@ -186,6 +186,7 @@ $base-window-width: 375;
 }
 html {
   font-size: 62.5%;
+  height: -webkit-fill-available;
   &.js-scroll-prevent {
     height: 100%;
     position: fixed;
@@ -196,6 +197,9 @@ html {
 body {
   @include font-default;
   color: $color_base;
+  background-color: $background-color_base;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
   letter-spacing: 0.05em;
   line-height: 1.8;
   margin: 0;
