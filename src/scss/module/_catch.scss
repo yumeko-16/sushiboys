@@ -1,0 +1,19 @@
+@use "../module/setting" as *;
+
+.catch {
+  @include sm-screen {
+    margin: 1em 0 0;
+  }
+  @include tb-screen {
+    @include font-size(16);
+    text-align: center;
+  }
+  @include pc-screen {
+    @include font-size(20);
+  }
+  &:first-of-type {
+    @include sm-screen {
+      margin: 0;
+    }
+  }
+}

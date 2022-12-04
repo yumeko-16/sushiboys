@@ -16,28 +16,9 @@
   }
   @include tb-screen {
     flex-direction: column;
-    height: 165px;
+    height: unset;
   }
   &.is-hide {
     display: none;
   }
-}
-.header__title {
-  @include font-oswald-medium;
-  margin: 0;
-  @include sm-screen {
-    @include font-size-vw(22);
-  }
-  @include tb-screen {
-    @include font-size(32);
-  }
-  @include pc-screen {
-    @include font-size(54);
-  }
-}
-.header__title-anchor {
-  color: $color_base;
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
 }

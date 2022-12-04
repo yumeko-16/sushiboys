@@ -11,6 +11,10 @@
     padding-block-start: 165px;
     width: 50%;
   }
+  @include pc-screen {
+    padding-block-start: 152.8px;
+    width: 50%;
+  }
 }
 .hero__frame {
   height: calc(100vh / 3);
