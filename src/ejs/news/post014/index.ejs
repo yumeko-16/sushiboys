@@ -3,12 +3,12 @@
 <head>
   <%_
     const localmeta = {
-      title: '6/18（土）出演 YATSUI FESTIVAL!2022 タイムテーブル発表 | SUSHIBOYS',
-      description: 'sushiboysはclubasiaで16：00～出演でございます。やついフェスYouTube channelで無料配信もございます。',
-      url: 'https://sushiboys350.com/news/post014/',
-      pageid: 'news',
+      title: `6/18(土)出演 YATSUI FESTIVAL!2022 タイムテーブル発表 | SUSHIBOYS`,
+      description: `sushiboysはclubasiaで16:00～出演でございます。やついフェスYouTube channelで無料配信もございます。`,
+      url: `https://sushiboys350.com/news/post014/`,
+      pageid: `news`,
       index: 13,
-      path: '../../'
+      path: `../../`
     };
     const localogp = {
       title: localmeta.title,
@@ -16,24 +16,24 @@
       url: localmeta.url
     };
     const localfile = {
-      css: '/css/news-detail.css',
-      js: '/js/newsDetail.js'
+      css: `/css/news-detail.css`,
+      js: `/js/newsDetail.js`
     };
   _%>
-  <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
-  <%- include(localmeta.path + '_data/_news'); %>
+  <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + `_data/_news`); %>
   <%_ newsData = news(); _%>
 </head>
 <body>
-  <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>
+  <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
   <div class="wrapper">
-    <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
+    <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
     <main class="main">
-      <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
-      <%- include(localmeta.path + '_inc/components/news/post/_post', {meta: localmeta, newsData: newsData}); %>
+      <%- include(localmeta.path + `_inc/components/_heading`, {meta: localmeta}); %>
+      <%- include(localmeta.path + `_inc/components/news/post/_post`, {meta: localmeta, newsData: newsData}); %>
     </main>
-    <%- include(localmeta.path + '_inc/components/_toggle'); %>
-    <%- include(localmeta.path + '_inc/components/_footer'); %>
+    <%- include(localmeta.path + `_inc/components/_toggle`); %>
+    <%- include(localmeta.path + `_inc/components/_footer`); %>
   </div>
 </body>
 </html>
