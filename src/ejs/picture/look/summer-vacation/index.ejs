@@ -3,12 +3,12 @@
 <head>
   <%_
     const localmeta = {
-      title: '夏休み編 | SUSHIBOYS',
-      description: '',
-      url: 'https://sushiboys350.com/picture/look/summer-vacation/',
-      pageid: 'picture',
+      title: `夏休み編 | SUSHIBOYS`,
+      description: ``,
+      url: `https://sushiboys350.com/picture/look/summer-vacation/`,
+      pageid: `picture`,
       index: 0,
-      path: '../../../'
+      path: `../../../`
     };
     const localogp = {
       title: localmeta.title,
@@ -16,24 +16,24 @@
       url: localmeta.url
     };
     const localfile = {
-      css: '/css/picture-post.css',
-      js: '/js/picturePost.js'
+      css: `/css/picture-post.css`,
+      js: `/js/picturePost.js`
     };
   _%>
-  <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
-  <%- include(localmeta.path + '_data/_picture'); %>
+  <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + `_data/_picture`); %>
   <%_ pictureData = picture(); _%>
 </head>
 <body>
-  <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>
+  <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
   <div class="wrapper">
-    <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
+    <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
     <main class="main">
-      <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
-      <%- include(localmeta.path + '_inc/components/picture/_post', {meta: localmeta, pictureData: pictureData}); %>
+      <%- include(localmeta.path + `_inc/components/_heading`, {meta: localmeta}); %>
+      <%- include(localmeta.path + `_inc/components/picture/_post`, {meta: localmeta, pictureData: pictureData}); %>
     </main>
-    <%- include(localmeta.path + '_inc/components/_toggle'); %>
-    <%- include(localmeta.path + '_inc/components/_footer'); %>
+    <%- include(localmeta.path + `_inc/components/_toggle`); %>
+    <%- include(localmeta.path + `_inc/components/_footer`); %>
   </div>
 </body>
 </html>

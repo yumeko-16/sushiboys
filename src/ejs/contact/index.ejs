@@ -3,11 +3,11 @@
 <head>
   <%_
     const localmeta = {
-      title: 'CONTACT | SUSHIBOYS',
-      description: 'SUSHIBOYSの鼓膜に直接コンタクト。ご連絡おまちしております。',
-      url: 'https://sushiboys350.com/contact/',
-      pageid: 'contact',
-      path: '../'
+      title: `CONTACT | SUSHIBOYS`,
+      description: `SUSHIBOYSの鼓膜に直接コンタクト。ご連絡おまちしております。`,
+      url: `https://sushiboys350.com/contact/`,
+      pageid: `contact`,
+      path: `../`
     };
     const localogp = {
       title: localmeta.title,
@@ -15,22 +15,22 @@
       url: localmeta.url
     };
     const localfile = {
-      css: '/css/contact.css',
-      js: '/js/contact.js'
+      css: `/css/contact.css`,
+      js: `/js/contact.js`
     };
   _%>
-  <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); %>
 </head>
 <body>
-  <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>
+  <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
   <div class="wrapper">
-    <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
+    <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
     <main class="main">
-      <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
-      <%- include(localmeta.path + '_inc/components/contact/_form'); %>
+      <%- include(localmeta.path + `_inc/components/_heading`, {meta: localmeta}); %>
+      <%- include(localmeta.path + `_inc/components/contact/_form`); %>
     </main>
-    <%- include(localmeta.path + '_inc/components/_toggle'); %>
-    <%- include(localmeta.path + '_inc/components/_footer'); %>
+    <%- include(localmeta.path + `_inc/components/_toggle`); %>
+    <%- include(localmeta.path + `_inc/components/_footer`); %>
   </div>
 </body>
 </html>

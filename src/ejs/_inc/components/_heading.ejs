@@ -1,26 +1,26 @@
-<%_ let primary = ''; _%>
-<%_ let secondary = ''; _%>
+<%_ let primary = ``; _%>
+<%_ let secondary = ``; _%>
 <%_
   switch (meta.pageid) {
-    case 'news':
-      primary = 'News';
-      secondary = 'お知らせ';
+    case `news`:
+      primary = `News`;
+      secondary = `お知らせ`;
       break;
-    case 'discography':
-      primary = 'Discography';
-      secondary = '楽曲';
+    case `discography`:
+      primary = `Discography`;
+      secondary = `楽曲`;
       break;
-    case 'goods':
-      primary = 'Goods';
-      secondary = 'グッズ';
+    case `goods`:
+      primary = `Goods`;
+      secondary = `グッズ`;
       break;
-    case 'picture':
-      primary = 'Picture';
-      secondary = '視覚表現';
+    case `picture`:
+      primary = `Picture`;
+      secondary = `視覚表現`;
       break;
-    case 'contact':
-      primary = 'Contact';
-      secondary = 'お問い合わせ';
+    case `contact`:
+      primary = `Contact`;
+      secondary = `お問い合わせ`;
       break;
   }
 _%>

@@ -13,7 +13,7 @@
 <%_
   clearcache = () => {
     const date = new Date();
-    const param = '?';
+    const param = `?`;
     const Y = date.getFullYear();
     const M = ("00" + (date.getMonth()+1)).slice(-2);
     const D = ("00" + date.getDate()).slice(-2);
@@ -36,7 +36,7 @@ _%>
 <!-- /OGP -->
 <meta name="thumbnail" content="/apple-touch-icon.png">
 <link rel="canonical" href="<%= meta.url %>">
-<%_ if (file.css !== '' || null || undefined) { _%>
+<%_ if (file.css !== `` || null || undefined) { _%>
 <link rel="stylesheet" href="<%= file.css %><%= clearcache() %>">
 <%_ } _%>
 <link rel="shortcut icon" href="/favicon.ico">
@@ -55,7 +55,7 @@ _%>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Oswald:wght@400;500&display=swap" rel="stylesheet">
 <!-- /Google Fonts -->
 <!-- Swiper -->
-<%_ if (meta.pageid.includes('discography') || meta.pageid.includes('goods')) { _%>
+<%_ if (meta.pageid.includes(`discography`) || meta.pageid.includes(`goods`)) { _%>
 <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 <%_ } _%>

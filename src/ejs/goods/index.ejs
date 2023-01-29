@@ -3,11 +3,11 @@
 <head>
   <%_
     const localmeta = {
-      title: 'GOODS | SUSHIBOYS',
-      description: 'SUSHIBOYSのグッズ一覧。グッズ購入・商品詳細ページへご案内いたします。',
-      url: 'https://sushiboys350.com/goods/',
-      pageid: 'goods',
-      path: '../'
+      title: `GOODS | SUSHIBOYS`,
+      description: `SUSHIBOYSのグッズ一覧。グッズ購入・商品詳細ページへご案内いたします。`,
+      url: `https://sushiboys350.com/goods/`,
+      pageid: `goods`,
+      path: `../`
     };
     const localogp = {
       title: localmeta.title,
@@ -15,24 +15,24 @@
       url: localmeta.url
     };
     const localfile = {
-      css: '/css/goods.css',
-      js: '/js/goods.js'
+      css: `/css/goods.css`,
+      js: `/js/goods.js`
     };
   _%>
-  <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); %>
-  <%- include(localmeta.path + '_data/_goods'); %>
+  <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + `_data/_goods`); %>
   <%_ goodsData = goods(); _%>
 </head>
 <body>
-  <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>
+  <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
   <div class="wrapper">
-    <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
+    <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
     <main class="main">
-      <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>
-      <%- include(localmeta.path + '_inc/components/goods/_goods', {goodsData: goodsData}); %>
+      <%- include(localmeta.path + `_inc/components/_heading`, {meta: localmeta}); %>
+      <%- include(localmeta.path + `_inc/components/goods/_goods`, {goodsData: goodsData}); %>
     </main>
-    <%- include(localmeta.path + '_inc/components/_toggle'); %>
-    <%- include(localmeta.path + '_inc/components/_footer'); %>
+    <%- include(localmeta.path + `_inc/components/_toggle`); %>
+    <%- include(localmeta.path + `_inc/components/_footer`); %>
   </div>
 </body>
 </html>
