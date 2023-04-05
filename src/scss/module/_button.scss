@@ -36,7 +36,6 @@
   }
   &:not(:first-of-type) {
     @include sm-screen {
-      @include margin-block-end-vw(30);
       margin-block-end: vw(30);
     }
     @include tb-screen {
