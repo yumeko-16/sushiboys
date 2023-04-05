@@ -22,10 +22,10 @@
   word-spacing: initial;
   writing-mode: initial;
   @include sm-screen {
-    @include border-all-radius-vw(5);
-    @include font-size-vw(16);
-    @include padding-block-vw(15);
-    @include padding-inline-vw(25);
+    border-radius: vw(5);
+    font-size: vw(16);
+    padding-block: vw(15);
+    padding-inline: vw(25);
   }
   @include tb-screen {
     @include font-size(20);
@@ -37,6 +37,7 @@
   &:not(:first-of-type) {
     @include sm-screen {
       @include margin-block-end-vw(30);
+      margin-block-end: vw(30);
     }
     @include tb-screen {
       margin-block-end: 0;
@@ -53,7 +54,7 @@
     border-style: solid;
     color: $color_base;
     @include sm-screen {
-      @include border-all-vw(1);
+      border: vw(1);
     }
     @include tb-screen {
       border-width: 1px;
@@ -71,7 +72,7 @@
   margin-block-end: 0;
   margin-inline: 0;
   @include sm-screen {
-    @include margin-block-start-vw(30);
+    margin-block-start: vw(30);
   }
   @include tb-screen {
     flex-direction: row;
@@ -81,7 +82,7 @@
 .button__icon {
   color: $color_white;
   @include sm-screen {
-    @include margin-inline-end-vw(10);
+    margin-inline-end: vw(10);
   }
   @include tb-screen {
     margin-inline-end: 10px;
@@ -91,7 +92,7 @@
   @include font-oswald-regular;
   color: $color_white;
   @include sm-screen {
-    @include font-size-vw(16);
+    font-size: vw(16);
   }
   @include tb-screen {
     @include font-size(16);

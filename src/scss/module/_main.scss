@@ -3,7 +3,7 @@
 .main {
   overflow: hidden;
   @include sm-screen {
-    @include padding-block-vw(60);
+    padding-block: vw(60);
   }
   @include tb-screen {
     padding-block-start: 88.39px;

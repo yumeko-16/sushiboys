@@ -29,8 +29,8 @@
   margin-block-end: 0;
   margin-inline: 0;
   @include sm-screen {
-    @include font-size-vw(24);
-    @include margin-block-start-vw(30);
+    font-size: vw(24);
+    margin-block-start: vw(30);
   }
   @include tb-screen {
     @include font-size(28);
@@ -44,7 +44,7 @@
   margin-block-end: 0;
   margin-inline: 0;
   @include sm-screen {
-    @include margin-block-start-vw(30);
+    margin-block-start: vw(30);
   }
   @include tb-screen {
     margin-block-start: 45px;
@@ -56,7 +56,7 @@
     margin-block-end: 0;
     margin-inline: 0;
     @include sm-screen {
-      @include margin-block-start-vw(8);
+      margin-block-start: vw(8);
     }
     @include tb-screen {
       margin-block-start: 15px;
@@ -74,9 +74,9 @@
   @include font-oswald-medium;
   margin-inline: 0;
   @include sm-screen {
-    @include font-size-vw(18);
-    @include margin-block-end-vw(10);
-    @include margin-block-start-vw(20);
+    font-size: vw(18);
+    margin-block-end: vw(10);
+    margin-block-start: vw(20);
   }
   @include tb-screen {
     @include font-size(20);

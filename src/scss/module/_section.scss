@@ -5,7 +5,7 @@
   padding-inline: 0;
   width: 100%;
   @include sm-screen {
-    @include padding-block-vw(30);
+    padding-block: vw(30);
   }
   @include tb-screen {
     padding-block: 80px;
@@ -17,7 +17,7 @@
   max-width: 1200px;
   padding-block: 0;
   @include sm-screen {
-    @include padding-inline-vw(20);
+    padding-inline: vw(20);
   }
   @include tb-screen {
     padding-inline: 40px;
@@ -33,8 +33,8 @@
   margin-block-start: 0;
   margin-inline: 0;
   @include sm-screen {
-    @include font-size-vw(26);
-    @include margin-block-end-vw(10);
+    font-size: vw(26);
+    margin-block-end: vw(10);
   }
   @include tb-screen {
     @include font-size(48);

@@ -11,7 +11,7 @@
   margin: 0;
   &:not(:first-of-type) {
     @include sm-screen {
-      @include margin-block-start-vw(15);
+      margin-block-start: vw(15);
     }
     @include tb-screen {
       margin: 0;

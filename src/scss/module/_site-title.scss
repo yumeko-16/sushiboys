@@ -7,7 +7,7 @@
   text-align: center;
   width: 100%;
   @include sm-screen {
-    @include font-size-vw(22);
+    font-size: vw(22);
   }
   @include tb-screen {
     @include font-size(32);

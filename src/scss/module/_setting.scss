@@ -12,11 +12,27 @@ $color_success: #00be28;
 $color_error: #ff6753;
 $main: #171717;
 
+/* base font size */
+$base-font-size: 16;
+
 /* transition */
 $transition-default: all 0.15s ease-in-out;
 
 /* base window width for smartphone */
 $base-window-width: 375;
+
+/* @function
+----------------------------------------- */
+/* convert from px to rem */
+@function rem($px) {
+  @return math.div($px, $base-font-size) * 1rem;
+}
+
+/* convert from px to vw */
+@function vw($size, $viewport: 375) {
+  $rate: math.div(100, $viewport);
+  @return $rate * $size * 1vw;
+}
 
 /* @mixin
 ----------------------------------------- */

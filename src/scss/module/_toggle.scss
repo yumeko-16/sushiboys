@@ -36,10 +36,10 @@
   position: fixed;
   z-index: 1002;
   @include sm-screen {
-    @include bottom-vw(30);
-    @include height-vw(50);
-    @include right-vw(30);
-    @include width-vw(50);
+    bottom: vw(30);
+    height: vw(50);
+    right: vw(30);
+    width: vw(50);
   }
   @include tb-screen {
     bottom: 1.875em;
@@ -59,8 +59,8 @@
   transform: translate(-50%, 0);
   transition: all 0.3s ease-in-out;
   @include sm-screen {
-    @include height-vw(2);
-    @include width-vw(25);
+    height: vw(2);
+    width: vw(25);
   }
   @include tb-screen {
     height: 2px;
@@ -100,7 +100,7 @@
   overflow-y: scroll;
   width: 100%;
   @include sm-screen {
-    @include padding-all-vw(30);
+    padding: vw(30);
   }
   @include tb-screen {
     padding: 1.875em;
@@ -113,8 +113,8 @@
   text-align: left;
   width: 100%;
   @include sm-screen {
-    @include font-size-vw(28);
-    @include padding-block-vw(15);
+    font-size: vw(28);
+    padding-block: vw(15);
   }
   @include tb-screen {
     @include font-size(42);
@@ -135,8 +135,8 @@
   padding: 0;
   position: absolute;
   @include sm-screen {
-    @include bottom-vw(122);
-    @include right-vw(30);
+    bottom: vw(122);
+    right: vw(30);
   }
   @include tb-screen {
     bottom: 7.625em;
@@ -148,7 +148,7 @@
   display: flex;
   justify-content: center;
   @include sm-screen {
-    @include padding-block-vw(8);
+    padding-block: vw(8);
   }
   @include tb-screen {
     padding-block: 1.25em;
@@ -162,9 +162,9 @@
   text-decoration: none;
   transition: .5s;
   @include sm-screen {
-    @include font-size(27);
-    @include height-vw(50);
-    @include width-vw(50);
+    font-size: vw(27);
+    height: vw(50);
+    width: vw(50);
   }
   @include tb-screen {
     @include font-size(42);

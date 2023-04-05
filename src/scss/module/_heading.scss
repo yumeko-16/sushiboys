@@ -5,8 +5,8 @@
   margin-inline: 0;
   text-align: center;
   @include sm-screen {
-    @include font-size-vw(14);
-    @include margin-block-vw(30);
+    font-size: vw(14);
+    margin-block: vw(30);
   }
   @include tb-screen {
     @include font-size(14);
@@ -19,7 +19,7 @@
     display: block;
     text-transform: uppercase;
     @include sm-screen {
-      @include font-size-vw(26);
+      font-size: vw(26);
     }
     @include tb-screen {
       @include font-size(32);

@@ -9,7 +9,7 @@
   color: #fff;
   text-transform: uppercase;
   @include sm-screen {
-    @include font-size-vw(16);
+    font-size: vw(16);
   }
   @include tb-screen {
     @include font-size(16);

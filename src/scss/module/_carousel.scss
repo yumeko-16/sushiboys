@@ -5,19 +5,6 @@
     overflow: visible;
   }
 }
-.carousel__title {
-  @include font-oswald-medium;
-  margin-block-start: 0;
-  margin-inline: 0;
-  @include sm-screen {
-    @include font-size-vw(18);
-    @include margin-block-end-vw(10);
-  }
-  @include tb-screen {
-    @include font-size(24);
-    margin-block-end: 10px;
-  }
-}
 .carousel__list {
   cursor: grab;
   list-style-type: none;
@@ -29,7 +16,7 @@
   display: block;
   &:not(:first-of-type) {
     @include sm-screen {
-      @include margin-inline-start-vw(20);
+      margin-inline-start: vw(20);
     }
     @include tb-screen {
       margin-inline-start: 30px;
@@ -37,8 +24,8 @@
   }
   &.swiper-slide {
     @include sm-screen {
-      @include height-vw(190);
-      @include width-vw(190);
+      height: vw(190);
+      width: vw(190);
     }
     @include tb-screen {
       height: 270px;

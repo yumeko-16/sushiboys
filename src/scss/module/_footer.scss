@@ -9,7 +9,7 @@
   position: absolute;
   width: 100%;
   @include sm-screen {
-    @include padding-block-vw(20);
+    padding-block: vw(20);
   }
   @include tb-screen {
     padding-block: 50px;
