@@ -12,6 +12,6 @@
     font-size: vw(16);
   }
   @include tb-screen {
-    @include font-size(16);
+    font-size: rem(16);
   }
 }

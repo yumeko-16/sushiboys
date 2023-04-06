@@ -26,7 +26,7 @@
   text-decoration: none;
   transition: .5s;
   @include pc-screen {
-    @include font-size(30);
+    font-size: rem(30);
     height: 1.3em;
     width: 1.3em;
   }

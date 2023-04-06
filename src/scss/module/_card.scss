@@ -95,10 +95,7 @@
     padding: vw(15);
   }
   @include tb-screen {
-    @include font-size(16);
+    font-size: rem(16);
     padding: 15px;
-  }
-  @include pc-screen {
-    padding: 30px;
   }
 }

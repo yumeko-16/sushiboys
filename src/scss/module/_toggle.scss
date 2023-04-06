@@ -117,7 +117,7 @@
     padding-block: vw(15);
   }
   @include tb-screen {
-    @include font-size(42);
+    font-size: rem(42);
     padding-block: .35714285714285715em;
   }
 }
@@ -167,7 +167,7 @@
     width: vw(50);
   }
   @include tb-screen {
-    @include font-size(42);
+    font-size: rem(42);
     height: 1.1904761904761905em;
     width: 1.1904761904761905em;
   }

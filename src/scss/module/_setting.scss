@@ -109,7 +109,6 @@ $base-window-width: 375;
   box-sizing: border-box;
 }
 html {
-  font-size: 62.5%;
   height: -webkit-fill-available;
   &.js-scroll-prevent {
     height: 100%;
@@ -131,6 +130,6 @@ body {
     font-size: vw(16);
   }
   @include tb-screen {
-    @include font-size(16);
+    font-size: rem(16);
   }
 }

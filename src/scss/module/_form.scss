@@ -23,7 +23,7 @@
   @include font-oswald-regular;
   display: block;
   @include tb-screen {
-    @include font-size(20);
+    font-size: rem(20);
   }
 }
 .form__input,
@@ -59,7 +59,7 @@
     padding: vw(15);
   }
   @include tb-screen {
-    @include font-size(16);
+    font-size: rem(16);
     border-width: 1px;
     border-radius: 5px;
     margin-block-start: 10px;
@@ -106,7 +106,7 @@
     font-size: vw(12);
   }
   @include tb-screen {
-    @include font-size(14);
+    font-size: rem(14);
   }
 }
 .form__success-message {
@@ -139,7 +139,7 @@
     top: vw(20);
   }
   @include tb-screen {
-    @include font-size(16);
+    font-size: rem(16);
     border-radius: 5px;
     padding: 15px 20px;
   }

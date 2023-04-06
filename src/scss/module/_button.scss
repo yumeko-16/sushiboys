@@ -28,7 +28,7 @@
     padding-inline: vw(25);
   }
   @include tb-screen {
-    @include font-size(20);
+    font-size: rem(20);
     border-radius: 5px;
     padding-block: 15px;
     padding-inline: 70px;
@@ -94,6 +94,6 @@
     font-size: vw(16);
   }
   @include tb-screen {
-    @include font-size(16);
+    font-size: rem(16);
   }
 }

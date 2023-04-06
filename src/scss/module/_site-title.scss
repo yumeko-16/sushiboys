@@ -10,11 +10,11 @@
     font-size: vw(22);
   }
   @include tb-screen {
-    @include font-size(32);
+    font-size: rem(32);
     padding-block: 25px;
   }
   @include pc-screen {
-    @include font-size(54);
+    font-size: rem(54);
   }
 }
 .site-title__link {

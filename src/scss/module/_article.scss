@@ -33,7 +33,7 @@
     margin-block-start: vw(30);
   }
   @include tb-screen {
-    @include font-size(28);
+    font-size: rem(28);
     margin-block-start: 45px;
   }
   @include pc-screen {
@@ -79,7 +79,7 @@
     margin-block-start: vw(20);
   }
   @include tb-screen {
-    @include font-size(20);
+    font-size: rem(20);
     margin-block-start: 20px;
     margin-block-end: 10px;
   }
@@ -97,7 +97,7 @@
 .article__caption-item {
   display: list-item;
   @include tb-screen {
-    @include font-size(16);
+    font-size: rem(16);
   }
   a {
     color: $color_base;
