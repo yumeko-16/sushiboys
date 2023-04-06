@@ -1,3 +1,5 @@
+'use strict';
+
 export const HumbergerToggle = (() => {
 
   const html = document.querySelector('html');

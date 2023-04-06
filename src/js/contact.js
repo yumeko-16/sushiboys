@@ -1,3 +1,5 @@
+'use strict';
+
 const form = document.querySelector('[data-form]');
 const inputs = document.querySelectorAll('[data-form-require]');
 const submit = document.querySelector('[data-form-submit]');

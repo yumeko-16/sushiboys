@@ -1,3 +1,5 @@
+'use strict';
+
 export const RandomHero = (() => {
 
   window.addEventListener('load', () => {
