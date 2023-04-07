@@ -23,9 +23,9 @@
 </head>
 <body>
   <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
-  <div class="wrapper">
+  <div class="wrapper" data-wrapper>
     <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
-    <main class="main">
+    <main class="main" data-main>
       <%- include(localmeta.path + `_inc/components/_heading`, {meta: localmeta}); %>
       <%- include(localmeta.path + `_inc/components/contact/_form`); %>
     </main>

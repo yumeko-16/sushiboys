@@ -4,13 +4,4 @@
   height: 100%;
   min-height: 100vh;
   position: relative;
-  @include sm-screen {
-    padding-block-end: vw(68.8);
-  }
-  @include tb-screen {
-    padding-block-end: 128.8px;
-  }
-  @include pc-screen {
-    padding-block-end: 202.8px;
-  }
 }

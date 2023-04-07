@@ -1,5 +1,3 @@
-'use strict';
-
 export const ToggleHeader = (() => {
 
   const header = document.querySelector('[data-header]');

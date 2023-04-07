@@ -1,5 +1,3 @@
-'use strict';
-
 export const SwiperDiscography = (() => {
 
   window.addEventListener('load', () => {

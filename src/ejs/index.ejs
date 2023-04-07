@@ -23,9 +23,9 @@
 </head>
 <body>
   <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
-  <div class="wrapper">
+  <div class="wrapper" data-wrapper>
     <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
-    <main class="main main--home">
+    <main class="main main--home" data-main>
       <%- include(localmeta.path + `_inc/components/home/_hero`); %>
       <%- include(localmeta.path + `_inc/components/home/_biography`); %>
     </main>

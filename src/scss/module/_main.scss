@@ -2,17 +2,4 @@
 
 .main {
   overflow: hidden;
-  @include sm-screen {
-    padding-block: vw(60);
-  }
-  @include tb-screen {
-    padding-block-start: 88.39px;
-    padding-block-end: 80px;
-  }
-  @include pc-screen {
-    padding-block-start: 152.8px;
-  }
-  &--home {
-    padding-block-start: 0;
-  }
 }
