@@ -2,4 +2,10 @@
 
 .main {
   overflow: hidden;
+  @include sm-screen {
+    padding-block-end: vw(30);
+  }
+  @include tb-screen {
+    padding-block-end: 80px;
+  }
 }
