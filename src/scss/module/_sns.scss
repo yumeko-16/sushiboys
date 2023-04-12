@@ -27,8 +27,8 @@
   transition: .5s;
   @include pc-screen {
     font-size: rem(30);
-    height: 1.3em;
-    width: 1.3em;
+    height: rem(40);
+    width: rem(40);
   }
   &:hover {
     opacity: .8;

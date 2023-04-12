@@ -1,12 +1,14 @@
 @use "../module/setting" as *;
 
 .copyright {
-  text-align: center;
+  line-height: 1;
   margin: 0;
+  text-align: center;
 }
 .copyright-text {
   @include font-oswald-regular;
   color: #fff;
+  display: block;
   text-transform: uppercase;
   @include sm-screen {
     font-size: vw(16);
