@@ -3,7 +3,13 @@
 .wrapper {
   height: 100%;
   min-height: 100vh;
-  padding-block-start: calc( calc(#{rem(54)} * 1.2 + 50px) + calc(#{rem(20)} * 1.8 + 2px) );
-  padding-block-end: calc( calc(#{rem(40)}) + #{rem(16)} + 100px + 35px );
   position: relative;
+  @include sm-screen {
+    padding-block-start: vw(60);
+    padding-block-end: vw(56);
+  }
+  @include tb-screen {
+    padding-block-start: calc( calc(#{rem(54)} * 1.2 + 50px) + calc(#{rem(20)} * 1.8 + 2px) );
+    padding-block-end: calc( calc(#{rem(40)}) + #{rem(16)} + 100px + 35px );
+  }
 }
