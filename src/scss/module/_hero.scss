@@ -7,12 +7,11 @@
   justify-content: center;
   margin: 0 auto;
   width: 70%;
-  @include tb-screen {
-    padding-block-start: 165px;
-    width: 50%;
+  @include sm-screen {
+    margin-block-start: vw(-60);
   }
-  @include pc-screen {
-    padding-block-start: 152.8px;
+  @include tb-screen {
+    margin-block-start: calc( calc(#{rem(-54)} * 1.2 + (-50px)) + calc(#{rem(-20)} * 1.8 + (2px)) );
     width: 50%;
   }
 }
