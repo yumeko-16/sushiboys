@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%_
+    const localmeta = {
+      title: `kinishinai | SUSHIBOYS`,
+      description: `木にしない`,
+      url: `https://sushiboys350.com/discography/single/kinishinai.html`,
+      pageid: `discography`,
+      type: `single`,
+      index: 5 - 1,
+      path: `../../`
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: `/css/discography-detail.css`,
+      js: `/js/discographyDetail.js`
+    };
+  _%>
+  <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}) %>
+  <%- include(localmeta.path + `_data/_discography`); %>
+  <%_ discographyData = discography(); _%>
+</head>
+<body>
+  <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
+  <div class="wrapper">
+    <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
+    <main class="main">
+      <%- include(localmeta.path + `_inc/components/_heading`, {meta: localmeta}); %>
+      <%- include(localmeta.path + `_inc/components/discography/detail/_article`, {meta: localmeta, discographyData: discographyData}); %>
+    </main>
+    <%- include(localmeta.path + `_inc/components/_toggle`); %>
+    <%- include(localmeta.path + `_inc/components/_footer`); %>
+  </div>
+</body>
+</html>
