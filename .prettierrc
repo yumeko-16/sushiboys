@@ -1,6 +1,22 @@
 {
   "tabWidth": 2,
   "useTabs": false,
+  "singleQuote": true,
   "semi": true,
-  "singleQuote": true
+  "trailingComma": "none",
+  "htmlWhitespaceSensitivity": "ignore",
+  "arrowParens": "avoid",
+  "bracketSameLine": true,
+  "jsxBracketSameLine": false,
+  "overrides": [
+    {
+      "files": "*.js",
+      "options": {
+        "parser": "babel",
+        "printWidth": 200,
+        "arrowParens": "always",
+        "indent": ["error", 2, { "SwitchCase": 1 }]
+      }
+    }
+  ]
 }

@@ -1,12 +1,12 @@
 export const ToggleHeader = (() => {
-
   const header = document.querySelector('[data-header]');
   let positionY = 0;
 
-  if (header === null) { return }
+  if (header === null) {
+    return;
+  }
 
   window.addEventListener('scroll', () => {
-
     if (window.scrollY < positionY) {
       header.classList.remove('is-hide');
     } else {
@@ -16,7 +16,5 @@ export const ToggleHeader = (() => {
     if (positionY <= 10) {
       header.classList.remove('is-hide');
     }
-
   });
-
 })();
