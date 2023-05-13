@@ -1,8 +1,8 @@
 export const ToggleHeader = (() => {
-  const header = document.querySelector('[data-header]');
+  const header = document.getElementById('header');
   let positionY = 0;
 
-  if (header === null) {
+  if (!header) {
     return;
   }
 
