@@ -7,14 +7,14 @@ module.exports = {
     }
   },
   entry: {
-    home: __dirname + '/src/home.js',
-    news: __dirname + '/src/news.js',
-    newsDetail: __dirname + '/src/newsDetail.js',
-    discography: __dirname + '/src/discography.js',
-    discographyDetail: __dirname + '/src/discographyDetail.js',
-    goods: __dirname + '/src/goods.js',
-    picturePost: __dirname + '/src/picturePost.js',
-    contact: __dirname + '/src/contact.js'
+    home: __dirname + '/src/js/home.js',
+    news: __dirname + '/src/js/news.js',
+    newsDetail: __dirname + '/src/js/newsDetail.js',
+    discography: __dirname + '/src/js/discography.js',
+    discographyDetail: __dirname + '/src/js/discographyDetail.js',
+    goods: __dirname + '/src/js/goods.js',
+    picturePost: __dirname + '/src/js/picturePost.js',
+    contact: __dirname + '/src/js/contact.js'
   },
   output: {
     path: __dirname + '/dist/js',
