@@ -1,27 +1,51 @@
-<header id="header" class="header">
-  <h1 class="site-title">
-    <a class="site-title__link" href="/">Sushiboys</a>
+<header
+  id="header"
+  class="header"
+>
+  <h1 class="header__title">
+    <a
+      class="header__link"
+      href="/"
+    >Sushiboys</a>
   </h1>
   <%_ const currentClass = ` current`; _%>
   <nav class="navigation">
     <ul class="navigation__list">
       <li class="navigation__item">
-        <a class="navigation__anchor<%- meta.pageid == `home` ? currentClass : `` %>" href="/">Home</a>
+        <a
+          class="navigation__anchor<%- meta.pageid == `home` ? currentClass : `` %>"
+          href="/"
+        >Home</a>
       </li>
       <li class="navigation__item">
-        <a class="navigation__anchor<%- meta.pageid == `news` ? currentClass : `` %>" href="/news/">News</a>
+        <a
+          class="navigation__anchor<%- meta.pageid == `news` ? currentClass : `` %>"
+          href="/news/"
+        >News</a>
       </li>
       <li class="navigation__item">
-        <a class="navigation__anchor<%- meta.pageid == `discography` ? currentClass : `` %>" href="/discography/">Discography</a>
+        <a
+          class="navigation__anchor<%- meta.pageid == `discography` ? currentClass : `` %>"
+          href="/discography/"
+        >Discography</a>
       </li>
       <li class="navigation__item">
-        <a class="navigation__anchor<%- meta.pageid == `goods` ? currentClass : `` %>" href="/goods/">Goods</a>
+        <a
+          class="navigation__anchor<%- meta.pageid == `goods` ? currentClass : `` %>"
+          href="/goods/"
+        >Goods</a>
       </li>
       <li class="navigation__item">
-        <a class="navigation__anchor<%- meta.pageid == `picture` ? currentClass : `` %>" href="/picture/look/summer-vacation/">Picture</a>
+        <a
+          class="navigation__anchor<%- meta.pageid == `picture` ? currentClass : `` %>"
+          href="/picture/look/summer-vacation/"
+        >Picture</a>
       </li>
       <li class="navigation__item">
-        <a class="navigation__anchor<%- meta.pageid == `contact` ? currentClass : `` %>" href="/contact/">Contact</a>
+        <a
+          class="navigation__anchor<%- meta.pageid == `contact` ? currentClass : `` %>"
+          href="/contact/"
+        >Contact</a>
       </li>
     </ul>
   </nav>
