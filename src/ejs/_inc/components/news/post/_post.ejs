@@ -7,7 +7,11 @@
       _%>
       <%_ if (reversePosts[meta.index].hero.image !== '') { _%>
       <figure class="article__hero">
-        <img class="article__hero-image" src="<%- reversePosts[meta.index].hero.image %>" alt="<%- reversePosts[meta.index].hero.alt %>">
+        <img
+          class="article__hero-image"
+          src="<%- reversePosts[meta.index].hero.image %>"
+          alt="<%- reversePosts[meta.index].hero.alt %>"
+        >
       </figure>
       <%_ } _%>
       <div class="article__inner">
@@ -19,7 +23,11 @@
           <%_ if (reversePosts[meta.index].photos.length !== 0) { _%>
           <%_ reversePosts[meta.index].photos.forEach(photo => { _%>
           <figure class="article__image-wrap">
-            <img class="article__image" src="<%- photo.image %>" alt="<%- photo.alt %>">
+            <img
+              class="article__image"
+              src="<%- photo.image %>"
+              alt="<%- photo.alt %>"
+            >
           </figure>
           <%_ }); _%>
           <%_ } _%>
@@ -27,7 +35,10 @@
       </div>
     </article>
     <div class="button__wrap">
-      <a class="button" href="/news/">
+      <a
+        class="button"
+        href="/news/"
+      >
         <span class="button__text">Back</span>
       </a>
     </div>

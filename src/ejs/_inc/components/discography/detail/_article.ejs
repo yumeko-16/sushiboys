@@ -37,7 +37,11 @@ _%>
   <div class="section__inner">
     <article class="article">
       <figure class="article__hero">
-        <img class="article__hero-image" src="<%- reverseData[meta.index].image %>" alt="<%- reverseData[meta.index].alt %>">
+        <img
+          class="article__hero-image"
+          src="<%- reverseData[meta.index].image %>"
+          alt="<%- reverseData[meta.index].alt %>"
+        >
       </figure>
       <div class="article__inner">
         <h3 class="article__title"><%- reverseData[meta.index].title %></h3>
@@ -48,7 +52,15 @@ _%>
             <%_ if (!reverseData[meta.index].price.trim() === false) { _%>
             <li class="article__caption-item">価格 : <%- reverseData[meta.index].price %></li>
             <%_ } _%>
-            <li class="article__caption-item">視聴：ご視聴・ご購入は<a href="<%- reverseData[meta.index].link %>" target="_blank" rel="noopener noreferrer">こちら</a>から</li>
+            <li class="article__caption-item">
+              視聴：ご視聴・ご購入は
+              <a
+                href="<%- reverseData[meta.index].link %>"
+                target="_blank"
+                rel="noopener noreferrer"
+              >こちら</a>
+              から
+            </li>
           </ul>
           <h3 class="article__caption-heading">Song contents</h3>
           <ol class="article__caption-list article__caption-list--song">
@@ -72,7 +84,10 @@ _%>
       </div>
     </article>
     <div class="button__wrap">
-      <a class="button" href="/discography/">
+      <a
+        class="button"
+        href="/discography/"
+      >
         <span class="button__text">Back</span>
       </a>
     </div>
