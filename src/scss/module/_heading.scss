@@ -2,17 +2,17 @@
 
 .heading {
   font-weight: 400;
-  margin-inline: 0;
+  line-height: 1;
+  margin: 0;
   text-align: center;
   @include sm-screen {
     font-size: vw(14);
-    margin-block: vw(30);
   }
   @include tb-screen {
-    font-size: rem(14);
-    display: block;
-    margin-block: 50px;
+    font-size: rem(16);
   }
+}
+.heading__text {
   &::before {
     @include font-oswald-medium;
     content: attr(data-heading);
@@ -20,9 +20,11 @@
     text-transform: uppercase;
     @include sm-screen {
       font-size: vw(26);
+      margin-block-end: 8px;
     }
     @include tb-screen {
       font-size: rem(32);
+      margin-block-end: 12px;
     }
   }
 }
