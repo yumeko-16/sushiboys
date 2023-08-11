@@ -1,19 +1,20 @@
 @use "../module/setting" as *;
 
 .copyright {
-  line-height: 1;
+  color: #fff;
+  @include font-oswald-regular;
+  line-height: 1.2;
+  @include lineHeightCrop(1.2);
   margin: 0;
   text-align: center;
-}
-.copyright-text {
-  @include font-oswald-regular;
-  color: #fff;
-  display: block;
   text-transform: uppercase;
   @include sm-screen {
-    font-size: vw(16);
+    font-size: vw(14);
   }
   @include tb-screen {
-    font-size: rem(16);
+    font-size: rem(14);
   }
+}
+.copyright__text {
+  font-size: inherit;
 }

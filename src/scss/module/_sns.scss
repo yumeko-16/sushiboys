@@ -1,32 +1,31 @@
 @use "../module/setting" as *;
 
 .sns {
+  color: #fff;
   display: none;
   @include pc-screen {
     display: flex;
+    font-size: rem(30);
+    gap: 20px;
     justify-content: center;
     list-style-type: none;
-    margin: 0 0 35px;
-    padding-inline-start: 0;
+    margin: 0;
+    padding: 0;
   }
 }
 .sns__item {
   display: flex;
   padding-block: 0;
-  @include pc-screen {
-    padding-inline: .625em;
-  }
 }
 .sns__link {
   border-radius: 50%;
-  color: #fff;
+  color: inherit;
   cursor: pointer;
   display: inline-block;
   position: relative;
   text-decoration: none;
   transition: .5s;
   @include pc-screen {
-    font-size: rem(30);
     height: rem(40);
     width: rem(40);
   }

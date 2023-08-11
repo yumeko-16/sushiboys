@@ -12,6 +12,9 @@
     padding-block: vw(20);
   }
   @include tb-screen {
-    padding-block: 50px;
+    padding-block: 20px;
+  }
+  @include pc-screen {
+    gap: 20px;
   }
 }

@@ -87,6 +87,22 @@ $base-window-width: 375;
   font-size: (math.div($px, $base-window-width) * 100) + vw;
 }
 
+@mixin lineHeightCrop($line-height) {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    height: 0;
+    width: 0;
+  }
+  &::before {
+    margin-top: calc((1 - #{$line-height}) * .5em);
+  }
+  &::after {
+    margin-bottom: calc((1 - #{$line-height}) * .5em);
+  }
+}
+
 %extrude {
   margin: 0 calc(50% - 50vw);
 }

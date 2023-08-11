@@ -1,8 +1,10 @@
 @use "../module/setting" as *;
 
 .site-title {
+  display: inline-block;
   @include font-oswald-medium;
   line-height: 1.2;
+  @include lineHeightCrop(1.2);
   margin: 0;
   text-align: center;
   width: 100%;
@@ -10,8 +12,7 @@
     font-size: vw(22);
   }
   @include tb-screen {
-    font-size: rem(32);
-    padding-block: 25px;
+    font-size: rem(22);
   }
   @include pc-screen {
     font-size: rem(54);
@@ -19,7 +20,6 @@
 }
 .site-title__link {
   color: $color_base;
-  display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
 }
