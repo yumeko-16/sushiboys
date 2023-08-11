@@ -1,10 +1,14 @@
 @use "../module/setting" as *;
 
 .navigation {
+  color: $color_base !important;
   display: none;
+  @include font-oswald-medium;
   width: 100%;
   @include pc-screen {
     display: block;
+    font-size: rem(20);
+    @include lineHeightCrop(1.8);
   }
 }
 .navigation__list {
@@ -23,14 +27,10 @@
   }
 }
 .navigation__anchor {
-  @include font-oswald-medium;
-  color: $color_base;
+  color: inherit;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
-  @include pc-screen {
-    font-size: rem(20);
-  }
   &.current {
     @include pc-screen {
       border-block-end: 2px solid $border-color_base;

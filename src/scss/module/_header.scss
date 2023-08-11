@@ -1,10 +1,10 @@
 @use "../module/setting" as *;
 
 .header {
-  align-items: center;
   background-color: $background-color_base;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
   left: 0;
   position: fixed;
   top: 0;
@@ -12,11 +12,10 @@
   width: 100%;
   z-index: 1000;
   @include sm-screen {
-    height: vw(60);
+    padding-block: vw(20);
   }
   @include tb-screen {
-    flex-direction: column;
-    height: unset;
+    padding-block: 20px;
   }
   &.is-hide {
     display: none;

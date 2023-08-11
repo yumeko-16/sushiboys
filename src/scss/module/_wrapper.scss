@@ -5,11 +5,15 @@
   min-height: 100vh;
   position: relative;
   @include sm-screen {
-    padding-block-start: vw(60);
-    padding-block-end: vw(56);
+    padding-block-end: calc( calc(#{vw(14)} ) + calc(#{vw(40)}) );
+    padding-block-start: calc( calc(#{vw(22)} ) + calc(#{vw(40)}) );
   }
   @include tb-screen {
-    padding-block-start: calc( calc(#{rem(54)} * 1.2 + 50px) + calc(#{rem(20)} * 1.8 + 2px) );
-    padding-block-end: calc( calc(#{rem(40)}) + #{rem(16)} + 100px + 35px );
+    padding-block-end: calc( calc(#{rem(14)}) + 40px );
+    padding-block-start: calc( calc(#{rem(22)}) + 40px );
+  }
+  @include pc-screen {
+    padding-block-end: calc( calc(#{rem(40)}) + calc(#{rem(14.02)}) + 60px );
+    padding-block-start: calc( calc(#{rem(54.02)}) + calc(#{rem(22)}) + 60px );
   }
 }
