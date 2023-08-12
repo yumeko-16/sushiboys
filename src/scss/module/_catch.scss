@@ -1,19 +1,14 @@
 @use "../module/setting" as *;
 
 .catch {
-  @include sm-screen {
-    margin: 1em 0 0;
-  }
-  @include tb-screen {
-    font-size: rem(16);
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.catch__text {
+  @include lineHeightCrop(1.8);
+  margin: 0;
   @include pc-screen {
     font-size: rem(20);
-  }
-  &:first-of-type {
-    @include sm-screen {
-      margin: 0;
-    }
   }
 }
