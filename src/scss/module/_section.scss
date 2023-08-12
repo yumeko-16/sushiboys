@@ -4,15 +4,11 @@
   margin: 0 auto;
   padding-inline: 0;
   width: 100%;
-  @include sm-screen {
-    padding-block: vw(30);
-  }
-  @include tb-screen {
-    padding-block: 80px;
-  }
 }
 .section__inner {
-  box-sizing: content-box;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
   margin: 0 auto;
   max-width: 1200px;
   padding-block: 0;
