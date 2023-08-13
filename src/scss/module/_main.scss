@@ -9,3 +9,11 @@
     padding-block-end: 80px;
   }
 }
+.main__heading {
+  @include sm-screen {
+    padding-block: vw(20);
+  }
+  @include tb-screen {
+    padding-block: 20px;
+  }
+}
