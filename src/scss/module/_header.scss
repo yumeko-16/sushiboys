@@ -4,7 +4,6 @@
   background-color: $background-color_base;
   display: flex;
   flex-direction: column;
-  gap: 20px;
   left: 0;
   position: fixed;
   top: 0;
@@ -16,6 +15,9 @@
   }
   @include tb-screen {
     padding-block: 20px;
+  }
+  @include pc-screen {
+    gap: 35px;
   }
   &.is-hide {
     display: none;
