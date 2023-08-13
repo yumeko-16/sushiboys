@@ -1,85 +1,30 @@
+const initializeSwiper = (selector) => {
+  return new Swiper(selector, {
+    freeMode: true,
+    loop: false,
+    slidesPerView: 'auto'
+  });
+};
+
 export const SwiperDiscography = (() => {
   window.addEventListener('load', () => {
-    const swiperEp = new Swiper('#swiper-ep', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
-
-    const swiperSingle = new Swiper('#swiper-single', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
-
-    const swiperFeat = new Swiper('#swiper-feat', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
-
-    const swiperRecord = new Swiper('#swiper-record', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
-
-    const swiperFarmhouseEp = new Swiper('#swiper-farmhouse-ep', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
-
-    const swiperFarmhouseSingle = new Swiper('#swiper-farmhouse-single', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
+    const swiperEp = initializeSwiper('#swiper-ep');
+    const swiperSingle = initializeSwiper('#swiper-single');
+    const swiperFeat = initializeSwiper('#swiper-feat');
+    const swiperRecord = initializeSwiper('#swiper-record');
+    const swiperFarmhouseEp = initializeSwiper('#swiper-farmhouse-ep');
+    const swiperFarmhouseSingle = initializeSwiper('#swiper-farmhouse-single');
   });
 })();
 
 export const SwiperGoods = (() => {
   window.addEventListener('load', () => {
-    const swiperKnickknack = new Swiper('#swiper-knickknack', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
-
-    const swiperRecordingMedias = new Swiper('#swiper-recording-media', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
-
-    const swiperHoodie = new Swiper('#swiper-hoodie', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
-
-    const swiperParker = new Swiper('#swiper-parker', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
-
-    const swiperLongTShirt = new Swiper('#swiper-long-t-shirt', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
-
-    const swiperTShirt = new Swiper('#swiper-t-shirt', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
-
-    const swiperCap = new Swiper('#swiper-cap', {
-      freeMode: true,
-      loop: false,
-      slidesPerView: 'auto'
-    });
+    const swiperKnickknack = initializeSwiper('#swiper-knickknack');
+    const swiperRecordingMedias = initializeSwiper('#swiper-recording-media');
+    const swiperHoodie = initializeSwiper('#swiper-hoodie');
+    const swiperParker = initializeSwiper('#swiper-parker');
+    const swiperLongTShirt = initializeSwiper('#swiper-long-t-shirt');
+    const swiperTShirt = initializeSwiper('#swiper-t-shirt');
+    const swiperCap = initializeSwiper('#swiper-cap');
   });
 })();
