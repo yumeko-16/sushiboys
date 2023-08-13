@@ -3,8 +3,7 @@
 .title {
   display: inline-block;
   @include font-oswald-medium;
-  line-height: 1.2;
-  @include lineHeightCrop(1.2);
+  line-height: 1;
   margin: 0;
   text-align: center;
   width: 100%;
@@ -20,6 +19,7 @@
 }
 .title__link {
   color: $color_base;
+  display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
 }

@@ -4,11 +4,11 @@
   color: $color_base !important;
   display: none;
   @include font-oswald-medium;
+  line-height: 1;
   width: 100%;
   @include pc-screen {
     display: block;
-    font-size: rem(20);
-    @include lineHeightCrop(1.8);
+    font-size: rem(27);
   }
 }
 .navigation__list {
@@ -17,23 +17,22 @@
   list-style-type: none;
   margin: 0 auto;
   padding: 0;
-}
-.navigation__item {
   @include pc-screen {
-    padding-inline: 15px;
-  }
-  &:hover {
-    opacity: 0.8;
+    gap: 30px;
   }
 }
 .navigation__anchor {
   color: inherit;
-  display: block;
+  display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
+  &:hover {
+    opacity: 0.8;
+  }
   &.current {
     @include pc-screen {
       border-block-end: 2px solid $border-color_base;
+      padding-block-end: 5px;
     }
   }
 }
