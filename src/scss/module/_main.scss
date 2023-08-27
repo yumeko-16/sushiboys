@@ -1,19 +1,14 @@
 @use "../module/setting" as *;
 
 .main {
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   @include sm-screen {
+    gap: vw(30);
     padding-block-end: vw(30);
   }
   @include tb-screen {
     padding-block-end: 80px;
-  }
-}
-.main__heading {
-  @include sm-screen {
-    padding-block: vw(20);
-  }
-  @include tb-screen {
-    padding-block: 20px;
   }
 }
