@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sihoo-milk/sushiboys.git"
+    "url": "git+https://github.com/yumeko-16/sushiboys.git"
   },
   "author": "Tomohiro Maeno",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Sihoo-milk/sushiboys/issues"
+    "url": "https://github.com/yumeko-16/sushiboys/issues"
   },
-  "homepage": "https://github.com/Sihoo-milk/sushiboys#readme",
+  "homepage": "https://github.com/yumeko-16/sushiboys#readme",
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
