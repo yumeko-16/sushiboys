@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%_
+    const localmeta = {
+      title: '🍣2024年もSUSHIBOYSは年賀状やります🍣🐉 | SUSHIBOYS',
+      description: '2024年も無事に年賀状を作成できました🍣🎍',
+      url: 'https://sushiboys350.com/news/post048/',
+      pageid: 'news',
+      index: 48 - 1,
+      path: '../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/news-detail.css',
+      js: '/js/newsDetail.js'
+    };
+  _%>
+  <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + `_data/_news`); %>
+  <%_ newsData = news(); _%>
+</head>
+<body>
+  <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
+  <div class="wrapper">
+    <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
+    <main class="main">
+      <%- include(localmeta.path + `_inc/components/_heading`, {meta: localmeta}); %>
+      <%- include(localmeta.path + `_inc/components/news/post/_post`, {meta: localmeta, newsData: newsData}); %>
+    </main>
+    <%- include(localmeta.path + '_inc/components/_toggle'); %>
+    <%- include(localmeta.path + `_inc/components/_footer`); %>
+  </div>
+</body>
+</html>
