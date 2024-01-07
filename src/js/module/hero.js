@@ -1,4 +1,4 @@
-// ページの読み込み時にランダムなヒーロー画像を表示する機能;
+/** Display a random hero image when the page loads. */
 export const RandomHero = (() => {
   window.addEventListener('load', () => {
     const imageArea = document.getElementById('hero');

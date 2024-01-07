@@ -1,11 +1,11 @@
-// ハンバーガーメニューのトグル機能;
+/** Toggle the hamburger menu. */
 export const HumbergerToggle = (() => {
-  const html = document.querySelector('html');
-  const header = document.getElementById('header');
-  const trigger = document.getElementById('toggle-trigger');
+  const HTML = document.querySelector('html');
+  const HEADER = document.getElementById('header');
+  const TRIGGER = document.getElementById('toggle-trigger');
   let scrollY = null;
 
-  if (!header || !trigger) {
+  if (!HEADER || !TRIGGER) {
     return;
   }
 
@@ -13,17 +13,17 @@ export const HumbergerToggle = (() => {
     if (e.target.checked) {
       scrollY = window.pageYOffset;
       setTimeout(() => {
-        html.classList.add('js-scroll-prevent');
+        HTML.classList.add('js-scroll-prevent');
       }, 300);
     } else {
-      html.classList.remove('js-scroll-prevent');
+      HTML.classList.remove('js-scroll-prevent');
       window.scrollTo(0, scrollY);
       scrollY = null;
       setTimeout(() => {
-        header.classList.remove('is-hide');
+        HEADER.classList.remove('is-hide');
       }, 100);
     }
   }
 
-  trigger.addEventListener('change', handleToggleChange, false);
+  TRIGGER.addEventListener('change', handleToggleChange, false);
 })();
