@@ -42,16 +42,19 @@ $base-window-width: 375;
     @content;
   }
 }
+
 @mixin tb-screen {
   @media screen and (min-width: 768px) {
     @content;
   }
 }
+
 @mixin pc-screen {
   @media screen and (min-width: 1024px) {
     @content;
   }
 }
+
 @mixin lt-screen {
   @media screen and (min-width: 1024px) and (max-width: 1400px) {
     @content;
@@ -62,32 +65,29 @@ $base-window-width: 375;
 @mixin font-default {
   @include font-not-sans-jp-regular;
 }
+
 @mixin font-not-sans-jp-regular {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
 }
+
 @mixin font-not-sans-jp-bold {
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 700;
 }
+
 @mixin font-oswald-regular {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
 }
+
 @mixin font-oswald-medium {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
 }
 
-/* font size */
-@mixin font-size($px: 16) {
-  font-size: (math.div($px, 10)) + rem;
-}
-@mixin font-size-vw($px: 16) {
-  font-size: (math.div($px, $base-window-width) * 100) + vw;
-}
-
 @mixin lineHeightCrop($line-height) {
+
   &::before,
   &::after {
     content: "";
@@ -95,9 +95,11 @@ $base-window-width: 375;
     height: 0;
     width: 0;
   }
+
   &::before {
     margin-top: calc((1 - #{$line-height}) * .5em);
   }
+
   &::after {
     margin-bottom: calc((1 - #{$line-height}) * .5em);
   }
@@ -106,14 +108,18 @@ $base-window-width: 375;
 %extrude {
   margin: 0 calc(50% - 50vw);
 }
+
 %carousel__inner {
   padding-block: 0;
+
   @include sm-screen {
     font-size: vw(20);
   }
+
   @include tb-screen {
     padding-inline: 30px;
   }
+
   @include pc-screen {
     padding-inline: 60px;
   }
@@ -124,8 +130,10 @@ $base-window-width: 375;
 * {
   box-sizing: border-box;
 }
+
 html {
   height: -webkit-fill-available;
+
   &.js-scroll-prevent {
     height: 100%;
     position: fixed;
@@ -133,6 +141,7 @@ html {
     z-index: -1;
   }
 }
+
 body {
   @include font-default;
   color: $color_base;
@@ -142,9 +151,11 @@ body {
   letter-spacing: 0.05em;
   line-height: 1.8;
   margin: 0;
+
   @include sm-screen {
     font-size: vw(16);
   }
+
   @include tb-screen {
     font-size: rem(16);
   }
