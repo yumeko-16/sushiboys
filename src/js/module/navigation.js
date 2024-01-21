@@ -11,7 +11,7 @@ export const HumbergerToggle = (() => {
 
   function handleToggleChange(e) {
     if (e.target.checked) {
-      scrollY = window.pageYOffset;
+      scrollY = window.scrollY;
       setTimeout(() => {
         HTML.classList.add('js-scroll-prevent');
       }, 300);
