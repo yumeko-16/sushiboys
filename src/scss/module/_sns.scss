@@ -3,6 +3,7 @@
 .sns {
   color: #fff;
   display: none;
+
   @include pc-screen {
     display: flex;
     font-size: rem(30);
@@ -13,10 +14,12 @@
     padding: 0;
   }
 }
+
 .sns__item {
   display: flex;
   padding-block: 0;
 }
+
 .sns__link {
   border-radius: 50%;
   color: inherit;
@@ -25,13 +28,16 @@
   position: relative;
   text-decoration: none;
   transition: .5s;
+
   @include pc-screen {
     height: rem(40);
     width: rem(40);
   }
+
   &:hover {
     opacity: .8;
   }
+
   i {
     left: 50%;
     position: absolute;

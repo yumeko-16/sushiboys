@@ -8,12 +8,15 @@
   justify-content: center;
   position: absolute;
   width: 100%;
+
   @include sm-screen {
     padding-block: vw(20);
   }
+
   @include tb-screen {
     padding-block: 20px;
   }
+
   @include pc-screen {
     gap: 20px;
   }

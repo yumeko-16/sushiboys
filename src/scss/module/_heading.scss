@@ -3,41 +3,51 @@
 .heading {
   line-height: 1;
   margin: 0;
+
   &--primary {
     font-weight: 400;
     text-align: center;
+
     @include sm-screen {
       font-size: vw(12);
     }
+
     @include tb-screen {
       font-size: rem(14);
     }
+
     &::before {
       @include font-oswald-medium;
       content: attr(data-heading);
       display: block;
       text-transform: uppercase;
+
       @include sm-screen {
         font-size: vw(26);
         margin-block-end: 8px;
       }
+
       @include tb-screen {
         font-size: rem(26);
         margin-block-end: 12px;
       }
     }
   }
+
   &--secondary {
     @include sm-screen {
       font-size: vw(26);
     }
+
     @include tb-screen {
       font-size: rem(48);
     }
   }
+
   &--ja {
     @include font-not-sans-jp-bold;
   }
+
   &--en {
     @include font-oswald-medium;
   }

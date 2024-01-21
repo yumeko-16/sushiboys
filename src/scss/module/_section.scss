@@ -5,27 +5,33 @@
   padding-inline: 0;
   width: 100%;
 }
+
 .section__inner {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   max-width: 1200px;
   padding-block: 0;
+
   @include sm-screen {
     gap: vw(30);
     padding-inline: vw(20);
   }
+
   @include tb-screen {
     gap: 50px;
     padding-inline: 40px;
   }
+
   @include pc-screen {
     gap: 60px;
     padding-inline: 100px;
   }
+
   @include lt-screen {
     padding-inline: 40px;
   }
+
   &--form {
     @include tb-screen {
       margin: 0 auto;

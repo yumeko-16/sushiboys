@@ -7,16 +7,20 @@
   margin: 0;
   text-align: center;
   width: 100%;
+
   @include sm-screen {
     font-size: vw(22);
   }
+
   @include tb-screen {
     font-size: rem(22);
   }
+
   @include pc-screen {
     font-size: rem(54);
   }
 }
+
 .title__link {
   color: $color_base;
   display: inline-block;
