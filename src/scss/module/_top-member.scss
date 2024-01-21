@@ -7,17 +7,21 @@
     justify-content: space-between;
   }
 }
+
 .top-member__image-wrap {
   margin: 0;
+
   &:not(:first-of-type) {
     @include sm-screen {
       margin-block-start: vw(15);
     }
+
     @include tb-screen {
       margin: 0;
     }
   }
 }
+
 .top-member__image {
   display: block;
   width: 100%;

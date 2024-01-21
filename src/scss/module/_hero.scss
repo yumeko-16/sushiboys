@@ -7,18 +7,22 @@
   justify-content: center;
   margin: 0 auto;
   width: 70%;
+
   @include sm-screen {
     margin-block-start: vw(-60);
   }
+
   @include tb-screen {
-    margin-block-start: calc( calc(#{rem(-54)} * 1.2 + (-50px)) + calc(#{rem(-20)} * 1.8 + (2px)) );
+    margin-block-start: calc(calc(#{rem(-54)} * 1.2 + (-50px)) + calc(#{rem(-20)} * 1.8 + (2px)));
     width: 50%;
   }
 }
+
 .hero__frame {
   height: calc(100vh / 4);
   margin: 0;
 }
+
 .hero__image {
   display: block;
   height: 100%;

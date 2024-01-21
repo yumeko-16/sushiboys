@@ -8,13 +8,16 @@
   margin: 0;
   text-align: center;
   text-transform: uppercase;
+
   @include sm-screen {
     font-size: vw(14);
   }
+
   @include tb-screen {
     font-size: rem(14);
   }
 }
+
 .copyright__text {
   font-size: inherit;
 }

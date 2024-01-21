@@ -3,12 +3,15 @@
 .text {
   margin: 0;
   word-break: break-all;
+
   &:not(:first-of-type) {
     margin-block-start: 2em;
   }
+
   &--bold {
     font-weight: 700;
   }
+
   a {
     color: $color_base;
     cursor: pointer;

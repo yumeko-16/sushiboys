@@ -4,26 +4,33 @@
   display: flex;
   flex-direction: column;
 }
+
 .form__contents {
   display: flex;
   flex-direction: column;
+
   @include sm-screen {
     gap: vw(30);
   }
+
   @include tb-screen {
     gap: 30px;
   }
 }
+
 .form__row {
   position: relative;
 }
+
 .form__label {
   @include font-oswald-regular;
   display: block;
+
   @include tb-screen {
     font-size: rem(20);
   }
 }
+
 .form__input,
 .form__textarea {
   -webkit-rtl-ordering: initial;
@@ -49,6 +56,7 @@
   word-spacing: initial;
   writing-mode: initial;
   width: 100%;
+
   @include sm-screen {
     border: vw(1);
     border-radius: vw(5);
@@ -56,6 +64,7 @@
     margin-block-start: vw(10);
     padding: vw(15);
   }
+
   @include tb-screen {
     font-size: rem(16);
     border-width: 1px;
@@ -63,62 +72,78 @@
     margin-block-start: 10px;
     padding: 15px;
   }
+
   &::placeholder {
     @include font-oswald-regular;
     color: $color_gray;
   }
+
   &:focus-visible {
     box-shadow: 0 0 5px 1px $background-color_base;
     outline: none;
     outline-offset: 0;
   }
 }
+
 .form__textarea {
   height: calc(1.6em * 5 + 8vw);
+
   @include tb-screen {
     height: calc(1.6em * 5 + 5vw);
   }
+
   @include pc-screen {
     height: calc(1.6em * 5 + 30px);
   }
 }
+
 .form__button-wrap {
   display: flex;
   justify-content: center;
   margin-block-end: 0;
   margin-inline: 0;
+
   @include sm-screen {
     margin-block-start: vw(40);
   }
+
   @include tb-screen {
     margin-block-start: 30px;
   }
 }
+
 .form__success-message,
 .form__error-message {
   margin: 0;
   opacity: 0;
   position: absolute;
   transition: $transition-default;
+
   @include sm-screen {
     font-size: vw(12);
   }
+
   @include tb-screen {
     font-size: rem(14);
   }
 }
+
 .form__success-message {
   color: $color_success;
+
   &.js-success {
     opacity: 1;
   }
 }
+
 .form__error-message {
   color: $color-error;
+
   &.js-error {
     opacity: 1;
   }
 }
+
 .form__toaster {
   box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
   color: $color_white;
@@ -128,6 +153,7 @@
   transition: all 0.5s ease-out;
   transform: translate3d(100%, 0, 0);
   z-index: 1000;
+
   @include sm-screen {
     border-bottom-left-radius: vw(5);
     border-top-left-radius: vw(5);
@@ -136,15 +162,18 @@
     padding-inline: vw(15);
     top: vw(20);
   }
+
   @include tb-screen {
     font-size: rem(16);
     border-radius: 5px;
     padding: 15px 20px;
   }
+
   &.js-success {
     background-color: $background-color_accent;
     transform: translate3d(0, 0, 0);
   }
+
   &.js-error {
     background-color: $color-error;
     transform: translate3d(0, 0, 0);
