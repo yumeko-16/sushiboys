@@ -12,7 +12,7 @@
   z-index: 1000;
 
   @include sm-screen {
-    padding-block: vw(20);
+    padding: vw(20);
   }
 
   @include tb-screen {
