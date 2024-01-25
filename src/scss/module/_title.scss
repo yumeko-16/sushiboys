@@ -1,12 +1,12 @@
 @use "../module/setting" as *;
 
 .title {
-  display: inline-block;
   @include font-oswald-medium;
-  line-height: 1;
+  line-height: 1.4;
   margin: 0;
   text-align: center;
   width: 100%;
+  word-break: break-all;
 
   @include sm-screen {
     font-size: vw(22);
@@ -23,7 +23,7 @@
 
 .title__link {
   color: $color_base;
-  display: inline-block;
+  display: block;
   text-decoration: none;
   text-transform: uppercase;
 }
