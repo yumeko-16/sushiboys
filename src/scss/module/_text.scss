@@ -8,13 +8,13 @@
     margin-block-start: 2em;
   }
 
-  &--bold {
-    font-weight: 700;
-  }
-
   a {
     color: $color_base;
     cursor: pointer;
     text-decoration: underline;
   }
+}
+
+.text--bold {
+  font-weight: 700;
 }

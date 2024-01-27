@@ -87,7 +87,6 @@ $base-window-width: 375;
 }
 
 @mixin lineHeightCrop($line-height) {
-
   &::before,
   &::after {
     content: "";
@@ -97,11 +96,11 @@ $base-window-width: 375;
   }
 
   &::before {
-    margin-top: calc((1 - #{$line-height}) * .5em);
+    margin-top: calc((1 - #{$line-height}) * 0.5em);
   }
 
   &::after {
-    margin-bottom: calc((1 - #{$line-height}) * .5em);
+    margin-bottom: calc((1 - #{$line-height}) * 0.5em);
   }
 }
 

@@ -1,10 +1,6 @@
 {
-  "semi": true,
   "trailingComma": "none",
   "htmlWhitespaceSensitivity": "ignore",
-  "arrowParens": "avoid",
-  "bracketSameLine": true,
-  "jsxBracketSameLine": false,
   "overrides": [
     {
       "files": "*.js",
@@ -20,7 +16,8 @@
       "files": "*.ejs",
       "options": {
         "parser": "html",
-        "embeddedLanguageFormatting": "off"
+        "embeddedLanguageFormatting": "off",
+        "singleAttributePerLine": true
       }
     }
   ]

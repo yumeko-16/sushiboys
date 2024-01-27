@@ -7,7 +7,7 @@
 }
 
 .catch__text {
-  @include lineHeightCrop(1.8);
+  @include lineHeightCrop(1.4);
   margin: 0;
 
   @include pc-screen {

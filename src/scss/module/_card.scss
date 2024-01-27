@@ -97,10 +97,10 @@
   @include lt-screen {
     height: 170px;
   }
+}
 
-  &--no-image {
-    object-position: center;
-  }
+.card__image--no-image {
+  object-position: center;
 }
 
 .card__title {
