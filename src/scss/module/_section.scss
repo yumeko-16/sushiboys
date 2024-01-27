@@ -31,11 +31,11 @@
   @include lt-screen {
     padding-inline: 40px;
   }
+}
 
-  &--form {
-    @include tb-screen {
-      margin: 0 auto;
-      width: 80%;
-    }
+.section__inner--form {
+  @include tb-screen {
+    margin: 0 auto;
+    width: 80%;
   }
 }
