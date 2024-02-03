@@ -9,14 +9,11 @@
 .section__inner {
   display: flex;
   flex-direction: column;
+  gap: vw(30);
   margin: 0 auto;
   max-width: 1200px;
   padding-block: 0;
-
-  @include sm-screen {
-    gap: vw(30);
-    padding-inline: vw(20);
-  }
+  padding-inline: vw(20);
 
   @include tb-screen {
     gap: 50px;

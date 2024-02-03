@@ -1,12 +1,13 @@
 /** Lower the content by the height of the header */
 export const HeightOfHeader = (() => {
   const heightOfHeader = () => {
-    const HEADER = document.querySelector('[data-header]');
+    const WRAPPER = document.getElementById('wrapper');
+    const HEADER = document.getElementById('header');
     const HEADER_HEIGHT = HEADER.clientHeight;
-    const MAIN = document.querySelector('[data-main]');
-    const HERO = document.querySelector('[data-hero]');
+    const HERO = document.getElementById('hero');
+    console.log(HERO);
 
-    MAIN.style.paddingBlockStart = `${HEADER_HEIGHT}px`;
+    WRAPPER.style.paddingBlockStart = `${HEADER_HEIGHT}px`;
     HERO != null ? (HERO.style.marginBlockStart = `-${HEADER_HEIGHT}px`) : 0;
   };
 

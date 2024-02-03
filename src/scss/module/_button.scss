@@ -6,12 +6,16 @@
   background-color: $background-color_main;
   border-color: initial;
   border-image: initial;
+  border-radius: vw(5);
   border-style: initial;
   border-width: initial;
   color: $color_white;
   cursor: pointer;
   display: block;
+  font-size: vw(16);
   letter-spacing: initial;
+  padding-block: vw(15);
+  padding-inline: vw(25);
   text-align: center;
   text-decoration: none;
   text-indent: initial;
@@ -22,25 +26,16 @@
   word-spacing: initial;
   writing-mode: initial;
 
-  @include sm-screen {
-    border-radius: vw(5);
-    font-size: vw(16);
-    padding-block: vw(15);
-    padding-inline: vw(25);
-  }
-
   @include tb-screen {
-    font-size: rem(20);
     border-radius: 5px;
+    font-size: rem(20);
     padding-block: 15px;
     padding-inline: 70px;
     width: auto;
   }
 
   &:not(:first-of-type) {
-    @include sm-screen {
-      margin-block-end: vw(30);
-    }
+    margin-block-end: vw(30);
 
     @include tb-screen {
       margin-block-end: 0;
@@ -49,19 +44,16 @@
   }
 
   &:hover {
-    opacity: 0.9;
-    transition: 0.1s;
+    opacity: .9;
+    transition: .1s;
   }
 
   &:disabled {
     background-color: rgba(0, 0, 0, .5);
+    border-width: vw(1);
     border-color: $border-color_base;
     border-style: solid;
     color: $color_base;
-
-    @include sm-screen {
-      border: vw(1);
-    }
 
     @include tb-screen {
       border-width: 1px;
@@ -79,11 +71,8 @@
   flex-direction: column-reverse;
   justify-content: center;
   margin-block-end: 0;
+  margin-block-start: vw(30);
   margin-inline: 0;
-
-  @include sm-screen {
-    margin-block-start: vw(30);
-  }
 
   @include tb-screen {
     flex-direction: row;
@@ -93,10 +82,7 @@
 
 .button__icon {
   color: $color_white;
-
-  @include sm-screen {
-    margin-inline-end: vw(10);
-  }
+  margin-inline-end: vw(10);
 
   @include tb-screen {
     margin-inline-end: 10px;

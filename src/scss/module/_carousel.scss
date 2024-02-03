@@ -8,30 +8,23 @@
 
 .carousel__list {
   cursor: grab;
+  gap: vw(20);
   list-style-type: none;
   margin: 0;
   padding-inline-start: 0;
+
+  @include tb-screen {
+    gap: 30px;
+  }
 }
 
 .carousel__card {
   box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
   display: block;
 
-  &:not(:first-of-type) {
-    @include sm-screen {
-      margin-inline-start: vw(20);
-    }
-
-    @include tb-screen {
-      margin-inline-start: 30px;
-    }
-  }
-
   &.swiper-slide {
-    @include sm-screen {
-      height: vw(190);
-      width: vw(190);
-    }
+    height: vw(190);
+    width: vw(190);
 
     @include tb-screen {
       height: 270px;
