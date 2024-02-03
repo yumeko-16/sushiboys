@@ -25,7 +25,10 @@
 </head>
 <body>
   <%- include(localmeta.path + '_inc/components/_googletagmanager'); %>
-  <div class="wrapper">
+  <div
+    id="wrapper"
+    class="wrapper"
+  >
     <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); %>
     <main class="main">
       <%- include(localmeta.path + '_inc/components/_heading', {meta: localmeta}); %>

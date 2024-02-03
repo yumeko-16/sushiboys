@@ -7,38 +7,32 @@
 
 .heading--primary {
   font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  font-size: vw(12);
+  gap: vw(8);
   text-align: center;
-
-  @include sm-screen {
-    font-size: vw(12);
-  }
 
   @include tb-screen {
     font-size: rem(14);
+    gap: 12px;
   }
 
   &::before {
     @include font-oswald-medium;
     content: attr(data-heading);
     display: block;
+    font-size: vw(26);
     text-transform: uppercase;
-
-    @include sm-screen {
-      font-size: vw(26);
-      margin-block-end: 8px;
-    }
 
     @include tb-screen {
       font-size: rem(26);
-      margin-block-end: 12px;
     }
   }
 }
 
 .heading--secondary {
-  @include sm-screen {
-    font-size: vw(26);
-  }
+  font-size: vw(26);
 
   @include tb-screen {
     font-size: rem(48);

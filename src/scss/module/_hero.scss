@@ -6,11 +6,8 @@
   height: 100vh;
   justify-content: center;
   margin: 0 auto;
+  margin-block-start: vw(-60);
   width: 70%;
-
-  @include sm-screen {
-    margin-block-start: vw(-60);
-  }
 
   @include tb-screen {
     margin-block-start: calc(calc(#{rem(-54)} * 1.2 + (-50px)) + calc(#{rem(-20)} * 1.8 + (2px)));

@@ -30,14 +30,11 @@
 
 .card__item {
   background-color: #fff;
+  border-radius: vw(8);
   box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
   display: block;
   overflow: hidden;
   width: 100%;
-
-  @include sm-screen {
-    border-radius: vw(8);
-  }
 
   @include tb-screen {
     border-radius: 8px;
@@ -45,9 +42,7 @@
   }
 
   &:nth-of-type(-n + 3) {
-    @include sm-screen {
-      margin-block-start: vw(20);
-    }
+    margin-block-start: vw(20);
 
     @include tb-screen {
       margin-block-start: 0;
@@ -55,9 +50,7 @@
   }
 
   &:nth-of-type(n + 4) {
-    @include sm-screen {
-      margin-block-start: vw(20);
-    }
+    margin-block-start: vw(20);
 
     @include tb-screen {
       margin-block-start: 25px;
@@ -78,13 +71,10 @@
 
 .card__image {
   display: block;
+  height: vw(200);
   object-fit: cover;
   object-position: 50% 0;
   width: 100%;
-
-  @include sm-screen {
-    height: vw(200);
-  }
 
   @include tb-screen {
     height: 170px;
@@ -105,15 +95,12 @@
 
 .card__title {
   color: $color_base;
+  font-size: vw(16);
   font-weight: 700;
   margin: 0;
   min-height: 82px;
+  padding: vw(15);
   word-break: break-all;
-
-  @include sm-screen {
-    font-size: vw(16);
-    padding: vw(15);
-  }
 
   @include tb-screen {
     font-size: rem(16);

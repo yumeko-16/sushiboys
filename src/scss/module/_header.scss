@@ -5,15 +5,12 @@
   display: flex;
   flex-direction: column;
   left: 0;
+  padding: vw(20);
   position: fixed;
   top: 0;
   transition: $transition-default;
   width: 100%;
   z-index: 1000;
-
-  @include sm-screen {
-    padding: vw(20);
-  }
 
   @include tb-screen {
     padding-block: 20px;

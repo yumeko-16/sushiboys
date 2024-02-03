@@ -2,15 +2,12 @@
 
 .title {
   @include font-oswald-medium;
+  font-size: clamp(#{rem(10)}, #{vw(22)}, #{rem(18)});
   line-height: 1.4;
   margin: 0;
   text-align: center;
   width: 100%;
   word-break: break-all;
-
-  @include sm-screen {
-    font-size: vw(22);
-  }
 
   @include tb-screen {
     font-size: rem(22);
