@@ -1,21 +1,25 @@
 @use "../module/setting" as *;
 
 .heading {
-  line-height: 1.4;
+  line-height: 1.2;
   margin: 0;
+  word-break: break-all;
+
+  @include tb-screen {
+    line-height: 1.4;
+  }
 }
 
 .heading--primary {
-  font-weight: 400;
   display: flex;
   flex-direction: column;
   font-size: vw(12);
-  gap: vw(8);
+  gap: vw(4);
   text-align: center;
 
   @include tb-screen {
     font-size: rem(14);
-    gap: 12px;
+    gap: 2px;
   }
 
   &::before {
