@@ -4,7 +4,7 @@
   color: $color_base !important;
   display: none;
   @include font-oswald-medium;
-  line-height: 1;
+  line-height: 1.2;
   width: 100%;
 
   @include pc-screen {
