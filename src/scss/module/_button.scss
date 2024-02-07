@@ -91,11 +91,8 @@
 
 .button__text {
   @include font-oswald-regular;
+  font-size: vw(16);
   color: $color_white;
-
-  @include sm-screen {
-    font-size: vw(16);
-  }
 
   @include tb-screen {
     font-size: rem(16);
