@@ -37,10 +37,10 @@
 }
 
 .article__title {
-  margin-block-end: 0;
-  margin-inline: 0;
   font-size: vw(24);
+  margin-block-end: 0;
   margin-block-start: vw(30);
+  margin-inline: 0;
 
   @include tb-screen {
     font-size: rem(28);
@@ -65,7 +65,7 @@
   padding: initial;
   gap: vw(15);
 
-   @include tb-screen {
+  @include tb-screen {
     gap: 30px;
   }
 }
