@@ -43,13 +43,13 @@
     }
   }
 
-  &:hover {
-    opacity: .9;
-    transition: .1s;
+  @include hover {
+    opacity: 0.9;
+    transition: 0.1s;
   }
 
   &:disabled {
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-width: vw(1);
     border-color: $border-color_base;
     border-style: solid;
@@ -59,7 +59,7 @@
       border-width: 1px;
     }
 
-    &>.button__icon {
+    & > .button__icon {
       color: $color_base;
     }
   }

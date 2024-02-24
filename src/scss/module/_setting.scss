@@ -104,6 +104,14 @@ $base-window-width: 375;
   }
 }
 
+@mixin hover {
+  @media (hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
 %extrude {
   margin: 0 calc(50% - 50vw);
 }
