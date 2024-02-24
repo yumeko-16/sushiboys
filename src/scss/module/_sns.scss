@@ -27,15 +27,15 @@
   display: inline-block;
   position: relative;
   text-decoration: none;
-  transition: .5s;
+  transition: 0.5s;
 
   @include pc-screen {
     height: rem(40);
     width: rem(40);
   }
 
-  &:hover {
-    opacity: .8;
+  @include hover {
+    opacity: 0.8;
   }
 
   i {

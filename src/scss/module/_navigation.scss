@@ -31,7 +31,7 @@
   text-decoration: none;
   text-transform: uppercase;
 
-  &:hover {
+  @include hover {
     opacity: 0.8;
   }
 

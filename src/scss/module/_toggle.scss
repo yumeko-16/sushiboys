@@ -4,7 +4,7 @@
   display: none;
 
   &:checked {
-    &~.toggle-menu {
+    & ~ .toggle-menu {
       display: block;
       transform: translate3d(0, 0, 0);
     }
@@ -123,7 +123,7 @@
 
   @include tb-screen {
     font-size: rem(42);
-    padding-block: .35714285714285715em;
+    padding-block: 0.35714285714285715em;
   }
 }
 
@@ -169,7 +169,7 @@
   height: vw(50);
   position: relative;
   text-decoration: none;
-  transition: .5s;
+  transition: 0.5s;
   width: vw(50);
 
   @include tb-screen {
@@ -178,7 +178,7 @@
     width: 1.1904761904761905em;
   }
 
-  &:hover {
+  @include hover {
     opacity: 0.8;
   }
 
