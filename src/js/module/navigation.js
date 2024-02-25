@@ -1,22 +1,23 @@
 /** Toggle the hamburger menu. */
 export const HumbergerToggle = (() => {
-  const HTML = document.querySelector('html');
+  const BODY = document.body;
   const HEADER = document.getElementById('header');
   const TRIGGER = document.getElementById('toggle-trigger');
-  let scrollY = null;
 
-  if (!HEADER || !TRIGGER) {
+  if (!BODY || !HEADER || !TRIGGER) {
     return;
   }
+
+  let scrollY = null;
 
   function handleToggleChange(e) {
     if (e.target.checked) {
       scrollY = window.scrollY;
       setTimeout(() => {
-        HTML.classList.add('js-scroll-prevent');
+        BODY.classList.add('js-scroll-prevent');
       }, 300);
     } else {
-      HTML.classList.remove('js-scroll-prevent');
+      BODY.classList.remove('js-scroll-prevent');
       window.scrollTo(0, scrollY);
       scrollY = null;
       setTimeout(() => {

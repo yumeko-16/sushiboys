@@ -140,13 +140,6 @@ $base-window-width: 375;
 
 html {
   height: -webkit-fill-available;
-
-  &.js-scroll-prevent {
-    height: 100%;
-    position: fixed;
-    width: 100%;
-    z-index: -1;
-  }
 }
 
 body {
@@ -165,5 +158,11 @@ body {
 
   @include tb-screen {
     font-size: rem(16);
+  }
+
+  &.js-scroll-prevent {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
   }
 }
