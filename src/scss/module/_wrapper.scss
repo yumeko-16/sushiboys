@@ -4,16 +4,13 @@
   height: 100%;
   min-height: 100vh;
   padding-block-end: calc(calc(#{vw(14)}) + calc(#{vw(40)}));
-  // padding-block-start: calc(calc(#{vw(22)}) * 1.4 + calc(#{vw(40)}));
   position: relative;
 
   @include tb-screen {
     padding-block-end: calc(calc(#{rem(14)}) + 40px);
-    // padding-block-start: calc(calc(#{rem(22)}) + 40px);
   }
 
   @include pc-screen {
     padding-block-end: calc(calc(#{rem(40)}) + calc(#{rem(14.02)}) + 60px);
-    // padding-block-start: calc(calc(#{rem(54)}) + calc(#{rem(27)}) + 82px);
   }
 }
