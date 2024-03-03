@@ -1,52 +1,56 @@
+<%_ if (meta.pageid !== `home`) { _%>
 <header
   id="header"
   class="header"
 >
-  <h1 class="title">
-    <a
-      class="title__link"
-      href="/"
-    >Sushiboys</a>
-  </h1>
-  <%_ const currentClass = ` current`; _%>
-  <nav class="navigation">
-    <ul class="navigation__list">
-      <li>
-        <a
-          class="navigation__anchor<%- meta.pageid == `home` ? currentClass : `` %>"
-          href="/"
-        >Home</a>
-      </li>
-      <li>
-        <a
-          class="navigation__anchor<%- meta.pageid == `news` ? currentClass : `` %>"
-          href="/news/"
-        >News</a>
-      </li>
-      <li>
-        <a
-          class="navigation__anchor<%- meta.pageid == `discography` ? currentClass : `` %>"
-          href="/discography/"
-        >Discography</a>
-      </li>
-      <li>
-        <a
-          class="navigation__anchor<%- meta.pageid == `goods` ? currentClass : `` %>"
-          href="/goods/"
-        >Goods</a>
-      </li>
-      <li>
-        <a
-          class="navigation__anchor<%- meta.pageid == `picture` ? currentClass : `` %>"
-          href="/picture/look/summer-vacation/"
-        >Picture</a>
-      </li>
-      <li>
-        <a
-          class="navigation__anchor<%- meta.pageid == `contact` ? currentClass : `` %>"
-          href="/contact/"
-        >Contact</a>
-      </li>
-    </ul>
-  </nav>
+  <div class="header__inner">
+    <h1 class="title">
+      <a
+        class="title__link"
+        href="/"
+      >Sushiboys</a>
+    </h1>
+    <%_ const currentClass = ` current`; _%>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li>
+          <a
+            class="navigation__anchor<%- meta.pageid == `home` ? currentClass : `` %>"
+            href="/"
+          >Home</a>
+        </li>
+        <li>
+          <a
+            class="navigation__anchor<%- meta.pageid == `news` ? currentClass : `` %>"
+            href="/news/"
+          >News</a>
+        </li>
+        <li>
+          <a
+            class="navigation__anchor<%- meta.pageid == `discography` ? currentClass : `` %>"
+            href="/discography/"
+          >Discography</a>
+        </li>
+        <li>
+          <a
+            class="navigation__anchor<%- meta.pageid == `goods` ? currentClass : `` %>"
+            href="/goods/"
+          >Goods</a>
+        </li>
+        <li>
+          <a
+            class="navigation__anchor<%- meta.pageid == `picture` ? currentClass : `` %>"
+            href="/picture/look/summer-vacation/"
+          >Picture</a>
+        </li>
+        <li>
+          <a
+            class="navigation__anchor<%- meta.pageid == `contact` ? currentClass : `` %>"
+            href="/contact/"
+          >Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
 </header>
+<%_ } _%>

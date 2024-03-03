@@ -1,25 +1,18 @@
 @use "../module/setting" as *;
 
 .header {
-  background-color: $background-color_base;
+  &.is-hide {
+    display: none;
+  }
+}
+
+.header__inner {
   display: flex;
   flex-direction: column;
   left: 0;
-  padding: vw(20);
+  padding-inline: vw(20);
   top: 0;
   transition: $transition-default;
   width: 100%;
   z-index: 1000;
-
-  @include tb-screen {
-    padding-block: 20px;
-  }
-
-  @include pc-screen {
-    gap: 35px;
-  }
-
-  &.is-hide {
-    display: none;
-  }
 }

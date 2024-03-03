@@ -5,12 +5,14 @@
   font-size: clamp(#{rem(10)}, #{vw(22)}, #{rem(18)});
   line-height: 1.4;
   margin: 0;
+  padding-block: vw(20);
   text-align: center;
   width: 100%;
   word-break: break-all;
 
   @include tb-screen {
     font-size: rem(22);
+    padding-block: 20px;
   }
 
   @include pc-screen {

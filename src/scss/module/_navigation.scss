@@ -5,7 +5,12 @@
   display: none;
   @include font-oswald-medium;
   line-height: 1.2;
+  padding-block: vw(20);
   width: 100%;
+
+  @include tb-screen {
+    padding-block: 20px;
+  }
 
   @include pc-screen {
     display: block;
