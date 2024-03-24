@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%_
+    const localmeta = {
+      title: `🍣2024.6.8（Sat.)『MIXIMAX』出演決定🍣 | SUSHIBOYS`,
+      description: `6月8日（土）北海道にてイベント『MIXIMAX』へ出演いたします🍣 北海道はかなり久しぶりなのでぜひ🍣`,
+      url: 'https://sushiboys350.com/news/post057/',
+      pageid: 'news',
+      index: 57 - 1,
+      path: '../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/news-detail.css',
+      js: '/js/newsDetail.js'
+    };
+  _%>
+  <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + `_data/_news`); %>
+  <%_ newsData = news(); _%>
+</head>
+<body>
+  <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
+  <div
+    id="wrapper"
+    class="wrapper"
+  >
+    <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
+    <main class="main">
+      <%- include(localmeta.path + `_inc/components/_heading`, {meta: localmeta}); %>
+      <%- include(localmeta.path + `_inc/components/news/post/_post`, {meta: localmeta, newsData: newsData}); %>
+    </main>
+    <%- include(localmeta.path + '_inc/components/_toggle'); %>
+    <%- include(localmeta.path + `_inc/components/_footer`); %>
+  </div>
+</body>
+</html>
