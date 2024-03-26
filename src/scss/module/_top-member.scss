@@ -11,7 +11,7 @@
 .top-member__image-wrap {
   margin: 0;
 
-  &:not(:first-of-type) {
+  * + * {
     margin-block-start: vw(15);
 
     @include tb-screen {

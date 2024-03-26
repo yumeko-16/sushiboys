@@ -34,15 +34,6 @@
     width: auto;
   }
 
-  &:not(:first-of-type) {
-    margin-block-end: vw(30);
-
-    @include tb-screen {
-      margin-block-end: 0;
-      margin-inline-start: 30px;
-    }
-  }
-
   @include hover {
     opacity: 0.9;
     transition: 0.1s;
@@ -61,6 +52,15 @@
 
     & > .button__icon {
       color: $color_base;
+    }
+  }
+
+  * + *{
+    margin-block-end: vw(30);
+
+    @include tb-screen {
+      margin-block-end: 0;
+      margin-inline-start: 30px;
     }
   }
 }
