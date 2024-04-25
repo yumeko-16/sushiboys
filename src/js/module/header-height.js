@@ -1,4 +1,6 @@
-/** Lower the content by the height of the header */
+/**
+ * Lower the content by the height of the header
+ */
 export const HeightOfHeader = (() => {
   const heightOfHeader = () => {
     const WRAPPER = document.getElementById('wrapper');

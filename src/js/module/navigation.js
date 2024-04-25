@@ -1,4 +1,6 @@
-/** Toggle the hamburger menu. */
+/**
+ * Toggle the hamburger menu.
+ */
 export const HumbergerToggle = (() => {
   const BODY = document.body;
   const HEADER = document.getElementById('header');
