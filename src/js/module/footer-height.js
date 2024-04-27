@@ -1,4 +1,6 @@
-/** Raise content by footer height */
+/**
+ * Raise content by footer height
+ */
 export const HeightOfFooter = (() => {
   const heightOfFooter = () => {
     const WRAPPER = document.querySelector('[data-wrapper]');

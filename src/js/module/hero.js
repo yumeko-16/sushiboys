@@ -1,4 +1,6 @@
-/** Display a random hero image when the page loads. */
+/**
+ * Display a random hero image when the page loads.
+ */
 export const RandomHero = (() => {
   window.addEventListener('load', () => {
     const imageArea = document.getElementById('hero');
