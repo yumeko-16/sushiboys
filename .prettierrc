@@ -1,6 +1,6 @@
 {
   "trailingComma": "none",
-  "htmlWhitespaceSensitivity": "ignore",
+  "htmlWhitespaceSensitivity": "strict",
   "overrides": [
     {
       "files": "*.js",
