@@ -2,24 +2,24 @@
 <html lang="ja">
 <head>
   <%_
-  const localmeta = {
-    title: `GARI | SUSHIBOYS`,
-    description: `軽自動車 なんでもできる ダンボルギーニ`,
-    url: `https://sushiboys350.com/discography/record/gari.html`,
-    pageid: `discography`,
-    type: `record`,
-    index: 0,
-    path: `../../`
-  };
-  const localogp = {
-    title: localmeta.title,
-    description: localmeta.description,
-    url: localmeta.url
-  };
-  const localfile = {
-    css: `/css/discography-detail.css`,
-    js: `/js/discographyDetail.js`
-  };
+    const localmeta = {
+      title: `GARI | SUSHIBOYS`,
+      description: `軽自動車 なんでもできる ダンボルギーニ`,
+      url: `https://sushiboys350.com/discography/record/gari.html`,
+      pageid: `discography`,
+      type: `record`,
+      index: 0,
+      path: `../../`
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: `/css/discography-detail.css`,
+      js: `/js/discographyDetail.js`
+    };
   _%>
   <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); %>
   <%- include(localmeta.path + `_data/_discography`); %>
