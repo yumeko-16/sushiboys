@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <%_
+    const localmeta = {
+      title: `🍙New Single おにぎり配信開始‼ SUSHIBOYSがおにぎりをテーマとした楽曲『おにぎり』を納品した。🍙 | SUSHIBOYS`,
+      description: `SUSHIBOYSがおにぎりをテーマとした楽曲『おにぎり』を納品した。今作はおにぎりを多角的な視点から考察しており、新生活に不安を抱く若者への応援ソングとなっている。なおヤマザキ春のパン祭りとは一切関係はない。メンバーのfarmhouseはプロモーションのため自身の汗から抽出した塩で握ったおにぎりを食し体調不良でのレコーディングとなったが、それを感じさせない力強いバースを蹴り上げている。発泡スチロール製のおにぎりのようなものが坂道を下る映像は物流の2024年問題を風刺しているかのようだ。ソウルフルなビートに乗せられた彼らのメッセージ。その塩加減は絶妙だ。`,
+      url: 'https://sushiboys350.com/news/post063/',
+      pageid: 'news',
+      index: 63 - 1,
+      path: '../../'
+    };
+    const localogp = {
+      title: localmeta.title,
+      description: localmeta.description,
+      url: localmeta.url
+    };
+    const localfile = {
+      css: '/css/news-detail.css',
+      js: '/js/newsDetail.js'
+    };
+  _%>
+  <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); %>
+  <%- include(localmeta.path + `_data/_news`); %>
+  <%_ newsData = news(); _%>
+</head>
+<body>
+  <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
+  <div
+    id="wrapper"
+    class="wrapper"
+  >
+    <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
+    <main class="main">
+      <%- include(localmeta.path + `_inc/components/_heading`, {meta: localmeta}); %>
+      <%- include(localmeta.path + `_inc/components/news/post/_post`, {meta: localmeta, newsData: newsData}); %>
+    </main>
+    <%- include(localmeta.path + '_inc/components/_toggle'); %>
+    <%- include(localmeta.path + `_inc/components/_footer`); %>
+  </div>
+</body>
+</html>
