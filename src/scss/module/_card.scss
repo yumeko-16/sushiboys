@@ -1,50 +1,24 @@
 @use "../module/setting" as *;
 
 .card {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  @include tb-screen {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding-inline: 0;
-  }
-
-  &::before,
-  &::after {
-    @include tb-screen {
-      content: "";
-      display: block;
-      height: 0;
-      width: calc(100% / 3 - 15px);
-    }
-  }
-
-  &::before {
-    order: 1;
-  }
-}
-
-.card__item {
   background-color: #fff;
+  border-color: #000;
+  border-style: solid;
+  border-width: vw(1);
   border-radius: vw(8);
-  box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
   display: block;
   overflow: hidden;
+  text-decoration: none;
   width: 100%;
 
   @include tb-screen {
+    border-width: 1px;
     border-radius: 8px;
-    width: calc(100% / 3 - 15px);
   }
 
   &:nth-of-type(-n + 3) {
-    margin-block-start: vw(20);
-
     @include tb-screen {
+      height: 100%;
       margin-block-start: 0;
     }
   }
@@ -62,48 +36,44 @@
   }
 }
 
-.card__anchor {
+.card__link {
   cursor: pointer;
   display: block;
   height: 100%;
   text-decoration: none;
 }
 
-.card__image {
+.card__thumbnail {
   display: block;
-  height: vw(200);
-  object-fit: cover;
-  object-position: 50% 0;
+  height: vw(260);
+  object-fit: contain;
   width: 100%;
 
   @include tb-screen {
-    height: 170px;
-  }
-
-  @include pc-screen {
-    height: 270px;
-  }
-
-  @include lt-screen {
-    height: 170px;
+    height: 260px;
   }
 }
 
-.card__image--no-image {
+.card__thumbnail--no-image {
   object-position: center;
 }
 
-.card__title {
+.card__body {
   color: $color_base;
+  padding: vw(20);
+  word-break: break-all;
+  min-height: 82px;
+
+  @include tb-screen {
+    padding: 30px 15px;
+  }
+}
+
+.card__title {
   font-size: vw(16);
   font-weight: 700;
-  margin: 0;
-  min-height: 82px;
-  padding: vw(15);
-  word-break: break-all;
 
   @include tb-screen {
     font-size: rem(16);
-    padding: 15px;
   }
 }
