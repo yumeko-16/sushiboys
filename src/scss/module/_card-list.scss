@@ -1,0 +1,38 @@
+@use "../module/setting" as *;
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: vw(30);
+
+  @include tb-screen {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  &::before,
+  &::after {
+    @include tb-screen {
+      content: "";
+      display: block;
+      height: 0;
+      width: calc(100% / 3 - 15px);
+    }
+  }
+
+  &::before {
+    order: 1;
+  }
+}
+
+.card-list__item {
+  @include tb-screen {
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include pc-screen {
+    width: calc((100% - 60px) / 3);
+  }
+}
