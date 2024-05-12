@@ -70,17 +70,20 @@
   }
 }
 
-.article__pictures-frame {
-  margin: initial;
-}
-
 .article__image-wrap {
   margin: 2em 0 0;
 }
 
 .article__image {
+  border-color: #000;
+  border-style: solid;
+  border-width: vw(1);
   display: block;
   width: 100%;
+
+  @include tb-screen {
+    border-width: 1px;
+  }
 }
 
 .article__caption-heading {
