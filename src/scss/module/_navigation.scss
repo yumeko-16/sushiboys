@@ -1,7 +1,7 @@
 @use "../module/setting" as *;
 
 .navigation {
-  color: $color_base !important;
+  color: $main-color !important;
   display: none;
   @include font-oswald-medium;
   line-height: 1.2;
@@ -37,7 +37,7 @@
 
   &.current {
     @include pc-screen {
-      border-block-end: 2px solid $border-color_base;
+      border-block-end: 2px solid $main-color;
       padding-block-end: 5px;
     }
   }

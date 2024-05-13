@@ -32,12 +32,12 @@
 .form__textarea {
   -webkit-rtl-ordering: initial;
   appearance: initial;
-  background-color: $color_white;
-  border-color: $border-color_base;
+  background-color: #fff;
+  border-color: $main-color;
   border-radius: vw(5);
   border-style: solid;
   border-width: vw(1);
-  color: $color_base;
+  color: $main-color;
   column-count: initial;
   cursor: initial;
   display: block;
@@ -69,11 +69,11 @@
 
   &::placeholder {
     @include font-oswald-regular;
-    color: $color_gray;
+    color: $placeholder-color;
   }
 
   &:focus-visible {
-    box-shadow: 0 0 5px 1px $background-color_base;
+    box-shadow: 0 0 5px 1px $base-color;
     outline: none;
     outline-offset: 0;
   }
@@ -117,7 +117,7 @@
 }
 
 .form__success-message {
-  color: $color_success;
+  color: $success-color;
 
   &.js-success {
     opacity: 1;
@@ -125,7 +125,7 @@
 }
 
 .form__error-message {
-  color: $color-error;
+  color: $error-color;
 
   &.js-error {
     opacity: 1;
@@ -136,7 +136,7 @@
   border-bottom-left-radius: vw(5);
   border-top-left-radius: vw(5);
   box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
-  color: $color_white;
+  color: #fff;
   display: inline-block;
   font-size: vw(12);
   padding-block: vw(10);
@@ -155,12 +155,12 @@
   }
 
   &.js-success {
-    background-color: $background-color_accent;
+    background-color: $success-color;
     transform: translate3d(0, 0, 0);
   }
 
   &.js-error {
-    background-color: $color-error;
+    background-color: $error-color;
     transform: translate3d(0, 0, 0);
   }
 }
