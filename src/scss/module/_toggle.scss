@@ -11,7 +11,7 @@
 
     // & ~ .toggle-button {
     //   .toggle-button__bar {
-    //     background-color: $color_white;
+    //     background-color: #fff;
     //     &:first-of-type {
     //       transform: translate(-50%, 0) rotate(45deg);
     //       transform-origin: left bottom;
@@ -30,7 +30,7 @@
 
 .toggle-button {
   appearance: none;
-  background-color: $background-color_base;
+  background-color: $base-color;
   border-radius: 50%;
   bottom: vw(30);
   box-shadow: 0 0 10px rgb(0 0 0 / 15%);
@@ -54,7 +54,7 @@
 }
 
 .toggle-button__bar {
-  background-color: $background-color_main;
+  background-color: $main-color;
   display: block;
   height: vw(2);
   left: 50%;
@@ -128,7 +128,7 @@
 }
 
 .toggle-menu__anchor {
-  color: $color_white;
+  color: #fff;
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;

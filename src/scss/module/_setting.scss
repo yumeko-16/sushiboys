@@ -3,17 +3,9 @@
 /* colors */
 $base-color: #fff700;
 $main-color: #171717;
-
-$background-color_base: #fff700;
-$background-color_main: #171717;
-$background-color_accent: #00be28;
-$border-color_base: #171717;
-$color_base: #171717;
-$color_white: #fff;
-$color_gray: #ccc;
-$color_success: #00be28;
-$color_error: #ff6753;
-$main: #171717;
+$success-color: #00be28;
+$error-color: #ff6753;
+$placeholder-color: #ccc;
 
 /* base font size */
 $base-font-size: 16;
@@ -147,8 +139,8 @@ html {
 
 body {
   @include font-default;
-  color: $color_base;
-  background-color: $background-color_base;
+  color: $main-color;
+  background-color: $base-color;
   min-height: 100vh;
   min-height: -webkit-fill-available;
   letter-spacing: 0.05em;

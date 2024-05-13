@@ -1,7 +1,7 @@
 @use "../module/setting" as *;
 
 .header {
-  background-color: $background-color_base;
+  background-color: $base-color;
   display: flex;
   flex-direction: column;
   left: 0;
