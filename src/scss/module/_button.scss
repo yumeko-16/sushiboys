@@ -3,13 +3,13 @@
 .button {
   align-items: center;
   appearance: initial;
-  background-color: $background-color_main;
+  background-color: $main-color;
   border-color: initial;
   border-image: initial;
   border-radius: vw(5);
   border-style: initial;
   border-width: initial;
-  color: $color_white;
+  color: #fff;
   cursor: pointer;
   display: flex;
   font-size: vw(16);
@@ -45,16 +45,16 @@
   &:disabled {
     background-color: rgba(0, 0, 0, 0.5);
     border-width: vw(1);
-    border-color: $border-color_base;
+    border-color: $main-color;
     border-style: solid;
-    color: $color_base;
+    color: $main-color;
 
     @include tb-screen {
       border-width: 1px;
     }
 
     & > .button__icon {
-      color: $color_base;
+      color: $main-color;
     }
   }
 }
@@ -75,13 +75,13 @@
 }
 
 .button__icon {
-  color: $color_white;
+  color: #fff;
 }
 
 .button__text {
   @include font-oswald-regular;
   font-size: vw(16);
-  color: $color_white;
+  color: #fff;
 
   @include tb-screen {
     font-size: rem(16);
