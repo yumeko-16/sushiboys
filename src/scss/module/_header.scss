@@ -11,11 +11,16 @@
   width: 100%;
   z-index: 1000;
 
+  @include sm-screen {
+    display: none;
+  }
+
   @include tb-screen {
     padding-block: 20px;
   }
 
   @include pc-screen {
+    display: block;
     gap: 35px;
   }
 
