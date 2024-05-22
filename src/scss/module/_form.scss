@@ -8,7 +8,10 @@
 .form__contents {
   display: flex;
   flex-direction: column;
-  gap: vw(30);
+
+  @include sm-screen {
+    gap: vw(30);
+  }
 
   @include tb-screen {
     gap: 30px;
@@ -34,19 +37,14 @@
   appearance: initial;
   background-color: #fff;
   border-color: $main-color;
-  border-radius: vw(5);
   border-style: solid;
-  border-width: vw(1);
   color: $main-color;
   column-count: initial;
   cursor: initial;
   display: block;
   flex-direction: initial;
-  font-size: vw(16);
   letter-spacing: 0.1em;
   line-height: 1.6;
-  margin-block-start: vw(10);
-  padding: vw(15);
   overflow-wrap: initial;
   resize: initial;
   text-align: initial;
@@ -58,6 +56,14 @@
   word-spacing: initial;
   writing-mode: initial;
   width: 100%;
+
+  @include sm-screen {
+    border-radius: vw(5);
+    border-width: vw(1);
+    font-size: vw(16);
+    margin-block-start: vw(10);
+    padding: vw(15);
+  }
 
   @include tb-screen {
     font-size: rem(16);
@@ -80,7 +86,9 @@
 }
 
 .form__textarea {
-  height: calc(1.6em * 5 + 8vw);
+  @include sm-screen {
+    height: calc(1.6em * 5 + 8vw);
+  }
 
   @include tb-screen {
     height: calc(1.6em * 5 + 5vw);
@@ -95,8 +103,11 @@
   display: flex;
   justify-content: center;
   margin-block-end: 0;
-  margin-block-start: vw(40);
   margin-inline: 0;
+
+  @include sm-screen {
+    margin-block-start: vw(40);
+  }
 
   @include tb-screen {
     margin-block-start: 30px;
@@ -105,11 +116,14 @@
 
 .form__success-message,
 .form__error-message {
-  font-size: vw(12);
   margin: 0;
   opacity: 0;
   position: absolute;
   transition: $transition-default;
+
+  @include sm-screen {
+    font-size: vw(12);
+  }
 
   @include tb-screen {
     font-size: rem(14);
@@ -133,20 +147,22 @@
 }
 
 .form__toaster {
-  border-bottom-left-radius: vw(5);
-  border-top-left-radius: vw(5);
   box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
   color: #fff;
   display: inline-block;
-  font-size: vw(12);
-  padding-block: vw(10);
-  padding-inline: vw(15);
   position: fixed;
   right: 0;
   transition: all 0.5s ease-out;
   transform: translate3d(100%, 0, 0);
-  top: vw(20);
   z-index: 1000;
+
+  @include sm-screen {
+    border-bottom-left-radius: vw(5);
+    border-top-left-radius: vw(5);
+    font-size: vw(12);
+    padding: vw(10) vw(15);
+    top: vw(20);
+  }
 
   @include tb-screen {
     font-size: rem(16);

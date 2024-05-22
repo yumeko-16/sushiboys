@@ -4,12 +4,15 @@
   background-color: #fff;
   border-color: #000;
   border-style: solid;
-  border-width: vw(1);
-  border-radius: vw(8);
   display: block;
   overflow: hidden;
   text-decoration: none;
   width: 100%;
+
+  @include sm-screen {
+    border-width: vw(1);
+    border-radius: vw(8);
+  }
 
   @include tb-screen {
     border-width: 1px;
@@ -45,9 +48,12 @@
 
 .card__thumbnail {
   display: block;
-  height: vw(260);
   object-fit: contain;
   width: 100%;
+
+  @include sm-screen {
+    height: vw(260);
+  }
 
   @include tb-screen {
     height: 260px;
@@ -60,9 +66,12 @@
 
 .card__body {
   color: $main-color;
-  padding: vw(20);
   word-break: break-all;
   min-height: 82px;
+
+  @include sm-screen {
+    padding: vw(20);
+  }
 
   @include tb-screen {
     padding: 30px 15px;
@@ -70,8 +79,11 @@
 }
 
 .card__title {
-  font-size: vw(16);
   font-weight: 700;
+
+  @include sm-screen {
+    font-size: vw(16);
+  }
 
   @include tb-screen {
     font-size: rem(16);

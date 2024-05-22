@@ -2,25 +2,25 @@
 
 .navigation {
   color: $main-color !important;
-  display: none;
   @include font-oswald-medium;
   line-height: 1.2;
   width: 100%;
 
-  @include pc-screen {
-    display: block;
-    font-size: rem(27);
+  @include sm-screen {
+    display: none;
+  }
+
+  @include tb-screen {
+    font-size: rem(24);
   }
 }
 
 .navigation__list {
+  @extend %list-reset;
   display: flex;
   justify-content: center;
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
 
-  @include pc-screen {
+  @include tb-screen {
     gap: 30px;
   }
 }
@@ -28,6 +28,7 @@
 .navigation__anchor {
   color: inherit;
   display: inline-block;
+  position: relative;
   text-decoration: none;
   text-transform: uppercase;
 
@@ -36,9 +37,15 @@
   }
 
   &.current {
-    @include pc-screen {
-      border-block-end: 2px solid $main-color;
-      padding-block-end: 5px;
+    &::after {
+      @include tb-screen {
+        border-bottom: 2px solid $main-color;
+        bottom: -5px;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+      }
     }
   }
 }

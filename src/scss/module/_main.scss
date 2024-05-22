@@ -3,9 +3,12 @@
 .main {
   display: flex;
   flex-direction: column;
-  gap: vw(30);
   overflow: hidden;
-  padding-block-end: vw(60);
+
+  @include sm-screen {
+    gap: vw(30);
+    padding-block-end: vw(60);
+  }
 
   @include tb-screen {
     gap: 40px;

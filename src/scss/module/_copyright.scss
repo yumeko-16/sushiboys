@@ -1,14 +1,17 @@
 @use "../module/setting" as *;
 
 .copyright {
+  @extend %margin-reset;
   color: #fff;
   @include font-oswald-regular;
-  font-size: vw(14);
   line-height: 1.2;
   @include lineHeightCrop(1.2);
-  margin: 0;
   text-align: center;
   text-transform: uppercase;
+
+  @include sm-screen {
+    font-size: vw(14);
+  }
 
   @include tb-screen {
     font-size: rem(14);

@@ -1,9 +1,13 @@
 @use "../module/setting" as *;
 
 .card-list {
+  @extend %list-reset;
   display: flex;
   flex-direction: column;
-  row-gap: vw(30);
+
+  @include sm-screen {
+    row-gap: vw(30);
+  }
 
   @include tb-screen {
     flex-direction: row;
