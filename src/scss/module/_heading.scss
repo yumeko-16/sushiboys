@@ -13,9 +13,12 @@
 .heading--primary {
   display: flex;
   flex-direction: column;
-  font-size: vw(12);
-  gap: vw(4);
   text-align: center;
+
+  @include sm-screen {
+    font-size: vw(12);
+    gap: vw(4);
+  }
 
   @include tb-screen {
     font-size: rem(14);
@@ -26,8 +29,11 @@
     @include font-oswald-medium;
     content: attr(data-heading);
     display: block;
-    font-size: vw(26);
     text-transform: uppercase;
+
+    @include sm-screen {
+      font-size: vw(26);
+    }
 
     @include tb-screen {
       font-size: rem(26);
@@ -36,7 +42,9 @@
 }
 
 .heading--secondary {
-  font-size: vw(26);
+  @include sm-screen {
+    font-size: vw(26);
+  }
 
   @include tb-screen {
     font-size: rem(48);

@@ -3,8 +3,11 @@
 .wrapper {
   height: 100%;
   min-height: 100vh;
-  padding-block-end: calc(calc(#{vw(14)}) + calc(#{vw(40)}));
   position: relative;
+
+  @include sm-screen {
+    padding-block-end: calc(calc(#{vw(14)}) + calc(#{vw(40)}));
+  }
 
   @include tb-screen {
     padding-block-end: calc(calc(#{rem(14)}) + 40px);

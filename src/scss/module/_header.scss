@@ -5,23 +5,19 @@
   display: flex;
   flex-direction: column;
   left: 0;
-  padding: vw(20);
   top: 0;
   transition: $transition-default;
   width: 100%;
   z-index: 1000;
 
   @include sm-screen {
-    display: none;
+    border-bottom: 1px solid $main-color;
+    padding: 15px;
   }
 
   @include tb-screen {
-    padding-block: 20px;
-  }
-
-  @include pc-screen {
-    display: block;
-    gap: 35px;
+    gap: 20px;
+    padding: 20px;
   }
 
   &.is-hide {

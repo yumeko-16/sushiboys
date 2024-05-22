@@ -7,11 +7,12 @@
 }
 
 .carousel__list {
+  @extend %list-reset;
   cursor: grab;
-  gap: vw(20);
-  list-style-type: none;
-  margin: 0;
-  padding-inline-start: 0;
+
+  @include sm-screen {
+    gap: vw(20);
+  }
 
   @include tb-screen {
     gap: 30px;
@@ -22,8 +23,10 @@
   display: block;
 
   &.swiper-slide {
-    height: vw(190);
-    width: vw(190);
+    @include sm-screen {
+      height: vw(190);
+      width: vw(190);
+    }
 
     @include tb-screen {
       height: 270px;
@@ -36,11 +39,14 @@
   background-color: #fff;
   border-color: #000;
   border-style: solid;
-  border-width: vw(1);
   display: block;
   height: 100%;
   object-fit: cover;
   width: 100%;
+
+  @include sm-screen {
+    border-width: vw(1);
+  }
 
   @include tb-screen {
     border-width: 1px;
