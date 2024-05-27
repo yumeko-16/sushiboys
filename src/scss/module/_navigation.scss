@@ -1,9 +1,10 @@
 @use "../module/setting" as *;
 
 .navigation {
-  color: $main-color !important;
+  color: $main-color;
   @include font-oswald-medium;
   line-height: 1.2;
+  text-transform: uppercase;
   width: 100%;
 
   @include sm-screen {
@@ -11,7 +12,8 @@
   }
 
   @include tb-screen {
-    font-size: rem(24);
+    font-size: rem(22);
+    font-size: clamp(#{rem(22)}, #{vw-tb(22)}, #{rem(26)});
   }
 }
 
@@ -21,7 +23,7 @@
   justify-content: center;
 
   @include tb-screen {
-    gap: 30px;
+    gap: clamp(25px, #{vw-tb(25)}, 35px);
   }
 }
 
@@ -30,7 +32,6 @@
   display: inline-block;
   position: relative;
   text-decoration: none;
-  text-transform: uppercase;
 
   @include hover {
     opacity: 0.8;
