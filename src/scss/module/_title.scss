@@ -1,29 +1,31 @@
 @use "../module/setting" as *;
 
 .title {
+  @extend %margin-reset;
+  color: $main-color;
   @include font-oswald-medium;
-  line-height: 1.4;
-  margin: 0;
   text-align: center;
+  text-transform: uppercase;
   width: 100%;
   word-break: break-all;
 
   @include sm-screen {
-    font-size: min(#{vw(18)}, #{rem(18)});
+    font-size: min(#{vw-sm(60)}, #{rem(60)});
+    line-height: 1.2;
   }
 
   @include tb-screen {
-    font-size: rem(40);
+    font-size: clamp(#{rem(100)}, #{vw-tb(100)}, #{rem(120)});
+    line-height: 1.1;
   }
 
   @include pc-screen {
-    font-size: rem(54);
+    line-height: 1;
   }
 }
 
 .title__link {
-  color: $main-color;
+  color: inherit;
   display: inline-block;
   text-decoration: none;
-  text-transform: uppercase;
 }
