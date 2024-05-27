@@ -4,19 +4,15 @@
   background-color: $base-color;
   display: flex;
   flex-direction: column;
-  left: 0;
-  top: 0;
   transition: $transition-default;
   width: 100%;
-  z-index: 1000;
 
   @include sm-screen {
-    border-bottom: 1px solid $main-color;
-    padding: 15px;
+    padding: vw-sm(15);
   }
 
   @include tb-screen {
-    gap: 20px;
+    gap: clamp(20px, #{vw-tb(20)}, 25px);
     padding: 20px;
   }
 
