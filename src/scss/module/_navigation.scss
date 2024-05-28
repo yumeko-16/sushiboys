@@ -12,7 +12,6 @@
   }
 
   @include tb-screen {
-    font-size: rem(22);
     font-size: clamp(#{rem(22)}, #{vw-tb(22)}, #{rem(26)});
   }
 }
