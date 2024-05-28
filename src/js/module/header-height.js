@@ -3,18 +3,15 @@
  */
 export const HeightOfHeader = (() => {
   const heightOfHeader = () => {
-    const WRAPPER = document.getElementById('wrapper');
     const HEADER = document.getElementById('header');
-    const HERO = document.getElementById('hero');
+    const TARGET = document.querySelector('[data-header-height-target]');
 
-    if (!WRAPPER || !HEADER || !HERO) {
+    if (!HEADER || !TARGET) {
       return;
     }
 
     const HEADER_HEIGHT = HEADER.clientHeight;
-
-    WRAPPER.style.paddingBlockStart = `${HEADER_HEIGHT}px`;
-    HERO.style.marginBlockStart = `-${HEADER_HEIGHT}px`;
+    TARGET.style.marginTop = `-${HEADER_HEIGHT}px`;
   };
 
   document.addEventListener('DOMContentLoaded', heightOfHeader);
