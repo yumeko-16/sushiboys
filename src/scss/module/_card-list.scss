@@ -6,14 +6,14 @@
   flex-direction: column;
 
   @include sm-screen {
-    row-gap: vw(30);
+    row-gap: vw-sm(40);
   }
 
   @include tb-screen {
     flex-direction: row;
     flex-wrap: wrap;
+    gap: clamp(40px, #{vw-tb(40)}, 50px);
     justify-content: space-between;
-    gap: 30px;
   }
 
   &::before,
@@ -33,10 +33,10 @@
 
 .card-list__item {
   @include tb-screen {
-    width: calc((100% - 30px) / 2);
+    width: calc((100% - clamp(40px, #{vw-tb(40)}, 50px)) / 2);
   }
 
   @include pc-screen {
-    width: calc((100% - 60px) / 3);
+    width: calc((100% - 100px) / 3);
   }
 }

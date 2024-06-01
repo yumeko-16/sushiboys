@@ -1,22 +1,18 @@
 @use "../module/setting" as *;
 
 .card {
-  background-color: #fff;
-  border-color: #000;
-  border-style: solid;
-  display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   text-decoration: none;
   width: 100%;
 
   @include sm-screen {
-    border-width: vw(1);
-    border-radius: vw(8);
+    row-gap: vw-sm(10);
   }
 
   @include tb-screen {
-    border-width: 1px;
-    border-radius: 8px;
+    row-gap: 10px;
   }
 
   &:nth-of-type(-n + 3) {
@@ -27,7 +23,9 @@
   }
 
   &:nth-of-type(n + 4) {
-    margin-block-start: vw(20);
+    @include sm-screen {
+      margin-block-start: vw-sm(20);
+    }
 
     @include tb-screen {
       margin-block-start: 25px;
@@ -35,7 +33,9 @@
   }
 
   @include hover {
-    opacity: 0.8;
+    .card__thumbnail {
+      opacity: 0.8;
+    }
   }
 }
 
@@ -46,13 +46,18 @@
   text-decoration: none;
 }
 
+.card__image-area {
+  background-color: #fff;
+}
+
 .card__thumbnail {
+  border: 1px solid $main-color;
   display: block;
   object-fit: contain;
   width: 100%;
 
   @include sm-screen {
-    height: vw(260);
+    height: vw-sm(260);
   }
 
   @include tb-screen {
@@ -67,22 +72,14 @@
 .card__body {
   color: $main-color;
   word-break: break-all;
-  min-height: 82px;
-
-  @include sm-screen {
-    padding: vw(20);
-  }
-
-  @include tb-screen {
-    padding: 30px 15px;
-  }
 }
 
 .card__title {
+  @extend %margin-reset;
   font-weight: 700;
 
   @include sm-screen {
-    font-size: vw(16);
+    font-size: vw-sm(16);
   }
 
   @include tb-screen {
