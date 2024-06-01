@@ -20,16 +20,15 @@
 
   @include tb-screen {
     gap: 50px;
-    padding-inline: 40px;
+    padding-inline: clamp(40px, #{vw-tb(40)}, 50px);
   }
 
   @include pc-screen {
     gap: 60px;
-    padding-inline: 100px;
   }
 
-  @include lt-screen {
-    padding-inline: 40px;
+  @media screen and (min-width: 1200px) {
+    padding: 0;
   }
 }
 
