@@ -11,7 +11,7 @@
           class="card"
           href="<%- post.url %>"
         >
-          <figure>
+          <figure class="card__image-area">
             <%_ if (post.hero.image !== '') { _%>
             <img
               class="card__thumbnail"
@@ -25,12 +25,13 @@
               alt="No image"
             >
             <%_ } _%>
-            <div class="card__body">
-              <figcaption class="card__title"
-                ><%- post.title %></figcaption
-              >
-            </div>
           </figure>
+
+          <div class="card__body">
+            <h3 class="card__title"
+              ><%- post.title %></h3
+            >
+          </div>
         </a>
       </li>
       <%_ }); _%>
