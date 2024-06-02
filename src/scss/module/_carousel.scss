@@ -29,8 +29,8 @@
     }
 
     @include tb-screen {
-      height: 270px;
-      width: 270px;
+      height: min(#{vw-tb(190)}, 270px);
+      width: min(#{vw-tb(190)}, 270px);
     }
   }
 }
