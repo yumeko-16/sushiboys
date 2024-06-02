@@ -16,8 +16,8 @@
   text-align: center;
 
   @include sm-screen {
-    font-size: vw(12);
-    gap: vw(4);
+    font-size: vw-sm(12);
+    gap: vw-sm(4);
   }
 
   @include tb-screen {
@@ -32,22 +32,22 @@
     text-transform: uppercase;
 
     @include sm-screen {
-      font-size: vw(26);
+      font-size: vw-sm(26);
     }
 
     @include tb-screen {
-      font-size: rem(26);
+      font-size: rem(45);
     }
   }
 }
 
 .heading--secondary {
   @include sm-screen {
-    font-size: vw(26);
+    font-size: vw-sm(22);
   }
 
   @include tb-screen {
-    font-size: rem(48);
+    font-size: rem(35);
   }
 }
 

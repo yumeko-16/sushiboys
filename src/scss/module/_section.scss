@@ -14,17 +14,13 @@
   padding-block: 0;
 
   @include sm-screen {
-    gap: vw(30);
-    padding-inline: vw(20);
+    row-gap: vw-sm(20);
+    padding-inline: vw-sm(20);
   }
 
   @include tb-screen {
-    gap: 50px;
+    row-gap: 20px;
     padding-inline: clamp(40px, #{vw-tb(40)}, 50px);
-  }
-
-  @include pc-screen {
-    gap: 60px;
   }
 
   @media screen and (min-width: 1200px) {
