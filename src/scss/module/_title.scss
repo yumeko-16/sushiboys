@@ -10,12 +10,12 @@
   word-break: break-all;
 
   @include sm-screen {
-    font-size: min(#{vw-sm(60)}, #{rem(60)});
+    font-size: min(#{vw-sm(45)}, #{rem(45)});
     line-height: 1.2;
   }
 
   @include tb-screen {
-    font-size: clamp(#{rem(100)}, #{vw-tb(100)}, #{rem(120)});
+    font-size: rem(90);
     line-height: 1.1;
   }
 

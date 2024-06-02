@@ -6,12 +6,12 @@
   overflow: hidden;
 
   @include sm-screen {
-    gap: vw(30);
-    padding-block-end: vw(60);
+    row-gap: vw-sm(30);
+    padding-block-end: vw-sm(60);
   }
 
   @include tb-screen {
-    gap: 40px;
-    padding-block-end: 80px;
+    row-gap: min(#{vw-tb(30)}, 40px);
+    padding-block-end: min(#{vw-tb(60)}, 80px);
   }
 }

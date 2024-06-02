@@ -21,8 +21,6 @@
     @include tb-screen {
       content: "";
       display: block;
-      height: 0;
-      width: calc(100% / 3 - 15px);
     }
   }
 

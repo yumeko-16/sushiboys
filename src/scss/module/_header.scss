@@ -8,12 +8,16 @@
   width: 100%;
 
   @include sm-screen {
-    padding: vw-sm(15);
+    padding: vw-sm(20);
   }
 
   @include tb-screen {
-    gap: clamp(20px, #{vw-tb(20)}, 25px);
-    padding: clamp(20px, #{vw-tb(20)}, 30px);
+    row-gap: min(#{vw-tb(40)}, 64px);
+    padding: min(#{vw-tb(50)}, 78px) min(#{vw-tb(40)}, 50px);
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-inline: 0;
   }
 
   &.is-hide {
