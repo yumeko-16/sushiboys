@@ -5,7 +5,7 @@
 
   @include sm-screen {
     flex-direction: column;
-    gap: vw(30);
+    gap: vw-sm(30);
   }
 
   @include tb-screen {
@@ -31,7 +31,7 @@
   flex-direction: column;
 
   @include sm-screen {
-    gap: vw(30);
+    gap: vw-sm(30);
   }
 
   @include tb-screen {
@@ -44,7 +44,7 @@
   @extend %margin-reset;
 
   @include sm-screen {
-    font-size: vw(24);
+    font-size: vw-sm(24);
   }
 
   @include tb-screen {
@@ -66,7 +66,7 @@
   flex-direction: column;
 
   @include sm-screen {
-    gap: vw(15);
+    gap: vw-sm(15);
   }
 
   @include tb-screen {
@@ -85,7 +85,7 @@
   width: 100%;
 
   @include sm-screen {
-    border-width: vw(1);
+    border-width: vw-sm(1);
   }
 
   @include tb-screen {
@@ -97,8 +97,8 @@
   @include font-oswald-medium;
 
   @include sm-screen {
-    font-size: vw(18);
-    margin: vw(10) 0 vw(20);
+    font-size: vw-sm(18);
+    margin: vw-sm(10) 0 vw-sm(20);
   }
 
   @include tb-screen {
