@@ -24,10 +24,10 @@
   writing-mode: initial;
 
   @include sm-screen {
-    border-radius: vw(5);
-    font-size: vw(16);
-    gap: vw(10);
-    padding: vw(15) vw(25);
+    border-radius: vw-sm(5);
+    font-size: vw-sm(16);
+    gap: vw-sm(10);
+    padding: vw-sm(15) vw-sm(25);
   }
 
   @include tb-screen {
@@ -51,7 +51,7 @@
     color: $main-color;
 
     @include sm-screen {
-      border-width: vw(1);
+      border-width: vw-sm(1);
     }
 
     @include tb-screen {
@@ -71,7 +71,7 @@
   justify-content: center;
 
   @include sm-screen {
-    margin: vw(30) 0 0;
+    margin: vw-sm(30) 0 0;
   }
 
   @include tb-screen {
@@ -89,7 +89,7 @@
   color: #fff;
 
   @include sm-screen {
-    font-size: vw(16);
+    font-size: vw-sm(16);
   }
 
   @include tb-screen {
