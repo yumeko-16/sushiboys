@@ -24,7 +24,9 @@ export const Validation = (() => {
             break;
           case `your-email`:
             if (
-              !input.value.match(/^(([^<>()\[\]\.,;:\s@\"'#\*]+(\.[^<>()\[\]\.,;:\s@\"'#\*]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"'#\*]+\.)+[^<>()[\]\.,;:\s@\"'#\*]{2,})$/i) ||
+              !input.value.match(
+                /^(([^<>()\[\]\.,;:\s@\"'#\*]+(\.[^<>()\[\]\.,;:\s@\"'#\*]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"'#\*]+\.)+[^<>()[\]\.,;:\s@\"'#\*]{2,})$/i,
+              ) ||
               input.value.length === 0
             ) {
               successMessage.classList.remove(`js-success`);
@@ -95,7 +97,7 @@ export const Submit = (() => {
 
     fetch(api_endpoint, {
       method: `POST`,
-      body: formData
+      body: formData,
     })
       .then((response) => {
         if (!response.ok) {
@@ -124,7 +126,9 @@ export const Submit = (() => {
           toaster.innerHTML = `送信完了だお！<br>自動返信メールを確認するんだお！`;
           toaster.classList.add(`js-success`);
           submit.disabled = true;
-          Array.from(document.querySelectorAll(`input`)).forEach((input) => (input.value = ``));
+          Array.from(document.querySelectorAll(`input`)).forEach(
+            (input) => (input.value = ``),
+          );
           document.querySelector(`textarea`).value = ``;
           setTimeout(() => {
             checkError();
