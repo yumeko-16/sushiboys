@@ -11,7 +11,7 @@
   cursor: grab;
 
   @include sm-screen {
-    gap: vw(20);
+    gap: vw-sm(20);
   }
 
   @include tb-screen {
@@ -24,8 +24,8 @@
 
   &.swiper-slide {
     @include sm-screen {
-      height: vw(190);
-      width: vw(190);
+      height: vw-sm(190);
+      width: vw-sm(190);
     }
 
     @include tb-screen {
@@ -45,7 +45,7 @@
   width: 100%;
 
   @include sm-screen {
-    border-width: vw(1);
+    border-width: vw-sm(1);
   }
 
   @include tb-screen {
