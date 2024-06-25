@@ -3,11 +3,11 @@
 <head>
   <%_
     const localmeta = {
-      title: `SUSHIBOYS`,
-      description: `SUSHIBOYSオフィシャルウェブサイト。メンバーはFARMHOUSE、サンテナ、DJ兼カメラマン兼マネージャー兼運転手兼スーパーバイザーのneo yosikawa。寿司ボーイズのライブ、ディスコグラフィ、グッズなどの最新情報を掲載しています。`,
-      url: `https://sushiboys350.com/`,
-      pageid: `home`,
-      path: `./`
+      title: `BIOGRAPHY | SUSHIBOYS`,
+      description: `SUSHIBOYSの生態系。`,
+      url: `https://sushiboys350.com/biography/`,
+      pageid: `biography`,
+      path: `../`
     };
     const localogp = {
       title: localmeta.title,
@@ -15,8 +15,8 @@
       url: localmeta.url
     };
     const localfile = {
-      css: `/css/home.css`,
-      js: `/js/home.js`
+      css: `/css/biography.css`,
+      js: `/js/biography.js`
     };
   _%>
   <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); %>
@@ -24,12 +24,13 @@
 <body>
   <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
   <div
-    id="wrappper"
+    id="wrapper"
     class="wrapper"
   >
     <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
-    <main class="main main--home">
-      <%- include(localmeta.path + `_inc/components/home/_hero`); %>
+    <main class="main">
+      <%- include(localmeta.path + `_inc/components/_heading`, {meta: localmeta}); %>
+      <%- include(localmeta.path + `_inc/components/biography/_biography`); %>
     </main>
     <%- include(localmeta.path + `_inc/components/_toggle`); %>
     <%- include(localmeta.path + `_inc/components/_footer`); %>
