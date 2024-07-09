@@ -3,26 +3,11 @@
 .hero {
   align-items: center;
   display: flex;
-  height: 100vh;
   justify-content: center;
   margin: 0 auto;
-  // margin-block-start: vw(-60);
-  width: 70%;
-
-  @include tb-screen {
-    // margin-block-start: calc(calc(#{rem(-54)} * 1.2 + (-50px)) + calc(#{rem(-20)} * 1.8 + (2px)));
-    width: 50%;
-  }
-}
-
-.hero__frame {
-  height: calc(100vh / 4);
-  margin: 0;
+  width: min(70%, 500px);
 }
 
 .hero__image {
-  display: block;
-  height: 100%;
-  pointer-events: none;
-  width: auto;
+  @extend %image;
 }
