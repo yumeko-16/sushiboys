@@ -7,11 +7,9 @@
 
   @include sm-screen {
     row-gap: vw-sm(30);
-    padding-block-end: vw-sm(60);
   }
 
   @include tb-screen {
     row-gap: min(#{vw-tb(30)}, 40px);
-    padding-block-end: min(#{vw-tb(60)}, 80px);
   }
 }
