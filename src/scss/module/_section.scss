@@ -4,6 +4,14 @@
   margin: 0 auto;
   padding-inline: 0;
   width: 100%;
+
+  @include sm-screen {
+    padding-block: vw-sm(60);
+  }
+
+  @include tb-screen {
+    padding-block: min(#{vw-tb(60)}, 80px);
+  }
 }
 
 .section__inner {
