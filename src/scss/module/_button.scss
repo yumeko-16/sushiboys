@@ -2,7 +2,7 @@
 
 .button {
   align-items: center;
-  appearance: initial;
+  appearance: none;
   background-color: $main-color;
   border-color: initial;
   border-image: initial;
@@ -12,7 +12,7 @@
   cursor: pointer;
   display: flex;
   justify-content: center;
-  letter-spacing: initial;
+  letter-spacing: 0.08em;
   text-align: center;
   text-decoration: none;
   text-indent: initial;
@@ -25,7 +25,7 @@
 
   @include sm-screen {
     border-radius: vw-sm(5);
-    font-size: vw-sm(16);
+    font-size: vw-sm(18);
     gap: vw-sm(10);
     padding: vw-sm(15) vw-sm(25);
   }
