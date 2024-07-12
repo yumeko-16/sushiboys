@@ -1,5 +1,19 @@
 @use "../module/setting" as *;
 
+%button {
+  align-items: center;
+  appearance: none;
+  border: 0;
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+
+  @include hover {
+    cursor: pointer;
+  }
+}
+
 .button {
   align-items: center;
   appearance: none;
@@ -94,5 +108,17 @@
 
   @include tb-screen {
     font-size: rem(16);
+  }
+}
+
+.back-button {
+  @extend %button;
+
+  @include sm-screen {
+    font-size: vw-sm(18);
+  }
+
+  @include tb-screen {
+    font-size: rem(20);
   }
 }
