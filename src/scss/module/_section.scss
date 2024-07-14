@@ -22,12 +22,10 @@
   padding-block: 0;
 
   @include sm-screen {
-    row-gap: vw-sm(20);
     padding-inline: vw-sm(20);
   }
 
   @include tb-screen {
-    row-gap: 20px;
     padding-inline: clamp(40px, #{vw-tb(40)}, 50px);
   }
 
