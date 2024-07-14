@@ -2,60 +2,44 @@
 
 .button {
   align-items: center;
-  appearance: initial;
-  background-color: $main-color;
-  border-color: initial;
-  border-image: initial;
-  border-style: initial;
-  border-width: initial;
-  color: #fff;
-  cursor: pointer;
-  display: flex;
+  appearance: none;
+  border: 0;
+  color: inherit;
+  display: inline-flex;
+  @include font-oswald-medium;
   justify-content: center;
-  letter-spacing: initial;
-  text-align: center;
   text-decoration: none;
-  text-indent: initial;
-  text-rendering: initial;
-  text-shadow: initial;
-  text-transform: initial;
-  width: 50%;
-  word-spacing: initial;
-  writing-mode: initial;
 
   @include sm-screen {
     border-radius: vw-sm(5);
-    font-size: vw-sm(16);
     gap: vw-sm(10);
     padding: vw-sm(15) vw-sm(25);
   }
 
   @include tb-screen {
     border-radius: 5px;
-    font-size: rem(20);
     gap: 10px;
-    padding-block: 15px;
-    padding-inline: 70px;
-    width: auto;
+    padding: 15px 70px;
   }
 
   @include hover {
-    opacity: 0.9;
-    transition: 0.1s;
+    cursor: pointer;
   }
 
   &:disabled {
     background-color: rgba(0, 0, 0, 0.5);
-    border-color: $main-color;
-    border-style: solid;
     color: $main-color;
 
     @include sm-screen {
-      border-width: vw-sm(1);
+      border: vw-sm(1) solid $main-color;
     }
 
     @include tb-screen {
-      border-width: 1px;
+      border: 1px solid $main-color;
+    }
+
+    @include hover {
+      cursor: not-allowed;
     }
 
     & > .button__icon {
@@ -94,5 +78,31 @@
 
   @include tb-screen {
     font-size: rem(16);
+  }
+}
+
+.button--back {
+  background-color: $main-color;
+  color: #fff;
+
+  @include sm-screen {
+    font-size: vw-sm(18);
+  }
+
+  @include tb-screen {
+    font-size: rem(18);
+  }
+}
+
+.button--send {
+  background-color: $main-color;
+  color: #fff;
+
+  @include sm-screen {
+    font-size: vw-sm(18);
+  }
+
+  @include tb-screen {
+    font-size: rem(18);
   }
 }
