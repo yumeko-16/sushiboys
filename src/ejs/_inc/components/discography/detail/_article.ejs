@@ -36,60 +36,61 @@ _%>
 <section class="section">
   <div class="section__inner">
     <article class="article">
-      <figure class="article__hero">
+      <h3 class="article__title"><%- reverseData[meta.index].title %></h3>
+
+      <figure class="article__eyecatch">
         <img
-          class="article__hero-image"
+          class="article__eyecatch-image"
           src="<%- reverseData[meta.index].image %>"
           alt="<%- reverseData[meta.index].alt %>"
         >
       </figure>
-      <div class="article__inner">
-        <h3 class="article__title"><%- reverseData[meta.index].title %></h3>
-        <div class="article__body">
-          <ul class="article__caption-list">
-            <li class="article__caption-item">作品種別 : <%- reverseData[meta.index].type %></li>
-            <li class="article__caption-item">発売日 : <%- reverseData[meta.index].release %></li>
-            <%_ if (!reverseData[meta.index].price.trim() === false) { _%>
-            <li class="article__caption-item">価格 : <%- reverseData[meta.index].price %></li>
-            <%_ } _%>
-            <li class="article__caption-item">
-              視聴：ご視聴・ご購入は<a
-                href="<%- reverseData[meta.index].link %>"
-                target="_blank"
-                rel="noopener noreferrer"
-                >こちら</a
-              >から
-            </li>
-          </ul>
 
-          <h3 class="article__caption-heading">Song contents</h3>
-          <ol class="article__caption-list article__caption-list--song">
-            <%_ reverseData[meta.index].songs.forEach(function(song) { _%>
-            <li class="article__caption-item">
-              <%- song %>
-            </li>
-            <%_ }); _%>
-          </ol>
-
-          <%_ if (!reverseData[meta.index].bonusTracks[0].trim() === false) { _%>
-          <h3 class="article__caption-heading">Bonus track</h3>
-          <ol class="article__caption-list article__caption-list--song">
-            <%_ reverseData[meta.index].bonusTracks.forEach(function(bonusTrack) { _%>
-            <li class="article__caption-item">
-              <%- bonusTrack %>
-            </li>
-            <%_ }); _%>
-          </ol>
+      <div class="article__body">
+        <ul class="article__caption-list">
+          <li class="article__caption-item">作品種別：<%- reverseData[meta.index].type %></li>
+          <li class="article__caption-item">発売日：<%- reverseData[meta.index].release %></li>
+          <%_ if (!reverseData[meta.index].price.trim() === false) { _%>
+          <li class="article__caption-item">価格：<%- reverseData[meta.index].price %></li>
           <%_ } _%>
-        </div>
+          <li class="article__caption-item">
+            視聴：ご視聴・ご購入は<a
+              href="<%- reverseData[meta.index].link %>"
+              target="_blank"
+              rel="noopener noreferrer"
+              >こちら</a
+            >から
+          </li>
+        </ul>
+
+        <h3 class="article__caption-heading">Song contents</h3>
+        <ol class="article__caption-list article__caption-list--song">
+          <%_ reverseData[meta.index].songs.forEach(function(song) { _%>
+          <li class="article__caption-item">
+            <%- song %>
+          </li>
+          <%_ }); _%>
+        </ol>
+
+        <%_ if (!reverseData[meta.index].bonusTracks[0].trim() === false) { _%>
+        <h3 class="article__caption-heading">Bonus track</h3>
+        <ol class="article__caption-list article__caption-list--song">
+          <%_ reverseData[meta.index].bonusTracks.forEach(function(bonusTrack) { _%>
+          <li class="article__caption-item">
+            <%- bonusTrack %>
+          </li>
+          <%_ }); _%>
+        </ol>
+        <%_ } _%>
+      </div>
+
+      <div class="article__button">
+        <a
+          class="button button--back"
+          href="/discography/"
+          >Back</a
+        >
       </div>
     </article>
-    <div class="button__wrap">
-      <a
-        class="button button--back"
-        href="/discography/"
-        ><span class="button__text">Back</span></a
-      >
-    </div>
   </div>
 </section>
