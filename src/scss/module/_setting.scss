@@ -24,11 +24,6 @@ $base-window-width: 375;
 }
 
 /* convert from px to vw */
-@function vw($size, $viewport: 375) {
-  $rate: math.div(100, $viewport);
-  @return $rate * $size * 1vw;
-}
-
 @function vw-sm($size, $viewport: 375) {
   $rate: math.div(100, $viewport);
   @return $rate * $size * 1vw;
@@ -142,7 +137,7 @@ $base-window-width: 375;
   padding-block: 0;
 
   @include sm-screen {
-    font-size: vw(20);
+    font-size: vw-sm(20);
   }
 
   @include tb-screen {
@@ -175,7 +170,7 @@ body {
   margin: 0;
 
   @include sm-screen {
-    font-size: vw(16);
+    font-size: vw-sm(16);
   }
 
   @include tb-screen {
