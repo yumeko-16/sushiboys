@@ -37,11 +37,11 @@
   z-index: 1002;
 
   @include sm-screen {
-    bottom: vw(30);
-    box-shadow: 0 0 vw(10) rgb(0 0 0 / 15%);
-    height: vw(50);
-    right: vw(30);
-    width: vw(50);
+    bottom: vw-sm(30);
+    box-shadow: 0 0 vw-sm(10) rgb(0 0 0 / 15%);
+    height: vw-sm(50);
+    right: vw-sm(30);
+    width: vw-sm(50);
   }
 
   @include tb-screen {
@@ -66,8 +66,8 @@
   transition: all 0.3s ease-in-out;
 
   @include sm-screen {
-    height: vw(2);
-    width: vw(25);
+    height: vw-sm(2);
+    width: vw-sm(25);
   }
 
   @include tb-screen {
@@ -102,9 +102,9 @@
   z-index: 1001;
 
   @include sm-screen {
-    -webkit-backdrop-filter: blur(vw(20));
-    backdrop-filter: blur(vw(20));
-    font-size: vw(28);
+    -webkit-backdrop-filter: blur(vw-sm(20));
+    backdrop-filter: blur(vw-sm(20));
+    font-size: vw-sm(28);
   }
 
   @include tb-screen {
@@ -128,8 +128,8 @@
   width: 100%;
 
   @include sm-screen {
-    gap: vw(30);
-    padding: vw(30);
+    gap: vw-sm(30);
+    padding: vw-sm(30);
   }
 
   @include tb-screen {
@@ -151,10 +151,10 @@
   position: absolute;
 
   @include sm-screen {
-    bottom: vw(122);
-    font-size: vw(27);
-    gap: vw(8);
-    right: vw(28);
+    bottom: vw-sm(122);
+    font-size: vw-sm(27);
+    gap: vw-sm(8);
+    right: vw-sm(28);
   }
 
   @include tb-screen {
@@ -171,8 +171,8 @@
   justify-content: center;
 
   @include sm-screen {
-    height: vw(50);
-    width: vw(50);
+    height: vw-sm(50);
+    width: vw-sm(50);
   }
 
   @include tb-screen {

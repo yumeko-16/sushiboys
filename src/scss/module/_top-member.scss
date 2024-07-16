@@ -13,7 +13,7 @@
 
   * + * {
     @include sm-screen {
-      margin-block-start: vw(15);
+      margin-block-start: vw-sm(15);
     }
 
     @include tb-screen {
