@@ -3,6 +3,7 @@ node_modules/*
 .htaccess
 .vscode
 .hsftp
+.env.local
 
 .sass-cache/
 *.css.map
