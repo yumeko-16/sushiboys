@@ -8,23 +8,6 @@
       display: block;
       transform: translate3d(0, 0, 0);
     }
-
-    // & ~ .toggle-button {
-    //   .toggle-button__bar {
-    //     background-color: #fff;
-    //     &:first-of-type {
-    //       transform: translate(-50%, 0) rotate(45deg);
-    //       transform-origin: left bottom;
-    //     }
-    //     &:nth-child(2) {
-    //       opacity: 0;
-    //     }
-    //     &:last-of-type {
-    //       transform: rotate(-45deg);
-    //       transform-origin: left top;
-    //     }
-    //   }
-    // }
   }
 }
 
