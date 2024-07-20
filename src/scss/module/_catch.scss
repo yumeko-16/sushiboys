@@ -1,16 +1,15 @@
 @use "../module/setting" as *;
 
 .catch {
+  @extend %text-group;
   display: flex;
   flex-direction: column;
-  gap: 2em;
 
   @include pc-screen {
     font-size: rem(20);
   }
-}
 
-.catch__text {
-  @extend %margin-reset;
-  @include lineHeightCrop(1.4);
+  & > * {
+    @include lineHeightCrop(1.4);
+  }
 }

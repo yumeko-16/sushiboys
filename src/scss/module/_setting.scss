@@ -129,6 +129,22 @@ $base-window-width: 375;
   width: 100%;
 }
 
+%text-group {
+  & > * {
+    margin: 0;
+  }
+
+  & > * + * {
+    margin-block-start: 2em;
+  }
+
+  a {
+    color: $main-color;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
 %extrude {
   margin: 0 calc(50% - 50vw);
 }
