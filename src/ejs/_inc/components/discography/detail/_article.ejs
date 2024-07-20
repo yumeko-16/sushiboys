@@ -50,9 +50,11 @@ _%>
         <ul class="article__caption-list">
           <li class="article__caption-item">作品種別：<%- reverseData[meta.index].type %></li>
           <li class="article__caption-item">発売日：<%- reverseData[meta.index].release %></li>
+
           <%_ if (!reverseData[meta.index].price.trim() === false) { _%>
           <li class="article__caption-item">価格：<%- reverseData[meta.index].price %></li>
           <%_ } _%>
+
           <li class="article__caption-item">
             視聴：ご視聴・ご購入は<a
               href="<%- reverseData[meta.index].link %>"
