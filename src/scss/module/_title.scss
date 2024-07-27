@@ -15,8 +15,12 @@
   }
 
   @include tb-screen {
-    font-size: min(#{vw-tb(32)}, #{rem(45)});
+    font-size: min(#{vw-tb(45)}, #{rem(90)});
     line-height: 1.1;
+  }
+
+  @include lt-screen {
+    font-size: rem(45);
   }
 }
 

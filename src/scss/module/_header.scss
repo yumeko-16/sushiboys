@@ -16,8 +16,8 @@
     padding: min(#{vw-tb(50)}, 78px) min(#{vw-tb(40)}, 50px);
   }
 
-  @media screen and (min-width: 1200px) {
-    padding-inline: 0;
+  @include lt-screen {
+    row-gap: 40px;
   }
 
   &.is-hide {

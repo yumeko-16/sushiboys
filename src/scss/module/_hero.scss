@@ -5,9 +5,22 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  width: min(70%, 500px);
+
+  @include sm-screen {
+    width: 70%;
+  }
+
+  @include tb-screen {
+    width: min(40%, 500px);
+  }
+
+  @include lt-screen {
+    width: 25%;
+  }
 }
 
 .hero__image {
   @extend %image;
+  aspect-ratio: 3000 / 2001;
+  height: auto;
 }
