@@ -4,12 +4,4 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-
-  @include sm-screen {
-    row-gap: vw-sm(30);
-  }
-
-  @include tb-screen {
-    row-gap: min(#{vw-tb(30)}, 40px);
-  }
 }

@@ -29,18 +29,20 @@
   }
 _%>
 
-<%_ if (meta.pageid.includes(`home`)) { _%>
-<figure class="hero">
-  <img
-    class="hero__image"
-    src="/img/logo.png"
-    alt="SUSHIBOYS"
-  />
-</figure>
-<%_ } else { _%>
-<h2
-  class="heading heading--primary"
-  data-heading="<%= primary %>"
-  ><%= secondary %></h2
->
-<%_ } _%>
+<div class="hero">
+  <%_ if (meta.pageid.includes(`home`)) { _%>
+  <figure class="hero__logo">
+    <img
+      class="hero__image"
+      src="/img/logo.png"
+      alt="SUSHIBOYS"
+    />
+  </figure>
+  <%_ } else { _%>
+  <h2
+    class="hero__heading"
+    data-heading="<%= primary %>"
+    ><%= secondary %></h2
+  >
+  <%_ } _%>
+</div>

@@ -1,6 +1,17 @@
 @use "../module/setting" as *;
 
 .hero {
+  @include sm-screen {
+    padding-block: vw-sm(25);
+    padding-inline: vw-sm(20);
+  }
+
+  @include tb-screen {
+    padding-inline: clamp(40px, #{vw-tb(40)}, 50px);
+  }
+}
+
+.hero__logo {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -23,4 +34,38 @@
   @extend %image;
   aspect-ratio: 3000 / 2001;
   height: auto;
+}
+
+.hero__heading {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  margin: 0;
+  word-break: break-all;
+
+  @include sm-screen {
+    font-size: vw-sm(14);
+    gap: vw-sm(4);
+  }
+
+  @include tb-screen {
+    font-size: rem(14);
+    gap: 2px;
+    line-height: 1.4;
+  }
+
+  &::before {
+    @include font-oswald-medium;
+    content: attr(data-heading);
+    display: block;
+    text-transform: uppercase;
+
+    @include sm-screen {
+      font-size: vw-sm(38);
+    }
+
+    @include tb-screen {
+      font-size: rem(45);
+    }
+  }
 }

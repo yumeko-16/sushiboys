@@ -31,8 +31,10 @@
   >
     <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
     <main class="main">
-      <%- include(localmeta.path + `_inc/components/_heading`, {meta: localmeta}); %>
-      <%- include(localmeta.path + `_inc/components/goods/_goods`, {goodsData: goodsData}); %>
+      <%- include(localmeta.path + `_inc/components/_hero`, {meta: localmeta}); %>
+      <div class="content">
+        <%- include(localmeta.path + `_inc/components/goods/_goods`, {goodsData: goodsData}); %>
+      </div>
     </main>
     <%- include(localmeta.path + `_inc/components/_toggle`); %>
     <%- include(localmeta.path + `_inc/components/_footer`); %>
