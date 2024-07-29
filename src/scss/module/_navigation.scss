@@ -12,7 +12,11 @@
   }
 
   @include tb-screen {
-    font-size: min(#{vw-tb(22)}, #{rem(28)});
+    font-size: min(#{vw-tb(20)}, #{rem(35)});
+  }
+
+  @include lt-screen {
+    font-size: rem(22);
   }
 }
 
