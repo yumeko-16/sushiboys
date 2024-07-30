@@ -4,4 +4,9 @@
   @include sm-screen {
     padding-block: vw-sm(45);
   }
+
+  @include tb-screen {
+    padding-block-end: min(#{vw-tb(45)}, 50px);
+    padding-block-start: min(#{vw-tb(45)}, 100px);
+  }
 }
