@@ -13,6 +13,10 @@
     padding: clamp(45px, #{vw-tb(45)}, 55px) clamp(40px, #{vw-tb(40)}, 50px);
   }
 
+  @include lt-screen {
+    padding-block: 50px;
+  }
+
   @media screen and (min-width: 1200px) {
     padding-inline: 0;
   }
