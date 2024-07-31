@@ -2,39 +2,21 @@
 
 .card-list {
   @extend %list-reset;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  justify-content: center;
 
   @include sm-screen {
     row-gap: vw-sm(40);
   }
 
   @include tb-screen {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: clamp(40px, #{vw-tb(40)}, 50px);
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, calc((100% - 60px) / 3));
     justify-content: space-between;
   }
 
-  &::before,
-  &::after {
-    @include tb-screen {
-      content: "";
-      display: block;
-    }
-  }
-
-  &::before {
-    order: 1;
-  }
-}
-
-.card-list__item {
-  @include tb-screen {
-    width: calc((100% - clamp(40px, #{vw-tb(40)}, 50px)) / 2);
-  }
-
   @include pc-screen {
-    width: calc((100% - 100px) / 3);
+    gap: 40px;
+    grid-template-columns: repeat(auto-fit, calc((100% - 120px) / 4));
   }
 }
