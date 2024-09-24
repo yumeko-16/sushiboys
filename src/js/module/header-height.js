@@ -6,9 +6,7 @@ export const HeightOfHeader = (() => {
     const HEADER = document.getElementById('header');
     const TARGET = document.querySelector('[data-header-height-target]');
 
-    if (!HEADER || !TARGET) {
-      return;
-    }
+    if (!HEADER || !TARGET) return;
 
     const HEADER_HEIGHT = HEADER.clientHeight;
     TARGET.style.marginTop = `-${HEADER_HEIGHT}px`;

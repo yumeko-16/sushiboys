@@ -3,9 +3,7 @@ export const ToggleHeader = (() => {
     const HEADER = document.getElementById('header');
     let lastScrollY = 0;
 
-    if (!HEADER) {
-      return;
-    }
+    if (!HEADER) return;
 
     if (window.scrollY < lastScrollY || window.scrollY <= 10) {
       HEADER.classList.remove('is-hide');

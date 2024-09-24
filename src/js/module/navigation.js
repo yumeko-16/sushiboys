@@ -6,13 +6,11 @@ export const HumbergerToggle = (() => {
   const HEADER = document.getElementById('header');
   const TRIGGER = document.getElementById('toggle-trigger');
 
-  if (!BODY || !HEADER || !TRIGGER) {
-    return;
-  }
+  if (!BODY || !HEADER || !TRIGGER) return;
 
   let scrollY = null;
 
-  function handleToggleChange(e) {
+  const handleToggleChange = (e) => {
     if (e.target.checked) {
       scrollY = window.scrollY;
       setTimeout(() => {
@@ -26,7 +24,7 @@ export const HumbergerToggle = (() => {
         HEADER.classList.remove('is-hide');
       }, 100);
     }
-  }
+  };
 
-  TRIGGER.addEventListener('change', handleToggleChange, false);
+  TRIGGER.addEventListener('change', handleToggleChange);
 })();

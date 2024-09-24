@@ -3,9 +3,7 @@ export const Validation = (() => {
     const inputs = document.querySelectorAll(`[data-form-require]`);
     let successes = null;
 
-    if (inputs === undefined || inputs === null) {
-      return;
-    }
+    if (inputs === undefined || inputs === null) return;
 
     inputs.forEach((input) => {
       const successMessage = input.nextElementSibling;
