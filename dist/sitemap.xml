@@ -38,11 +38,6 @@
   <lastmod>2024-09-30T14:53:59+09:00</lastmod>
 </url>
 <url>
-  <loc>https://sushiboys350.com//twitter.com/sushiboys350</loc>
-  <priority>0.8</priority>
-  <lastmod>2021-11-16T10:13:21+09:00</lastmod>
-</url>
-<url>
   <loc>https://sushiboys350.com/news/post073/</loc>
   <priority>0.7</priority>
   <lastmod>2024-09-30T14:53:59+09:00</lastmod>
@@ -236,6 +231,12 @@
   <loc>https://sushiboys350.com/news/post035/</loc>
   <priority>0.7</priority>
   <lastmod>2024-09-30T14:53:59+09:00</lastmod>
+</url>
+<url>
+  <loc>https://sushiboys350.com/news/post034/</loc>
+  <priority>0.7</priority>
+  <lastmod>2024-09-30T14:53:59+09:00</lastmod>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>https://sushiboys350.com/news/post033/</loc>
