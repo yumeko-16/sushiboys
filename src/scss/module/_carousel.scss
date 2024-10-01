@@ -4,19 +4,21 @@
   &.swiper {
     overflow: visible;
   }
+
+  .section__heading + & {
+    @include sm-screen {
+      margin-block-start: vw-sm(10);
+    }
+
+    @include tb-screen {
+      margin-block-start: vw-tb(10);
+    }
+  }
 }
 
 .carousel__list {
   @extend %list-reset;
   cursor: grab;
-
-  @include sm-screen {
-    gap: vw-sm(20);
-  }
-
-  @include tb-screen {
-    gap: 30px;
-  }
 }
 
 .carousel__card {

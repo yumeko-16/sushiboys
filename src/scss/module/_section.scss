@@ -7,8 +7,6 @@
 }
 
 .section__inner {
-  display: flex;
-  flex-direction: column;
   margin: 0 auto;
   max-width: 1200px;
   padding-block: 0;
@@ -31,4 +29,27 @@
     margin: 0 auto;
     width: 80%;
   }
+}
+
+.section__heading {
+  line-height: 1.2;
+  margin: 0;
+  word-break: break-all;
+
+  @include sm-screen {
+    font-size: vw-sm(22);
+  }
+
+  @include tb-screen {
+    font-size: rem(35);
+    line-height: 1.4;
+  }
+}
+
+.section__heading--ja {
+  @include font-not-sans-jp-bold;
+}
+
+.section__heading--en {
+  @include font-oswald-medium;
 }
