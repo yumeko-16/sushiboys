@@ -1,12 +1,12 @@
 <section class="section">
   <div class="section__inner">
-    <h3 class="heading heading--secondary heading--ja">夏休み編</h3>
+    <h3 class="section__heading section__heading--ja">夏休み編</h3>
     <ul class="article__pictures">
       <%_
         const posts = pictureData.looks;
         const reversePosts = posts.reverse();
       _%>
-      <%_ reversePosts[meta.index].images.forEach(function(image) { _%>
+      <%_ reversePosts[meta.index].images.forEach((image) => { _%>
       <li class="article__pictures-item">
         <figure>
           <img
