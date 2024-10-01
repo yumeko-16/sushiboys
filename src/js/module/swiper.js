@@ -1,8 +1,16 @@
+import Swiper from 'swiper';
+
 const initializeSwiper = (selector) => {
   return new Swiper(selector, {
     freeMode: true,
     loop: false,
-    slidesPerView: 'auto'
+    slidesPerView: 'auto',
+    spaceBetween: 20,
+    breakpoints: {
+      1024: {
+        spaceBetween: 30,
+      },
+    },
   });
 };
 
