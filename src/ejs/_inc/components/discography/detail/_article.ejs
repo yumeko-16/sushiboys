@@ -1,6 +1,7 @@
-<%_ let data = {}; _%>
-<%_ let reverseData = {}; _%>
 <%_
+  let data = {};
+  let reverseData = {};
+
   switch (meta.type) {
     case 'ep':
       data = discographyData.eps;
@@ -67,7 +68,7 @@ _%>
 
         <h3 class="article__caption-heading">Song contents</h3>
         <ol class="article__caption-list article__caption-list--song">
-          <%_ reverseData[meta.index].songs.forEach(function(song) { _%>
+          <%_ reverseData[meta.index].songs.forEach((song) => { _%>
           <li class="article__caption-item">
             <%- song %>
           </li>
@@ -77,7 +78,7 @@ _%>
         <%_ if (!reverseData[meta.index].bonusTracks[0].trim() === false) { _%>
         <h3 class="article__caption-heading">Bonus track</h3>
         <ol class="article__caption-list article__caption-list--song">
-          <%_ reverseData[meta.index].bonusTracks.forEach(function(bonusTrack) { _%>
+          <%_ reverseData[meta.index].bonusTracks.forEach((bonusTrack) => { _%>
           <li class="article__caption-item">
             <%- bonusTrack %>
           </li>
