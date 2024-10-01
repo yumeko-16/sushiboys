@@ -38,11 +38,13 @@
 
   @include sm-screen {
     font-size: vw-sm(22);
+    margin-block-end: vw-sm(10);
   }
 
   @include tb-screen {
     font-size: rem(35);
     line-height: 1.4;
+    margin-block-end: vw-tb(10);
   }
 }
 
