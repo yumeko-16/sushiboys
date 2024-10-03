@@ -3,6 +3,7 @@
 .navigation {
   color: $main-color;
   @include font-oswald-medium;
+  letter-spacing: 0.08em;
   line-height: 1.2;
   text-transform: uppercase;
   width: 100%;
@@ -12,20 +13,20 @@
   }
 
   @include tb-screen {
-    font-size: min(#{vw-tb(20)}, #{rem(35)});
-  }
-
-  @include lt-screen {
-    font-size: rem(22);
+    font-size: min(#{vw-tb(18)}, #{rem(22)});
   }
 }
 
 .navigation__list {
   @extend %list-reset;
   display: flex;
-  justify-content: center;
 
   @include tb-screen {
+    justify-content: space-between;
+  }
+
+  @include pc-screen {
+    justify-content: center;
     gap: clamp(25px, #{vw-tb(25)}, 35px);
   }
 }
