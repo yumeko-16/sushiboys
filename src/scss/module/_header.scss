@@ -12,12 +12,8 @@
   }
 
   @include tb-screen {
-    row-gap: min(#{vw-tb(40)}, 64px);
+    row-gap: 60px;
     padding: min(#{vw-tb(50)}, 78px) min(#{vw-tb(40)}, 50px);
-  }
-
-  @include lt-screen {
-    row-gap: 40px;
   }
 
   &.is-hide {
