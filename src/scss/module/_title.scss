@@ -4,23 +4,20 @@
   @extend %margin-reset;
   color: $main-color;
   @include font-oswald-medium;
+  letter-spacing: 0.1em;
   text-align: center;
   text-transform: uppercase;
   width: 100%;
   word-break: break-all;
 
   @include sm-screen {
-    font-size: min(#{vw-sm(24)}, #{rem(32)});
+    font-size: min(#{vw-sm(40)}, #{rem(40)});
     line-height: 1.2;
   }
 
   @include tb-screen {
-    font-size: min(#{vw-tb(45)}, #{rem(90)});
+    font-size: rem(50);
     line-height: 1.1;
-  }
-
-  @include lt-screen {
-    font-size: rem(45);
   }
 }
 
