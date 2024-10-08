@@ -27,7 +27,7 @@
 .section__inner--form {
   @include tb-screen {
     margin: 0 auto;
-    width: 80%;
+    max-width: 800px;
   }
 }
 
