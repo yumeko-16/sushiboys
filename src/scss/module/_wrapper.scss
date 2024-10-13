@@ -1,19 +1,14 @@
 @use "../module/setting" as *;
 
 .wrapper {
-  height: 100%;
-  min-height: 100vh;
-  position: relative;
-
-  @include sm-screen {
-    padding-block-end: calc(calc(#{vw-sm(14)}) + calc(#{vw-sm(40)}));
-  }
+  display: grid;
+  grid-template-rows: 1fr;
 
   @include tb-screen {
-    padding-block-end: calc(calc(#{rem(14)}) + 40px);
+    grid-template-columns: 175px 1fr;
   }
 
   @include pc-screen {
-    padding-block-end: calc(calc(#{rem(40)}) + calc(#{rem(14.02)}) + 60px);
+    grid-template-columns: 260px 1fr;
   }
 }

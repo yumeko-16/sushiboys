@@ -18,10 +18,6 @@
   @include tb-screen {
     padding-inline: clamp(40px, #{vw-tb(40)}, 50px);
   }
-
-  @media screen and (min-width: 1200px) {
-    padding: 0;
-  }
 }
 
 .section__inner--form {

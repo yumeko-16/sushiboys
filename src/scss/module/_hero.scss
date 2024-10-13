@@ -16,10 +16,6 @@
   @include lt-screen {
     padding-block: 50px;
   }
-
-  @media screen and (min-width: 1200px) {
-    padding-inline: 0;
-  }
 }
 
 .hero__logo {
@@ -34,7 +30,7 @@
   }
 
   @include tb-screen {
-    width: min(50%, 500px);
+    width: min(50%, 300px);
   }
 }
 
