@@ -27,19 +27,19 @@
 </head>
 <body>
   <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
-  <div
-    id="wrapper"
-    class="wrapper"
-  >
-    <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
+  <div class="wrapper">
+    <%- include(localmeta.path + `_inc/components/_global-navigation`, {meta: localmeta}); %>
     <main class="main">
-      <%- include(localmeta.path + `_inc/components/_hero`, {meta: localmeta}); %>
-      <div class="content">
-        <%- include(localmeta.path + `_inc/components/discography/detail/_article`, {meta: localmeta, discographyData: discographyData}); %>
+      <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
+      <div>
+        <%- include(localmeta.path + `_inc/components/_hero`, {meta: localmeta}); %>
+        <div class="content">
+          <%- include(localmeta.path + `_inc/components/discography/detail/_article`, {meta: localmeta, discographyData: discographyData}); %>
+        </div>
       </div>
+      <%- include(localmeta.path + `_inc/components/_toggle`); %>
+      <%- include(localmeta.path + `_inc/components/_footer`); %>
     </main>
-    <%- include(localmeta.path + `_inc/components/_toggle`); %>
-    <%- include(localmeta.path + `_inc/components/_footer`); %>
   </div>
 </body>
 </html>
