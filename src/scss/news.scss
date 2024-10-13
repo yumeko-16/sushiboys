@@ -1,9 +1,9 @@
 @use "./module/setting";
 @use "./module/wrapper";
+@use "./module/global-navigation";
+@use "./module/main";
 @use "./module/header";
 @use "./module/title";
-@use "./module/navigation";
-@use "./module/main";
 @use "./module/hero";
 @use "./module/content";
 @use "./module/toggle";

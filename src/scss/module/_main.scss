@@ -1,7 +1,21 @@
 @use "../module/setting" as *;
 
 .main {
-  display: flex;
-  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
   overflow: hidden;
+  position: relative;
+
+  @include sm-screen {
+    padding-block-end: calc(calc(#{vw-sm(14)}) + calc(#{vw-sm(40)}));
+  }
+
+  @include tb-screen {
+    padding-block-end: calc(calc(#{rem(14)}) + 40px);
+  }
+
+  @include pc-screen {
+    grid-area: 1 / 2 / 2 / 3;
+    padding-block-end: calc(calc(#{rem(40)}) + calc(#{rem(14.02)}) + 60px);
+  }
 }
