@@ -31,8 +31,7 @@
   }
 }
 
-.form__input,
-.form__textarea {
+:where(.form__input, .form__textarea) {
   -webkit-rtl-ordering: initial;
   appearance: initial;
   background-color: #fff;
@@ -114,8 +113,7 @@
   }
 }
 
-.form__success-message,
-.form__error-message {
+:where(.form__success-message, .form__error-message) {
   margin: 0;
   opacity: 0;
   position: absolute;
@@ -170,13 +168,15 @@
     padding: 15px 20px;
   }
 
+  &:where(.js-success, .js-error) {
+    transform: translate3d(0, 0, 0);
+  }
+
   &.js-success {
     background-color: $success-color;
-    transform: translate3d(0, 0, 0);
   }
 
   &.js-error {
     background-color: $error-color;
-    transform: translate3d(0, 0, 0);
   }
 }
