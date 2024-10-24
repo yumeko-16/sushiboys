@@ -10,20 +10,20 @@ export const HumbergerToggle = (() => {
 
   let scrollY = null;
 
-  const handleToggleChange = (e) => {
-    if (e.target.checked) {
-      scrollY = window.scrollY;
-      setTimeout(() => {
-        BODY.classList.add('js-scroll-prevent');
-      }, 300);
-    } else {
-      BODY.classList.remove('js-scroll-prevent');
-      window.scrollTo(0, scrollY);
-      scrollY = null;
-      setTimeout(() => {
-        HEADER.classList.remove('is-hide');
-      }, 100);
-    }
+  const preventScroll = () => {
+    scrollY = window.scrollY;
+    BODY.style.top = `-${scrollY}px`;
+    BODY.classList.add('js-scroll-prevent');
+  };
+
+  const restoreScroll = () => {
+    BODY.style.top = '';
+    BODY.classList.remove('js-scroll-prevent');
+    window.scrollTo(0, scrollY);
+  };
+
+  const handleToggleChange = ({ target }) => {
+    target.checked ? preventScroll() : restoreScroll();
   };
 
   TRIGGER.addEventListener('change', handleToggleChange);
