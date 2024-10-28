@@ -37,13 +37,13 @@ _%>
 <section class="section">
   <div class="section__inner">
     <article class="article">
-      <h3 class="article__title"><%- reverseData[meta.index].title %></h3>
+      <h3 class="article__title"><%- reverseData?.[meta.index]?.title || "タイトルがありません" %></h3>
 
       <figure class="article__eyecatch">
         <img
           class="article__eyecatch-image"
-          src="<%- reverseData[meta.index].image %>"
-          alt="<%- reverseData[meta.index].alt %>"
+          src="<%- reverseData?.[meta.index]?.image || '/img/no-img.png' %>"
+          alt="<%- reverseData?.[meta.index]?.alt || '画像がありません' %>"
         >
       </figure>
 
