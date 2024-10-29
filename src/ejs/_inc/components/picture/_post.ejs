@@ -1,22 +1,27 @@
 <section class="section">
   <div class="section__inner">
     <h3 class="section__heading section__heading--ja">夏休み編</h3>
+    <%_
+      const posts = pictureData?.looks || [];
+      const reversePosts = [...posts].reverse(); // オリジナル配列を破壊しないためのコピー
+      const images = reversePosts?.[meta.index]?.images || [];
+    _%>
+    <%_ if (images.length > 0) { _%>
     <ul class="article__pictures">
-      <%_
-        const posts = pictureData.looks;
-        const reversePosts = posts.reverse();
-      _%>
-      <%_ reversePosts[meta.index].images.forEach((image) => { _%>
+      <%_ images.forEach((image) => { _%>
       <li class="article__pictures-item">
         <figure>
           <img
             class="article__image"
-            src="<%- image %>"
+            src="<%- image || '/img/no-image.png' %>"
             alt=""
           >
         </figure>
       </li>
-      <%_ }); _%>
+      <%_ }) _%>
     </ul>
+    <%_ } else { _%>
+    <p>画像がありません。</p>
+    <%_ } _%>
   </div>
 </section>
