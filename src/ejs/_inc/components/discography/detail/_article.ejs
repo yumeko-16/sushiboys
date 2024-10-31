@@ -1,3 +1,4 @@
+<!-- prettier-ignore -->
 <%_
   let data = {};
   let reverseData = {};
@@ -38,8 +39,7 @@ _%>
   <div class="section__inner">
     <article class="article">
       <h3 class="article__title"
-        ><%- reverseData?.[meta.index]?.title ||
-        'タイトルがありません' %></h3
+        ><%- reverseData?.[meta.index]?.title || 'タイトルがありません' %></h3
       >
 
       <figure class="article__eyecatch">
@@ -47,22 +47,19 @@ _%>
           class="article__eyecatch-image"
           src="<%- reverseData?.[meta.index]?.image || '/img/no-image.png' %>"
           alt="<%- reverseData?.[meta.index]?.alt || '' %>"
-        >
+        />
       </figure>
 
       <div class="article__body">
         <ul class="article__caption-list">
           <li class="article__caption-item"
-            >作品種別：<%- reverseData?.[meta.index]?.type || '未定'
-            %></li
+            >作品種別：<%- reverseData?.[meta.index]?.type || '未定' %></li
           >
           <li class="article__caption-item"
-            >発売日：<%- reverseData?.[meta.index]?.release ||
-            '未定' %></li
+            >発売日：<%- reverseData?.[meta.index]?.release || '未定' %></li
           >
           <li class="article__caption-item"
-            >価格：<%- reverseData?.[meta.index]?.price?.trim() ||
-            '未定' %></li
+            >価格：<%- reverseData?.[meta.index]?.price?.trim() || '未定' %></li
           >
           <%_ if (reverseData?.[meta.index]?.link?.trim()) { _%>
           <li class="article__caption-item">
@@ -74,17 +71,13 @@ _%>
             >
           </li>
           <%_ } else { _%>
-          <li class="article__caption-item"
-            >視聴：リンクがありません</li
-          >
+          <li class="article__caption-item">視聴：リンクがありません</li>
           <%_ } _%>
         </ul>
 
         <h3 class="article__caption-heading">Song contents</h3>
         <%_ if (reverseData?.[meta.index]?.songs?.length > 0) { _%>
-        <ol
-          class="article__caption-list article__caption-list--song"
-        >
+        <ol class="article__caption-list article__caption-list--song">
           <%_ reverseData[meta.index].songs.forEach((song) => { _%>
           <li class="article__caption-item"><%- song %></li>
           <%_ }) _%>
@@ -93,11 +86,10 @@ _%>
         <p>楽曲がありません</p>
         <%_ } _%>
 
+        <!-- prettier-ignore -->
         <%_ if (reverseData?.[meta.index]?.bonusTracks?.[0]?.trim()) { _%>
         <h3 class="article__caption-heading">Bonus track</h3>
-        <ol
-          class="article__caption-list article__caption-list--song"
-        >
+        <ol class="article__caption-list article__caption-list--song">
           <%_ reverseData[meta.index].bonusTracks.forEach((bonusTrack) => { _%>
           <li class="article__caption-item"><%- bonusTrack %></li>
           <%_ }) _%>
