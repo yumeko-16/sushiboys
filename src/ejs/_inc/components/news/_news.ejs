@@ -5,6 +5,7 @@
       data-news
     >
       <%_ const posts = newsData.posts; _%>
+      <!-- prettier-ignore -->
       <%_ posts.forEach(post => { _%>
       <li class="card-list__item">
         <a
@@ -17,20 +18,17 @@
               class="card__thumbnail"
               src="<%- post.hero.image %>"
               alt="<%- post.hero.alt %>"
-            >
+            />
             <%_ } else { _%>
             <img
               class="card__thumbnail card__thumbnail--no-image"
               src="/img/news/no-image.png"
               alt="No image"
-            >
+            />
             <%_ } _%>
           </figure>
-
           <div class="card__body">
-            <h3 class="card__title"
-              ><%- post.title %></h3
-            >
+            <h3 class="card__title"><%- post.title %></h3>
           </div>
         </a>
       </li>

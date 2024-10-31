@@ -1,11 +1,11 @@
 <section class="section">
   <div class="section__inner">
     <article class="article">
+      <!-- prettier-ignore -->
       <%_
         const posts = newsData.posts;
         const reversePosts = posts.reverse();
       _%>
-
       <h3 class="article__title"><%- reversePosts[meta.index].title %></h3>
 
       <%_ if (reversePosts[meta.index].hero.image !== '') { _%>
@@ -14,7 +14,7 @@
           class="article__eyecatch-image"
           src="<%- reversePosts[meta.index].hero.image %>"
           alt="<%- reversePosts[meta.index].hero.alt %>"
-        >
+        />
       </figure>
       <%_ } _%>
 
@@ -22,7 +22,7 @@
         <%_ reversePosts[meta.index].leads.forEach(lead => { _%>
         <p><%- lead %></p>
         <%_ }); _%>
-
+        <!-- prettier-ignore -->
         <%_ if (reversePosts[meta.index].photos.length !== 0) { _%>
         <%_ reversePosts[meta.index].photos.forEach(photo => { _%>
         <figure class="article__image-wrap">
@@ -30,9 +30,10 @@
             class="article__image"
             src="<%- photo.image %>"
             alt="<%- photo.alt %>"
-          >
+          />
         </figure>
         <%_ }); _%>
+        <!-- prettier-ignore -->
         <%_ } _%>
       </div>
 
