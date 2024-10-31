@@ -1,44 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <%_
-    const localmeta = {
-      title: `夏休み編 | SUSHIBOYS`,
-      description: ``,
-      url: `https://sushiboys350.com/picture/look/summer-vacation/`,
-      pageid: `picture`,
-      index: 0,
-      path: `../../../`
-    };
-    const localogp = {
-      title: localmeta.title,
-      description: localmeta.description,
-      url: localmeta.url
-    };
-    const localfile = {
-      css: `/css/picture-post.css`,
-      js: `/js/picturePost.js`
-    };
-  _%>
-  <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); %>
-  <%- include(localmeta.path + `_data/_picture`); %>
-  <%_ pictureData = picture(); _%>
-</head>
-<body>
-  <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
-  <div class="wrapper">
-    <%- include(localmeta.path + `_inc/components/_global-navigation`, {meta: localmeta}); %>
-    <main class="main">
-      <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
-      <div>
-        <%- include(localmeta.path + `_inc/components/_hero`, {meta: localmeta}); %>
-        <div class="content">
-          <%- include(localmeta.path + `_inc/components/picture/_post`, {meta: localmeta, pictureData: pictureData}); %>
+  <head>
+    <!-- prettier-ignore -->
+    <%_
+      const localmeta = {
+        title: `夏休み編 | SUSHIBOYS`,
+        description: ``,
+        url: `https://sushiboys350.com/picture/look/summer-vacation/`,
+        pageid: `picture`,
+        index: 0,
+        path: `../../../`
+      };
+      const localogp = {
+        title: localmeta.title,
+        description: localmeta.description,
+        url: localmeta.url
+      };
+      const localfile = {
+        css: `/css/picture-post.css`,
+        js: `/js/picturePost.js`
+      };
+    _%>
+    <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
+    <%- include(localmeta.path + `_data/_picture`); _%>
+    <%_ pictureData = picture(); _%>
+  </head>
+  <body>
+    <%- include(localmeta.path + `_inc/components/_googletagmanager`); _%>
+
+    <div class="wrapper">
+      <!-- prettier-ignore -->
+      <%- include(localmeta.path + `_inc/components/_global-navigation`, {meta: localmeta}); _%>
+
+      <main class="main">
+        <!-- prettier-ignore -->
+        <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); _%>
+
+        <div>
+          <!-- prettier-ignore -->
+          <%- include(localmeta.path + `_inc/components/_hero`, {meta: localmeta}); _%>
+
+          <div class="content">
+            <!-- prettier-ignore -->
+            <%- include(localmeta.path + `_inc/components/picture/_post`, {meta: localmeta, pictureData: pictureData}); _%>
+          </div>
         </div>
-      </div>
-      <%- include(localmeta.path + `_inc/components/_toggle`); %>
-      <%- include(localmeta.path + `_inc/components/_footer`); %>
-    </main>
-  </div>
-</body>
+
+        <!-- prettier-ignore -->
+        <%- include(localmeta.path + `_inc/components/_toggle`); _%>
+
+        <%- include(localmeta.path + `_inc/components/_footer`); _%>
+      </main>
+    </div>
+  </body>
 </html>
