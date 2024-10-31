@@ -1,44 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <%_
-    const localmeta = {
-      title: `10/20（Fri.）G2 SHIZUOKA 出演決定 | SUSHIBOYS`,
-      description: `10/20（Fri.）G2 SHIZUOKA 出演決定 会場 〒420-0852 静岡県静岡市葵区紺屋町12-1 ドン・キホーテビル６F`,
-      url: `https://sushiboys350.com/news/post041/`,
-      pageid: `news`,
-      index: 41 - 1,
-      path: `../../`
-    };
-    const localogp = {
-      title: localmeta.title,
-      description: localmeta.description,
-      url: localmeta.url
-    };
-    const localfile = {
-      css: `/css/news-detail.css`,
-      js: `/js/newsDetail.js`
-    };
-  _%>
-  <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); %>
-  <%- include(localmeta.path + `_data/_news`); %>
-  <%_ newsData = news(); _%>
-</head>
-<body>
-  <%- include(localmeta.path + `_inc/components/_googletagmanager`); %>
-  <div class="wrapper">
-    <%- include(localmeta.path + `_inc/components/_global-navigation`, {meta: localmeta}); %>
-    <main class="main">
-      <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); %>
-      <div>
-        <%- include(localmeta.path + `_inc/components/_hero`, {meta: localmeta}); %>
-        <div class="content">
-          <%- include(localmeta.path + `_inc/components/news/post/_post`, {meta: localmeta, newsData: newsData}); %>
+  <head>
+    <!-- prettier-ignore -->
+    <%_
+      const localmeta = {
+        title: `10/20（Fri.）G2 SHIZUOKA 出演決定 | SUSHIBOYS`,
+        description: `10/20（Fri.）G2 SHIZUOKA 出演決定 会場 〒420-0852 静岡県静岡市葵区紺屋町12-1 ドン・キホーテビル６F`,
+        url: `https://sushiboys350.com/news/post041/`,
+        pageid: `news`,
+        index: 41 - 1,
+        path: `../../`
+      };
+      const localogp = {
+        title: localmeta.title,
+        description: localmeta.description,
+        url: localmeta.url
+      };
+      const localfile = {
+        css: `/css/news-detail.css`,
+        js: `/js/newsDetail.js`
+      };
+    _%>
+    <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
+    <%- include(localmeta.path + `_data/_news`); _%>
+    <%_ newsData = news(); _%>
+  </head>
+  <body>
+    <%- include(localmeta.path + `_inc/components/_googletagmanager`); _%>
+
+    <div class="wrapper">
+      <!-- prettier-ignore -->
+      <%- include(localmeta.path + `_inc/components/_global-navigation`, {meta: localmeta}); _%>
+
+      <main class="main">
+        <!-- prettier-ignore -->
+        <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); _%>
+
+        <div>
+          <!-- prettier-ignore -->
+          <%- include(localmeta.path + `_inc/components/_hero`, {meta: localmeta}); _%>
+
+          <div class="content">
+            <!-- prettier-ignore -->
+            <%- include(localmeta.path + `_inc/components/news/post/_post`, {meta: localmeta, newsData: newsData}); _%>
+          </div>
         </div>
-      </div>
-      <%- include(localmeta.path + `_inc/components/_toggle`); %>
-      <%- include(localmeta.path + `_inc/components/_footer`); %>
-    </main>
-  </div>
-</body>
+
+        <!-- prettier-ignore -->
+        <%- include(localmeta.path + `_inc/components/_toggle`); _%>
+
+        <%- include(localmeta.path + `_inc/components/_footer`); _%>
+      </main>
+    </div>
+  </body>
 </html>
