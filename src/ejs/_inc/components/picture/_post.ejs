@@ -1,6 +1,7 @@
 <section class="section">
   <div class="section__inner">
     <h3 class="section__heading section__heading--ja">夏休み編</h3>
+    <!-- prettier-ignore -->
     <%_
       const posts = pictureData?.looks || [];
       const reversePosts = [...posts].reverse(); // オリジナル配列を破壊しないためのコピー
@@ -15,10 +16,10 @@
             class="article__image"
             src="<%- image || '/img/no-image.png' %>"
             alt=""
-          >
+          />
         </figure>
       </li>
-      <%_ }) _%>
+      <%_ }); _%>
     </ul>
     <%_ } else { _%>
     <p>画像がありません。</p>
