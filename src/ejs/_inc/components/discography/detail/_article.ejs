@@ -60,7 +60,7 @@ _%>
             価格：<%- reverseData?.[meta.index]?.price?.trim() || '未定' %>
           </li>
           <li class="article__caption-item">
-            <%_ const link = reverseData?.[meta.index]?.link?.trim() _%>
+            <%_ const link = reverseData?.[meta.index]?.link?.trim(); _%>
             <!-- prettier-ignore -->
             <%_ if (link) { _%>
             視聴：<a
@@ -86,7 +86,7 @@ _%>
         <ol class="article__caption-list article__caption-list--song">
           <%_ songs.forEach((song) => { _%>
           <li class="article__caption-item"><%- song %></li>
-          <%_ }) _%>
+          <%_ }); _%>
         </ol>
         <%_ } else { _%>
         <p>楽曲がありません</p>
@@ -102,7 +102,7 @@ _%>
         <ol class="article__caption-list article__caption-list--song">
           <%_ bonusTracks.forEach((bonusTrack) => { _%>
           <li class="article__caption-item"><%- bonusTrack %></li>
-          <%_ }) _%>
+          <%_ }); _%>
         </ol>
         <%_ } _%>
       </div>
