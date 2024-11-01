@@ -6,15 +6,15 @@
       class="carousel swiper"
     >
       <ul class="carousel__list swiper-wrapper">
-        <%_ const eps = discographyData.eps; _%>
+        <%_ const eps = discographyData?.eps || []; _%>
         <!-- prettier-ignore -->
         <%_ eps.forEach((ep) => { _%>
         <li class="carousel__card swiper-slide">
-          <a href="<%- ep.url %>">
+          <a href="<%- ep?.url || '#' %>">
             <img
               class="carousel__image"
-              src="<%- ep.image %>"
-              alt="<%- ep.alt %>"
+              src="<%- ep?.image || '/img/no-image.png' %>"
+              alt="<%- ep?.alt || '' %>"
             />
           </a>
         </li>
@@ -32,15 +32,15 @@
       class="carousel swiper"
     >
       <ul class="carousel__list swiper-wrapper">
-        <%_ const singles = discographyData.singles; _%>
+        <%_ const singles = discographyData?.singles || []; _%>
         <!-- prettier-ignore -->
         <%_ singles.forEach((single) => { _%>
         <li class="carousel__card swiper-slide">
-          <a href="<%- single.url %>">
+          <a href="<%- single?.url || '#' %>">
             <img
               class="carousel__image"
-              src="<%- single.image %>"
-              alt="<%- single.alt %>"
+              src="<%- single?.image || '/img/no-image.png' %>"
+              alt="<%- single?.alt || '' %>"
             />
           </a>
         </li>
@@ -58,15 +58,15 @@
       class="carousel swiper"
     >
       <ul class="carousel__list swiper-wrapper">
-        <%_ const feats = discographyData.feats; _%>
+        <%_ const feats = discographyData?.feats || []; _%>
         <!-- prettier-ignore -->
         <%_ feats.forEach((feat) => { _%>
         <li class="carousel__card swiper-slide">
-          <a href="<%- feat.url %>">
+          <a href="<%- feat?.url || '#' %>">
             <img
               class="carousel__image"
-              src="<%- feat.image %>"
-              alt="<%- feat.alt %>"
+              src="<%- feat?.image || '/img/no-image.png' %>"
+              alt="<%- feat?.alt || '' %>"
             />
           </a>
         </li>
@@ -84,15 +84,15 @@
       class="carousel swiper"
     >
       <ul class="carousel__list swiper-wrapper">
-        <%_ const records = discographyData.records; _%>
+        <%_ const records = discographyData?.records || []; _%>
         <!-- prettier-ignore -->
         <%_ records.forEach((record) => { _%>
         <li class="carousel__card swiper-slide">
-          <a href="<%- record.url %>">
+          <a href="<%- record?.url || '#' %>">
             <img
               class="carousel__image"
-              src="<%- record.image %>"
-              alt="<%- record.alt %>"
+              src="<%- record?.image || '/img/no-image.png' %>"
+              alt="<%- record?.alt || '' %>"
             />
           </a>
         </li>
@@ -110,15 +110,15 @@
       class="carousel swiper"
     >
       <ul class="carousel__list swiper-wrapper">
-        <%_ const farmhouseEps = discographyData.farmhouseEps; _%>
+        <%_ const farmhouseEps = discographyData.farmhouseEps || []; _%>
         <!-- prettier-ignore -->
         <%_ farmhouseEps.forEach((farmhouseEp) => { _%>
         <li class="carousel__card swiper-slide">
-          <a href="<%- farmhouseEp.url %>">
+          <a href="<%- farmhouseEp?.url || '#' %>">
             <img
               class="carousel__image"
-              src="<%- farmhouseEp.image %>"
-              alt="<%- farmhouseEp.alt %>"
+              src="<%- farmhouseEp?.image || '/img/no-image.png' %>"
+              alt="<%- farmhouseEp?.alt || '' %>"
             />
           </a>
         </li>
@@ -136,15 +136,15 @@
       class="carousel swiper"
     >
       <ul class="carousel__list swiper-wrapper">
-        <%_ const santenaEps = discographyData.santenaEps; _%>
+        <%_ const santenaEps = discographyData.santenaEps || []; _%>
         <!-- prettier-ignore -->
         <%_ santenaEps.forEach((santenaEp) => { _%>
         <li class="carousel__card swiper-slide">
-          <a href="<%- santenaEp.url %>">
+          <a href="<%- santenaEp?.url || '#' %>">
             <img
               class="carousel__image"
-              src="<%- santenaEp.image %>"
-              alt="<%- santenaEp.alt %>"
+              src="<%- santenaEp?.image || '/img/no-image.png' %>"
+              alt="<%- santenaEp?.alt || '' %>"
             />
           </a>
         </li>
@@ -162,15 +162,16 @@
       class="carousel swiper"
     >
       <ul class="carousel__list swiper-wrapper">
-        <%_ const farmhouseSingles = discographyData.farmhouseSingles; _%>
+        <%_ const farmhouseSingles = discographyData?.farmhouseSingles || [];
+        _%>
         <!-- prettier-ignore -->
         <%_ farmhouseSingles.forEach((farmhouseSingle) => { _%>
         <li class="carousel__card swiper-slide">
-          <a href="<%- farmhouseSingle.url %>">
+          <a href="<%- farmhouseSingle?.url || '#' %>">
             <img
               class="carousel__image"
-              src="<%- farmhouseSingle.image %>"
-              alt="<%- farmhouseSingle.alt %>"
+              src="<%- farmhouseSingle?.image || '/img/no-image.png' %>"
+              alt="<%- farmhouseSingle?.alt || '' %>"
             />
           </a>
         </li>
