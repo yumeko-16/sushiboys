@@ -172,11 +172,11 @@ $base-window-width: 375;
   box-sizing: border-box;
 }
 
-html {
+:where(html) {
   height: -webkit-fill-available;
 }
 
-body {
+:where(body) {
   @include font-default;
   color: $main-color;
   background-color: $base-color;
@@ -201,6 +201,6 @@ body {
   }
 }
 
-figure {
+:where(figure) {
   margin: 0;
 }
