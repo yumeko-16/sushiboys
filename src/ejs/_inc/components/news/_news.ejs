@@ -10,25 +10,19 @@
       <li class="card-list__item">
         <a
           class="card"
-          href="<%- post.url %>"
+          href="<%- post?.url || '#' %>"
         >
           <figure class="card__image-area">
-            <%_ if (post.hero.image !== '') { _%>
             <img
-              class="card__thumbnail"
-              src="<%- post.hero.image %>"
-              alt="<%- post.hero.alt %>"
+              class="card__thumbnail<%= post?.hero?.image ? '' : ' card__thumbnail--no-image' %>"
+              src="<%- post?.hero?.image || '/img/no-image.png' %>"
+              alt="<%- post?.hero?.alt || 'No image' %>"
             />
-            <%_ } else { _%>
-            <img
-              class="card__thumbnail card__thumbnail--no-image"
-              src="/img/news/no-image.png"
-              alt="No image"
-            />
-            <%_ } _%>
           </figure>
           <div class="card__body">
-            <h3 class="card__title"><%- post.title %></h3>
+            <h3 class="card__title">
+              <%- post?.title || 'タイトルがありません' %>
+            </h3>
           </div>
         </a>
       </li>
