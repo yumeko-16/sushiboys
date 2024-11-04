@@ -3,33 +3,36 @@
     <article class="article">
       <!-- prettier-ignore -->
       <%_
-        const posts = newsData.posts;
-        const reversePosts = posts.reverse();
+        const posts = newsData?.posts || [];
+        const reversePosts = [...posts].reverse();
+        const post = reversePosts[meta.index] || {};
       _%>
-      <h3 class="article__title"><%- reversePosts[meta.index].title %></h3>
+      <h3 class="article__title">
+        <%- post.title || 'タイトルがありません' %>
+      </h3>
 
-      <%_ if (reversePosts[meta.index].hero.image !== '') { _%>
+      <%_ if (post.hero?.image) { _%>
       <figure class="article__eyecatch">
         <img
           class="article__eyecatch-image"
-          src="<%- reversePosts[meta.index].hero.image %>"
-          alt="<%- reversePosts[meta.index].hero.alt %>"
+          src="<%- post.hero.image || '/img/no-image.png' %>"
+          alt="<%- post.hero.alt || '' %>"
         />
       </figure>
       <%_ } _%>
 
       <div class="article__body">
-        <%_ reversePosts[meta.index].leads.forEach(lead => { _%>
+        <%_ (post.leads || []).forEach(lead => { _%>
         <p><%- lead %></p>
         <%_ }); _%>
         <!-- prettier-ignore -->
-        <%_ if (reversePosts[meta.index].photos.length !== 0) { _%>
-        <%_ reversePosts[meta.index].photos.forEach(photo => { _%>
+        <%_ if (post.photos?.length) { _%>
+        <%_ post.photos.forEach(photo => { _%>
         <figure class="article__image-wrap">
           <img
             class="article__image"
             src="<%- photo.image %>"
-            alt="<%- photo.alt %>"
+            alt="<%- photo.alt || '' %>"
           />
         </figure>
         <%_ }); _%>
