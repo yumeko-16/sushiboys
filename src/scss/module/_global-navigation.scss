@@ -40,7 +40,7 @@
 
 .global-navigation__logo {
   @extend %image;
-  aspect-ratio: 3000 / 2001;
+  aspect-ratio: $aspect-logo;
 }
 
 .global-navigation__list {

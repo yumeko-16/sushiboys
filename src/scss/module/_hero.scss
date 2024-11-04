@@ -36,7 +36,7 @@
 
 .hero__image {
   @extend %image;
-  aspect-ratio: 3000 / 2001;
+  aspect-ratio: $aspect-logo;
   height: auto;
 }
 
