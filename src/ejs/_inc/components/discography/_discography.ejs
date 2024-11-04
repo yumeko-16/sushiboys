@@ -1,46 +1,22 @@
+<!-- prettier-ignore -->
+<%_ const renderCarouselSection = (id, heading, items) => { _%>
 <section class="section">
   <div class="section__inner">
-    <h3 class="section__heading section__heading--en">EP</h3>
-    <div
-      id="swiper-ep"
-      class="carousel swiper"
-    >
-      <ul class="carousel__list swiper-wrapper">
-        <%_ const eps = discographyData?.eps || []; _%>
-        <!-- prettier-ignore -->
-        <%_ eps.forEach((ep) => { _%>
-        <li class="carousel__card swiper-slide">
-          <a href="<%- ep?.url || '#' %>">
-            <img
-              class="carousel__image"
-              src="<%- ep?.image || '/img/no-image.png' %>"
-              alt="<%- ep?.alt || 'No image' %>"
-            />
-          </a>
-        </li>
-        <%_ }); _%>
-      </ul>
-    </div>
-  </div>
-</section>
+    <h3 class="section__heading section__heading--en"><%= heading %></h3>
 
-<section class="section">
-  <div class="section__inner">
-    <h3 class="section__heading section__heading--en">Single</h3>
     <div
-      id="swiper-single"
+      id="<%= id %>"
       class="carousel swiper"
     >
       <ul class="carousel__list swiper-wrapper">
-        <%_ const singles = discographyData?.singles || []; _%>
         <!-- prettier-ignore -->
-        <%_ singles.forEach((single) => { _%>
+        <%_ items.forEach((item) => { _%>
         <li class="carousel__card swiper-slide">
-          <a href="<%- single?.url || '#' %>">
+          <a href="<%- item?.url || '#' %>">
             <img
               class="carousel__image"
-              src="<%- single?.image || '/img/no-image.png' %>"
-              alt="<%- single?.alt || 'No image' %>"
+              src="<%- item?.image || '/img/no-image.png' %>"
+              alt="<%- item?.alt || 'No image' %>"
             />
           </a>
         </li>
@@ -49,134 +25,15 @@
     </div>
   </div>
 </section>
+<%_ } _%>
 
-<section class="section">
-  <div class="section__inner">
-    <h3 class="section__heading section__heading--en">feat.</h3>
-    <div
-      id="swiper-feat"
-      class="carousel swiper"
-    >
-      <ul class="carousel__list swiper-wrapper">
-        <%_ const feats = discographyData?.feats || []; _%>
-        <!-- prettier-ignore -->
-        <%_ feats.forEach((feat) => { _%>
-        <li class="carousel__card swiper-slide">
-          <a href="<%- feat?.url || '#' %>">
-            <img
-              class="carousel__image"
-              src="<%- feat?.image || '/img/no-image.png' %>"
-              alt="<%- feat?.alt || 'No image' %>"
-            />
-          </a>
-        </li>
-        <%_ }); _%>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section__inner">
-    <h3 class="section__heading section__heading--en">Record</h3>
-    <div
-      id="swiper-record"
-      class="carousel swiper"
-    >
-      <ul class="carousel__list swiper-wrapper">
-        <%_ const records = discographyData?.records || []; _%>
-        <!-- prettier-ignore -->
-        <%_ records.forEach((record) => { _%>
-        <li class="carousel__card swiper-slide">
-          <a href="<%- record?.url || '#' %>">
-            <img
-              class="carousel__image"
-              src="<%- record?.image || '/img/no-image.png' %>"
-              alt="<%- record?.alt || 'No image' %>"
-            />
-          </a>
-        </li>
-        <%_ }); _%>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section__inner">
-    <h3 class="section__heading section__heading--en">FARMHOUSE EP</h3>
-    <div
-      id="swiper-farmhouse-ep"
-      class="carousel swiper"
-    >
-      <ul class="carousel__list swiper-wrapper">
-        <%_ const farmhouseEps = discographyData.farmhouseEps || []; _%>
-        <!-- prettier-ignore -->
-        <%_ farmhouseEps.forEach((farmhouseEp) => { _%>
-        <li class="carousel__card swiper-slide">
-          <a href="<%- farmhouseEp?.url || '#' %>">
-            <img
-              class="carousel__image"
-              src="<%- farmhouseEp?.image || '/img/no-image.png' %>"
-              alt="<%- farmhouseEp?.alt || 'No image' %>"
-            />
-          </a>
-        </li>
-        <%_ }); _%>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section__inner">
-    <h3 class="section__heading section__heading--en">SANTENA EP</h3>
-    <div
-      id="swiper-santena-ep"
-      class="carousel swiper"
-    >
-      <ul class="carousel__list swiper-wrapper">
-        <%_ const santenaEps = discographyData.santenaEps || []; _%>
-        <!-- prettier-ignore -->
-        <%_ santenaEps.forEach((santenaEp) => { _%>
-        <li class="carousel__card swiper-slide">
-          <a href="<%- santenaEp?.url || '#' %>">
-            <img
-              class="carousel__image"
-              src="<%- santenaEp?.image || '/img/no-image.png' %>"
-              alt="<%- santenaEp?.alt || 'No image' %>"
-            />
-          </a>
-        </li>
-        <%_ }); _%>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="section__inner">
-    <h3 class="section__heading section__heading--en">FARMHOUSE Single</h3>
-    <div
-      id="swiper-farmhouse-single"
-      class="carousel swiper"
-    >
-      <ul class="carousel__list swiper-wrapper">
-        <%_ const farmhouseSingles = discographyData?.farmhouseSingles || [];
-        _%>
-        <!-- prettier-ignore -->
-        <%_ farmhouseSingles.forEach((farmhouseSingle) => { _%>
-        <li class="carousel__card swiper-slide">
-          <a href="<%- farmhouseSingle?.url || '#' %>">
-            <img
-              class="carousel__image"
-              src="<%- farmhouseSingle?.image || '/img/no-image.png' %>"
-              alt="<%- farmhouseSingle?.alt || 'No image' %>"
-            />
-          </a>
-        </li>
-        <%_ }); _%>
-      </ul>
-    </div>
-  </div>
-</section>
+<!-- prettier-ignore -->
+<%_
+  renderCarouselSection("swiper-ep", "EP", discographyData?.eps || []);
+  renderCarouselSection("swiper-single", "Single", discographyData?.singles || []);
+  renderCarouselSection("swiper-feat", "feat.", discographyData?.feats || []);
+  renderCarouselSection("swiper-record", "Record", discographyData?.records || []);
+  renderCarouselSection("swiper-farmhouse-ep", "FARMHOUSE EP", discographyData?.farmhouseEps || []);
+  renderCarouselSection("swiper-santena-ep", "SANTENA EP", discographyData?.santenaEps || []);
+  renderCarouselSection("swiper-farmhouse-single", "FARMHOUSE Single", discographyData?.farmhouseSingles || []);
+_%>
