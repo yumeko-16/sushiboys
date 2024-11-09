@@ -24,17 +24,32 @@
   z-index: 2;
 
   @include tb-screen {
-    display: flex;
-    flex-direction: column;
     font-size: rem(16);
     grid-area: 1 / 1 / 2 / 2;
-    padding: 60px 20px;
-    row-gap: 60px;
   }
 
   @include pc-screen {
     font-size: rem(18);
-    padding: 60px 35px;
+  }
+}
+
+.global-navigation__inner {
+  @include tb-screen {
+    display: flex;
+  }
+}
+
+.global-navigation__inner--vertically {
+  @include tb-screen {
+    flex-direction: column;
+    padding-inline: 20px;
+    position: sticky;
+    row-gap: 60px;
+    top: 60px;
+  }
+
+  @include pc-screen {
+    padding-inline: 35px;
   }
 }
 
