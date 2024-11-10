@@ -3,7 +3,13 @@
 .button {
   align-items: center;
   appearance: none;
-  border: 0;
+  background: silver;
+  border-width: 2px;
+  border-style: outset;
+  border-top-color: #fff;
+  border-right-color: #424242;
+  border-bottom-color: #424242;
+  border-left-color: #fff;
   color: inherit;
   display: inline-flex;
   @include font-oswald-medium;
@@ -11,13 +17,13 @@
   text-decoration: none;
 
   @include sm-screen {
-    border-radius: vw-sm(5);
+    border-radius: vw-sm(1);
     gap: vw-sm(10);
     padding: vw-sm(15) vw-sm(25);
   }
 
   @include tb-screen {
-    border-radius: 5px;
+    border-radius: 1px;
     gap: 10px;
     padding: 15px 70px;
   }
@@ -27,23 +33,23 @@
   }
 
   &:disabled {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: $main-color;
-
-    @include sm-screen {
-      border: vw-sm(1) solid $main-color;
-    }
-
-    @include tb-screen {
-      border: 1px solid $main-color;
-    }
+    opacity: 0.65;
 
     @include hover {
-      cursor: not-allowed;
+      cursor: default;
     }
+  }
 
-    & > .button__icon {
-      color: $main-color;
+  &:not(:disabled) {
+    @include hover {
+      border: 2px inset #fff;
+      background: silver;
+      box-shadow: -1px -1px #000;
+      color: #424242;
+
+      .button__icon {
+        color: #424242;
+      }
     }
   }
 }
@@ -65,7 +71,7 @@
 }
 
 .button__icon {
-  color: #fff;
+  color: $main-color;
 }
 
 .button__text {
@@ -82,9 +88,6 @@
 }
 
 .button--back {
-  background-color: $main-color;
-  color: #fff;
-
   @include sm-screen {
     font-size: vw-sm(18);
   }
@@ -95,9 +98,6 @@
 }
 
 .button--send {
-  background-color: $main-color;
-  color: #fff;
-
   @include sm-screen {
     font-size: vw-sm(18);
   }
