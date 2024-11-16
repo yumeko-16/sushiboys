@@ -15,7 +15,7 @@
           <figure class="card__image-area">
             <img
               class="card__thumbnail<%= post?.hero?.image ? '' : ' card__thumbnail--no-image' %>"
-              src="<%- (post?.hero?.image && post.hero.image !== '') ? post.hero.image : '/img/no-image.png' %>"
+              src="<%- post?.hero?.image || '/img/no-image.png' %>"
               alt="<%- post?.hero?.alt || 'No image' %>"
             />
           </figure>
