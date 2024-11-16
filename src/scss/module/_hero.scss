@@ -30,13 +30,13 @@
   }
 
   @include tb-screen {
-    width: min(50%, 300px);
+    width: 65%;
   }
 }
 
 .hero__image {
   @extend %image;
-  aspect-ratio: $aspect-logo;
+  aspect-ratio: 854 / 480;
   height: auto;
 }
 
