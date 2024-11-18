@@ -24,6 +24,11 @@
   justify-content: center;
   margin: 0 auto;
 
+  @include sm-screen {
+    padding-block: vw-sm(35);
+    width: 70%;
+  }
+
   @include pc-screen {
     width: 65%;
   }
@@ -31,8 +36,15 @@
 
 .hero__image {
   @extend %image;
-  aspect-ratio: 854 / 480;
   height: auto;
+
+  @include sm-screen {
+    aspect-ratio: 3000 / 2001;
+  }
+
+  @include tb-screen {
+    aspect-ratio: 854 / 480;
+  }
 }
 
 .hero__heading {

@@ -32,13 +32,18 @@
 _%>
 <div class="hero">
   <%_ if (meta.pageid.includes(`home`)) { _%>
-  <figure class="hero__logo">
+  <picture class="hero__logo">
+    <source
+      media="(max-width: 767px)"
+      srcset="/img/logo.png"
+      alt="SUSHIBOYS"
+    />
     <img
       class="hero__image"
       src="/img/members.jpg"
       alt="SUSHIBOYS"
     />
-  </figure>
+  </picture>
   <%_ } else { _%>
   <h2
     class="hero__heading"
