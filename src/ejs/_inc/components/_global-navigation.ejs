@@ -4,11 +4,17 @@
       class="global-navigation__link"
       href="/"
     >
-      <img
-        class="global-navigation__logo"
-        src="/img/logo.png"
-        alt="SUSHIBOYS"
-      />
+      <picture>
+        <source
+          srcset="/img/logo.webp"
+          type="image/webp"
+        />
+        <img
+          class="global-navigation__logo"
+          src="/img/logo.png"
+          alt="SUSHIBOYS"
+        />
+      </picture>
     </a>
 
     <%_ const currentClass = ` current`; _%>
