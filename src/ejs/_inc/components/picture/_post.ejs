@@ -11,13 +11,17 @@
     <ul class="article__pictures">
       <%_ images.forEach((image) => { _%>
       <li class="article__pictures-item">
-        <figure>
+        <picture>
+          <source
+            srcset="<%- `${image}.webp` %>"
+            type="image/webp"
+          />
           <img
             class="article__image"
-            src="<%- image || '/img/no-image.png' %>"
+            src="<%- `${image}.jpg` || '/img/no-image.png' %>"
             alt=""
           />
-        </figure>
+        </picture>
       </li>
       <%_ }); _%>
     </ul>
