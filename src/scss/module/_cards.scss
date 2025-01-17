@@ -1,6 +1,6 @@
 @use "../module/setting" as *;
 
-.card-list {
+.cards {
   @extend %list-reset;
   display: grid;
   justify-content: center;
