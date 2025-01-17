@@ -1,6 +1,6 @@
 @use "../module/setting" as *;
 
-.card {
+.card__content {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -31,19 +31,18 @@
       margin-block-start: 25px;
     }
   }
+}
+
+.card__content--link {
+  cursor: pointer;
+  height: 100%;
+  text-decoration: none;
 
   @include hover {
     .card__thumbnail {
       opacity: 0.8;
     }
   }
-}
-
-.card__link {
-  cursor: pointer;
-  display: block;
-  height: 100%;
-  text-decoration: none;
 }
 
 .card__image-area {

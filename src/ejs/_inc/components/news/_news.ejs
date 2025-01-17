@@ -1,22 +1,24 @@
 <section class="section">
   <div class="section__inner">
+    <!-- prettier-ignore -->
+    <%_ const posts = newsData?.posts; _%>
+    <%_ if (posts?.length) { _%>
     <ul
-      class="card-list"
+      class="cards"
       data-news
     >
-      <%_ const posts = newsData?.posts; _%>
-      <!-- prettier-ignore -->
       <%_ posts.forEach(post => { _%>
-      <li class="card-list__item">
+      <li class="card cards__item">
+        <%_ if (post?.url) { _%>
         <a
-          class="card"
-          href="<%- post?.url || '#' %>"
+          class="card__content card__content--link"
+          href="<%- post.url %>"
         >
           <figure class="card__image-area">
             <img
               class="card__thumbnail<%= post?.hero?.image ? '' : ' card__thumbnail--no-image' %>"
               src="<%- post?.hero?.image || '/img/no-image.png' %>"
-              alt="<%- post?.hero?.alt || 'No image' %>"
+              alt="<%- post?.hero?.alt || '' %>"
             />
           </figure>
           <div class="card__body">
@@ -25,8 +27,27 @@
             </h3>
           </div>
         </a>
+        <%_ } else { _%>
+        <div class="card__content">
+          <figure class="card__image-area">
+            <img
+              class="card__thumbnail<%= post?.hero?.image ? '' : ' card__thumbnail--no-image' %>"
+              src="<%- post?.hero?.image || '/img/no-image.png' %>"
+              alt="<%- post?.hero?.alt || '' %>"
+            />
+          </figure>
+          <div class="card__body">
+            <h3 class="card__title">
+              <%- post?.title || 'タイトルがありません' %>
+            </h3>
+          </div>
+        </div>
+        <%_ } _%>
       </li>
       <%_ }); _%>
     </ul>
+    <%_ } else { _%>
+    <p>現在、投稿はありません。</p>
+    <%_ } _%>
   </div>
 </section>
