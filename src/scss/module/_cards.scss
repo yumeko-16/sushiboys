@@ -3,20 +3,17 @@
 .cards {
   @extend %list-reset;
   display: grid;
-  justify-content: center;
 
   @include sm-screen {
-    row-gap: vw-sm(40);
+    gap: vw-sm(40) 0;
   }
 
   @include tb-screen {
-    gap: 30px;
-    grid-template-columns: repeat(auto-fit, calc((100% - 60px) / 3));
-    justify-content: space-between;
+    gap: vw-tb(30);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 
   @include pc-screen {
     gap: 40px;
-    grid-template-columns: repeat(auto-fit, calc((100% - 120px) / 4));
   }
 }

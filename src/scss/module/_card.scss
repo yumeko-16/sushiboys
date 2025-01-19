@@ -1,81 +1,36 @@
 @use "../module/setting" as *;
 
-.card__content {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  text-decoration: none;
-  width: 100%;
+.card {
+  display: contents;
+}
+
+.card__wrapper {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 2;
 
   @include sm-screen {
-    row-gap: vw-sm(10);
+    gap: vw-sm(10) 0;
   }
 
   @include tb-screen {
-    row-gap: 10px;
-  }
-
-  &:nth-of-type(-n + 3) {
-    @include tb-screen {
-      height: 100%;
-      margin-block-start: 0;
-    }
-  }
-
-  &:nth-of-type(n + 4) {
-    @include sm-screen {
-      margin-block-start: vw-sm(20);
-    }
-
-    @include tb-screen {
-      margin-block-start: 25px;
-    }
+    gap: 10px;
   }
 }
 
-.card__content--link {
+.card__wrapper--link {
+  color: inherit;
   cursor: pointer;
-  height: 100%;
   text-decoration: none;
 
   @include hover {
-    .card__thumbnail {
-      opacity: 0.8;
-    }
+    filter: opacity(0.8);
   }
 }
 
-.card__image-area {
-  background-color: #fff;
-}
-
-.card__thumbnail {
-  border: 1px solid $main-color;
-  display: block;
-  object-fit: contain;
-  width: 100%;
-
-  @include sm-screen {
-    height: vw-sm(260);
-  }
-
-  @include tb-screen {
-    height: 260px;
-  }
-}
-
-.card__thumbnail--no-image {
-  object-position: center;
-}
-
-.card__body {
-  color: $main-color;
-  word-break: break-all;
-}
-
-.card__title {
-  @extend %margin-reset;
+.card__heading {
   font-weight: 700;
+  word-break: break-all;
 
   @include sm-screen {
     font-size: vw-sm(16);
@@ -84,4 +39,16 @@
   @include tb-screen {
     font-size: rem(16);
   }
+}
+
+.card__thumbnail {
+  aspect-ratio: 1 / 1;
+  background-color: #fff;
+  border: 1px solid $main-color;
+  order: -1;
+}
+
+.card__image {
+  height: 100%;
+  object-fit: contain;
 }
