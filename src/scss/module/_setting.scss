@@ -149,7 +149,7 @@ $base-window-width: 375;
   }
 }
 
-:where(p) {
+:where(h3, p) {
   margin: 0;
 }
 
