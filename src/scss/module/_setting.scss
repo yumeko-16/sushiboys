@@ -9,9 +9,6 @@ $error-color: #ff6753;
 $placeholder-color: #ccc;
 $aspect-logo: math.div(3000, 2001);
 
-/* base font size */
-$base-font-size: 16;
-
 /* transition */
 $transition-default: all 0.15s ease-in-out;
 
@@ -21,8 +18,8 @@ $base-window-width: 375;
 /* @function
 ----------------------------------------- */
 /* convert from px to rem */
-@function rem($px) {
-  @return math.div($px, $base-font-size) * 1rem;
+@function rem($px, $base: 16) {
+  @return math.div($px, $base) * 1rem;
 }
 
 /* convert from px to vw */
