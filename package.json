@@ -7,14 +7,14 @@
     "dev": "run-p serve ejs:watch ejs:lint sass js",
     "build": "run-s ejs remove sass:build js:build",
     "serve": "webpack serve",
-    "sass": "sass src/scss:dist/css --style=compressed --no-source-map --no-charset --watch",
-    "sass:build": "sass src/scss:dist/css --style=compressed --no-source-map --no-charset",
+    "sass": "sass src/assets/scss:dist/assets/css --style=compressed --no-source-map --no-charset --watch",
+    "sass:build": "sass src/assets/scss:dist/assets/css --style=compressed --no-source-map --no-charset",
     "js": "webpack --mode development -w",
     "js:build": "webpack --mode production -w",
     "ejs": "ejs-cli -b src/ejs/ \"/**/*.ejs\" -o dist/",
     "ejs:watch": "chokidar \"src/ejs/\" -c \"npm run ejs\" --initial",
     "ejs:lint": "ejslint src/ejs/",
-    "remove": "rm -rfv dist/_inc/ dist/_data/",
+    "remove": "rm -rfv dist/_data/ dist/components/",
     "prettier": "prettier --write \"src/js/*.js\""
   },
   "repository": {
