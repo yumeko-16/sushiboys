@@ -7,7 +7,10 @@ export const RandomHero = (() => {
 
     if (!imageArea) return;
 
-    const images = ['/img/sushiboys.png', '/img/sushiboys_logo.png'];
+    const images = [
+      '/assets/img/sushiboys.png',
+      '/assets/img/sushiboys_logo.png',
+    ];
     const index = Math.floor(Math.random() * images.length);
     imageArea.src = images[index];
   });

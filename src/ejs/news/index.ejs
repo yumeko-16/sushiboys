@@ -16,39 +16,39 @@
         url: localmeta.url
       };
       const localfile = {
-        css: '/css/news.css',
-        js: '/js/news.js'
+        css: '/assets/css/news.css',
+        js: '/assets/js/news.js'
       };
     _%>
-    <%- include(localmeta.path + '_inc/_head', {meta: localmeta, ogp: localogp, file: localfile}); _%>
-    <%- include(localmeta.path + '_data/_news'); _%>
+    <%- include(localmeta.path + 'components/_head', {meta: localmeta, ogp: localogp, file: localfile}); _%>
+    <%- include(localmeta.path + '../_data/_news'); _%>
     <%_ newsData = news(); _%>
   </head>
   <body>
-    <%- include(localmeta.path + '_inc/components/_googletagmanager'); _%>
+    <%- include(localmeta.path + 'components/_googletagmanager'); _%>
 
     <div class="wrapper">
       <!-- prettier-ignore -->
-      <%- include(localmeta.path + `_inc/components/_global-navigation`, {meta: localmeta}); _%>
+      <%- include(localmeta.path + `components/_global-navigation`, {meta: localmeta}); _%>
 
       <main class="main">
         <!-- prettier-ignore -->
-        <%- include(localmeta.path + '_inc/components/_header', {meta: localmeta}); _%>
+        <%- include(localmeta.path + 'components/_header', {meta: localmeta}); _%>
 
         <div>
           <!-- prettier-ignore -->
-          <%- include(localmeta.path + '_inc/components/_hero', {meta: localmeta}); _%>
+          <%- include(localmeta.path + 'components/_hero', {meta: localmeta}); _%>
 
           <div class="content">
             <!-- prettier-ignore -->
-            <%- include(localmeta.path + '_inc/components/news/_news', {meta: localmeta, newsData: newsData}); _%>
+            <%- include(localmeta.path + 'components/news/_news', {meta: localmeta, newsData: newsData}); _%>
           </div>
         </div>
 
         <!-- prettier-ignore -->
-        <%- include(localmeta.path + `_inc/components/_toggle`); _%>
+        <%- include(localmeta.path + `components/_toggle`); _%>
 
-        <%- include(localmeta.path + `_inc/components/_footer`); _%>
+        <%- include(localmeta.path + `components/_footer`); _%>
       </main>
     </div>
   </body>
