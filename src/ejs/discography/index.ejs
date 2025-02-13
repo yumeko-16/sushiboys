@@ -16,39 +16,39 @@
         url: localmeta.url
       };
       const localfile = {
-        css: `/css/discography.css`,
-        js: `/js/discography.js`
+        css: `/assets/css/discography.css`,
+        js: `/assets/js/discography.js`
       };
     _%>
-    <%- include(localmeta.path + `_inc/_head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
-    <%- include(localmeta.path + `_data/_discography`); _%>
+    <%- include(localmeta.path + `components/_head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
+    <%- include(localmeta.path + `../_data/_discography`); _%>
     <%_ discographyData = discography(); _%>
   </head>
   <body>
-    <%- include(localmeta.path + `_inc/components/_googletagmanager`); _%>
+    <%- include(localmeta.path + `components/_googletagmanager`); _%>
 
     <div class="wrapper">
       <!-- prettier-ignore -->
-      <%- include(localmeta.path + `_inc/components/_global-navigation`, {meta: localmeta}); _%>
+      <%- include(localmeta.path + `components/_global-navigation`, {meta: localmeta}); _%>
 
       <main class="main">
         <!-- prettier-ignore -->
-        <%- include(localmeta.path + `_inc/components/_header`, {meta: localmeta}); _%>
+        <%- include(localmeta.path + `components/_header`, {meta: localmeta}); _%>
 
         <div>
           <!-- prettier-ignore -->
-          <%- include(localmeta.path + `_inc/components/_hero`, {meta: localmeta}); _%>
+          <%- include(localmeta.path + `components/_hero`, {meta: localmeta}); _%>
 
           <div class="content">
             <!-- prettier-ignore -->
-            <%- include(localmeta.path + `_inc/components/discography/_discography`, {discographyData: discographyData}); _%>
+            <%- include(localmeta.path + `components/discography/_discography`, {discographyData: discographyData}); _%>
           </div>
         </div>
 
         <!-- prettier-ignore -->
-        <%- include(localmeta.path + `_inc/components/_toggle`); _%>
+        <%- include(localmeta.path + `components/_toggle`); _%>
 
-        <%- include(localmeta.path + `_inc/components/_footer`); _%>
+        <%- include(localmeta.path + `components/_footer`); _%>
       </main>
     </div>
   </body>
