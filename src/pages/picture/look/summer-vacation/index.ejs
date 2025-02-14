@@ -9,7 +9,7 @@
         url: `https://sushiboys350.com/picture/look/summer-vacation/`,
         pageid: `picture`,
         index: 0,
-        path: `../../../`
+        path: `../../../../`
       };
       const localogp = {
         title: localmeta.title,
@@ -22,7 +22,7 @@
       };
     _%>
     <%- include(localmeta.path + `components/_head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
-    <%- include(localmeta.path + `../_data/_picture`); _%>
+    <%- include(localmeta.path + `_data/_picture`); _%>
     <%_ pictureData = picture(); _%>
   </head>
   <body>
