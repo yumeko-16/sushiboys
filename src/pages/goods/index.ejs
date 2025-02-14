@@ -8,7 +8,7 @@
         description: `SUSHIBOYSのグッズ一覧。グッズ購入・商品詳細ページへご案内いたします。`,
         url: `https://sushiboys350.com/goods/`,
         pageid: `goods`,
-        path: `../`
+        path: `../../`
       };
       const localogp = {
         title: localmeta.title,
@@ -21,7 +21,7 @@
       };
     _%>
     <%- include(localmeta.path + `components/_head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
-    <%- include(localmeta.path + `../_data/_goods`); _%>
+    <%- include(localmeta.path + `_data/_goods`); _%>
     <%_ goodsData = goods(); _%>
   </head>
   <body>
