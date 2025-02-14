@@ -11,9 +11,9 @@
     "sass:build": "sass src/assets/scss:dist/assets/css --style=compressed --no-source-map --no-charset",
     "js": "webpack --mode development -w",
     "js:build": "webpack --mode production -w",
-    "ejs": "ejs-cli -b src/ejs/ \"/**/*.ejs\" -o dist/",
-    "ejs:watch": "chokidar \"src/ejs/\" -c \"npm run ejs\" --initial",
-    "ejs:lint": "ejslint src/ejs/",
+    "ejs": "ejs-cli -b src/pages/ \"/**/*.ejs\" -o dist/",
+    "ejs:watch": "chokidar \"src/pages/\" -c \"npm run ejs\" --initial",
+    "ejs:lint": "ejslint src/pages/",
     "remove": "rm -rfv dist/_data/ dist/components/",
     "prettier": "prettier --write \"src/js/*.js\""
   },
