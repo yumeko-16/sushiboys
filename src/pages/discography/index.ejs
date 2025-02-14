@@ -8,7 +8,7 @@
         description: `SUSHIBOYSが世に送り出した楽曲情報を余すことなくお届けいたします。ぜひご視聴ください。`,
         url: `https://sushiboys350.com/discography/`,
         pageid: `discography`,
-        path: `../`
+        path: '../../'
       };
       const localogp = {
         title: localmeta.title,
@@ -21,7 +21,7 @@
       };
     _%>
     <%- include(localmeta.path + `components/_head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
-    <%- include(localmeta.path + `../_data/_discography`); _%>
+    <%- include(localmeta.path + `_data/_discography`); _%>
     <%_ discographyData = discography(); _%>
   </head>
   <body>
