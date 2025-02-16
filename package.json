@@ -15,7 +15,7 @@
     "ejs:watch": "chokidar \"src/pages/\" -c \"npm run ejs\" --initial",
     "ejs:lint": "ejslint src/pages/",
     "remove": "rm -rfv dist/_data/ dist/components/",
-    "prettier": "prettier --write \"src/js/*.js\""
+    "format": "prettier --write src"
   },
   "repository": {
     "type": "git",
@@ -32,21 +32,14 @@
     "@babel/preset-env": "^7.14.8",
     "babel-loader": "^8.2.2",
     "chokidar-cli": "^3.0.0",
-    "dragscroll": "^0.0.8",
     "ejs-cli": "^2.2.3",
     "ejs-lint": "^2.0.0",
-    "imagemin-gifsicle": "^7.0.0",
-    "imagemin-keep-folder": "^5.3.2",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-pngquant": "^9.0.2",
-    "imagemin-svgo": "^9.0.0",
     "npm-run-all": "^4.1.5",
-    "onchange": "^7.1.0",
     "prettier": "^3.3.3",
     "sass": "^1.79.4",
     "swiper": "^11.1.14",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^3.11.2"
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   }
 }
