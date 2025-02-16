@@ -15,7 +15,7 @@
     "ejs:watch": "chokidar \"src/pages/\" -c \"npm run ejs\" --initial",
     "ejs:lint": "ejslint src/pages/",
     "remove": "rm -rfv dist/_data/ dist/components/",
-    "prettier": "prettier --write \"src/js/*.js\""
+    "format": "prettier --write src"
   },
   "repository": {
     "type": "git",
