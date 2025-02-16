@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   mode: 'development',
   cache: {
@@ -18,12 +20,16 @@ module.exports = {
     contact: __dirname + '/src/assets/js/contact.js',
   },
   output: {
-    path: __dirname + '/dist/assets/js',
+    path: path.resolve(__dirname, 'dist/assets/js'),
     filename: '[name].js',
   },
   devServer: {
-    contentBase: './dist',
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+    },
     open: true,
+    port: 8080,
+    hot: true,
   },
   module: {
     rules: [
