@@ -105,7 +105,7 @@ _%>
   src="https://www.googletagmanager.com/gtag/js?id=G-790RPY1GPD"
 ></script>
 <script
-  src="<%= file.js %>"
+  src="<%= file.js %><%= clearcache() %>"
   defer
 ></script>
 <!-- /Global site tag (gtag.js) - Google Analytics -->
@@ -124,13 +124,13 @@ _%>
   rel="stylesheet"
 />
 <!-- /Google Fonts -->
-<!-- Swiper -->
 <!-- prettier-ignore -->
 <%_ if (meta.pageid.includes(`discography`) || meta.pageid.includes(`goods`)) { _%>
+<!-- Swiper -->
 <link
   rel="stylesheet"
   href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
 />
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-<%_ } _%>
 <!-- /Swiper -->
+<%_ } _%>
