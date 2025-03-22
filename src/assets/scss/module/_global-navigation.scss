@@ -24,12 +24,8 @@
   z-index: 2;
 
   @include tb-screen {
-    font-size: rem(16);
-    grid-area: 1 / 1 / 2 / 2;
-  }
-
-  @include pc-screen {
     font-size: rem(18);
+    grid-area: 1 / 1 / 2 / 2;
   }
 }
 
@@ -42,14 +38,10 @@
 .global-navigation__inner--vertically {
   @include tb-screen {
     flex-direction: column;
-    padding-inline: 20px;
+    padding-inline: 35px;
     position: sticky;
     row-gap: 60px;
     top: 60px;
-  }
-
-  @include pc-screen {
-    padding-inline: 35px;
   }
 }
 
