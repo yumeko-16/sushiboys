@@ -35,9 +35,9 @@
   -webkit-rtl-ordering: initial;
   appearance: initial;
   background-color: #fff;
-  border-color: $main-color;
+  border-color: var(--black);
   border-style: solid;
-  color: $main-color;
+  color: var(--black);
   column-count: initial;
   cursor: initial;
   display: block;
@@ -74,11 +74,11 @@
 
   &::placeholder {
     @include font-oswald-regular;
-    color: $placeholder-color;
+    color: var(--placeholder);
   }
 
   &:focus-visible {
-    box-shadow: 0 0 5px 1px $base-color;
+    box-shadow: 0 0 5px 1px var(--base);
     outline: none;
     outline-offset: 0;
   }
@@ -129,7 +129,7 @@
 }
 
 .form__success-message {
-  color: $success-color;
+  color: var(--success);
 
   &.js-success {
     opacity: 1;
@@ -137,7 +137,7 @@
 }
 
 .form__error-message {
-  color: $error-color;
+  color: var(--error);
 
   &.js-error {
     opacity: 1;
@@ -173,10 +173,10 @@
   }
 
   &.js-success {
-    background-color: $success-color;
+    background-color: var(--success);
   }
 
   &.js-error {
-    background-color: $error-color;
+    background-color: var(--error);
   }
 }

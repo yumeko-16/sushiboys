@@ -1,7 +1,6 @@
 @use "../module/setting" as *;
 
 .cards {
-  @extend %list-reset;
   display: grid;
 
   @include sm-screen {

@@ -1,12 +1,15 @@
 @use "../module/setting" as *;
 
 .catch {
-  @extend %text-group;
   display: flex;
   flex-direction: column;
 
   & > * {
     @include lineHeightCrop(1.4);
+  }
+
+  & > * + * {
+    margin-block-start: 2em;
   }
 }
 
