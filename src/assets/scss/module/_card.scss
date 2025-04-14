@@ -44,7 +44,7 @@
 .card__thumbnail {
   aspect-ratio: 1 / 1;
   background-color: #fff;
-  border: 1px solid $main-color;
+  border: 1px solid var(--black);
   order: -1;
 }
 

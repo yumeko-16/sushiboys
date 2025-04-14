@@ -1,7 +1,7 @@
 @use "../module/setting" as *;
 
 .footer {
-  background-color: $main-color;
+  background-color: var(--black);
   bottom: 0;
   display: flex;
   flex-direction: column;
