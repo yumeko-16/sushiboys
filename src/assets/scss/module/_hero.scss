@@ -35,7 +35,6 @@
 }
 
 .hero__image {
-  @extend %image;
   height: auto;
 
   @include sm-screen {

@@ -1,7 +1,7 @@
 @use "../module/setting" as *;
 
 .global-navigation {
-  color: $main-color;
+  color: var(--black);
   @include font-oswald-medium;
   letter-spacing: 0.08em;
   line-height: 1.2;
@@ -19,8 +19,8 @@
 }
 
 .global-navigation--vertically {
-  background-color: $accent-color;
-  border-right: 1px solid $main-color;
+  background-color: var(--accent);
+  border-right: 1px solid var(--black);
   z-index: 2;
 
   @include tb-screen {
@@ -50,12 +50,10 @@
 }
 
 .global-navigation__logo {
-  @extend %image;
   aspect-ratio: $aspect-logo;
 }
 
 .global-navigation__list {
-  @extend %list-reset;
   display: flex;
 }
 
@@ -91,7 +89,7 @@
   &.current {
     &::after {
       @include tb-screen {
-        border-bottom: 2px solid $main-color;
+        border-bottom: 2px solid var(--black);
         bottom: -5px;
         content: "";
         display: block;

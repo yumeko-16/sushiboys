@@ -1,16 +1,21 @@
 @use "sass:math";
 
-/* colors */
-$base-color: #ffff83;
-$main-color: #171717;
-$accent-color: #83c0f9;
-$success-color: #00be28;
-$error-color: #ff6753;
-$placeholder-color: #ccc;
 $aspect-logo: math.div(3000, 2001);
-
-/* transition */
 $transition-default: all 0.15s ease-in-out;
+
+:root {
+  /* Color */
+  --base: #ffff83;
+  --white: #fff;
+  --black: #171717;
+  --accent: #83c0f9;
+  --success: #00be28;
+  --error: #ff6753;
+  --placeholder: #ccc;
+
+  /* Font size */
+  --body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+}
 
 /* @function
 ----------------------------------------- */
@@ -101,7 +106,7 @@ $transition-default: all 0.15s ease-in-out;
 }
 
 @mixin hover {
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover {
       @content;
     }
@@ -110,7 +115,9 @@ $transition-default: all 0.15s ease-in-out;
 
 /* normalize / reset
 ----------------------------------------- */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -120,21 +127,14 @@ $transition-default: all 0.15s ease-in-out;
 
 :where(body) {
   @include font-default;
-  color: $main-color;
-  background-color: $base-color;
+  background-color: var(--base);
+  color: var(--black);
+  font-size: var(--body);
   min-height: 100vh;
   min-height: -webkit-fill-available;
   letter-spacing: 0.05em;
   line-height: 1.6;
   margin: 0;
-
-  @include sm-screen {
-    font-size: vw-sm(16);
-  }
-
-  @include tb-screen {
-    font-size: rem(16);
-  }
 
   &.js-scroll-prevent {
     overflow: hidden;
@@ -143,74 +143,23 @@ $transition-default: all 0.15s ease-in-out;
   }
 }
 
-:where(h3, p) {
+:where(h1, h2, h3, p, figure) {
   margin: 0;
+}
+
+:where(a) {
+  color: inherit;
+  text-decoration: none;
 }
 
 :where(img) {
   display: block;
-  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 :where(ul) {
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-:where(figure) {
-  margin: 0;
-}
-
-/* @extend
------------------------------------------ */
-%list-reset {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-%margin-reset {
-  margin: 0;
-}
-
-%image {
-  display: block;
-  width: 100%;
-}
-
-%text-group {
-  & > * {
-    margin: 0;
-  }
-
-  & > * + * {
-    margin-block-start: 2em;
-  }
-
-  a {
-    color: $main-color;
-    cursor: pointer;
-    text-decoration: underline;
-  }
-}
-
-%extrude {
-  margin: 0 calc(50% - 50vw);
-}
-
-%carousel__inner {
-  padding-block: 0;
-
-  @include sm-screen {
-    font-size: vw-sm(20);
-  }
-
-  @include tb-screen {
-    padding-inline: 30px;
-  }
-
-  @include pc-screen {
-    padding-inline: 60px;
-  }
 }

@@ -13,7 +13,7 @@
 
 .toggle-button {
   appearance: none;
-  background-color: $base-color;
+  background-color: var(--base);
   border-radius: 50%;
   cursor: pointer;
   position: fixed;
@@ -41,7 +41,7 @@
 }
 
 .toggle-button__bar {
-  background-color: $main-color;
+  background-color: var(--black);
   display: block;
   left: 50%;
   position: absolute;
@@ -98,7 +98,6 @@
 }
 
 .toggle-menu__list {
-  @extend %list-reset;
   background: radial-gradient(transparent, #000 100%);
   color: #fff;
   display: flex;
@@ -128,7 +127,6 @@
 }
 
 .toggle-sns {
-  @extend %list-reset;
   display: flex;
   flex-direction: column;
   position: absolute;

@@ -1,7 +1,6 @@
 @use "../module/setting" as *;
 
 .sns {
-  @extend %list-reset;
   color: #fff;
   display: none;
 
