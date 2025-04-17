@@ -1,15 +1,15 @@
 @use "../module/setting" as *;
 
 .section {
-  margin: 0 auto;
-  padding-inline: 0;
   width: 100%;
+  padding-inline: 0;
+  margin: 0 auto;
 }
 
 .section__inner {
-  margin: 0 auto;
   max-width: 1200px;
   padding-block: 0;
+  margin: 0 auto;
 
   @include sm-screen {
     padding-inline: vw-sm(20);
@@ -22,25 +22,25 @@
 
 .section__inner--form {
   @include tb-screen {
-    margin: 0 auto;
     max-width: 800px;
+    margin: 0 auto;
   }
 }
 
 .section__heading {
-  line-height: 1.2;
   margin: 0;
+  line-height: 1.2;
   word-break: break-all;
 
   @include sm-screen {
-    font-size: vw-sm(22);
     margin-block-end: vw-sm(10);
+    font-size: vw-sm(22);
   }
 
   @include tb-screen {
+    margin-block-end: vw-tb(10);
     font-size: rem(35);
     line-height: 1.4;
-    margin-block-end: vw-tb(10);
   }
 }
 
