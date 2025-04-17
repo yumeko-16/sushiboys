@@ -8,8 +8,8 @@
   }
 
   @include tb-screen {
-    gap: vw-tb(30);
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: vw-tb(30);
   }
 
   @include pc-screen {

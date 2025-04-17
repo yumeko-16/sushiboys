@@ -6,14 +6,12 @@
 
   @include sm-screen {
     grid-template-columns: 1fr;
-    grid-column-gap: vw-sm(50);
-    grid-row-gap: vw-sm(50);
+    grid-gap: vw-sm(50);
   }
 
   @include tb-screen {
     grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 50px;
+    grid-gap: 50px;
   }
 }
 
@@ -23,8 +21,8 @@
   }
 
   @include tb-screen {
-    font-size: min(#{vw-tb(24)}, #{rem(28)});
     grid-area: 1 / 1 / 2 / 3;
+    font-size: min(#{vw-tb(24)}, #{rem(28)});
   }
 }
 
@@ -40,8 +38,8 @@
   }
 
   a {
-    cursor: pointer;
     text-decoration: underline;
+    cursor: pointer;
   }
 
   @include tb-screen {
@@ -76,10 +74,10 @@
 }
 
 .article__image {
-  border-color: #000;
-  border-style: solid;
   display: block;
   width: 100%;
+  border-color: #000;
+  border-style: solid;
 
   @include sm-screen {
     border-width: vw-sm(1);
@@ -94,13 +92,13 @@
   @include font-oswald-medium;
 
   @include sm-screen {
-    font-size: vw-sm(18);
     margin: vw-sm(10) 0 vw-sm(20);
+    font-size: vw-sm(18);
   }
 
   @include tb-screen {
-    font-size: rem(20);
     margin: 20px 0 10px;
+    font-size: rem(20);
   }
 }
 
@@ -109,8 +107,8 @@
 }
 
 .article__caption-list--song {
-  list-style-type: decimal-leading-zero;
   padding-inline-start: 3rem;
+  list-style-type: decimal-leading-zero;
 }
 
 .article__caption-item {
@@ -122,7 +120,7 @@
 
   a {
     color: var(--black);
-    cursor: pointer;
     text-decoration: underline;
+    cursor: pointer;
   }
 }

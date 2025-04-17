@@ -5,7 +5,7 @@
   flex-direction: column;
 
   & > * {
-    @include lineHeightCrop(1.4);
+    @include line-height-crop(1.4);
   }
 
   & > * + * {
@@ -15,7 +15,7 @@
 
 .catch--home {
   @include pc-screen {
-    margin: 0 auto;
     width: 65%;
+    margin: 0 auto;
   }
 }

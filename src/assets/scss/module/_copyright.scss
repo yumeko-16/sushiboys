@@ -1,12 +1,13 @@
 @use "../module/setting" as *;
 
 .copyright {
-  color: #fff;
-  @include font-oswald-regular;
   line-height: 1.2;
-  @include lineHeightCrop(1.2);
+  color: #fff;
   text-align: center;
   text-transform: uppercase;
+
+  @include font-oswald-regular;
+  @include line-height-crop(1.2);
 
   @include sm-screen {
     font-size: vw-sm(14);
