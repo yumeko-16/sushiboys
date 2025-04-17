@@ -11,10 +11,12 @@
 
   @include tb-screen {
     gap: min(#{vw-tb(45)}, 50px);
-    padding-block: min(#{vw-tb(45)}, 50px) min(#{vw-tb(100)}, 100px);
+    padding-block-end: min(#{vw-tb(100)}, 100px);
+    padding-block-start: min(#{vw-tb(45)}, 50px);
   }
 
   @include lt-screen {
-    padding-block: 50px 100px;
+    padding-block-end: 100px;
+    padding-block-start: 50px;
   }
 }

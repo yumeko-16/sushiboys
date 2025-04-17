@@ -1,14 +1,13 @@
 @use "../module/setting" as *;
 
 .title {
-  width: 100%;
   color: var(--black);
+  @include font-oswald-medium;
+  letter-spacing: 0.1em;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  width: 100%;
   word-break: break-all;
-
-  @include font-oswald-medium;
 
   @include sm-screen {
     font-size: min(#{vw-sm(40)}, #{rem(40)});
@@ -22,7 +21,7 @@
 }
 
 .title__link {
-  display: inline-block;
   color: inherit;
+  display: inline-block;
   text-decoration: none;
 }
