@@ -1,9 +1,9 @@
 @use "../module/setting" as *;
 
 .hero {
-  margin: 0 auto;
-  max-width: 1200px;
   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 
   @include sm-screen {
     padding: vw-sm(25) vw-sm(20);
@@ -19,14 +19,14 @@
 }
 
 .hero__logo {
-  align-items: center;
   display: flex;
+  align-items: center;
   justify-content: center;
   margin: 0 auto;
 
   @include sm-screen {
-    padding-block: vw-sm(35);
     width: 70%;
+    padding-block: vw-sm(35);
   }
 
   @include pc-screen {
@@ -49,18 +49,18 @@
 .hero__heading {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
   margin: 0;
+  line-height: 1.2;
   word-break: break-all;
 
   @include sm-screen {
-    font-size: vw-sm(12);
     gap: vw-sm(4);
+    font-size: vw-sm(12);
   }
 
   @include tb-screen {
-    font-size: clamp(#{rem(12)}, #{vw-tb(12)}, #{rem(14)});
     gap: 2px;
+    font-size: clamp(#{rem(12)}, #{vw-tb(12)}, #{rem(14)});
     line-height: 1.4;
   }
 
@@ -70,9 +70,10 @@
 
   &::before {
     @include font-oswald-medium;
-    content: attr(data-heading);
+
     display: block;
     text-transform: uppercase;
+    content: attr(data-heading);
 
     @include sm-screen {
       font-size: vw-sm(30);
