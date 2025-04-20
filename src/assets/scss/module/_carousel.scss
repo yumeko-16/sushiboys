@@ -15,25 +15,25 @@
 
   &.swiper-slide {
     @include sm-screen {
-      height: vw-sm(190);
       width: vw-sm(190);
+      height: vw-sm(190);
     }
 
     @include tb-screen {
-      height: min(#{vw-tb(190)}, 270px);
       width: min(#{vw-tb(190)}, 270px);
+      height: min(#{vw-tb(190)}, 270px);
     }
   }
 }
 
 .carousel__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   background-color: #fff;
   border-color: #000;
   border-style: solid;
-  display: block;
-  height: 100%;
-  object-fit: cover;
-  width: 100%;
 
   @include sm-screen {
     border-width: vw-sm(1);
