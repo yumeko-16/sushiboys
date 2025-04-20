@@ -20,8 +20,8 @@
 
 .card__wrapper--link {
   color: inherit;
-  text-decoration: none;
   cursor: pointer;
+  text-decoration: none;
 
   @include hover {
     filter: opacity(0.8);
@@ -42,10 +42,10 @@
 }
 
 .card__thumbnail {
-  order: -1;
   aspect-ratio: 1 / 1;
   background-color: #fff;
   border: 1px solid var(--black);
+  order: -1;
 }
 
 .card__image {

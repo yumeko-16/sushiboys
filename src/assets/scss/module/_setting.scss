@@ -27,13 +27,11 @@ $transition-default: all 0.15s ease-in-out;
 /* convert from px to vw */
 @function vw-sm($size, $viewport: 375) {
   $rate: math.div(100, $viewport);
-
   @return $rate * $size * 1vw;
 }
 
 @function vw-tb($size, $viewport: 768) {
   $rate: math.div(100, $viewport);
-
   @return $rate * $size * 1vw;
 }
 
@@ -80,22 +78,22 @@ $transition-default: all 0.15s ease-in-out;
 }
 
 @mixin font-oswald-regular {
-  font-family: Oswald, sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 400;
 }
 
 @mixin font-oswald-medium {
-  font-family: Oswald, sans-serif;
+  font-family: "Oswald", sans-serif;
   font-weight: 500;
 }
 
-@mixin line-height-crop($line-height) {
+@mixin lineHeightCrop($line-height) {
   &::before,
   &::after {
-    display: block;
-    width: 0;
-    height: 0;
     content: "";
+    display: block;
+    height: 0;
+    width: 0;
   }
 
   &::before {
@@ -128,21 +126,23 @@ $transition-default: all 0.15s ease-in-out;
 }
 
 :where(body) {
+  @include font-default;
+
+  background-color: var(--base);
+  color: var(--black);
+  font-size: var(--body);
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  margin: 0;
-  font-size: var(--body);
-  line-height: 1.6;
-  color: var(--black);
   letter-spacing: 0.05em;
-  background-color: var(--base);
+  line-height: 1.6;
+  margin: 0;
 
   @include font-default;
 
   &.js-scroll-prevent {
+    overflow: hidden;
     position: fixed;
     width: 100%;
-    overflow: hidden;
   }
 }
 
@@ -163,6 +163,6 @@ $transition-default: all 0.15s ease-in-out;
 
 :where(img) {
   display: block;
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
 }

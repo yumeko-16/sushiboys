@@ -24,7 +24,6 @@
 
 .form__label {
   @include font-oswald-regular;
-
   display: block;
 
   @include tb-screen {
@@ -33,56 +32,55 @@
 }
 
 :where(.form__input, .form__textarea) {
-  display: block;
-  flex-direction: initial;
-  width: 100%;
-  line-height: 1.6;
-  color: var(--black);
-  text-align: initial;
-  text-indent: initial;
-  text-transform: initial;
-  word-spacing: initial;
-  letter-spacing: 0.1em;
-  overflow-wrap: initial;
-  white-space: initial;
-  text-shadow: initial;
+  -webkit-rtl-ordering: initial;
   appearance: initial;
-  cursor: initial;
-  resize: initial;
   background-color: #fff;
   border-color: var(--black);
   border-style: solid;
-  writing-mode: initial;
-  -webkit-rtl-ordering: initial;
+  color: var(--black);
   column-count: initial;
+  cursor: initial;
+  display: block;
+  flex-direction: initial;
+  letter-spacing: 0.1em;
+  line-height: 1.6;
+  overflow-wrap: initial;
+  resize: initial;
+  text-align: initial;
+  text-indent: initial;
   text-rendering: initial;
+  text-shadow: initial;
+  text-transform: initial;
+  white-space: initial;
+  word-spacing: initial;
+  writing-mode: initial;
+  width: 100%;
 
   @include sm-screen {
-    padding: vw-sm(15);
-    margin-block-start: vw-sm(10);
-    font-size: vw-sm(16);
-    border-width: vw-sm(1);
     border-radius: vw-sm(5);
+    border-width: vw-sm(1);
+    font-size: vw-sm(16);
+    margin-block-start: vw-sm(10);
+    padding: vw-sm(15);
   }
 
   @include tb-screen {
-    padding: 15px;
-    margin-block-start: 10px;
     font-size: rem(16);
     border-width: 1px;
     border-radius: 5px;
+    margin-block-start: 10px;
+    padding: 15px;
   }
 
   &::placeholder {
     @include font-oswald-regular;
-
     color: var(--placeholder);
   }
 
   &:focus-visible {
+    box-shadow: 0 0 5px 1px var(--base);
     outline: none;
     outline-offset: 0;
-    box-shadow: 0 0 5px 1px var(--base);
   }
 }
 
@@ -116,9 +114,9 @@
 }
 
 :where(.form__success-message, .form__error-message) {
-  position: absolute;
   margin: 0;
   opacity: 0;
+  position: absolute;
   transition: $transition-default;
 
   @include sm-screen {
@@ -147,27 +145,27 @@
 }
 
 .form__toaster {
+  box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
+  color: #fff;
+  display: inline-block;
   position: fixed;
   right: 0;
-  z-index: 1000;
-  display: inline-block;
-  color: #fff;
-  box-shadow: 0 3px 15px rgb(0 0 0 / 10%);
-  transform: translate3d(100%, 0, 0);
   transition: all 0.5s ease-out;
+  transform: translate3d(100%, 0, 0);
+  z-index: 1000;
 
   @include sm-screen {
-    top: vw-sm(20);
-    padding: vw-sm(10) vw-sm(15);
-    font-size: vw-sm(12);
-    border-top-left-radius: vw-sm(5);
     border-bottom-left-radius: vw-sm(5);
+    border-top-left-radius: vw-sm(5);
+    font-size: vw-sm(12);
+    padding: vw-sm(10) vw-sm(15);
+    top: vw-sm(20);
   }
 
   @include tb-screen {
-    padding: 15px 20px;
     font-size: rem(16);
     border-radius: 5px;
+    padding: 15px 20px;
   }
 
   &:where(.js-success, .js-error) {
