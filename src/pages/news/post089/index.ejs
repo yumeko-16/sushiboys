@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <!-- prettier-ignore -->
+    <%_
+      const localmeta = {
+        title: `🍣6.28(土)漢 Kitchen LIVE Fes. 渋谷編の出演が決定🍣 | SUSHIBOYS`,
+        description: `6.28(土)漢 Kitchen LIVE Fes. 渋谷編の出演が決定🍣`,
+        url: 'https://sushiboys350.com/news/post089/',
+        pageid: 'news',
+        index: 89 - 1,
+        path: '../../../'
+      };
+      const localogp = {
+        title: localmeta.title,
+        description: localmeta.description,
+        url: localmeta.url
+      };
+      const localfile = {
+        css: `/assets/css/news-detail.css`,
+        js: `/assets/js/newsDetail.js`
+      };
+    _%>
+    <%- include(localmeta.path + `components/_head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
+    <%- include(localmeta.path + `_data/_news`); _%>
+    <%_ newsData = news(); _%>
+  </head>
+  <body>
+    <%- include(localmeta.path + `components/_googletagmanager`); _%>
+
+    <div class="wrapper">
+      <!-- prettier-ignore -->
+      <%- include(localmeta.path + `components/_global-navigation`, {meta: localmeta}); _%>
+
+      <main class="main">
+        <!-- prettier-ignore -->
+        <%- include(localmeta.path + `components/_header`, {meta: localmeta}); _%>
+
+        <div>
+          <!-- prettier-ignore -->
+          <%- include(localmeta.path + `components/_hero`, {meta: localmeta}); _%>
+
+          <div class="content">
+            <!-- prettier-ignore -->
+            <%- include(localmeta.path + `components/news/post/_post`, {meta: localmeta, newsData: newsData}); _%>
+          </div>
+        </div>
+
+        <!-- prettier-ignore -->
+        <%- include(localmeta.path + `components/_toggle`); _%>
+
+        <%- include(localmeta.path + `components/_footer`); _%>
+      </main>
+    </div>
+  </body>
+</html>
