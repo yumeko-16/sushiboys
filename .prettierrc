@@ -1,13 +1,6 @@
 {
-  "htmlWhitespaceSensitivity": "strict",
-  "singleAttributePerLine": true,
+  "singleQuote": true,
   "overrides": [
-    {
-      "files": "*.js",
-      "options": {
-        "singleQuote": true
-      }
-    },
     {
       "files": "*.ejs",
       "options": {
