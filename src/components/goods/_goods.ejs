@@ -6,19 +6,12 @@
 
     <!-- prettier-ignore -->
     <%_ if (items.length > 0) { _%>
-    <div
-      id="<%= id %>"
-      class="carousel swiper"
-    >
+    <div id="<%= id %>" class="carousel swiper">
       <ul class="carousel__list swiper-wrapper">
         <%_ items.forEach((item) => { _%>
         <li class="carousel__card swiper-slide">
           <%_ if (item?.url) { _%>
-          <a
-            href="<%- item.url %>"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="<%- item.url %>" target="_blank" rel="noopener noreferrer">
             <img
               class="carousel__image"
               src="<%- item?.image || '/assets/img/no-image.png' %>"

@@ -36,9 +36,9 @@ _%>
 <section class="section">
   <div class="section__inner">
     <article class="article">
-      <h3 class="article__title"
-        ><%- reverseData?.[meta.index]?.title || 'タイトルがありません' %></h3
-      >
+      <h3 class="article__title">
+        <%- reverseData?.[meta.index]?.title || 'タイトルがありません' %>
+      </h3>
 
       <figure class="article__eyecatch">
         <img
@@ -53,12 +53,15 @@ _%>
           <li class="article__caption-item">
             作品種別：<%- reverseData?.[meta.index]?.type || '未定' %>
           </li>
+
           <li class="article__caption-item">
             発売日：<%- reverseData?.[meta.index]?.release || '未定' %>
           </li>
+
           <li class="article__caption-item">
             価格：<%- reverseData?.[meta.index]?.price?.trim() || '未定' %>
           </li>
+
           <li class="article__caption-item">
             <%_ const link = reverseData?.[meta.index]?.link?.trim(); _%>
             <!-- prettier-ignore -->
@@ -77,6 +80,7 @@ _%>
         </ul>
 
         <h3 class="article__caption-heading">Song contents</h3>
+
         <!-- prettier-ignore -->
         <%_
           const songs = reverseData?.[meta.index]?.songs || [];
@@ -99,6 +103,7 @@ _%>
         _%>
         <%_ if (hasBonusTracks) { _%>
         <h3 class="article__caption-heading">Bonus track</h3>
+
         <ol class="article__caption-list article__caption-list--song">
           <%_ bonusTracks.forEach((bonusTrack) => { _%>
           <li class="article__caption-item"><%- bonusTrack %></li>
@@ -108,11 +113,7 @@ _%>
       </div>
 
       <div class="article__button">
-        <a
-          class="button button--back"
-          href="/discography/"
-          >Back</a
-        >
+        <a class="button button--back" href="/discography/">Back</a>
       </div>
     </article>
   </div>
