@@ -1,6 +1,8 @@
-@use "../module/setting" as *;
+@use '../module/setting' as *;
 
 .hero {
+  display: grid;
+  place-items: center start;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -18,12 +20,11 @@
   }
 }
 
-.hero__logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
+.hero--home {
+  place-items: center;
+}
 
+.hero__logo {
   @include sm-screen {
     width: 70%;
     padding-block: vw-sm(35);
@@ -35,8 +36,6 @@
 }
 
 .hero__image {
-  height: auto;
-
   @include sm-screen {
     aspect-ratio: 3000 / 2001;
   }

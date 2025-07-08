@@ -30,8 +30,9 @@
       break;
   }
 _%>
-<div class="hero">
-  <%_ if (meta.pageid.includes(`home`)) { _%>
+
+<%_ if (meta.pageid.includes(`home`)) { _%>
+<div class="hero hero--home">
   <picture class="hero__logo">
     <source
       media="(max-width: 767px)"
@@ -46,7 +47,9 @@ _%>
     <source srcset="/assets/img/members.webp" type="image/webp" />
     <img class="hero__image" src="/assets/img/members.jpg" alt="SUSHIBOYS" />
   </picture>
-  <%_ } else { _%>
-  <h2 class="hero__heading" data-heading="<%= primary %>"><%= secondary %></h2>
-  <%_ } _%>
 </div>
+<%_ } else { _%>
+<div class="hero">
+  <h2 class="hero__heading" data-heading="<%= primary %>"><%= secondary %></h2>
+</div>
+<%_ } _%>
