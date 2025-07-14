@@ -51,7 +51,7 @@
 }
 
 .global-navigation__logo {
-  aspect-ratio: $aspect-logo;
+  aspect-ratio: var(--aspect-logo);
 }
 
 .global-navigation__list {
