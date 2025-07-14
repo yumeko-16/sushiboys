@@ -1,4 +1,4 @@
-@use "../module/setting" as *;
+@use '../module/setting' as *;
 
 .global-navigation {
   line-height: 1.2;
@@ -94,7 +94,7 @@
         bottom: -5px;
         display: block;
         width: 100%;
-        content: "";
+        content: '';
         border-bottom: 2px solid var(--black);
       }
     }

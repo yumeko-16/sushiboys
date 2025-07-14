@@ -1,4 +1,4 @@
-@use "../module/setting" as *;
+@use '../module/setting' as *;
 
 .header {
   @include sm-screen {
