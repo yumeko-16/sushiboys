@@ -114,6 +114,12 @@
   }
 }
 
+@mixin touch {
+  @media (hover: none) {
+    @content;
+  }
+}
+
 /* normalize / reset
 ----------------------------------------- */
 *,
