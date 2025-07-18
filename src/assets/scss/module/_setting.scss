@@ -14,7 +14,7 @@
   --body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
 
   /* Aspect ratio */
-  --aspect-logo: calc(3000 / 2001); // ※Sass math.div は calc() に置き換え
+  --aspect-logo: calc(3000 / 2001);
 
   /* Transition */
   --transition-default: all 0.15s ease-in-out;
