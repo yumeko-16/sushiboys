@@ -1,4 +1,4 @@
-@use "../module/setting" as *;
+@use '../module/setting' as *;
 
 .global-navigation {
   line-height: 1.2;
@@ -51,7 +51,7 @@
 }
 
 .global-navigation__logo {
-  aspect-ratio: $aspect-logo;
+  aspect-ratio: var(--aspect-logo);
 }
 
 .global-navigation__list {
@@ -87,16 +87,26 @@
     opacity: 0.8;
   }
 
-  &.current {
-    &::after {
-      @include tb-screen {
-        position: absolute;
-        bottom: -5px;
-        display: block;
-        width: 100%;
-        content: "";
-        border-bottom: 2px solid var(--black);
-      }
+  &.current,
+  &::after {
+    @include tb-screen {
+      transform: scale(1);
+    }
+  }
+
+  &::after {
+    @include tb-screen {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 2px;
+      content: '';
+      background-color: var(--black);
+      transform: scale(0, 1);
+      transform-origin: left center;
+      transition: 0.5s;
     }
   }
 }

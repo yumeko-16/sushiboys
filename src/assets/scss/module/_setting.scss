@@ -1,7 +1,4 @@
-@use "sass:math";
-
-$aspect-logo: math.div(3000, 2001);
-$transition-default: all 0.15s ease-in-out;
+@use 'sass:math';
 
 :root {
   /* Color */
@@ -15,6 +12,12 @@ $transition-default: all 0.15s ease-in-out;
 
   /* Font size */
   --body: clamp(1rem, 0.95rem + 0.2vw, 1.125rem);
+
+  /* Aspect ratio */
+  --aspect-logo: calc(3000 / 2001);
+
+  /* Transition */
+  --transition-default: all 0.15s ease-in-out;
 }
 
 /* @function
@@ -65,17 +68,13 @@ $transition-default: all 0.15s ease-in-out;
 }
 
 /* font family */
-@mixin font-default {
-  @include font-not-sans-jp-regular;
-}
-
 @mixin font-not-sans-jp-regular {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-weight: 400;
 }
 
 @mixin font-not-sans-jp-bold {
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   font-weight: 700;
 }
 
@@ -95,7 +94,7 @@ $transition-default: all 0.15s ease-in-out;
     display: block;
     width: 0;
     height: 0;
-    content: "";
+    content: '';
   }
 
   &::before {
@@ -115,6 +114,12 @@ $transition-default: all 0.15s ease-in-out;
   }
 }
 
+@mixin touch {
+  @media (hover: none) {
+    @content;
+  }
+}
+
 /* normalize / reset
 ----------------------------------------- */
 *,
@@ -127,29 +132,26 @@ $transition-default: all 0.15s ease-in-out;
   height: -webkit-fill-available;
 }
 
-:where(body) {
-  @include font-default;
+:where(body, h1, h2, h3, p, figure, dl) {
+  margin: 0;
+}
 
+:where(body) {
   min-height: 100vh;
   min-height: -webkit-fill-available;
-  margin: 0;
   font-size: var(--body);
   line-height: 1.6;
   color: var(--black);
   letter-spacing: 0.05em;
   background-color: var(--base);
 
-  @include font-default;
+  @include font-not-sans-jp-regular;
 
   &.js-scroll-prevent {
     position: fixed;
     width: 100%;
     overflow: hidden;
   }
-}
-
-:where(h1, h2, h3, p, figure, dl) {
-  margin: 0;
 }
 
 :where(ul, ol) {
