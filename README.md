@@ -7,10 +7,9 @@ SUSHIBOYS Official Website.
 
 https://sushiboys350.com/
 
-## Commands
+## 💻 Development
 
-Local development environment:
-`npm run dev`
-
-Build:
-`npm run build`
+```bash
+# Start local development server
+npm run dev
+```
