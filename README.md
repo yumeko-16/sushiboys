@@ -13,3 +13,9 @@ https://sushiboys350.com/
 # Start local development server
 npm run dev
 ```
+
+## 📦 Production Build
+
+```bash
+npm run build
+```
