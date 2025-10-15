@@ -3,6 +3,14 @@
 **Description:**  
 SUSHIBOYS Official Website.
 
+## 🚀 Tech Stack
+
+- **Markup:** HTML
+- **Styles:** SCSS / CSS
+- **Scripts:** JavaScript
+- **Backend (optional):** WordPress
+- **Build Tool:** Webpack
+
 ## 🌐 Demo
 
 https://sushiboys350.com/
