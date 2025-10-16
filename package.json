@@ -7,7 +7,7 @@
     "dev": "run-p serve watch lint:ejs",
     "build": "run-s prebuild build:ejs build:sass build:js",
     "prebuild": "rm -rfv dist/_data/ dist/components/",
-    "serve": "webpack serve --open",
+    "serve": "webpack serve --port 8081 --open",
     "watch": "run-p watch:ejs watch:sass watch:js",
     "watch:ejs": "chokidar \"src/**/*.ejs\" -c \"npm run build:ejs\" --initial",
     "watch:sass": "sass src/assets/scss:dist/assets/css --style=compressed --no-source-map --no-charset --watch",
