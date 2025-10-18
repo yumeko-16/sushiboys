@@ -1,15 +1,31 @@
 # SUSHIBOYS
 
+**Description:**  
 SUSHIBOYS Official Website.
 
-## URL
+## 🚀 Tech Stack
+
+- **Markup:** HTML
+- **Styles:** SCSS / CSS
+- **Scripts:** JavaScript
+- **Backend (optional):** WordPress
+- **Build Tool:** Webpack
+
+## 🌐 Demo
 
 https://sushiboys350.com/
 
-## Commands
+## 💻 Development
 
-Local development environment:
-`npm run dev`
+```bash
+# Start local development server
+npm run dev
+```
 
-Build:
-`npm run build`
+## 📦 Production Build
+
+```bash
+npm run build
+```
+
+## Test
