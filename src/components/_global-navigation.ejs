@@ -1,3 +1,45 @@
+<!-- prettier-ignore -->
+<%_
+  const data = {
+    nav: [
+      {
+        id: 'home',
+        label: 'Home',
+        href: '/',
+      },
+      {
+        id: 'biography',
+        label: 'Biography',
+        href: '/biography/',
+      },
+      {
+        id: 'news',
+        label: 'News',
+        href: '/news/',
+      },
+      {
+        id: 'discography',
+        label: 'Discography',
+        href: '/discography/',
+      },
+      {
+        id: 'goods',
+        label: 'Goods',
+        href: '/goods/',
+      },
+      {
+        id: 'picture',
+        label: 'Picture',
+        href: '/picture/look/summer-vacation/',
+      },
+      {
+        id: 'contact',
+        label: 'Contact',
+        href: '/contact/',
+      },
+    ],
+  }
+_%>
 <nav class="global-navigation global-navigation--vertically">
   <div class="global-navigation__inner global-navigation__inner--vertically">
     <a class="global-navigation__link" href="/">
@@ -11,57 +53,17 @@
       </picture>
     </a>
 
-    <%_ const currentClass = ` current`; _%>
     <ul class="global-navigation__list global-navigation__list--vertically">
+      <%_ data.nav.forEach(item => { _%>
       <li>
         <a
-          class="global-navigation__anchor<%- meta.pageid == `home` ? currentClass : `` %>"
-          href="/"
-          >Home</a
+          class="global-navigation__anchor<%- meta.pageid === item.id ? ' is-current' : '' %>"
+          href="<%= item.href %>"
         >
+          <%= item.label %>
+        </a>
       </li>
-      <li>
-        <a
-          class="global-navigation__anchor<%- meta.pageid == `biography` ? currentClass : `` %>"
-          href="/biography/"
-          >Biography</a
-        >
-      </li>
-      <li>
-        <a
-          class="global-navigation__anchor<%- meta.pageid == `news` ? currentClass : `` %>"
-          href="/news/"
-          >News</a
-        >
-      </li>
-      <li>
-        <a
-          class="global-navigation__anchor<%- meta.pageid == `discography` ? currentClass : `` %>"
-          href="/discography/"
-          >Discography</a
-        >
-      </li>
-      <li>
-        <a
-          class="global-navigation__anchor<%- meta.pageid == `goods` ? currentClass : `` %>"
-          href="/goods/"
-          >Goods</a
-        >
-      </li>
-      <li>
-        <a
-          class="global-navigation__anchor<%- meta.pageid == `picture` ? currentClass : `` %>"
-          href="/picture/look/summer-vacation/"
-          >Picture</a
-        >
-      </li>
-      <li>
-        <a
-          class="global-navigation__anchor<%- meta.pageid == `contact` ? currentClass : `` %>"
-          href="/contact/"
-          >Contact</a
-        >
-      </li>
+      <%_ }); _%>
     </ul>
   </div>
 </nav>

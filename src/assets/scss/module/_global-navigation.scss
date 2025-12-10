@@ -87,7 +87,7 @@
     opacity: 0.8;
   }
 
-  &.current,
+  &.is-current,
   &::after {
     @include tb-screen {
       transform: scale(1);
