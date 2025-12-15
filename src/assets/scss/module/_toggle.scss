@@ -7,6 +7,8 @@
 .toggle-button {
   position: fixed;
   z-index: 1002;
+  display: grid;
+  place-items: center;
   appearance: none;
   cursor: pointer;
   background-color: var(--base);
@@ -33,6 +35,8 @@
   }
 }
 
+.toggle-button::before,
+.toggle-button::after,
 .toggle-button__bar {
   position: absolute;
   left: 50%;
@@ -50,19 +54,24 @@
     width: 25px;
     height: 2px;
   }
+}
 
-  &:first-of-type {
-    top: 30%;
-  }
+.toggle-button::before,
+.toggle-button::after {
+  content: '';
+}
 
-  &:nth-child(2) {
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
+.toggle-button::before {
+  top: 30%;
+}
 
-  &:last-of-type {
-    bottom: 30%;
-  }
+.toggle-button::after {
+  bottom: 30%;
+}
+
+.toggle-button__bar {
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .toggle-menu {
