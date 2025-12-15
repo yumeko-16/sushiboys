@@ -1,54 +1,51 @@
+<!-- prettier-ignore -->
+<%_
+  const data = {
+    contents: [
+      {
+        name: 'Facebook',
+        url: 'https://www.facebook.com/people/Sushiboys/100057913514913/',
+        icon: 'fab fa-facebook',
+      },
+      {
+        name: 'Twitter',
+        url: 'https://twitter.com/sushiboys350',
+        icon: 'fab fa-twitter',
+      },
+      {
+        name: 'Instagram',
+        url: 'https://www.instagram.com/sushiboys350',
+        icon: 'fab fa-instagram',
+      },
+      {
+        name: 'TikTok',
+        url: 'https://www.tiktok.com/@sushiboys350',
+        icon: 'fa-brands fa-tiktok',
+      },
+      {
+        name: 'YouTube',
+        url: 'https://www.youtube.com/user/umetube2013',
+        icon: 'fab fa-youtube',
+      },
+    ],
+  };
+_%>
 <footer class="footer">
   <ul class="sns">
+    <!-- prettier-ignore -->
+    <%_ data.contents.forEach((sns) => { _%>
     <li class="sns__item">
       <a
         class="sns__link"
-        href="https://www.facebook.com/people/Sushiboys/100057913514913/"
+        href="<%= sns.url %>"
         target="_blank"
         rel="noopener noreferrer"
-        ><i class="fab fa-facebook"></i
-      ></a>
+        aria-label="<%= sns.name %>"
+      >
+        <i class="<%= sns.icon %>"></i>
+      </a>
     </li>
-
-    <li class="sns__item">
-      <a
-        class="sns__link"
-        href="//twitter.com/sushiboys350"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><i class="fab fa-twitter"></i
-      ></a>
-    </li>
-
-    <li class="sns__item">
-      <a
-        class="sns__link"
-        href="//www.instagram.com/sushiboys350"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><i class="fab fa-instagram"></i
-      ></a>
-    </li>
-
-    <li class="sns__item">
-      <a
-        class="sns__link"
-        href="//www.tiktok.com/@sushiboys350"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><i class="fa-brands fa-tiktok"></i
-      ></a>
-    </li>
-
-    <li class="sns__item">
-      <a
-        class="sns__link"
-        href="//www.youtube.com/user/umetube2013"
-        target="_blank"
-        rel="noopener noreferrer"
-        ><i class="fab fa-youtube"></i
-      ></a>
-    </li>
+    <%_ }); _%>
   </ul>
 
   <p class="copyright">
