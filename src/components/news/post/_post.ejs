@@ -11,34 +11,20 @@
         <%- post.title || 'タイトルがありません' %>
       </h3>
 
-      <%_ if (post.hero?.image) { _%>
+      <%_ if (post.hero?.url) { _%>
       <figure class="article__eyecatch">
         <img
           class="article__eyecatch-image"
-          src="<%- post.hero.image || '/assets/img/no-image.png' %>"
+          src="<%- post.hero.url || '/assets/img/no-image.png' %>"
           alt="<%- post.hero.alt || '' %>"
+          width="<%- post.hero.width|| '' %>"
+          height="<%- post.hero.height|| '' %>"
+          loading="eager"
         />
       </figure>
       <%_ } _%>
 
-      <div class="article__body">
-        <%_ (post.leads || []).forEach(lead => { _%>
-        <p><%- lead %></p>
-        <%_ }); _%>
-        <!-- prettier-ignore -->
-        <%_ if (post.photos?.length) { _%>
-        <%_ post.photos.forEach(photo => { _%>
-        <figure class="article__image-wrap">
-          <img
-            class="article__image"
-            src="<%- photo.image %>"
-            alt="<%- photo.alt || '' %>"
-          />
-        </figure>
-        <%_ }); _%>
-        <!-- prettier-ignore -->
-        <%_ } _%>
-      </div>
+      <div class="article__body"><%- post.content %></div>
 
       <div class="article__button">
         <a class="button button--back" href="/news/">Back</a>
