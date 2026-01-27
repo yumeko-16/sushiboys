@@ -44,5 +44,5 @@ npm run dev
 npm run build
 ```
 
-The production-ready files will be output to the dist/ directory.
+The production-ready files will be output to the `dist/` directory.
 You can then deploy the dist folder to your hosting server.
