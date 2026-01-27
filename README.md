@@ -1,4 +1,4 @@
-# SUSHIBOYS Official Website
+# SUSHIBOYS
 
 [![Build Tool: Webpack](https://img.shields.io/badge/Build-Webpack-1e72b9)](https://webpack.js.org/)
 [![WordPress](https://img.shields.io/badge/API-WordPress-blue)](https://wordpress.org/)
