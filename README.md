@@ -3,7 +3,6 @@
 [![Build Tool: Webpack](https://img.shields.io/badge/Build-Webpack-1e72b9)](https://webpack.js.org/)
 [![WordPress](https://img.shields.io/badge/API-WordPress-blue)](https://wordpress.org/)
 
-**Description:**  
 This repository contains the source code for a **brand website** built with **EJS**, **SCSS**, and **JavaScript**.  
 It uses **WordPress as a headless CMS** (via REST API) and **Webpack** for asset bundling and build automation.
 
