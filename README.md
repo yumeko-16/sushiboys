@@ -15,7 +15,7 @@ It uses **WordPress as a headless CMS** (via REST API) and **Webpack** for asset
 - **Build Tool:** Webpack  
 - **Package Manager:** npm  
 
-## 🌐 Demo
+## 🌐 Site
 
 https://sushiboys350.com/
 
