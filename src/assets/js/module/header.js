@@ -1,17 +1,28 @@
-export const ToggleHeader = (() => {
-  const updateHeaderVisibility = () => {
-    const HEADER = document.getElementById('header');
-    let lastScrollY = 0;
+const els = {};
+let lastScrollY = window.scrollY;
 
-    if (!HEADER) return;
+const cacheElements = () => {
+  els.header = document.getElementById('header');
+};
 
-    if (window.scrollY < lastScrollY || window.scrollY <= 10) {
-      HEADER.classList.remove('is-hide');
-    } else {
-      HEADER.classList.add('is-hide');
-    }
-    lastScrollY = window.scrollY;
-  };
+const updateHeaderVisibility = () => {
+  const currentScrollY = window.scrollY;
 
-  window.addEventListener('scroll', updateHeaderVisibility);
-})();
+  if (currentScrollY < lastScrollY || currentScrollY <= 10) {
+    els.header.classList.remove('is-hide');
+  } else {
+    els.header.classList.add('is-hide');
+  }
+
+  lastScrollY = currentScrollY;
+};
+
+const init = () => {
+  cacheElements();
+  if (!els.header) return;
+
+  updateHeaderVisibility();
+  window.addEventListener('scroll', updateHeaderVisibility, { passive: true });
+};
+
+export default { init };
