@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-<!--  created with free sitemap generation system www.sitemapxml.jp  --> 
+<!--  created with free sitemap generation system www.sitemapxml.jp  -->
 <url>
   <loc>https://sushiboys350.com/</loc>
   <priority>1.0</priority>
@@ -681,11 +681,6 @@
   <loc>https://sushiboys350.com/discography/farmhouse/single/kutsushita.html</loc>
   <priority>0.7</priority>
   <lastmod>2026-06-22T22:44:13+09:00</lastmod>
-</url>
-<url>
-  <loc>https://sushiboys350.com/news/post083/info@synchronicity.tv</loc>
-  <priority>0.6</priority>
-  <lastmod>2021-11-16T10:13:21+09:00</lastmod>
 </url>
 
 </urlset>
