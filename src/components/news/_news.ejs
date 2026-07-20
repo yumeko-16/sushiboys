@@ -6,10 +6,10 @@
     <div class="cards">
       <%_ posts.forEach(post => { _%>
       <article class="card">
-        <%_ if (post?.url) { _%>
+        <%_ if (post?.slug) { _%>
         <a
           class="card__wrapper card__wrapper--link"
-          href="<%- post.url %>"
+          href="<%- post.slug %>"
         >
         <%_ } else { _%>
         <div class="card__wrapper">
@@ -25,7 +25,7 @@
               alt="<%- post?.hero?.alt || '' %>"
             />
           </figure>
-        <%_ if (post?.url) { _%>
+        <%_ if (post?.slug) { _%>
         </a>
         <%_ } else { _%>
         </div>
