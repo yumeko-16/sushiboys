@@ -11,14 +11,14 @@
         <%- post.title || 'タイトルがありません' %>
       </h3>
 
-      <%_ if (post.hero?.url) { _%>
+      <%_ if (post.eyecatch?.url) { _%>
       <figure class="article__eyecatch">
         <img
           class="article__eyecatch-image"
-          src="<%- post.hero.url || '/assets/img/no-image.png' %>"
-          alt="<%- post.hero.alt || '' %>"
-          width="<%- post.hero.width|| '' %>"
-          height="<%- post.hero.height|| '' %>"
+          src="<%- post.eyecatch.url || '/assets/img/no-image.png' %>"
+          alt="<%- post.eyecatch.alt || '' %>"
+          width="<%- post.eyecatch.width|| '' %>"
+          height="<%- post.eyecatch.height|| '' %>"
           loading="eager"
         />
       </figure>
