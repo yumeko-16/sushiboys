@@ -10,19 +10,23 @@
       <ul class="carousel__list swiper-wrapper">
         <%_ items.forEach((item) => { _%>
         <li class="carousel__card swiper-slide">
-          <%_ if (item?.url) { _%>
-          <a href="<%- item.url %>" target="_blank" rel="noopener noreferrer">
+          <%_ if (item?.link) { _%>
+          <a href="<%- item.link %>" target="_blank" rel="noopener noreferrer">
             <img
               class="carousel__image"
-              src="<%- item?.image || '/assets/img/no-image.png' %>"
-              alt="<%- item?.alt || 'No image' %>"
+              src="<%- item?.eyecatch.url || '/assets/img/no-image.png' %>"
+              alt="<%- item?.eyecatch.alt || 'No image' %>"
+              width="<%- item?.eyecatch.width %>"
+              height="<%- item?.eyecatch.height %>"
             />
           </a>
           <%_ } else { _%>
           <img
             class="carousel__image"
-            src="<%- item?.image || '/assets/img/no-image.png' %>"
-            alt="<%- item?.alt || 'No image' %>"
+            src="<%- item?.eyecatch.url || '/assets/img/no-image.png' %>"
+            alt="<%- item?.eyecatch.alt || 'No image' %>"
+            width="<%- item?.eyecatch.width %>"
+            height="<%- item?.eyecatch.height %>"
           />
           <%_ } _%>
         </li>
