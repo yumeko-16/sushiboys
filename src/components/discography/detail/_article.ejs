@@ -43,8 +43,10 @@ _%>
       <figure class="article__eyecatch">
         <img
           class="article__eyecatch-image"
-          src="<%- reverseData?.[meta.index]?.image || '/assets/img/no-image.png' %>"
-          alt="<%- reverseData?.[meta.index]?.alt || '' %>"
+          src="<%- reverseData?.[meta.index]?.eyecatch.url || '/assets/img/no-image.png' %>"
+          alt="<%- reverseData?.[meta.index]?.eyecatch.alt || '' %>"
+          width="<%- reverseData?.[meta.index]?.eyecatch.width %>"
+          height="<%- reverseData?.[meta.index]?.eyecatch.height %>"
         />
       </figure>
 
