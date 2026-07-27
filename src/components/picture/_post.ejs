@@ -4,23 +4,21 @@
 
     <!-- prettier-ignore -->
     <%_
-      const posts = pictureData?.looks || [];
-      const reversePosts = [...posts].reverse(); // オリジナル配列を破壊しないためのコピー
-      const images = reversePosts?.[meta.index]?.images || [];
+      const looks = pictureData?.looks || [];
+      const reverseLooks = [...looks].reverse();
     _%>
-    <%_ if (images.length > 0) { _%>
+    <%_ if (looks.length > 0) { _%>
     <ul class="article__pictures">
-      <%_ images.forEach((image) => { _%>
+      <%_ reverseLooks.forEach((look) => { _%>
       <li class="article__pictures-item">
-        <picture>
-          <source srcset="<%- `${image}.webp` %>" type="image/webp" />
-
+        <figure class="article__image">
           <img
-            class="article__image"
-            src="<%- `${image}.jpg` || '/assets/img/no-image.png' %>"
-            alt=""
+            src="<%- look.image.url %>"
+            alt="<%- look.image.alt %>"
+            width="<%- look.image.width %>"
+            height="<%- look.image.height %>"
           />
-        </picture>
+        </figure>
       </li>
       <%_ }); _%>
     </ul>
