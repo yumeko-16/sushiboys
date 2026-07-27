@@ -20,32 +20,32 @@
         js: `/assets/js/contact.js`
       };
     _%>
-    <%- include(localmeta.path + `components/_head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
+    <%- include(localmeta.path + `_components/head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
   </head>
   <body>
-    <%- include(localmeta.path + `components/_googletagmanager`); _%>
+    <%- include(localmeta.path + `_components/googletagmanager`); _%>
 
     <div class="wrapper">
       <!-- prettier-ignore -->
-      <%- include(localmeta.path + `components/_global-navigation`, {meta: localmeta}); _%>
+      <%- include(localmeta.path + `_components/global-navigation`, {meta: localmeta}); _%>
 
       <main class="main">
         <!-- prettier-ignore -->
-        <%- include(localmeta.path + `components/_header`, {meta: localmeta}); _%>
+        <%- include(localmeta.path + `_components/header`, {meta: localmeta}); _%>
 
         <div>
           <!-- prettier-ignore -->
-          <%- include(localmeta.path + `components/_hero`, {meta: localmeta}); _%>
+          <%- include(localmeta.path + `_components/hero`, {meta: localmeta}); _%>
 
           <div class="content">
-            <%- include(localmeta.path + `components/contact/_form`); _%>
+            <%- include(localmeta.path + `_components/contact/form`); _%>
           </div>
         </div>
 
         <!-- prettier-ignore -->
-        <%- include(localmeta.path + `components/_toggle`); _%>
+        <%- include(localmeta.path + `_components/toggle`); _%>
 
-        <%- include(localmeta.path + `components/_footer`); _%>
+        <%- include(localmeta.path + `_components/footer`); _%>
       </main>
     </div>
   </body>
