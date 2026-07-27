@@ -20,7 +20,7 @@
         js: '/assets/js/news.js'
       };
     _%>
-    <%- include(localmeta.path + '_components/_head', {meta: localmeta, ogp: localogp, file: localfile}); _%>
+    <%- include(localmeta.path + '_components/head', {meta: localmeta, ogp: localogp, file: localfile}); _%>
     <%- include(localmeta.path + '_data/_news'); _%>
     <%_ newsData = news(); _%>
   </head>
