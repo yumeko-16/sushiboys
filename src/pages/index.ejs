@@ -10,11 +10,13 @@
         pageid: `home`,
         path: `../`
       };
+
       const localogp = {
         title: localmeta.title,
         description: localmeta.description,
         url: localmeta.url
       };
+
       const localfile = {
         css: `/assets/css/home.css`,
         js: `/assets/js/home.js`
@@ -38,7 +40,11 @@
           <%- include(localmeta.path + `_components/hero`, {meta: localmeta}); _%>
 
           <div class="content">
-            <%- include(localmeta.path + '_components/biography'); _%>
+            <section class="section">
+              <div class="section__inner">
+                <%- include(localmeta.path + '_components/biography'); _%>
+              </div>
+            </section>
           </div>
         </div>
 
