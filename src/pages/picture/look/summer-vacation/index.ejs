@@ -30,7 +30,7 @@
 
     <div class="wrapper">
       <!-- prettier-ignore -->
-      <%- include(localmeta.path + `_components/global-navigation`, {meta: localmeta}); _%>
+      <%- include(localmeta.path + `_components/globalNavigation`, {meta: localmeta}); _%>
 
       <main class="main">
         <!-- prettier-ignore -->
@@ -41,8 +41,14 @@
           <%- include(localmeta.path + `_components/hero`, {meta: localmeta}); _%>
 
           <div class="content">
-            <!-- prettier-ignore -->
-            <%- include(localmeta.path + `_components/pictures`, {meta: localmeta, pictureData: pictureData}); _%>
+            <section class="section">
+              <div class="section__inner">
+                <h3 class="section__heading section__heading--ja">夏休み編</h3>
+
+                <%- include(localmeta.path + `_components/pictures`, {meta:
+                localmeta, pictureData: pictureData}); _%>
+              </div>
+            </section>
           </div>
         </div>
 

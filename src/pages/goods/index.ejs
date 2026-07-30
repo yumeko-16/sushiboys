@@ -10,38 +10,43 @@
         pageid: `goods`,
         path: `../../`
       };
+
       const localogp = {
         title: localmeta.title,
         description: localmeta.description,
         url: localmeta.url
       };
+
       const localfile = {
         css: `/assets/css/goods.css`,
         js: `/assets/js/goods.js`
       };
     _%>
+
     <%- include(localmeta.path + `_components/head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
+
     <%- include(localmeta.path + `_data/goods`); _%>
+
     <%_ goodsData = goods(); _%>
   </head>
   <body>
     <%- include(localmeta.path + `_components/googletagmanager`); _%>
 
     <div class="wrapper">
-      <!-- prettier-ignore -->
-      <%- include(localmeta.path + `_components/global-navigation`, {meta: localmeta}); _%>
+      <%- include(localmeta.path + `_components/globalNavigation`, {meta:
+      localmeta}); _%>
 
       <main class="main">
         <!-- prettier-ignore -->
         <%- include(localmeta.path + `_components/header`, {meta: localmeta}); _%>
 
         <div>
-          <!-- prettier-ignore -->
-          <%- include(localmeta.path + `_components/hero`, {meta: localmeta}); _%>
+          <%- include(localmeta.path + `_components/hero`, {meta: localmeta});
+          _%>
 
           <div class="content">
-            <!-- prettier-ignore -->
-            <%- include(localmeta.path + `_components/goods`, {goodsData: goodsData}); _%>
+            <%- include(localmeta.path + `_components/goodsList`, {goodsData:
+            goodsData}); _%>
           </div>
         </div>
 

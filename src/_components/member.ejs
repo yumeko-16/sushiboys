@@ -1,31 +1,34 @@
-<section class="section">
-  <div class="section__inner">
-    <h3 class="section__heading section__heading--en">Member</h3>
-
-    <div class="top-member">
-      <figure class="top-member__image-wrap">
-        <img
-          class="top-member__image"
-          src="/assets/img/home/farmhouse.png"
-          alt="FARMHOUSE"
-        />
-      </figure>
-
-      <figure class="top-member__image-wrap">
-        <img
-          class="top-member__image"
-          src="/assets/img/home/santena.png"
-          alt="SANTENA"
-        />
-      </figure>
-
-      <figure class="top-member__image-wrap">
-        <img
-          class="top-member__image"
-          src="/assets/img/home/neo-yoshikawa.png"
-          alt="neo yoshikawa"
-        />
-      </figure>
-    </div>
-  </div>
-</section>
+<!-- prettier-ignore -->
+const members = [
+  {
+    eyecatch: {
+      url: "/assets/img/home/farmhouse.png",
+      alt: "FARMHOUSE",
+      width: 0,
+      height: 0,
+    },
+  },
+  {
+    eyecatch: {
+      url: "/assets/img/home/santena.png",
+      alt: "SANTENA",
+      width: 0,
+      height: 0,
+    },
+  },
+  {
+    eyecatch: {
+      url: "/assets/img/home/neo-yoshikawa.png",
+      alt: "neo yoshikawa",
+      width: 0,
+      height: 0,
+    },
+  },
+];
+<div class="member">
+  <% members.forEach(member => { %>
+  <figure class="member__image">
+    <img src="<%- member.eyecatch.url %>" alt="<%- member.eyecatch.alt %>" />
+  </figure>
+  <% }); %>
+</div>

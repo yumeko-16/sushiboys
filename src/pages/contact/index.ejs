@@ -27,7 +27,7 @@
 
     <div class="wrapper">
       <!-- prettier-ignore -->
-      <%- include(localmeta.path + `_components/global-navigation`, {meta: localmeta}); _%>
+      <%- include(localmeta.path + `_components/globalNavigation`, {meta: localmeta}); _%>
 
       <main class="main">
         <!-- prettier-ignore -->
@@ -38,7 +38,11 @@
           <%- include(localmeta.path + `_components/hero`, {meta: localmeta}); _%>
 
           <div class="content">
-            <%- include(localmeta.path + `_components/contact`); _%>
+            <section class="section">
+              <div class="section__inner section__inner--form">
+                <%- include(localmeta.path + `_components/contact`); _%>
+              </div>
+            </section>
           </div>
         </div>
 

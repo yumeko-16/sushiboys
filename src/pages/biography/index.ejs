@@ -10,11 +10,13 @@
         pageid: `biography`,
         path: '../../'
       };
+
       const localogp = {
         title: localmeta.title,
         description: localmeta.description,
         url: localmeta.url
       };
+
       const localfile = {
         css: `/assets/css/biography.css`,
         js: `/assets/js/biography.js`
@@ -27,7 +29,7 @@
 
     <div class="wrapper">
       <!-- prettier-ignore -->
-      <%- include(localmeta.path + `_components/global-navigation`, {meta: localmeta}); _%>
+      <%- include(localmeta.path + `_components/globalNavigation`, {meta: localmeta}); _%>
 
       <main class="main">
         <!-- prettier-ignore -->
@@ -38,8 +40,11 @@
           <%- include(localmeta.path + `_components/hero`, {meta: localmeta}); _%>
 
           <div class="content">
-            <!-- prettier-ignore -->
-            <%- include(localmeta.path + `_components/biography`); _%>
+            <section class="section">
+              <div class="section__inner">
+                <%- include(localmeta.path + `_components/biography`); _%>
+              </div>
+            </section>
           </div>
         </div>
 

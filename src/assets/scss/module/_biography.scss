@@ -1,6 +1,6 @@
 @use '../module/setting' as *;
 
-.catch {
+.biography {
   display: flex;
   flex-direction: column;
 
@@ -10,12 +10,5 @@
 
   & > * + * {
     margin-block-start: 2em;
-  }
-}
-
-.catch--home {
-  @include pc-screen {
-    width: 65%;
-    margin: 0 auto;
   }
 }
