@@ -1,29 +1,23 @@
-<section class="section">
-  <div class="section__inner">
-    <h3 class="section__heading section__heading--ja">夏休み編</h3>
-
-    <!-- prettier-ignore -->
-    <%_
-      const looks = pictureData?.looks || [];
-      const reverseLooks = [...looks].reverse();
-    _%>
-    <%_ if (looks.length > 0) { _%>
-    <ul class="article__pictures">
-      <%_ reverseLooks.forEach((look) => { _%>
-      <li class="article__pictures-item">
-        <figure class="article__image">
-          <img
-            src="<%- look.image.url %>"
-            alt="<%- look.image.alt %>"
-            width="<%- look.image.width %>"
-            height="<%- look.image.height %>"
-          />
-        </figure>
-      </li>
-      <%_ }); _%>
-    </ul>
-    <%_ } else { _%>
-    <p>画像がありません。</p>
-    <%_ } _%>
-  </div>
-</section>
+<!-- prettier-ignore -->
+<%_
+  const looks = pictureData?.looks || [];
+  const reverseLooks = [...looks].reverse();
+_%>
+<%_ if (looks.length > 0) { _%>
+<ul class="article__pictures">
+  <%_ reverseLooks.forEach((look) => { _%>
+  <li class="article__pictures-item">
+    <figure class="article__image">
+      <img
+        src="<%- look.image.url %>"
+        alt="<%- look.image.alt %>"
+        width="<%- look.image.width %>"
+        height="<%- look.image.height %>"
+      />
+    </figure>
+  </li>
+  <%_ }); _%>
+</ul>
+<%_ } else { _%>
+<p>画像がありません。</p>
+<%_ } _%>
