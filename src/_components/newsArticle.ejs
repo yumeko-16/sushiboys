@@ -1,34 +1,28 @@
-<section class="section">
-  <div class="section__inner">
-    <article class="article">
-      <!-- prettier-ignore -->
-      <%_
-        const posts = newsData?.posts || [];
-        const reversePosts = [...posts].reverse();
-        const post = reversePosts[meta.index] || {};
-      _%>
-      <h3 class="article__title">
-        <%- post.title || 'タイトルがありません' %>
-      </h3>
+<article class="article">
+  <!-- prettier-ignore -->
+  <%_
+    const posts = newsData?.posts || [];
+    const reversePosts = [...posts].reverse();
+    const post = reversePosts[meta.index] || {};
+  _%>
+  <h3 class="article__title"><%- post.title || 'タイトルがありません' %></h3>
 
-      <%_ if (post.eyecatch?.url) { _%>
-      <figure class="article__eyecatch">
-        <img
-          class="article__eyecatch-image"
-          src="<%- post.eyecatch.url || '/assets/img/no-image.png' %>"
-          alt="<%- post.eyecatch.alt || '' %>"
-          width="<%- post.eyecatch.width|| '' %>"
-          height="<%- post.eyecatch.height|| '' %>"
-          loading="eager"
-        />
-      </figure>
-      <%_ } _%>
+  <%_ if (post.eyecatch?.url) { _%>
+  <figure class="article__eyecatch">
+    <img
+      class="article__eyecatch-image"
+      src="<%- post.eyecatch.url || '/assets/img/no-image.png' %>"
+      alt="<%- post.eyecatch.alt || '' %>"
+      width="<%- post.eyecatch.width|| '' %>"
+      height="<%- post.eyecatch.height|| '' %>"
+      loading="eager"
+    />
+  </figure>
+  <%_ } _%>
 
-      <div class="article__body"><%- post.content %></div>
+  <div class="article__body"><%- post.content %></div>
 
-      <div class="article__button">
-        <a class="button button--back" href="/news/">Back</a>
-      </div>
-    </article>
+  <div class="article__button">
+    <a class="button button--back" href="/news/">Back</a>
   </div>
-</section>
+</article>

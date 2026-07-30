@@ -41,8 +41,12 @@
           <%- include(localmeta.path + `_components/hero`, {meta: localmeta}); _%>
 
           <div class="content">
-            <!-- prettier-ignore -->
-            <%- include(localmeta.path + `_components/newsArticle`, {meta: localmeta, newsData: newsData}); _%>
+            <section class="section">
+              <div class="section__inner">
+                <%- include(localmeta.path + `_components/newsArticle`, {meta:
+                localmeta, newsData: newsData}); _%>
+              </div>
+            </section>
           </div>
         </div>
 
