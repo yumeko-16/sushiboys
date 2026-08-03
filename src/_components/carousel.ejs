@@ -1,0 +1,17 @@
+<div id="<%= id %>" class="carousel swiper">
+  <ul class="carousel__list swiper-wrapper">
+    <%_ (items || []).forEach((item) => { _%>
+    <li class="carousel__card swiper-slide">
+      <a href="<%= basePath %>/<%- item?.slug || '#' %>">
+        <img
+          class="carousel__image"
+          src="<%- item?.eyecatch?.url || '/assets/img/no-image.png' %>"
+          alt="<%- item?.eyecatch?.alt || 'No image' %>"
+          width="<%- item?.eyecatch?.width %>"
+          height="<%- item?.eyecatch?.height %>"
+        />
+      </a>
+    </li>
+    <%_ }); _%>
+  </ul>
+</div>

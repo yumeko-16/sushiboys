@@ -10,19 +10,71 @@
         pageid: `discography`,
         path: '../../'
       };
+
       const localogp = {
         title: localmeta.title,
         description: localmeta.description,
         url: localmeta.url
       };
+
       const localfile = {
         css: `/assets/css/discography.css`,
         js: `/assets/js/discography.js`
       };
     _%>
+
     <%- include(localmeta.path + `_components/head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
+
     <%- include(localmeta.path + `_data/discography`); _%>
+
     <%_ discographyData = discography(); _%>
+
+    <%_
+      const sections = [
+        {
+          heading: { text: "EP", isEn: true },
+          id: "swiper-ep",
+          items: discographyData.eps,
+          basePath: "/discography/ep",
+        },
+        {
+          heading: { text: "Single", isEn: true },
+          id: "swiper-single",
+          items: discographyData.singles,
+          basePath: "/discography/single",
+        },
+        {
+          heading: { text: "feat.", isEn: true },
+          id: "swiper-feat",
+          items: discographyData.feats,
+          basePath: "/discography/feat",
+        },
+        {
+          heading: { text: "Record", isEn: true },
+          id: "swiper-record",
+          items: discographyData.records,
+          basePath: "/discography/record",
+        },
+        {
+          heading: { text: "FARMHOUSE EP", isEn: true },
+          id: "swiper-farmhouse-ep",
+          items: discographyData.farmhouseEps,
+          basePath: "/discography/farmhouse/ep",
+        },
+        {
+          heading: { text: "SANTENA EP", isEn: true },
+          id: "swiper-santena-ep",
+          items: discographyData.santenaEps,
+          basePath: "/discography/santena/ep",
+        },
+        {
+          heading: { text: "FARMHOUSE Single", isEn: true },
+          id: "swiper-farmhouse-single",
+          items: discographyData.farmhouseSingles,
+          basePath: "/discography/farmhouse/single",
+        },
+      ];
+    _%>
   </head>
   <body>
     <%- include(localmeta.path + `_components/googletagmanager`); _%>
@@ -40,8 +92,17 @@
           <%- include(localmeta.path + `_components/hero`, {meta: localmeta}); _%>
 
           <div class="content">
-            <%- include(localmeta.path + `_components/discographyList`,
-            {discographyData: discographyData}); _%>
+            <!-- prettier-ignore -->
+            <%_ sections.forEach((section) => { _%>
+            <%- include(localmeta.path + '_components/section', {
+              heading: section.heading,
+              body: include(localmeta.path + '_components/carousel', {
+                id: section.id,
+                items: section.items,
+                basePath: section.basePath,
+              })
+            }); _%>
+            <%_ }); _%>
           </div>
         </div>
 
