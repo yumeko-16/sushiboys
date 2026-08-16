@@ -30,11 +30,11 @@
     <%_ newsData = news(); _%>
   </head>
   <body>
-    <%- include(localmeta.path + '_components/googletagmanager'); _%>
+    <%- include(localmeta.path + '_components/GoogleTagManager'); _%>
 
     <div class="wrapper">
       <!-- prettier-ignore -->
-      <%- include(localmeta.path + `_components/globalNavigation`, {meta: localmeta}); _%>
+      <%- include(localmeta.path + `_components/GlobalNavigation`, {meta: localmeta}); _%>
 
       <main class="main">
         <!-- prettier-ignore -->
@@ -55,9 +55,9 @@
         </div>
 
         <!-- prettier-ignore -->
-        <%- include(localmeta.path + `_components/toggle`); _%>
+        <%- include(localmeta.path + `_components/Toggle`); _%>
 
-        <%- include(localmeta.path + `_components/footer`); _%>
+        <%- include(localmeta.path + `_components/Footer`); _%>
       </main>
     </div>
   </body>

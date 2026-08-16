@@ -21,29 +21,29 @@
         js: `/assets/js/discographyDetail.js`
       };
     _%>
-    <%- include(localmeta.path + `_components/head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
+    <%- include(localmeta.path + `_components/Head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
     <%- include(localmeta.path + `_data/discography`); _%>
     <%_ discographyData = discography(); _%>
   </head>
   <body>
-    <%- include(localmeta.path + `_components/googletagmanager`); _%>
+    <%- include(localmeta.path + `_components/GoogleTagManager`); _%>
 
     <div class="wrapper">
       <!-- prettier-ignore -->
-      <%- include(localmeta.path + `_components/globalNavigation`, {meta: localmeta}); _%>
+      <%- include(localmeta.path + `_components/GlobalNavigation`, {meta: localmeta}); _%>
 
       <main class="main">
         <!-- prettier-ignore -->
-        <%- include(localmeta.path + `_components/header`, {meta: localmeta}); _%>
+        <%- include(localmeta.path + `_components/Header`, {meta: localmeta}); _%>
 
         <div>
           <!-- prettier-ignore -->
-          <%- include(localmeta.path + `_components/hero`, {meta: localmeta}); _%>
+          <%- include(localmeta.path + `_components/Hero`, {meta: localmeta}); _%>
 
           <div class="content">
             <section class="section">
               <div class="section__inner">
-                <%- include(localmeta.path + `_components/discographyArticle`,
+                <%- include(localmeta.path + `_components/DiscographyArticle`,
                 {meta: localmeta, discographyData: discographyData}); _%>
               </div>
             </section>
@@ -51,9 +51,9 @@
         </div>
 
         <!-- prettier-ignore -->
-        <%- include(localmeta.path + `_components/toggle`); _%>
+        <%- include(localmeta.path + `_components/Toggle`); _%>
 
-        <%- include(localmeta.path + `_components/footer`); _%>
+        <%- include(localmeta.path + `_components/Footer`); _%>
       </main>
     </div>
   </body>

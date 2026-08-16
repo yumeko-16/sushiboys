@@ -21,31 +21,31 @@
         js: `/assets/js/picturePost.js`
       };
     _%>
-    <%- include(localmeta.path + `_components/head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
+    <%- include(localmeta.path + `_components/Head`, {meta: localmeta, ogp: localogp, file: localfile}); _%>
     <%- include(localmeta.path + `_data/picture`); _%>
     <%_ pictureData = picture(); _%>
   </head>
   <body>
-    <%- include(localmeta.path + `_components/googletagmanager`); _%>
+    <%- include(localmeta.path + `_components/GoogleTagManager`); _%>
 
     <div class="wrapper">
       <!-- prettier-ignore -->
-      <%- include(localmeta.path + `_components/globalNavigation`, {meta: localmeta}); _%>
+      <%- include(localmeta.path + `_components/GlobalNavigation`, {meta: localmeta}); _%>
 
       <main class="main">
         <!-- prettier-ignore -->
-        <%- include(localmeta.path + `_components/header`, {meta: localmeta}); _%>
+        <%- include(localmeta.path + `_components/Header`, {meta: localmeta}); _%>
 
         <div>
           <!-- prettier-ignore -->
-          <%- include(localmeta.path + `_components/hero`, {meta: localmeta}); _%>
+          <%- include(localmeta.path + `_components/Hero`, {meta: localmeta}); _%>
 
           <div class="content">
             <section class="section">
               <div class="section__inner">
                 <h3 class="section__heading section__heading--ja">夏休み編</h3>
 
-                <%- include(localmeta.path + `_components/pictures`, {meta:
+                <%- include(localmeta.path + `_components/Pictures`, {meta:
                 localmeta, pictureData: pictureData}); _%>
               </div>
             </section>
@@ -53,9 +53,9 @@
         </div>
 
         <!-- prettier-ignore -->
-        <%- include(localmeta.path + `_components/toggle`); _%>
+        <%- include(localmeta.path + `_components/Toggle`); _%>
 
-        <%- include(localmeta.path + `_components/footer`); _%>
+        <%- include(localmeta.path + `_components/Footer`); _%>
       </main>
     </div>
   </body>
