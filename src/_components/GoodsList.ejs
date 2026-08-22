@@ -1,53 +1,31 @@
-<!-- prettier-ignore -->
-<% const renderCarouselSection = (id, heading, items) => { %>
-<section class="section">
-  <div class="section__inner">
-    <h3 class="section__heading section__heading--en"><%= heading %></h3>
-
-    <!-- prettier-ignore -->
-    <%_ if (items.length > 0) { _%>
-    <div id="<%= id %>" class="carousel swiper">
-      <ul class="carousel__list swiper-wrapper">
-        <%_ items.forEach((item) => { _%>
-        <li class="carousel__card swiper-slide">
-          <%_ if (item?.link) { _%>
-          <a href="<%- item.link %>" target="_blank" rel="noopener noreferrer">
-            <img
-              class="carousel__image"
-              src="<%- item?.eyecatch.url || '/assets/img/no-image.png' %>"
-              alt="<%- item?.eyecatch.alt || 'No image' %>"
-              width="<%- item?.eyecatch.width %>"
-              height="<%- item?.eyecatch.height %>"
-            />
-          </a>
-          <%_ } else { _%>
-          <img
-            class="carousel__image"
-            src="<%- item?.eyecatch.url || '/assets/img/no-image.png' %>"
-            alt="<%- item?.eyecatch.alt || 'No image' %>"
-            width="<%- item?.eyecatch.width %>"
-            height="<%- item?.eyecatch.height %>"
-          />
-          <%_ } _%>
-        </li>
-        <%_ }); _%>
-      </ul>
-    </div>
-    <%_ } else { _%>
-    <p>商品がありません。</p>
-    <%_ } _%>
-  </div>
-</section>
+<%_ if (goodsData.length > 0) { _%>
+<div id="<%= id %>" class="carousel swiper">
+  <ul class="carousel__list swiper-wrapper">
+    <%_ goodsData.forEach((item) => { _%>
+    <li class="carousel__card swiper-slide">
+      <%_ if (item?.link) { _%>
+      <a href="<%- item.link %>" target="_blank" rel="noopener noreferrer">
+        <img
+          class="carousel__image"
+          src="<%- item?.eyecatch.url || '/assets/img/no-image.png' %>"
+          alt="<%- item?.eyecatch.alt || 'No image' %>"
+          width="<%- item?.eyecatch.width %>"
+          height="<%- item?.eyecatch.height %>"
+        />
+      </a>
+      <%_ } else { _%>
+      <img
+        class="carousel__image"
+        src="<%- item?.eyecatch.url || '/assets/img/no-image.png' %>"
+        alt="<%- item?.eyecatch.alt || 'No image' %>"
+        width="<%- item?.eyecatch.width %>"
+        height="<%- item?.eyecatch.height %>"
+      />
+      <%_ } _%>
+    </li>
+    <%_ }); _%>
+  </ul>
+</div>
+<%_ } else { _%>
+<p>商品がありません。</p>
 <%_ } _%>
-
-<!-- prettier-ignore -->
-<%_
-  renderCarouselSection('swiper-knickknack', 'Knickknack', goodsData?.knickknacks || []);
-  renderCarouselSection('swiper-recording-media', 'Recording media', goodsData?.recordingMedias || []);
-  renderCarouselSection('swiper-cap', 'Cap', goodsData?.caps || []);
-  renderCarouselSection('swiper-hoodie', 'Hoodie', goodsData?.hoodies || []);
-  renderCarouselSection('swiper-parker', 'Parker', goodsData?.parkers || []);
-  renderCarouselSection('swiper-long-t-shirt', 'Long T-Shirt', goodsData?.longTShirts || []);
-  renderCarouselSection('swiper-t-shirt', 'T-Shirt', goodsData?.tShirts || []);
-  renderCarouselSection('swiper-shorts', 'Shorts', goodsData?.aLotsOfShorts || []);
-_%>

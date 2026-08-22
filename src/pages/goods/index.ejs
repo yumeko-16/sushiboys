@@ -45,8 +45,84 @@
           _%>
 
           <div class="content">
-            <%- include(localmeta.path + `_components/GoodsList`, {goodsData:
-            goodsData}); _%>
+            <section class="section">
+              <div class="section__inner">
+                <h3 class="section__heading section__heading--en">
+                  Knickknack
+                </h3>
+
+                <%- include(localmeta.path + '_components/GoodsList', { id:
+                'swiper-knickknack', goodsData: goodsData.knickknacks }); _%>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section__inner">
+                <h3 class="section__heading section__heading--en">
+                  Recording media
+                </h3>
+
+                <%- include(localmeta.path + '_components/GoodsList', { id:
+                'swiper-recording-media', goodsData: goodsData.recordingMedias
+                }); _%>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section__inner">
+                <h3 class="section__heading section__heading--en">Cap</h3>
+
+                <%- include(localmeta.path + '_components/GoodsList', { id:
+                'swiper-cap', goodsData: goodsData.caps }); _%>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section__inner">
+                <h3 class="section__heading section__heading--en">Hoodie</h3>
+
+                <%- include(localmeta.path + '_components/GoodsList', { id:
+                'swiper-hoodie', goodsData: goodsData.hoodies }); _%>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section__inner">
+                <h3 class="section__heading section__heading--en">Parker</h3>
+
+                <%- include(localmeta.path + '_components/GoodsList', { id:
+                'swiper-parker', goodsData: goodsData.parkers }); _%>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section__inner">
+                <h3 class="section__heading section__heading--en">
+                  Long T-Shirt
+                </h3>
+
+                <%- include(localmeta.path + '_components/GoodsList', { id:
+                'swiper-long-t-shirt', goodsData: goodsData.longTShirts }); _%>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section__inner">
+                <h3 class="section__heading section__heading--en">T-Shirt</h3>
+
+                <%- include(localmeta.path + '_components/GoodsList', { id:
+                'swiper-t-shirt', goodsData: goodsData.tShirts }); _%>
+              </div>
+            </section>
+
+            <section class="section">
+              <div class="section__inner">
+                <h3 class="section__heading section__heading--en">Shorts</h3>
+
+                <%- include(localmeta.path + '_components/GoodsList', { id:
+                'swiper-shorts', goodsData: goodsData.aLotsOfShorts }); _%>
+              </div>
+            </section>
           </div>
         </div>
 
